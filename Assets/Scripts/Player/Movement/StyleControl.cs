@@ -45,6 +45,8 @@ public class StyleControl : MonoBehaviour {
     //Desativa/Ativa as Renders do 3D, o collider e a gravidade.
     void ComponentsHandler_3D(bool active)
     {
+
+		//Teste
         Move3D.enabled = active;
         Player3D.GetComponent<MeshRenderer>().enabled = active;
         Player3D.GetComponent<CapsuleCollider>().enabled = active;
