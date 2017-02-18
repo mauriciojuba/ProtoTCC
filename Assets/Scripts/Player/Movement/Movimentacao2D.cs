@@ -20,21 +20,21 @@ public class Movimentacao2D : MonoBehaviour {
 
 	void Movement() {
 		//movimenta o Player pra cima
-		if(Input.GetKey(KeyCode.W)){
+		if(Input.GetAxisRaw("Vertical") > 0){
 			transform.Translate(Vector3.up*Time.deltaTime*Speed); 
 		}
 		//movimenta o Player pra baixo
-		if(Input.GetKey(KeyCode.S)){
+		if(Input.GetAxisRaw("Vertical") < 0){
 			transform.Translate(Vector3.down*Time.deltaTime*Speed); 
 		}
 		//movimenta o Player pra esquerda
-		if(Input.GetKey(KeyCode.A)){
+		if(Input.GetAxisRaw("Horizontal") < 0){
 			// vira a sprite pro lado esquerdo
 			Spriter.GetComponent<SpriteRenderer> ().flipX = true;
 			transform.Translate(Vector3.left*Time.deltaTime*Speed); 
 		}
 		//movimenta o Player pra direita
-		if(Input.GetKey(KeyCode.D)){
+		if(Input.GetAxisRaw("Horizontal") > 0){
 			// vira a sprite pro lado direito
 			Spriter.GetComponent<SpriteRenderer> ().flipX = false;
 			transform.Translate(Vector3.right*Time.deltaTime*Speed); 

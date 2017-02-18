@@ -29,15 +29,14 @@ public class StyleControl : MonoBehaviour {
             ComponentsHandler_3D(true);
             ComponentsHandler_2D(false);
             
-			//Mantem o personagem 2D na mesma posição visual que o personagem 3D está.
-			Player2D.transform.position = new Vector2 (Player3D.transform.position.x, Player3D.transform.position.z);
-
+			//Mantem o personagem 3D na mesma posição visual que o personagem 2D está.
+			Player3D.transform.position = new Vector3 (Player2D.transform.position.x, Player3D.transform.position.y, Player2D.transform.position.y);
 		} else {
             ComponentsHandler_3D(false);
             ComponentsHandler_2D(true);
 
-            //Mantem o personagem 3D na mesma posição visual que o personagem 2D está.
-            Player3D.transform.position = new Vector3 (Player2D.transform.position.x, Player3D.transform.position.y, Player2D.transform.position.y);
+			//Mantem o personagem 2D na mesma posição visual que o personagem 3D está.
+			Player2D.transform.position = new Vector2 (Player3D.transform.position.x, Player3D.transform.position.z);
 		}
 	}
 
@@ -45,8 +44,6 @@ public class StyleControl : MonoBehaviour {
     //Desativa/Ativa as Renders do 3D, o collider e a gravidade.
     void ComponentsHandler_3D(bool active)
     {
-
-		//Teste
         Move3D.enabled = active;
         Player3D.GetComponent<MeshRenderer>().enabled = active;
         Player3D.GetComponent<CapsuleCollider>().enabled = active;

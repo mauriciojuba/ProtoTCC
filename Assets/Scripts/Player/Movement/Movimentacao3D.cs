@@ -27,14 +27,14 @@ public class Movimentacao3D : MonoBehaviour {
 
 	//Define a direção que o player olha de acordo com os botoes que ele aperta.
 	void DirectionDefinition(){
-		if (Input.GetKey (KeyCode.W)) {
+		if (Input.GetAxisRaw("Vertical") > 0) {
 			InMovement = true;
 			//Define a direção para Cima-Esquerda.
-			if (Input.GetKey (KeyCode.A)) {
+			if (Input.GetAxisRaw("Horizontal") < 0) {
 				ActualDirection = 4;
 			} 
 			//Define a direção para Cima-Direita.
-			else if (Input.GetKey (KeyCode.D)) {
+			else if (Input.GetAxisRaw("Horizontal") > 0) {
 				ActualDirection = 5;
 			} 
 			//Define a direção para Cima.
@@ -42,14 +42,14 @@ public class Movimentacao3D : MonoBehaviour {
 				ActualDirection = 0;
 			}
 		} 
-		else if (Input.GetKey (KeyCode.S)) {
+		else if (Input.GetAxisRaw("Vertical") < 0) {
 			InMovement = true;
 			//Define a direção para Baixo-Esquerda
-			if (Input.GetKey (KeyCode.A)) {
+			if (Input.GetAxisRaw("Horizontal") < 0) {
 				ActualDirection = 6;
 			} 
 			//Define a direção para Baixo-Direita
-			else if (Input.GetKey (KeyCode.D)) {
+			else if (Input.GetAxisRaw("Horizontal") > 0) {
 				ActualDirection = 7;
 			} 
 			//Define a direção para Baixo.
@@ -58,12 +58,12 @@ public class Movimentacao3D : MonoBehaviour {
 			}
 		} 
 		//Define a direção para Esquerda
-		else if (Input.GetKey (KeyCode.A)) {
+		else if (Input.GetAxisRaw("Horizontal") < 0) {
 			InMovement = true;
 			ActualDirection = 2;
 		} 
 		//Define a direção para Direita
-		else if (Input.GetKey (KeyCode.D)) {
+		else if (Input.GetAxisRaw("Horizontal") > 0) {
 			InMovement = true;
 			ActualDirection = 3;
 		} else {
