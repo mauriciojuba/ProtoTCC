@@ -17,7 +17,7 @@ public class StyleControl : MonoBehaviour {
         ChangeStyle();
     }	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Alpha0)) ChangeStyle();
+		if (Input.GetButtonDown("B")) ChangeStyle();
     }
 
 	void ChangeStyle(){
@@ -44,6 +44,9 @@ public class StyleControl : MonoBehaviour {
     //Desativa/Ativa as Renders do 3D, o collider e a gravidade.
     void ComponentsHandler_3D(bool active)
     {
+		if(active == false)
+			Player3D.GetComponent<Rigidbody>().velocity = transform.forward * 0;
+		
         Move3D.enabled = active;
         Player3D.GetComponent<MeshRenderer>().enabled = active;
         Player3D.GetComponent<CapsuleCollider>().enabled = active;
@@ -53,7 +56,7 @@ public class StyleControl : MonoBehaviour {
     //Destiva/Ativa o codigo de movimentação 2D.
     //Desativa/Ativa a Sprite 2D
     void ComponentsHandler_2D(bool active)
-    {
+	{
         Move2D.enabled = active;
         Player2D.GetComponent<SpriteRenderer>().enabled = active;
     }
