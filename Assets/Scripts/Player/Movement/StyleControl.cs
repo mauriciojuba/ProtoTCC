@@ -18,12 +18,7 @@ public class StyleControl : MonoBehaviour {
 	public GameObject Player2D_P2;
 	public bool In3D_P2;
 
-	public int PT;
 
-    void Start()
-    {
-		
-    }	
 	void Update () {
 		if (Input.GetButtonDown ("B P1")) {
 			ChangeStyle (1);
@@ -35,7 +30,6 @@ public class StyleControl : MonoBehaviour {
 
 	void ChangeStyle(int P){
 		//Muda o estilo de 3D pra 2D e vice-versa
-		PT = P;
 		if (P == 1) {
 			In3D_P1 = !In3D_P1;
 

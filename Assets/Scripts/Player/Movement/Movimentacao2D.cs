@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Movimentacao2D : MonoBehaviour {
 
+	//Define a velocidade de movimento
 	public float Speed = 5;
 
+	//GO do personagem que vai ser movimentado.
 	public GameObject Spriter;
 
 	//Define o numero do player.

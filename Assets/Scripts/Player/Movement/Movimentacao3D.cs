@@ -19,8 +19,7 @@ public class Movimentacao3D : MonoBehaviour {
 	//Define o numero do Player.
 	public int PlayerNumber;
 
-	public Example Teste;
-
+	//GO do personagem que sera movimentado.
 	public GameObject Player;
 
 	void Start () {
@@ -34,7 +33,6 @@ public class Movimentacao3D : MonoBehaviour {
 
 	//Define a direção que o player olha de acordo com os botoes que ele aperta.
 	void DirectionDefinition(){
-	//	if (Teste.Joysticks.Length >= PlayerNumber) {
 			if (Input.GetAxisRaw ("Vertical P" + PlayerNumber) > 0) {
 				InMovement = true;
 				//Define a direção para Cima-Esquerda.
@@ -83,9 +81,6 @@ public class Movimentacao3D : MonoBehaviour {
 				Player.GetComponent<Rigidbody> ().velocity = transform.forward * Speed;
 			else
 				Player.GetComponent<Rigidbody> ().velocity = transform.forward * 0;
-		//}else {
-		//	Debug.LogWarning("No Controller Connected");
-		//}
 	}
 }
 
