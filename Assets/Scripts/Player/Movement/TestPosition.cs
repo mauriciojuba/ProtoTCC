@@ -6,10 +6,6 @@ public class TestPosition : MonoBehaviour {
 
 	public Transform P1, P2;
 
-
-	void Start () {
-
-	}
 	
 	// Update is called once per frame
 	void Update () {
