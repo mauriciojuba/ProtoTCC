@@ -4,28 +4,35 @@ using UnityEngine;
 
 public class TestPosition : MonoBehaviour {
 
-	public Camera CameraMain;
+	public Transform P1, P2;
+
 
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		var DistanceZ = (transform.position - CameraMain.transform.position).z;
 
-		var Leftborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, DistanceZ)).x;
+		//armazena a distancia do eixo X
+		var posx = calcDistMid (P1, P2).x;
+		//armazena a distancia do eixo Z
+		var posz = calcDistMid (P1, P2).z;
+		//posiciona o objeto entre os 2 pontos
+		transform.position = Vector3.MoveTowards(transform.position,new Vector3 (posx, 0, posz),0.5f);
 
-		var Rightborder = CameraMain.ViewportToWorldPoint (new Vector3 (1, 0, DistanceZ)).x;
+	}
 
-		var Topborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, DistanceZ)).y;
-
-		var Bottomborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 1.2f, DistanceZ)).y;
-
-		transform.position = new Vector3 (
-			Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
-			Mathf.Clamp (transform.position.y, Topborder, Bottomborder), 
-			transform.position.z);
+	//Calcula a distancia entre 2 pontos.
+	Vector3 calcDistMid(Transform ObA, Transform ObB){
 		
+		//calcula a distancia entre 2 pontos no eixo X, e divide por 2 para achar o meio entre eles.
+		float posX = ObA.position.x + (ObB.position.x - ObA.position.x) / 2;
+		//calcula a distancia entre 2 pontos no eixo Z, e divide por 2 para achar o meio entre eles.
+		float posZ = ObA.position.z + (ObB.position.z - ObA.position.z) / 2;
+
+		//retorna o resultado para a variavel.
+		Vector3 Result = new Vector3 (posX, 0, posZ);
+		return Result;
 	}
 }

@@ -15,11 +15,11 @@ public class Movimentacao2D : MonoBehaviour {
 
 	public Camera CameraMain;
 
-	private Vector2 Movement;
+	private Vector3 Movement;
 
-	private Rigidbody2D rigidbody2D;
+	private Rigidbody Rb;
 	void Start () {
-		rigidbody2D = gameObject.GetComponent<Rigidbody2D> ();
+		Rb = gameObject.GetComponent<Rigidbody> ();
 	}
 
 	void FixedUpdate () {
@@ -41,10 +41,10 @@ public class Movimentacao2D : MonoBehaviour {
 			Spriter.GetComponent<SpriteRenderer> ().flipX = true;
 
 		//Registra a direção que o personagem vai se mover
-		Movement = new Vector2 (InputX * Speed, InputY * Speed);
+		Movement = new Vector3 (InputX * Speed,0, InputY * Speed);
 
 		//Move o personagem na direção indicada.
-		rigidbody2D.velocity = Movement;
+		Rb.velocity = Movement;
 
 	}
 
@@ -60,16 +60,16 @@ public class Movimentacao2D : MonoBehaviour {
 		var Rightborder = CameraMain.ViewportToWorldPoint (new Vector3 (0.99f, 0, DistanceZ)).x;
 
 		//Calcula o ponto maximo de movimentação pra Baixo.
-		var Bottomborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, -0.7f, DistanceZ)).y;
+		var Bottomborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, 3)).z;
 
 		//Calcula o ponto maximo de movimentação pra Cima.
-		var Topborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 1.19f, DistanceZ)).y;
+		var Topborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, 48)).z;
 
 		//Mantem o personagem sempre dentro do espaço da camera.
 		transform.position = new Vector3 (
 			Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
-			Mathf.Clamp (transform.position.y, Bottomborder, Topborder), 
-			transform.position.z);
+			/*Mathf.Clamp (*/transform.position.y/*, Bottomborder, Topborder)*/,
+			Mathf.Clamp (transform.position.z,Bottomborder,Topborder ));
 
 	}
 }

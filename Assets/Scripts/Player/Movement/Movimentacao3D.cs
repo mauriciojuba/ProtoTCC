@@ -22,10 +22,15 @@ public class Movimentacao3D : MonoBehaviour {
 	//GO do personagem que sera movimentado.
 	public GameObject Player;
 
+	public Camera CameraMain;
 	void Start () {
 		ActualDirection = 3;
 	}
-	
+
+	void Update(){
+		TestPosition ();
+	}
+
 	void FixedUpdate () {
 		DirectionDefinition ();
 	}
@@ -81,6 +86,28 @@ public class Movimentacao3D : MonoBehaviour {
 				Player.GetComponent<Rigidbody> ().velocity = transform.forward * Speed;
 			else
 				Player.GetComponent<Rigidbody> ().velocity = transform.forward * 0;
+	}
+	void TestPosition(){
+		//Calcula a distancia entre o personagem e a camera.
+		var DistanceZ = (transform.position - CameraMain.transform.position).z;
+
+		//Calcula o ponto maximo de movimentação pra esquerda.
+		var Leftborder = CameraMain.ViewportToWorldPoint (new Vector3 (0.01f, 0, DistanceZ)).x;
+
+		//Calcula o ponto maximo de movimentação pra direita.
+		var Rightborder = CameraMain.ViewportToWorldPoint (new Vector3 (0.99f, 0, DistanceZ)).x;
+
+		//Calcula o ponto maximo de movimentação pra Baixo.
+		var Bottomborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, 3)).z;
+
+		//Calcula o ponto maximo de movimentação pra Cima.
+		var Topborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, 48)).z;
+
+		//Mantem o personagem sempre dentro do espaço da camera.
+		transform.position = new Vector3 (
+			Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
+			/*Mathf.Clamp (*/transform.position.y/*, Bottomborder, Topborder)*/,
+			Mathf.Clamp (transform.position.z,Bottomborder,Topborder ));
 	}
 }
 

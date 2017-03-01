@@ -39,13 +39,13 @@ public class StyleControl : MonoBehaviour {
 				ComponentsHandler_2DP1 (false);
             
 				//Mantem o personagem 3D na mesma posição visual que o personagem 2D está.
-				Player3D_P1.transform.position = new Vector3 (Player2D_P1.transform.position.x, Player3D_P1.transform.position.y, Player2D_P1.transform.position.y);
+				Player3D_P1.transform.position = new Vector3 (Player2D_P1.transform.position.x, Player3D_P1.transform.position.y, Player2D_P1.transform.position.z);
 			} else {
 				ComponentsHandler_3DP1 (false);
 				ComponentsHandler_2DP1 (true);
 
 				//Mantem o personagem 2D na mesma posição visual que o personagem 3D está.
-				Player2D_P1.transform.position = new Vector2 (Player3D_P1.transform.position.x, Player3D_P1.transform.position.z);
+				Player2D_P1.transform.position = new Vector3 (Player3D_P1.transform.position.x,0, Player3D_P1.transform.position.z);
 			}
 		}
 		else if (P == 2) {
@@ -57,13 +57,13 @@ public class StyleControl : MonoBehaviour {
 				ComponentsHandler_2DP2 (false);
 
 				//Mantem o personagem 3D na mesma posição visual que o personagem 2D está.
-				Player3D_P2.transform.position = new Vector3 (Player2D_P2.transform.position.x, Player3D_P2.transform.position.y, Player2D_P2.transform.position.y);
+				Player3D_P2.transform.position = new Vector3 (Player2D_P2.transform.position.x, Player3D_P2.transform.position.y, Player2D_P2.transform.position.z);
 			} else {
 				ComponentsHandler_3DP2 (false);
 				ComponentsHandler_2DP2 (true);
 
 				//Mantem o personagem 2D na mesma posição visual que o personagem 3D está.
-				Player2D_P2.transform.position = new Vector2 (Player3D_P2.transform.position.x, Player3D_P2.transform.position.z);
+				Player2D_P2.transform.position = new Vector3 (Player3D_P2.transform.position.x,0, Player3D_P2.transform.position.z);
 			}
 		}
 	}
