@@ -196,7 +196,7 @@ public class EnemyIA : MonoBehaviour {
 	}
 	#endregion
 	//Testes Pra seleção de Foco
-	/* Transform SelectTarget (Transform P1, Transform P2,Transform P3){
+	/* Transform SelectTarget (Transform P1, Transform P2){
 		//Distancia Do Player1 em X e em Z
 		float DistP1X = transform.position.x - P1.position.x;
 		float DistP1Z = transform.position.z - P1.position.z;
