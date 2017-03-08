@@ -14,6 +14,9 @@ public class EnemyIA : MonoBehaviour {
 	public float DistX;
 	#endregion
 
+	[Header("Transforms Dos Players")]
+	public Transform P1T, P2T, P3T, P4T;
+
 	[Header("Ativa/Desativa o script")]
 	public bool Active;
 
@@ -57,14 +60,17 @@ public class EnemyIA : MonoBehaviour {
 	public float RoundSpeed;
 
 	void Start () {
+		Target = SelectTarget (P1T,P2T,P3T,P4T);
 		RB = gameObject.GetComponent<Rigidbody> ();
 		SelectSide ();
 		CDAtk = AttackCD;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(Input.GetKeyDown(KeyCode.Space))
+			Target = SelectTarget (P1T,P2T,P3T,P4T);
 		if(Active){
 			switch (MyActualState) {
 				case State.Chase : 	  ChaseState ();     break;
@@ -195,34 +201,40 @@ public class EnemyIA : MonoBehaviour {
 		}
 	}
 	#endregion
-	//Testes Pra seleção de Foco
-	/* Transform SelectTarget (Transform P1, Transform P2){
-		//Distancia Do Player1 em X e em Z
-		float DistP1X = transform.position.x - P1.position.x;
-		float DistP1Z = transform.position.z - P1.position.z;
-		//Distancia Do Player2 em X e em Z
-		float DistP2X = transform.position.x - P2.position.x;
-		float DistP2Z = transform.position.z - P2.position.z;
-
-		//Distancia Do Player3 em X e em Z
-		float DistP3X = transform.position.x - P3.position.x;
-		float DistP3Z = transform.position.z - P3.position.z;
 
 
-		//Soma as distancias do Player1
-		float DistP1 = DistP1X + DistP1Z;
-		//Soma as distancias do Player2
-		float DistP2 = DistP2X + DistP2Z;
-		//Soma as distancias do Player3
-		float DistP3 = DistP3X + DistP3Z;
-
-		//Decide qual player esta mais perto para focar.
-		if (DistP1 < DistP2 && DistP1 < DistP3) {
-			return P1;
-		} else if (DistP2 < DistP3) {
-			return P2;
+	//Testes Pra seleção de Foco.
+	Transform SelectTarget (Transform P1, Transform P2,Transform P3, Transform P4){
+		if (P4 != null) {
+			//Decide qual player esta mais perto para focar.
+			if (Vector3.Distance (transform.position, P1.position) < Vector3.Distance (transform.position, P2.position)
+			    && Vector3.Distance (transform.position, P1.position) < Vector3.Distance (transform.position, P3.position)
+			    && Vector3.Distance (transform.position, P1.position) < Vector3.Distance (transform.position, P4.position)) {
+				return P1;
+			} else if (Vector3.Distance (transform.position, P2.position) < Vector3.Distance (transform.position, P3.position)
+			           && Vector3.Distance (transform.position, P3.position) < Vector3.Distance (transform.position, P4.position)) {
+				return P2;
+			} else if (Vector3.Distance (transform.position, P3.position) < Vector3.Distance (transform.position, P4.position)) {
+				return P3;
+			} else {
+				return P4;
+			}
+		} else if (P3 != null) {
+			if (Vector3.Distance (transform.position, P1.position) < Vector3.Distance (transform.position, P2.position)
+			    && Vector3.Distance (transform.position, P1.position) < Vector3.Distance (transform.position, P3.position)) {
+				return P1;
+			} else if (Vector3.Distance (transform.position, P2.position) < Vector3.Distance (transform.position, P3.position)) {
+				return P2;
+			} else {
+				return P3;
+			}
+		} else if (P2 != null) {
+			if (Vector3.Distance (transform.position, P1.position) < Vector3.Distance (transform.position, P2.position)) {
+				return P1;
+			} else {
+				return P2;
+			}
 		} else
-			return P3;
-
-	}*/
+			return P1;
+	}
 }
