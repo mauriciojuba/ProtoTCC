@@ -7,7 +7,9 @@ public class CameraControl : MonoBehaviour {
 	//Alvo que a camera centraliza.
 	public Transform Target;
 	//Vector para registrar a distancia entre a camera e o player
-	Vector3 Offset;
+	[SerializeField] private Vector3 Offset;
+
+	private float OffsetY,OffsetZ;
 
 	//Vector para registrar a distancia entre os players
 	Vector3 Distan;
@@ -22,7 +24,10 @@ public class CameraControl : MonoBehaviour {
 
 	void Start () {
 		//marca a diferença entre a camera e o ponto de foco.
-		Offset = transform.position - Target.position;
+		OffsetY = transform.position.y - Target.position.y;
+		OffsetZ = transform.position.z - Target.position.z;
+
+		Offset = new Vector3 (0, OffsetY, OffsetZ);
 	}
 
 	void Update () {

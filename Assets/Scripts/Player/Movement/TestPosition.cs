@@ -6,17 +6,31 @@ public class TestPosition : MonoBehaviour {
 
 	public Transform P1, P2;
 
-	
+	void Start(){
+		
+	}
+
 	// Update is called once per frame
 	void Update () {
+		if (P1 == null) {
+			if (GameObject.FindWithTag ("Player1_3D") != null)
+				P1 = GameObject.FindWithTag ("Player1_3D").transform;
+		}
+		if (P2 == null) {
+			if (GameObject.FindWithTag ("Player2_3D") != null)
+				P2 = GameObject.FindWithTag ("Player2_3D").transform;
+		}
 
-		//armazena a distancia do eixo X
-		var posx = calcDistMid (P1, P2).x;
-		//armazena a distancia do eixo Z
-		var posz = calcDistMid (P1, P2).z;
-		//posiciona o objeto entre os 2 pontos
-		transform.position = Vector3.MoveTowards(transform.position,new Vector3 (posx, 0, posz),0.5f);
-
+		if (P2 != null) {
+			//armazena a distancia do eixo X
+			var posx = calcDistMid (P1, P2).x;
+			//armazena a distancia do eixo Z
+			var posz = calcDistMid (P1, P2).z;
+			//posiciona o objeto entre os 2 pontos
+			transform.position = Vector3.MoveTowards (transform.position, new Vector3 (posx, 0, posz), 0.5f);
+		} else {
+			transform.position = Vector3.MoveTowards (transform.position, new Vector3 (P1.position.x, 0, P1.position.z), 0.5f);
+		}
 	}
 
 	//Calcula a distancia entre 2 pontos.

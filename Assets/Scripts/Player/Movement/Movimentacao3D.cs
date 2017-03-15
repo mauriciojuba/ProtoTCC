@@ -24,6 +24,7 @@ public class Movimentacao3D : MonoBehaviour {
 
 	public Camera CameraMain;
 	void Start () {
+		CameraMain = Camera.main;
 		ActualDirection = 3;
 	}
 

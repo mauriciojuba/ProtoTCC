@@ -60,6 +60,11 @@ public class EnemyIA : MonoBehaviour {
 	public float RoundSpeed;
 
 	void Start () {
+		if(GameObject.FindWithTag ("Player1_3D") != null)
+			P1T = GameObject.FindWithTag ("Player1_3D").transform;
+		if(GameObject.FindWithTag ("Player2_3D") != null)
+			P2T = GameObject.FindWithTag ("Player2_3D").transform;
+
 		Target = SelectTarget (P1T,P2T,P3T,P4T);
 		RB = gameObject.GetComponent<Rigidbody> ();
 		SelectSide ();

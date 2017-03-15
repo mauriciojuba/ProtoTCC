@@ -16,6 +16,7 @@ public class FightTest : MonoBehaviour {
 
 
 	void Start () {
+		Target = GameObject.FindWithTag ("Enemy");
 		Style = GameObject.FindWithTag ("StyleControl").GetComponent<StyleControl> ();
 		TargetScript = Target.GetComponent<ChangeStance> ();
 	}
