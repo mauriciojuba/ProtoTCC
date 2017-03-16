@@ -11,6 +11,8 @@ public class CursorControl : MonoBehaviour {
 	[SerializeField] private Rigidbody2D Rb;
 	[SerializeField] private Canvas CanvasC;
 	[SerializeField] private Button SelectedButton;
+	private Toggle SelectedToggle;
+	private Slider SelectedSlider;
 	void Start () {
 		
 	}
@@ -20,7 +22,13 @@ public class CursorControl : MonoBehaviour {
 			if (Input.GetButtonDown ("A P1") && SelectedButton.interactable) {
 				StartCoroutine (ClickButton ());
 			}
-		}
+		} else if (SelectedToggle != null) {
+			if (Input.GetButtonDown ("A P1") && SelectedToggle.interactable) {
+				SelectedToggle.animator.SetTrigger ("Pressed");
+				SelectedToggle.isOn = !SelectedToggle.isOn;
+				SelectedToggle.onValueChanged.Invoke (SelectedToggle.isOn);
+			}
+		} 
 	}
 
 	void FixedUpdate () {
@@ -77,10 +85,15 @@ public class CursorControl : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D Col){
 		if (Col.gameObject.GetComponent<Button> () != null) {
 			SelectedButton = Col.gameObject.GetComponent<Button> ();
-		}
-		if (SelectedButton.interactable) {
-			SelectedButton.animator.SetTrigger ("Highlighted");
-		}
+			if (SelectedButton.interactable) {
+				SelectedButton.animator.SetTrigger ("Highlighted");
+			}
+		} else if (Col.gameObject.GetComponent<Toggle> () != null) {
+			SelectedToggle = Col.gameObject.GetComponent<Toggle> ();
+			if (SelectedToggle.interactable) {
+				SelectedToggle.animator.SetTrigger ("Highlighted");
+			}
+		} 
 	}
 
 	//Quando o "mouse" sai do botao, retira o botao da variavel, tornando ela vazia.
@@ -89,14 +102,22 @@ public class CursorControl : MonoBehaviour {
 			if (SelectedButton.interactable) {
 				SelectedButton.animator.SetTrigger ("Normal");
 			}
+			SelectedButton = null;
 		}
-		SelectedButton = null;
+		if (SelectedToggle != null) {
+			if (SelectedToggle.interactable) {
+				SelectedToggle.animator.SetTrigger ("Normal");
+			
+			}
+			SelectedToggle = null;
+		}
 	}
 		
 	//Ativa a função que o botao tem, como selecionar a fase.
+	//estou fazendo testes ainda.. por isso deixei o yield return como 0.
 	IEnumerator ClickButton(){
 		SelectedButton.animator.SetTrigger ("Pressed");
-		yield return new WaitForSeconds (0.3f);
+		yield return new WaitForSeconds (0.01f);
 		SelectedButton.onClick.Invoke ();
 	}
 
