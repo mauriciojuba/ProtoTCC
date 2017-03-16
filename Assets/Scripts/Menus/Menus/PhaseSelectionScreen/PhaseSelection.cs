@@ -21,6 +21,7 @@ public class PhaseSelection : MonoBehaviour {
 	}
 	
 	public void PhaseSelected(string PhaseName){
-		UnityEngine.SceneManagement.SceneManager.LoadScene (PhaseName);
+		DataS.PhaseName = PhaseName;
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Selecao Personagens");
 	}
 }

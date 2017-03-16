@@ -10,7 +10,7 @@ public class CursorControl : MonoBehaviour {
 	[SerializeField] private float Speed;
 	[SerializeField] private Rigidbody2D Rb;
 	[SerializeField] private Canvas CanvasC;
-	private Button SelectedButton;
+	[SerializeField] private Button SelectedButton;
 	void Start () {
 		
 	}
@@ -85,8 +85,10 @@ public class CursorControl : MonoBehaviour {
 
 	//Quando o "mouse" sai do botao, retira o botao da variavel, tornando ela vazia.
 	void OnTriggerExit2D (Collider2D Col){
-		if (SelectedButton.interactable) {
-			SelectedButton.animator.SetTrigger ("Normal");
+		if (SelectedButton != null) {
+			if (SelectedButton.interactable) {
+				SelectedButton.animator.SetTrigger ("Normal");
+			}
 		}
 		SelectedButton = null;
 	}
@@ -96,5 +98,15 @@ public class CursorControl : MonoBehaviour {
 		SelectedButton.animator.SetTrigger ("Pressed");
 		yield return new WaitForSeconds (0.3f);
 		SelectedButton.onClick.Invoke ();
+	}
+
+	//Torna o botao selecionado como nulo
+	public void TurnNull(){
+		StartCoroutine (Deselect());
+	}
+
+	IEnumerator Deselect(){
+		yield return new WaitForSeconds (0.4f);
+		SelectedButton = null;
 	}
 }
