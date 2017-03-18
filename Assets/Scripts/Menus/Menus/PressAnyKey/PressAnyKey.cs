@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PressAnyKey : MonoBehaviour {
 
+	//Menu Inicial, script apenas para a primeira tela, onde esta escrito pressione qualquer botão.
+
 	private bool Active;
 	[Header("Menu Manager")]
 	private MenuManager Menu;

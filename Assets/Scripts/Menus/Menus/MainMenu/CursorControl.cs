@@ -4,13 +4,17 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class CursorControl : MonoBehaviour {
-
+	[Header("Objeto que esta com a Imagem do cursor")]
 	[SerializeField] private GameObject Spriter;
 	 private Vector2 Movement;
+	[Header("Velocidade do cursor")]
 	[SerializeField] private float Speed;
+
+	[Tooltip("Objeto que esta com o rigidbody do cursor")]
 	[SerializeField] private Rigidbody2D Rb;
+	[Tooltip("Coloque o Canvas aqui")]
 	[SerializeField] private Canvas CanvasC;
-	[SerializeField] private Button SelectedButton;
+	private Button SelectedButton;
 	private Toggle SelectedToggle;
 	private Slider SelectedSlider;
 	void Start () {
@@ -18,6 +22,7 @@ public class CursorControl : MonoBehaviour {
 	}
 	
 	void Update(){
+		//ativa a função do botão quando for clicado.
 		if (SelectedButton != null) {
 			if (Input.GetButtonDown ("A P1") && SelectedButton.interactable) {
 				StartCoroutine (ClickButton ());
@@ -56,8 +61,8 @@ public class CursorControl : MonoBehaviour {
 	Rb.velocity = Movement;
 
 	}
-
-//testa a posição do personagem em relação a camera
+		
+	//testa a posição do personagem em relação a camera
 	void TestPosition(){
 		//Calcula a distancia entre o personagem e a camera.
 		//var DistanceZ = (transform.position - Camera.main.transform.position).z;
@@ -113,7 +118,7 @@ public class CursorControl : MonoBehaviour {
 		}
 	}
 		
-	//Ativa a função que o botao tem, como selecionar a fase.
+	//Ativa a função que o botao tem, como selecionar a fase, selecionar personagem.
 	//estou fazendo testes ainda.. por isso deixei o yield return como 0.
 	IEnumerator ClickButton(){
 		SelectedButton.animator.SetTrigger ("Pressed");

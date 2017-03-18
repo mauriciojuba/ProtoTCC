@@ -74,8 +74,6 @@ public class EnemyIA : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Space))
-			Target = SelectTarget (P1T,P2T,P3T,P4T);
 		if(Active){
 			switch (MyActualState) {
 				case State.Chase : 	  ChaseState ();     break;

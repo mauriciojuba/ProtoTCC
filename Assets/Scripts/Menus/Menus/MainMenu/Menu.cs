@@ -6,26 +6,25 @@ using System.Collections;
 [RequireComponent(typeof(CanvasGroup))]
 public class Menu : MonoBehaviour {
 
-	private Animator _animator;
-	private CanvasGroup _canvasGroup;
+	private Animator Animator;
+	private CanvasGroup _CanvasGroup;
 
+	//booleana para definir se o menu esta aberto, para ativar a animação de abrir.
 	public bool IsOpen{
-		get{ return _animator.GetBool ("IsOpen"); }
-		set{ _animator.SetBool ("IsOpen", value); }
+		get{ return Animator.GetBool ("IsOpen"); }
+		set{ Animator.SetBool ("IsOpen", value); }
 	}
 
 	public void Awake(){
-		_animator = GetComponent<Animator> ();
-		_canvasGroup = GetComponent<CanvasGroup> ();
-
-		//var rect = GetComponent<RectTransform> ();
-		//rect.offsetMax = rect.offsetMin = new Vector2 (0, 0);
+		Animator = GetComponent<Animator> ();
+		_CanvasGroup = GetComponent<CanvasGroup> ();
 	}
 
 	public void Update(){
-			if (!_animator.GetCurrentAnimatorStateInfo (0).IsName ("Open")) {
-				_canvasGroup.blocksRaycasts = _canvasGroup.interactable = false;
-			} else
-				_canvasGroup.blocksRaycasts = _canvasGroup.interactable = true;
+		//ativa a animção de um menu para abrir, e de outro menu para fechar.
+		if (!Animator.GetCurrentAnimatorStateInfo (0).IsName ("Open")) {
+			_CanvasGroup.blocksRaycasts = _CanvasGroup.interactable = false;
+		} else
+			_CanvasGroup.blocksRaycasts = _CanvasGroup.interactable = true;
 	}
 }
