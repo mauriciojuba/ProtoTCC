@@ -24,6 +24,12 @@ public class CameraControl : MonoBehaviour {
 
 	void Start () {
 		//marca a diferença entre a camera e o ponto de foco.
+		if (GameObject.FindWithTag ("Player1_3D") != null) {
+			P1 = GameObject.FindWithTag ("Player1_3D").transform;
+		}
+		if (GameObject.FindWithTag ("Player2_3D") != null) {
+			P2 = GameObject.FindWithTag ("Player2_3D").transform;
+		}
 		OffsetY = transform.position.y - Target.position.y;
 		OffsetZ = transform.position.z - Target.position.z;
 
@@ -32,20 +38,28 @@ public class CameraControl : MonoBehaviour {
 
 	void Update () {
 		//marca a distancia entre os 2 players.
-		Distan = Dist (P1.position, P2.position);
+		if (P1 != null && P2 != null) {
+			Distan = Dist (P1.position, P2.position);
 
-		//marca a Posição em X da camera.
-		if (Distan.x < 50)
+			//marca a Posição em X da camera.
+			if (Distan.x < 50)
+				PosX = Target.position.x + Offset.x;
+			//marca a posição em Z da camera.
+			if (Distan.z < 30)
+				PosZ = Target.position.z + Offset.z;
+
+			//Marca a distancia maxima que a camera pode ir.
+			DistanMax = new Vector3 (PosX, transform.position.y, PosZ);
+
+			//Move a camera
+			transform.position = Vector3.MoveTowards (transform.position, DistanMax, 0.5f);
+		} else if (P1 != null) {
 			PosX = Target.position.x + Offset.x;
-		//marca a posição em Z da camera.
-		if (Distan.z < 30)
 			PosZ = Target.position.z + Offset.z;
+			DistanMax = new Vector3 (PosX, transform.position.y, PosZ);
+			transform.position = Vector3.MoveTowards (transform.position, DistanMax, 0.5f);
 
-		//Marca a distancia maxima que a camera pode ir.
-		DistanMax = new Vector3 (PosX, transform.position.y, PosZ);
-
-		//Move a camera
-		transform.position = Vector3.MoveTowards (transform.position, DistanMax, 0.5f);
+		}
 	}
 
 

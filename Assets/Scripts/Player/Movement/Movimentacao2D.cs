@@ -20,6 +20,7 @@ public class Movimentacao2D : MonoBehaviour {
 	private Rigidbody Rb;
 	void Start () {
 		Rb = gameObject.GetComponent<Rigidbody> ();
+		CameraMain = Camera.main;
 	}
 
 	void FixedUpdate () {

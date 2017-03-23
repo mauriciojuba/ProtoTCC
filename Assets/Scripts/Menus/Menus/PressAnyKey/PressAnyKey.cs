@@ -13,6 +13,7 @@ public class PressAnyKey : MonoBehaviour {
 	[SerializeField] private GameObject Cursor;
 
 	void Start () {
+		Time.timeScale = 1;
 		Cursor.SetActive (false);
 		Menu = gameObject.GetComponent<MenuManager> ();
 	}

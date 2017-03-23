@@ -5,18 +5,38 @@ using UnityEngine;
 public class StyleControl : MonoBehaviour {
 
 	[Header("PLAYER 1 CONFIGS")]
-	public Movimentacao3D Move3D_P1;
-	public Movimentacao2D Move2D_P1;
-	public GameObject Player3D_P1;
-	public GameObject Player2D_P1;
+	private Movimentacao3D Move3D_P1;
+	private Movimentacao2D Move2D_P1;
+	private GameObject Player3D_P1;
+	private GameObject Player2D_P1;
 	public bool In3D_P1;
 	[Space(20)]
 	[Header("PLAYER 2 CONFIGS")]
-	public Movimentacao3D Move3D_P2;
-	public Movimentacao2D Move2D_P2;
-	public GameObject Player3D_P2;
-	public GameObject Player2D_P2;
+	private Movimentacao3D Move3D_P2;
+	private Movimentacao2D Move2D_P2;
+	private GameObject Player3D_P2;
+	private GameObject Player2D_P2;
 	public bool In3D_P2;
+
+	void Start(){
+		if (GameObject.FindWithTag ("Player1_3D") != null) {
+			Player3D_P1 = GameObject.FindWithTag ("Player1_3D");
+			Move3D_P1 = Player3D_P1.GetComponent<Movimentacao3D> ();
+		}
+		if (GameObject.FindWithTag ("Player2_3D") != null) {
+			Player3D_P2 = GameObject.FindWithTag ("Player2_3D");
+			Move3D_P2 = Player3D_P2.GetComponent<Movimentacao3D> ();
+		}
+		if (GameObject.FindWithTag ("Player1_2D") != null) {
+			Player2D_P1 = GameObject.FindWithTag ("Player1_2D");
+			Move2D_P1 = Player2D_P1.GetComponent<Movimentacao2D> ();
+		}
+		if (GameObject.FindWithTag ("Player2_2D") != null) {
+			Player2D_P2 = GameObject.FindWithTag ("Player2_2D");
+			Move2D_P2 = Player2D_P2.GetComponent<Movimentacao2D> ();
+		}
+
+	}
 
 
 	void Update () {
