@@ -22,7 +22,15 @@ public class Movimentacao3D : MonoBehaviour {
 	//GO do personagem que sera movimentado.
 	public GameObject Player;
 
+	[SerializeField] private float JumpForce;
+	[SerializeField] private bool InGround;
+
 	public Camera CameraMain;
+
+
+	public LayerMask NoIgnoredLayers = -1;
+	[SerializeField] private float MaxJump;
+	private bool Jumping;
 	void Start () {
 		CameraMain = Camera.main;
 		ActualDirection = 3;
@@ -30,10 +38,12 @@ public class Movimentacao3D : MonoBehaviour {
 
 	void Update(){
 		TestPosition ();
+		Jump ();
 	}
 
 	void FixedUpdate () {
 		DirectionDefinition ();
+
 	}
 
 
@@ -82,12 +92,49 @@ public class Movimentacao3D : MonoBehaviour {
 			}
 			transform.LookAt (new Vector3 (Directions [ActualDirection].position.x, transform.position.y, Directions [ActualDirection].position.z));
 
-			//Define se o Player esta em movimento ou não.
-			if (InMovement)
-				Player.GetComponent<Rigidbody> ().velocity = transform.forward * Speed;
-			else
-				Player.GetComponent<Rigidbody> ().velocity = transform.forward * 0;
+			//Define se o Player esta em movimento ou não, alterando apenas a velocidade em x e em z, para nao alterar a gravidade.
+		if (InMovement) {
+			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+			V3.x = transform.forward.x * Speed;
+			V3.z = transform.forward.z * Speed;
+			Player.GetComponent<Rigidbody> ().velocity = V3;
+		} else if (!InMovement) {
+			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+			V3.x = transform.forward.x * 0;
+			V3.z = transform.forward.z * 0;
+			Player.GetComponent<Rigidbody> ().velocity = V3;
+		}
+
 	}
+
+	//função para pulo
+	void Jump(){
+		//verifica se o player esta encostando no chão
+		InGround = Physics.Linecast (Player.transform.position, Player.transform.position - Vector3.up * 1.1f, NoIgnoredLayers);
+		Debug.DrawLine (Player.transform.position,Player.transform.position - Vector3.up * 1.1f);
+
+		//se estiver no chao, pula, apertando A no controle.
+		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround) {
+			Jumping = true;
+			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+			V3.y = JumpForce;
+			Player.GetComponent<Rigidbody> ().velocity = V3;
+		}
+		if(Input.GetButtonUp("A P" + PlayerNumber)){
+			Jumping = false;
+		}
+
+
+		if(Jumping){
+			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+			V3.y += JumpForce;
+			Player.GetComponent<Rigidbody> ().velocity = V3;
+		}
+		if(Player.GetComponent<Rigidbody> ().velocity.y > MaxJump){
+			Jumping = false;
+		}
+	}
+
 	void TestPosition(){
 		//Calcula a distancia entre o personagem e a camera.
 		var DistanceZ = (transform.position - CameraMain.transform.position).z;

@@ -14,7 +14,7 @@ public class Legends : MonoBehaviour {
 	[Tooltip("Velocidade para cada linha de legenda, Velocidade [0] é para linha [0], etc..")]
 	[SerializeField] private float[] ScrollSpeed;
 	[Tooltip("Text do canvas para escrever a legenda")]
-	[SerializeField] private Text TextLegend;
+	[SerializeField] private Text TextSubtitle;
 	private int ActualLine;
 
 
@@ -27,7 +27,7 @@ public class Legends : MonoBehaviour {
 		string ActualText = "";
 		for (int i = 0; i < Lines [ActualLine].Length; i++) {
 			ActualText += Lines [ActualLine] [i];
-			TextLegend.text = ActualText;
+			TextSubtitle.text = ActualText;
 			yield return new WaitForSeconds (1 / ScrollSpeed[ActualLine]);
 		}
 		//tempo para a legenda ficar a mostra.
