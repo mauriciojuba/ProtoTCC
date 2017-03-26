@@ -33,7 +33,7 @@ public class CameraControl : MonoBehaviour {
 		OffsetY = transform.position.y - Target.position.y;
 		OffsetZ = transform.position.z - Target.position.z;
 
-		Offset = new Vector3 (0, OffsetY, OffsetZ);
+		Offset = new Vector3 (0, OffsetY, -15);
 	}
 
 	void Update () {
