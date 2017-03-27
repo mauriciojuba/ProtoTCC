@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightTest : MonoBehaviour {
+public class ChangeEnemyStance : MonoBehaviour {
 
 	public int PlayerNumber;
 

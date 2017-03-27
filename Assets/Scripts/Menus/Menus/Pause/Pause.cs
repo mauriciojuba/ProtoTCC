@@ -49,13 +49,13 @@ public class Pause : MonoBehaviour {
 		PausedScreen.SetActive (Paused);
 		if (Player1_3D != null) {
 			Player1_3D.GetComponent<Movimentacao3D> ().enabled = !Paused;
-			Player1_3D.GetComponent<FightTest> ().enabled = !Paused;
+			Player1_3D.GetComponent<ChangeEnemyStance> ().enabled = !Paused;
 		}
 		if (Player1_2D != null)
 			Player1_2D.GetComponent<Movimentacao2D> ().enabled = !Paused;
 		if (Player2_3D != null) {
 			Player2_3D.GetComponent<Movimentacao3D> ().enabled = !Paused;
-			Player2_3D.GetComponent<FightTest> ().enabled = !Paused;
+			Player2_3D.GetComponent<ChangeEnemyStance> ().enabled = !Paused;
 		}
 		if (Player2_2D != null)
 			Player2_2D.GetComponent<Movimentacao2D> ().enabled = !Paused;
