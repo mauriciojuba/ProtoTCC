@@ -8,6 +8,10 @@ public class Fight : MonoBehaviour {
 	public float MinDamage;
 	public float MaxDamage;
 
+	//dano minimo e maximo do ataque forte.
+	public float MinStrongDamage;
+	public float MaxStrongDamage;
+
 	[SerializeField] private Collider DamageCollider;
 
 
@@ -26,6 +30,14 @@ public class Fight : MonoBehaviour {
 			DamageCollider.gameObject.GetComponent<FightCollider> ().Damage = Random.Range (MinDamage, MaxDamage);
 		}
 		if (Input.GetButtonUp ("X P" + PlayerNumberRef.PlayerNumber)) {
+			DamageCollider.enabled = false;
+		}
+
+		if (Input.GetButtonDown ("Y P" + PlayerNumberRef.PlayerNumber)) {
+			DamageCollider.enabled = true;
+			DamageCollider.gameObject.GetComponent<FightCollider> ().Damage = Random.Range (MinStrongDamage, MaxStrongDamage);
+		}
+		if (Input.GetButtonUp ("Y P" + PlayerNumberRef.PlayerNumber)) {
 			DamageCollider.enabled = false;
 		}
 	}
