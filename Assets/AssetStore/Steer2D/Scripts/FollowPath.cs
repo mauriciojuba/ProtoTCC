@@ -28,6 +28,7 @@ namespace Steer2D
             Path = path;
             currentPoint = 0;
         }
+        
 
         public override Vector2 GetVelocity()
         {
@@ -36,7 +37,9 @@ namespace Steer2D
             if (currentPoint >= Path.Length)
                 return Vector2.zero;
             else if (!Loop && currentPoint == Path.Length - 1)
+            {
                 velocity = arrive(Path[currentPoint]);
+            }
             else
                 velocity = seek(Path[currentPoint]);
 
@@ -45,7 +48,11 @@ namespace Steer2D
             {
                 currentPoint++;
                 if (Loop && currentPoint == Path.Length)
+                {
                     currentPoint = 0;
+                    //exclusivo para ataque 2D do boss Lagartixa
+                    this.gameObject.SetActive(false);
+                }
             }
 
             return velocity;
