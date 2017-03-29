@@ -9,6 +9,8 @@ public class FightCollider : MonoBehaviour {
 	void OnTriggerEnter (Collider col){
 		//aplicar a função de causar dano.
 		Debug.LogWarning ("Deal " + (int)Damage + " Damage");
+		if (col.gameObject.GetComponent<Life> () != null)
+			col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
 		GetComponent<BoxCollider> ().enabled = false;
 	}
 }

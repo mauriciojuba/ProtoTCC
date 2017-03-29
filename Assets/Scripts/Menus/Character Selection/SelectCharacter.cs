@@ -37,7 +37,8 @@ public class SelectCharacter : MonoBehaviour {
 	private float TimerMax = 3,Timer;
 
 	void Start () {
-		DataS = GameObject.FindWithTag ("DATA").GetComponent<Data> ();
+		if (GameObject.FindWithTag ("DATA") != null)
+			DataS = GameObject.FindWithTag ("DATA").GetComponent<Data> ();
 
 		Timer = TimerMax;
 
