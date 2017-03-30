@@ -5,11 +5,20 @@ using UnityEngine.UI;
 
 public class Life : MonoBehaviour {
 
-	public enum LifeType {Player, Enemy, Boss};
+
+	public enum LifeType {Player, Enemy, Boss, Object};
 	public LifeType LifeOF;
 	public float LifeQuant;
-	public List<GameObject> ListOfImg;
+    public GameObject[] Loot;
+    [Range(0,100)]
+    public int LootChance;
 
+    #region Variables For Objects Life
+    public GameObject ObjDestruido;
+    #endregion
+
+    #region Variables For Players Life
+    public List<GameObject> ListOfImg;
 	private int PlayerNumber;
 	private GameObject LifeOBJ;
 	private GameObject Container;
@@ -17,28 +26,55 @@ public class Life : MonoBehaviour {
 	private int QuantImgInScene;
 	[SerializeField] private int QuantImg;
 	[SerializeField] private GameObject LifeSpritePrefab;
+    #endregion
 
-	void Awake () {
-		PlayerNumber = GetComponent<Movimentacao3D> ().PlayerNumber;
-		LifeOBJ = GameObject.Find ("UI").transform.FindChild ("LifeP" + PlayerNumber).gameObject;
-		Container = LifeOBJ.transform.FindChild ("Container").gameObject;
-		Division = 30;
+    void Awake () {
+        if (LifeOF == LifeType.Player)
+        {
+            PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
+            LifeOBJ = GameObject.Find("UI").transform.FindChild("LifeP" + PlayerNumber).gameObject;
+            Container = LifeOBJ.transform.FindChild("Container").gameObject;
+            Division = 30;
+        }
 	}
-	
-	// Update is called once per frame
+
+    // Update is called once per frame
+    //Trocar Update por algum método para fazer o teste apenas quando o jogador acerta um alvo.
+    //No script do FightCollider(e onde mais estiver fazendo alteração na vida do personagem) deve chamar o metodo criado.
+    //Só não criei agora por que o PlayerLife parece ter algumas funções necessárias desde o Start(), ou que deveriam tá no Start()
+    //da uma olhada depois.
 	void Update () {
 		switch (LifeOF) {
-		case LifeType.Player:
-			PlayerLife ();
-			break;
-		case LifeType.Enemy:
-			EnemyLife();
-			break;
-		case LifeType.Boss:
-			BossLife();
-			break;
+            case LifeType.Object:
+                ObjectLife();
+                break;
+            case LifeType.Player:
+			    PlayerLife ();
+			    break;
+		    case LifeType.Enemy:
+			    EnemyLife();
+			    break;
+		    case LifeType.Boss:
+			    BossLife();
+			    break;
 		}
 	}
+
+    void ObjectLife()
+    {
+        if (LifeQuant <= 0)
+        {
+            GameObject bo = Instantiate(ObjDestruido, transform.position, Quaternion.identity);
+            DropLoot();
+            Destroy(bo, 3f);
+            Destroy(this);
+            Destroy(gameObject);
+        }
+    }
+    void DestroyObject()
+    {
+        
+    }
 
 	void PlayerLife(){
 		LifeOBJ.SetActive (true);
@@ -69,4 +105,18 @@ public class Life : MonoBehaviour {
 	void BossLife(){
 	
 	}
+
+    void DropLoot()
+    {
+        float random = Random.Range(0, 100);
+        if (random <= LootChance)
+        {
+            if (Loot[0] != null)
+            {
+                int drop = Random.Range(0, Loot.Length);
+                Debug.Log(drop);
+                Instantiate(Loot[drop],transform.position,Quaternion.identity);
+            }
+        }
+    }
 }
