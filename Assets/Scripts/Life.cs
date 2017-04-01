@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RAIN.Core;
 using UnityEngine.UI;
 
 public class Life : MonoBehaviour {
@@ -12,6 +13,11 @@ public class Life : MonoBehaviour {
     public GameObject[] Loot;
     [Range(0,100)]
     public int LootChance;
+
+
+    #region Variables For Enemys Life
+    AIRig ai;
+    #endregion
 
     #region Variables For Objects Life
     public GameObject ObjDestruido;
@@ -36,22 +42,17 @@ public class Life : MonoBehaviour {
             Container = LifeOBJ.transform.FindChild("Container").gameObject;
 			//mudar a quantidade de vida para imagem aqui
             Division = 30;
+            UpdateLife();
         }
-
-		UpdateLife ();
 	}
 
-	//tentei fazer com metódo, mas o script precisa atualizar frequente para acrescentar todas as imagens necessarias.
 	void Update(){
-		if (QuantImgInScene < QuantImg) {
+		if (QuantImgInScene < QuantImg && LifeOF == LifeType.Player) {
 			UpdateLife ();
 		}
 	}
 
-    //Trocar Update por algum método para fazer o teste apenas quando o jogador acerta um alvo.
-    //No script do FightCollider(e onde mais estiver fazendo alteração na vida do personagem) deve chamar o metodo criado.
-    //Só não criei agora por que o PlayerLife parece ter algumas funções necessárias desde o Start(), ou que deveriam tá no Start()
-    //da uma olhada depois.
+    
 	public void UpdateLife () {
 		switch (LifeOF) {
             case LifeType.Object:
@@ -108,8 +109,10 @@ public class Life : MonoBehaviour {
 	}
 
 	void EnemyLife(){
-	
-	}
+        ai = GetComponentInChildren<AIRig>();
+        ai.AI.WorkingMemory.SetItem("takingDamage", true);
+        ai.AI.WorkingMemory.SetItem("vida", LifeQuant);
+    }
 
 	void BossLife(){
 	

@@ -8,7 +8,6 @@ public class FightCollider : MonoBehaviour {
 
 	void OnTriggerEnter (Collider col){
 		//aplicar a função de causar dano.
-		Debug.LogWarning ("Deal " + (int)Damage + " Damage");
         if (col.gameObject.GetComponent<Life>() != null)
         {
             //Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
