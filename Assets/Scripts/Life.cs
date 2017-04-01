@@ -28,22 +28,31 @@ public class Life : MonoBehaviour {
 	[SerializeField] private GameObject LifeSpritePrefab;
     #endregion
 
-    void Awake () {
+    void Start () {
         if (LifeOF == LifeType.Player)
         {
             PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
             LifeOBJ = GameObject.Find("UI").transform.FindChild("LifeP" + PlayerNumber).gameObject;
             Container = LifeOBJ.transform.FindChild("Container").gameObject;
+			//mudar a quantidade de vida para imagem aqui
             Division = 30;
         }
+
+		UpdateLife ();
 	}
 
-    // Update is called once per frame
+	//tentei fazer com metódo, mas o script precisa atualizar frequente para acrescentar todas as imagens necessarias.
+	void Update(){
+		if (QuantImgInScene < QuantImg) {
+			UpdateLife ();
+		}
+	}
+
     //Trocar Update por algum método para fazer o teste apenas quando o jogador acerta um alvo.
     //No script do FightCollider(e onde mais estiver fazendo alteração na vida do personagem) deve chamar o metodo criado.
     //Só não criei agora por que o PlayerLife parece ter algumas funções necessárias desde o Start(), ou que deveriam tá no Start()
     //da uma olhada depois.
-	void Update () {
+	public void UpdateLife () {
 		switch (LifeOF) {
             case LifeType.Object:
                 ObjectLife();
