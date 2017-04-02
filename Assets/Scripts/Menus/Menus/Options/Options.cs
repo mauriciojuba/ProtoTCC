@@ -6,26 +6,35 @@ using UnityEngine;
 public class Options : MonoBehaviour {
 
 	[SerializeField] private Slider SliderSelected;
-	[SerializeField] private GameObject Lever, OptionObj;
+	[SerializeField] private GameObject OptionObj;
+	[SerializeField] private GameObject Player;
+	public GameObject Lever;
 
 	[SerializeField] private float Speed;
 	[Range(1.5f,5)]
 	[SerializeField] private float SliderSpeed;
 
-	private float InitRot , AngleToGo, PosToGo, InitPos;
+	[HideInInspector]
+	public float InitRot , AngleToGo, PosToGo, InitPos;
 
-	float rotX;
-	float rotY;
-	float rotZ;
-
-	float Direction;
+	[HideInInspector]
+	public float rotX;
+	public float rotY;
+	public float rotZ;
+	public float Direction;
 	void Start(){
-		SetInitialRot ();
+		Player = GameObject.FindWithTag ("Player1_3D");
 	}
 
+
 	void Update(){
+		//controla a alavanca, mexendo ela de acordo com o joystick
 		if (Lever != null) {
-			Direction = Input.GetAxis ("Horizontal P1");
+			if (Player.GetComponent<OptionsPlayer> ().UsingLever) {
+				Direction = Input.GetAxis ("Horizontal P1");
+			} else {
+				Direction = 0;
+			}
 			AngleToGo = Mathf.MoveTowards (AngleToGo, Direction, Time.deltaTime * Speed);
 			PosToGo = Mathf.MoveTowards (PosToGo, Direction, Time.deltaTime * Speed);
 
@@ -38,18 +47,22 @@ public class Options : MonoBehaviour {
 		}
 	}
 
-
-	public void SelectLever(GameObject lever, GameObject optionObj){
+	/// Função para selecionar a alavanca
+	public void SelectLever(GameObject lever, GameObject optionObj, Slider slider){
 		Lever = lever;
 		OptionObj = optionObj;
+		SliderSelected = slider;
 	}
-
+		
+	/// Função para Deselecionar a alavanca
 	public void DeselectLever(){
 		Lever = null;
 		OptionObj = null;
+		SliderSelected = null;
 	}
 
-	void SetInitialRot(){
+	/// Sets the initial rot.
+	public void SetInitialRot(){
 		InitRot = Lever.transform.localEulerAngles.z;
 		InitPos = OptionObj.transform.position.x;
 
@@ -62,19 +75,11 @@ public class Options : MonoBehaviour {
 	public void Plus(){
 		if(SliderSelected.value < SliderSelected.maxValue)
 			SliderSelected.value += Time.deltaTime * Mathf.Abs(Direction) * SliderSpeed;
-
-//		OptionObj.transform.position = new Vector3 (InitPos + (PosToGo * 7.5f * -1),
-//			OptionObj.transform.position.y,
-//			OptionObj.transform.position.z);
 	}
 
 	//opção - de volume
 	public void Minus(){
 		if (SliderSelected.value > SliderSelected.minValue)
 			SliderSelected.value -= Time.deltaTime * Mathf.Abs(Direction) * SliderSpeed;
-
-//		OptionObj.transform.position = new Vector3 (InitPos + (PosToGo * 7.5f * -1),
-//			OptionObj.transform.position.y,
-//			OptionObj.transform.position.z);
 	}
 }

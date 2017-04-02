@@ -17,14 +17,27 @@ public class JumpGravity : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Rb.velocity.y < 0) {
-			Vector3 V3 = Rb.velocity;
-			V3.y += Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
-			Rb.velocity = V3;
-		} else if(Rb.velocity.y > 0 && !Input.GetButton("A P" + Moviment.PlayerNumber)) {
-			Vector3 V3 = Rb.velocity;
-			V3.y += Physics.gravity.y * (LowJumpMultiplayer - 1) * Time.deltaTime;
-			Rb.velocity = V3;
+		if (Moviment != null) {
+			if (Rb.velocity.y < 0) {
+				Vector3 V3 = Rb.velocity;
+				V3.y += Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+				Rb.velocity = V3;
+			} else if (Rb.velocity.y > 0 && !Input.GetButton ("A P" + Moviment.PlayerNumber)) {
+				Vector3 V3 = Rb.velocity;
+				V3.y += Physics.gravity.y * (LowJumpMultiplayer - 1) * Time.deltaTime;
+				Rb.velocity = V3;
+			}
+		} else {
+			if (Rb.velocity.y < 0) {
+				Vector3 V3 = Rb.velocity;
+				V3.y += Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+				Rb.velocity = V3;
+			} else if (Rb.velocity.y > 0 && !Input.GetButton ("A P1")) {
+				Vector3 V3 = Rb.velocity;
+				V3.y += Physics.gravity.y * (LowJumpMultiplayer - 1) * Time.deltaTime;
+				Rb.velocity = V3;
+			}
+
 		}
 	}
 }
