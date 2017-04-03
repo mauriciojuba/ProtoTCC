@@ -43,7 +43,7 @@ public class OptionsPlayer : MonoBehaviour {
 	void FixedUpdate () {
 		if (!UsingLever) {
 			DirectionDefinition ();
-			TestPosition ();
+//			TestPosition ();
 			Jump ();
 		}
 		if (InStairs) {
