@@ -4,74 +4,98 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour {
 
-	//Alvo que a camera centraliza.
-	public Transform Target;
-	//Vector para registrar a distancia entre a camera e o player
-	[SerializeField] private Vector3 Offset;
+    [SerializeField] Transform[] players;
+    Transform DollyCam;
+    int numPlayers = 0;
+    [SerializeField] float distancia = 8;
+    [SerializeField] float maxDistancia;
+    [SerializeField] float minDistancia;
+    [SerializeField] float velocidadeZoom;
 
-	private float OffsetY,OffsetZ;
+    bool pForaDaTela;
+    bool zoomIn;
 
-	//Vector para registrar a distancia entre os players
-	Vector3 Distan;
-	//Transforms dos players.
-	public Transform P1,P2;
+    private void Start()
+    {
+        DollyCam = transform;
+        players = new Transform[4];
+        ChecarQuantidadePlayers();
+    }
 
-	//Float para registrar a distancia da camera em X e em Z
-	float PosX,PosZ;
-	//Vector para registrar a distancia maxima que a camera pode chegar.
-	Vector3 DistanMax;
+    private void Update()
+    {
+        DollyCam.position = posicionaCamera(CalculaCamTarget(numPlayers));
+        ControlaBordaTela();
+    }
+
+    void ChecarQuantidadePlayers()
+    {
+        //alterar a tag quando não for mais necessário o "3D" no final
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (GameObject.FindWithTag("Player"+(i+1)+"_3D") != null)
+            {
+                players[i] = GameObject.FindWithTag("Player"+(i+1)+"_3D").transform;
+                numPlayers++;
+            }
+        }
+    }
+
+    //marca o ponto entre os jogadores que a camera ficará olhando
+    Vector3 CalculaCamTarget(int numPlayers)
+    {
+        switch (numPlayers)
+        {
+            case 1:
+                return players[0].position;
+            case 2:
+                return Vector3.Lerp(players[0].position, players[1].position, 0.5f);
+            case 3:
+                return Vector3.Lerp(Vector3.Lerp(players[0].position, players[1].position, 0.5f), players[2].position, 0.33f);
+            case 4:
+                return Vector3.Lerp(Vector3.Lerp(Vector3.Lerp(players[0].position, players[1].position, 0.5f), players[2].position, 0.33f), players[3].position, 0.25f);
+        }
+        return Vector3.one;
+    }
+
+    Vector3 posicionaCamera(Vector3 _target)
+    {
+        return new Vector3(_target.x, _target.y + distancia, _target.z - distancia-2);
+    }
+
+    void ControlaBordaTela()
+    {
+        
+        for (int i = 0; i < players.Length; i++)
+        {
+            Vector3 posOnScreen = Camera.main.WorldToViewportPoint(players[i].position);
+            if (posOnScreen.x <= 0 || posOnScreen.x >= 1 || posOnScreen.y <= 0 || posOnScreen.y >= 1)
+            {
+                if (distancia <= maxDistancia)
+                {
+                    distancia += velocidadeZoom * Time.deltaTime;
+                    return;
+                }
+            }
+        }
+
+    }
 
 
-	void Start () {
-		//marca a diferença entre a camera e o ponto de foco.
-		if (GameObject.FindWithTag ("Player1_3D") != null) {
-			P1 = GameObject.FindWithTag ("Player1_3D").transform;
-		}
-		if (GameObject.FindWithTag ("Player2_3D") != null) {
-			P2 = GameObject.FindWithTag ("Player2_3D").transform;
-		}
-		OffsetY = transform.position.y - Target.position.y;
-		OffsetZ = transform.position.z - Target.position.z;
-
-		Offset = new Vector3 (0, OffsetY, -15);
-	}
-
-	void Update () {
-		//marca a distancia entre os 2 players.
-		if (P1 != null && P2 != null) {
-			Distan = Dist (P1.position, P2.position);
-
-			//marca a Posição em X da camera.
-			if (Distan.x < 50)
-				PosX = Target.position.x + Offset.x;
-			//marca a posição em Z da camera.
-			if (Distan.z < 30)
-				PosZ = Target.position.z + Offset.z;
-
-			//Marca a distancia maxima que a camera pode ir.
-			DistanMax = new Vector3 (PosX, transform.position.y, PosZ);
-
-			//Move a camera
-			transform.position = Vector3.MoveTowards (transform.position, DistanMax, 0.5f);
-		} else if (P1 != null) {
-			PosX = Target.position.x + Offset.x;
-			PosZ = Target.position.z + Offset.z;
-			DistanMax = new Vector3 (PosX, transform.position.y, PosZ);
-			transform.position = Vector3.MoveTowards (transform.position, DistanMax, 0.5f);
-
-		}
-	}
 
 
-	//Cálculo para encontrar o meio entre 2 pontos.
-	Vector3 Dist(Vector3 A,Vector3 B){
-		float DistX = A.x - B.x;
-		float DistZ = A.z - B.z;
 
-		float CalcX = Mathf.Sqrt (DistX * DistX);
-		float CalcZ = Mathf.Sqrt (DistZ * DistZ);
 
-		Vector3 Result = new Vector3 (CalcX, 0, CalcZ);
-		return Result;
-	}
+
+
+
+
+
+
+
+
+
+
+
+
 }

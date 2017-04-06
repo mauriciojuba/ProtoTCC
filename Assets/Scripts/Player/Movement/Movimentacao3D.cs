@@ -37,7 +37,7 @@ public class Movimentacao3D : MonoBehaviour {
 	}
 
 	void Update(){
-		TestPosition ();
+		//TestPosition ();
 		Jump ();
 	}
 
@@ -135,6 +135,10 @@ public class Movimentacao3D : MonoBehaviour {
 		}
 	}
 
+
+
+
+    //Preciso que você mude isso vou controlar depois de outra forma os limites da camera... Ou posso apagar?
 	void TestPosition(){
 		//Calcula a distancia entre o personagem e a camera.
 		var DistanceZ = (transform.position - CameraMain.transform.position).z;
