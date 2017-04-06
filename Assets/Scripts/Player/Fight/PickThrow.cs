@@ -6,9 +6,8 @@ public class PickThrow : MonoBehaviour {
 
 
 	[SerializeField] private float Radius;
-	[SerializeField] private Collider[] colliders;
-	[SerializeField] List<Collider> CollidersInRange;
-	Ray ray;
+	[SerializeField] private Collider ColliderInRange;
+
 
 	void Start () {
 		
@@ -16,21 +15,32 @@ public class PickThrow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		colliders = Physics.OverlapSphere (transform.position, Radius);
-
-		for(int i = 0; i < colliders.Length; i ++){
-			if(!colliders [i].GetComponent<IgnoreRangeCast>()){
-				if (!CollidersInRange.Contains (colliders [i]))
-					CollidersInRange.Add (colliders [i]);
-			}
-		}
-
+		LocateObject ();
 
 	}
 
-	void OnDrawGizmos(){
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere (transform.position, Radius);
+
+	void LocateObject(){
+		Ray ray = new Ray (transform.position, transform.forward * 2);
+		Debug.DrawRay (transform.position, transform.forward * 2, Color.red);
+		RaycastHit hit;
+
+		if (Physics.Raycast (ray, out hit)) {
+			if (hit.collider.CompareTag ("Enemy")) {
+				ColliderInRange = hit.collider;
+			} else {
+				ColliderInRange = null;
+			}
+		} else {
+			ColliderInRange = null;
+		}
+	}
+
+	void PickObject(){
+		
+	}
+
+	void ThrowObject(){
+		
 	}
 }
