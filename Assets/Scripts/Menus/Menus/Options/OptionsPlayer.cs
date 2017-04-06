@@ -43,8 +43,10 @@ public class OptionsPlayer : MonoBehaviour {
 	void FixedUpdate () {
 		if (!UsingLever) {
 			DirectionDefinition ();
-//			TestPosition ();
 			Jump ();
+		}
+		if (CameraMain.gameObject.GetComponent<CameraMenu> ().InOptions) {
+			TestPosition ();
 		}
 		if (InStairs) {
 			if (Input.GetButtonDown ("X P1")) {
@@ -178,5 +180,11 @@ public class OptionsPlayer : MonoBehaviour {
 			Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
 			/*Mathf.Clamp (*/transform.position.y/*, Bottomborder, Topborder)*/,
 			Mathf.Clamp (transform.position.z,Bottomborder,Topborder ));
+	}
+
+	void OnBecameInvisible(){
+		if (CameraMain.gameObject.GetComponent<CameraMenu> ().InMainMenu) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("Inicio");
+		}
 	}
 }
