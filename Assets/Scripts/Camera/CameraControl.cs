@@ -7,6 +7,7 @@ public class CameraControl : MonoBehaviour {
     [SerializeField] Transform[] players;
     Transform DollyCam;
     int numPlayers = 0;
+    [SerializeField] float velocidadeMovimento;
     [SerializeField] float distancia = 8;
     [SerializeField] float maxDistancia;
     [SerializeField] float minDistancia;
@@ -15,18 +16,26 @@ public class CameraControl : MonoBehaviour {
     bool pForaDaTela;
     bool zoomIn;
 
+    Vector3 vel = Vector3.zero;
+
     private void Start()
     {
         DollyCam = transform;
         players = new Transform[4];
         ChecarQuantidadePlayers();
+        DollyCam.position = posicionaCamera(CalculaCamTarget(numPlayers));
+    }
+
+    private void LateUpdate()
+    {
+        ControlaBordaTela();
     }
 
     private void Update()
     {
-        DollyCam.position = posicionaCamera(CalculaCamTarget(numPlayers));
-//        ControlaBordaTela();
+        DollyCam.position = Vector3.SmoothDamp(DollyCam.position, posicionaCamera(CalculaCamTarget(numPlayers)), ref vel, (velocidadeMovimento/10)*Time.deltaTime);
     }
+
 
     void ChecarQuantidadePlayers()
     {
@@ -60,42 +69,36 @@ public class CameraControl : MonoBehaviour {
 
     Vector3 posicionaCamera(Vector3 _target)
     {
-        return new Vector3(_target.x, _target.y + distancia, _target.z - distancia-2);
+        return new Vector3(_target.x, _target.y + distancia, _target.z - distancia - 2);
     }
 
-//    void ControlaBordaTela()
-//    {
-//        
-//        for (int i = 0; i < players.Length; i++)
-//        {
-//            Vector3 posOnScreen = Camera.main.WorldToViewportPoint(players[i].position);
-//            if (posOnScreen.x <= 0 || posOnScreen.x >= 1 || posOnScreen.y <= 0 || posOnScreen.y >= 1)
-//            {
-//                if (distancia <= maxDistancia)
-//                {
-//                    distancia += velocidadeZoom * Time.deltaTime;
-//                    return;
-//                }
-//            }
-//        }
-//
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    bool alguemFora;
+    void ControlaBordaTela()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            Vector3 testOffScreen = Camera.main.WorldToViewportPoint(players[i].position);
+            if (testOffScreen.x <= 0.1 || testOffScreen.x >= 0.9 || testOffScreen.y <= 0.1 || testOffScreen.y >= 0.9)
+            {
+                alguemFora = true;
+                break;
+            }
+        }
+        for (int j = 0; j < players.Length; j++)
+        {
+            Vector3 testOnScreen = Camera.main.WorldToViewportPoint(players[j].position);
+            if ((testOnScreen.x > 0.1 && testOnScreen.x < 0.9 && testOnScreen.y > 0.1 && testOnScreen.y < 0.9) && !alguemFora)
+            {
+                distancia = Mathf.MoveTowards(distancia, minDistancia, velocidadeZoom * Time.deltaTime);
+                return;
+            }
+            else
+            {
+                distancia = Mathf.MoveTowards(distancia, maxDistancia, velocidadeZoom * Time.deltaTime);
+                alguemFora = false;
+                return;
+            }
+        }
+    }
 }
+
