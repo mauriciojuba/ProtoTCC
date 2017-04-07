@@ -25,7 +25,7 @@ public class CameraControl : MonoBehaviour {
     private void Update()
     {
         DollyCam.position = posicionaCamera(CalculaCamTarget(numPlayers));
-        ControlaBordaTela();
+//        ControlaBordaTela();
     }
 
     void ChecarQuantidadePlayers()
@@ -63,23 +63,23 @@ public class CameraControl : MonoBehaviour {
         return new Vector3(_target.x, _target.y + distancia, _target.z - distancia-2);
     }
 
-    void ControlaBordaTela()
-    {
-        
-        for (int i = 0; i < players.Length; i++)
-        {
-            Vector3 posOnScreen = Camera.main.WorldToViewportPoint(players[i].position);
-            if (posOnScreen.x <= 0 || posOnScreen.x >= 1 || posOnScreen.y <= 0 || posOnScreen.y >= 1)
-            {
-                if (distancia <= maxDistancia)
-                {
-                    distancia += velocidadeZoom * Time.deltaTime;
-                    return;
-                }
-            }
-        }
-
-    }
+//    void ControlaBordaTela()
+//    {
+//        
+//        for (int i = 0; i < players.Length; i++)
+//        {
+//            Vector3 posOnScreen = Camera.main.WorldToViewportPoint(players[i].position);
+//            if (posOnScreen.x <= 0 || posOnScreen.x >= 1 || posOnScreen.y <= 0 || posOnScreen.y >= 1)
+//            {
+//                if (distancia <= maxDistancia)
+//                {
+//                    distancia += velocidadeZoom * Time.deltaTime;
+//                    return;
+//                }
+//            }
+//        }
+//
+//    }
 
 
 
