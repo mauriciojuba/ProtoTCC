@@ -138,7 +138,7 @@ public class Movimentacao3D : MonoBehaviour {
 
 
 
-    //Preciso que você mude isso vou controlar depois de outra forma os limites da camera... Ou posso apagar?
+    //Ver o metodo no CameraControl
 	void TestPosition(){
 		//Calcula a distancia entre o personagem e a camera.
 		var DistanceZ = (transform.position - CameraMain.transform.position).z;

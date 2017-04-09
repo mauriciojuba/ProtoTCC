@@ -13,9 +13,8 @@ public class CameraControl : MonoBehaviour {
     [SerializeField] float minDistancia;
     [SerializeField] float velocidadeZoom;
 
-    bool pForaDaTela;
-    bool zoomIn;
 
+    bool alguemFora;
     Vector3 vel = Vector3.zero;
 
     private void Start()
@@ -26,14 +25,10 @@ public class CameraControl : MonoBehaviour {
         DollyCam.position = posicionaCamera(CalculaCamTarget(numPlayers));
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
+        DollyCam.position = Vector3.SmoothDamp(DollyCam.position, posicionaCamera(CalculaCamTarget(numPlayers)), ref vel, (velocidadeMovimento / 10) * Time.deltaTime);
         ControlaBordaTela();
-    }
-
-    private void Update()
-    {
-        DollyCam.position = Vector3.SmoothDamp(DollyCam.position, posicionaCamera(CalculaCamTarget(numPlayers)), ref vel, (velocidadeMovimento/10)*Time.deltaTime);
     }
 
 
@@ -72,25 +67,31 @@ public class CameraControl : MonoBehaviour {
         return new Vector3(_target.x, _target.y + distancia, _target.z - distancia - 2);
     }
 
-    bool alguemFora;
+    
     void ControlaBordaTela()
     {
         for (int i = 0; i < players.Length; i++)
         {
             Vector3 testOffScreen = Camera.main.WorldToViewportPoint(players[i].position);
-            if (testOffScreen.x <= 0.1 || testOffScreen.x >= 0.9 || testOffScreen.y <= 0.1 || testOffScreen.y >= 0.9)
+            if ((testOffScreen.x <= 0.1 || testOffScreen.x >= 0.9 || testOffScreen.y <= 0.1 || testOffScreen.y >= 0.9))
             {
                 alguemFora = true;
-                break;
+                if (distancia >= maxDistancia)
+                {
+                    lockPlayerMovement(players[i].transform);
+                }
             }
         }
         for (int j = 0; j < players.Length; j++)
         {
             Vector3 testOnScreen = Camera.main.WorldToViewportPoint(players[j].position);
-            if ((testOnScreen.x > 0.1 && testOnScreen.x < 0.9 && testOnScreen.y > 0.1 && testOnScreen.y < 0.9) && !alguemFora)
+            if ((testOnScreen.x > 0.1 && testOnScreen.x < 0.9 && testOnScreen.y > 0.1 && testOnScreen.y < 0.9) && !alguemFora )
             {
-                distancia = Mathf.MoveTowards(distancia, minDistancia, velocidadeZoom * Time.deltaTime);
-                return;
+                if (players[j].GetComponent<Movimentacao3D>() != null && players[j].GetComponent<Movimentacao3D>().InMovement)
+                {
+                    distancia = Mathf.MoveTowards(distancia, minDistancia, velocidadeZoom * Time.deltaTime);
+                    return;
+                }
             }
             else
             {
@@ -99,6 +100,12 @@ public class CameraControl : MonoBehaviour {
                 return;
             }
         }
+
+    }
+    
+    void lockPlayerMovement(Transform t)
+    {
+        //trava o movimento do jogador
     }
 }
 
