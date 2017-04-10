@@ -12,6 +12,9 @@ public class Data : MonoBehaviour {
 
 	public Character P1SelectedCharacter;
 	public Character P2SelectedCharacter;
+	public Character P3SelectedCharacter;
+	public Character P4SelectedCharacter;
+
 
 	void Awake(){
 		//procura todas os objetos de Dados do jogo e coloca no Array.

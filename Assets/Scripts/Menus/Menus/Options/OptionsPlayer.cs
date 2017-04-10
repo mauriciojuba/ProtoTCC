@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class OptionsPlayer : MonoBehaviour {
 
+
+	[SerializeField] private bool Menus;
+
+	//variaveis do menu inicial/opçoes
 	public bool InStairs;
 	public bool UsingStairs;
 	public GameObject StairsObj;
@@ -41,32 +45,37 @@ public class OptionsPlayer : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		if (!UsingLever) {
+		if (Menus) {
+			if (!UsingLever) {
+				DirectionDefinition ();
+				Jump ();
+			}
+			if (CameraMain.gameObject.GetComponent<CameraMenu> ().InOptions) {
+				TestPosition ();
+			}
+			if (InStairs) {
+				if (Input.GetButtonDown ("X P1")) {
+					UsingStairs = true;
+				}
+			}
+			//quando o player estiver na escada, desliga a gravidade e altera apenas a velocidade Y do player.
+			if (UsingStairs) {
+				GetComponent<Rigidbody> ().useGravity = false;
+				if (Input.GetAxis ("Vertical P1") > 0.2f || Input.GetAxis ("Vertical P1") < -0.2f) {
+					Vector3 V3 = GetComponent<Rigidbody> ().velocity;
+					V3.y = StairsObj.transform.up.y * Speed * Input.GetAxis ("Vertical P1");
+					GetComponent<Rigidbody> ().velocity = V3;
+				} else {
+					Vector3 V3 = GetComponent<Rigidbody> ().velocity;
+					V3.y = 0;
+					GetComponent<Rigidbody> ().velocity = V3;
+				}
+			} else {
+				GetComponent<Rigidbody> ().useGravity = true;
+			}
+		} else {
 			DirectionDefinition ();
 			Jump ();
-		}
-		if (CameraMain.gameObject.GetComponent<CameraMenu> ().InOptions) {
-			TestPosition ();
-		}
-		if (InStairs) {
-			if (Input.GetButtonDown ("X P1")) {
-				UsingStairs = true;
-			}
-		}
-		//quando o player estiver na escada, desliga a gravidade e altera apenas a velocidade Y do player.
-		if (UsingStairs) {
-			GetComponent<Rigidbody> ().useGravity = false;
-			if (Input.GetAxis ("Vertical P1") > 0.2f || Input.GetAxis ("Vertical P1") < -0.2f) {
-				Vector3 V3 = GetComponent<Rigidbody> ().velocity;
-				V3.y = StairsObj.transform.up.y * Speed * Input.GetAxis ("Vertical P1");
-				GetComponent<Rigidbody> ().velocity = V3;
-			} else {
-				Vector3 V3 = GetComponent<Rigidbody> ().velocity;
-				V3.y = 0;
-				GetComponent<Rigidbody> ().velocity = V3;
-			}
-		}else{
-			GetComponent<Rigidbody>().useGravity = true;
 		}
 	}
 
@@ -183,8 +192,10 @@ public class OptionsPlayer : MonoBehaviour {
 	}
 
 	void OnBecameInvisible(){
-		if (CameraMain.gameObject.GetComponent<CameraMenu> ().InMainMenu) {
-			UnityEngine.SceneManagement.SceneManager.LoadScene ("Inicio");
+		if (Menus) {
+			if (CameraMain.gameObject.GetComponent<CameraMenu> ().InMainMenu) {
+				UnityEngine.SceneManagement.SceneManager.LoadScene ("Inicio");
+			}
 		}
 	}
 }
