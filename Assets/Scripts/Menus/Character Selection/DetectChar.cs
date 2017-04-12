@@ -14,6 +14,7 @@ public class DetectChar : MonoBehaviour {
 
 	void Start () {
 		PlayerNumber = GetComponent<OptionsPlayer> ().PlayerNumber;
+		DetectS = GameObject.FindWithTag ("Detect").GetComponent<DetectJoysticks> ();
 	}
 	
 	// Update is called once per frame
@@ -24,7 +25,7 @@ public class DetectChar : MonoBehaviour {
 				GetComponent<Rigidbody> ().velocity = Vector3.zero;
 				GetComponent<OptionsPlayer> ().enabled = false;
 
-					DetectS.QuantSelected++;
+				DetectS.QuantSelected++;
 				Selected = true;
 
 			}
@@ -37,11 +38,5 @@ public class DetectChar : MonoBehaviour {
 				}
 			}
 		}
-
-	
 	}
-
-
-
-
 }

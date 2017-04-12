@@ -39,9 +39,12 @@ public class OptionsPlayer : MonoBehaviour {
 	public LayerMask NoIgnoredLayers = -1;
 	[SerializeField] private float MaxJump;
 	private bool Jumping;
+	public bool CanMove;
 	void Start () {
 		CameraMain = Camera.main;
 		ActualDirection = 3;
+		if (PlayerNumber == 1)
+			StartCoroutine (StarMove ());
 	}
 
 	void FixedUpdate () {
@@ -74,7 +77,9 @@ public class OptionsPlayer : MonoBehaviour {
 				GetComponent<Rigidbody> ().useGravity = true;
 			}
 		} else {
-			DirectionDefinition ();
+			if (CanMove) {
+				DirectionDefinition ();
+			}
 			Jump ();
 		}
 	}
@@ -197,5 +202,10 @@ public class OptionsPlayer : MonoBehaviour {
 				UnityEngine.SceneManagement.SceneManager.LoadScene ("Inicio");
 			}
 		}
+	}
+
+	public IEnumerator StarMove(){
+		yield return new WaitForSeconds (1);
+		CanMove = true;
 	}
 }

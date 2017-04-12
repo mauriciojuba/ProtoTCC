@@ -31,6 +31,15 @@ public class DetectJoysticks : MonoBehaviour {
 	[SerializeField] private float Timer;
 	[Range(1,5)]
 	[SerializeField] private float MaxTimer = 3;
+
+	[SerializeField] private GameObject Player;
+	[SerializeField] private Transform Point;
+	[Range(650,1500)]
+	[SerializeField] private float Force = 650;
+
+	public Color P2Color = Color.red;
+
+	private GameObject P2, P3, P4;
 	void Start(){
 		P1Active = true;
 	}
@@ -54,16 +63,24 @@ public class DetectJoysticks : MonoBehaviour {
 	//Ativa os controles quando apertar A.
 	void ActiveJoysticks(){
 		if (P2Connected) {
-			if (!P2Active)
+			if (!P2Active){
 				Press_A_P2.SetActive (true);
-			if (Input.GetButtonDown ("A P2")) {
-				P2Active = true;
+				if (Input.GetButtonDown ("A P2")) {
+					P2Active = true;
+					SummonPlayer (2);
+				}
+			}
+			
+			if (P2Active) {
+				if (Input.GetButtonDown ("B P2")) {
+					P2Active = false;
+					Destroy (P2);
+				}
 			}
 		} else {
-			P2Active = false;
 			Press_A_P2.SetActive (false);
-		}
-		
+
+		}	
 
 		if (P3Connected) {
 			if (!P3Active)
@@ -94,29 +111,22 @@ public class DetectJoysticks : MonoBehaviour {
 	void DetectActivity(){
 		if (P2Active) {
 			Press_A_P2.SetActive (false);
-//			ScrollP2.content.gameObject.SetActive (true);
-//			ScrollP2.gameObject.GetComponent<SelectCharacter> ().enabled = true;
-//		} else {
-//			ScrollP2.content.gameObject.SetActive (false);
-//			ScrollP2.gameObject.GetComponent<SelectCharacter> ().enabled = false;
+
+		} else {
+			
 		}
 		if (P3Active) {
 			Press_A_P3.SetActive (false);
-//			ScrollP3.content.gameObject.SetActive (true);
-//			ScrollP3.gameObject.GetComponent<SelectCharacter> ().enabled = true;
-//		} else {
-//			ScrollP3.content.gameObject.SetActive(false);
-//			ScrollP3.gameObject.GetComponent<SelectCharacter>().enabled = false;
+
+		} else {
+			
 		}
 		if (P4Active) {
 			Press_A_P4.SetActive (false);
-//			ScrollP4.content.gameObject.SetActive (true);
-//			ScrollP4.gameObject.GetComponent<SelectCharacter> ().enabled = true;
-//		} else {
-//			ScrollP4.content.gameObject.SetActive (false);
-//			ScrollP4.gameObject.GetComponent<SelectCharacter> ().enabled = false;
-		}
-//			
+
+		} else {
+			
+		}			
 	}
 
 	//detecta se os joyscticks estao conectados.
@@ -150,6 +160,18 @@ public class DetectJoysticks : MonoBehaviour {
 			ActiveJoy = 2;
 		}else if(P1Active){
 			ActiveJoy = 1;
+		}
+	}
+
+	void SummonPlayer(int Number){
+		if (Number == 2) {
+			P2 = GameObject.Instantiate (Player, Point.position, Point.rotation);
+			P2.transform.FindChild("PlayerModel").GetComponent<OptionsPlayer> ().CanMove = false;
+			P2.transform.FindChild("PlayerModel").GetComponent<OptionsPlayer> ().PlayerNumber = Number;
+			StartCoroutine (P2.transform.FindChild ("PlayerModel").GetComponent<OptionsPlayer> ().StarMove ());
+			P2.transform.FindChild ("PlayerModel").GetComponent<Rigidbody> ().useGravity = false;
+			P2.transform.FindChild("PlayerModel").GetComponent<Rigidbody> ().AddForce (Point.forward * Force);
+			P2.transform.FindChild ("PlayerModel").GetComponent<Rigidbody> ().useGravity = true;
 		}
 	}
 }
