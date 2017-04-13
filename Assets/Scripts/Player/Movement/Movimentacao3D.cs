@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movimentacao3D : MonoBehaviour {
 
-
+    private Rigidbody rb;
 	//Array de direções que o player pode olhar
 	public Transform[] Directions;
 	//Direção atual que o player esta olhando
@@ -26,23 +26,32 @@ public class Movimentacao3D : MonoBehaviour {
 	[SerializeField] private bool InGround;
 
 	public Camera CameraMain;
+    
+
+    public Transform camScreen;
+    public float velTransicao;
+    public bool onScreen;
 
 
-	public LayerMask NoIgnoredLayers = -1;
+    public LayerMask NoIgnoredLayers = -1;
 	[SerializeField] private float MaxJump;
 	private bool Jumping;
 	void Start () {
-		CameraMain = Camera.main;
+        rb = Player.GetComponent<Rigidbody>();
+        CameraMain = Camera.main;
 		ActualDirection = 3;
 	}
 
 	void Update(){
 		//TestPosition ();
 		Jump ();
-	}
+        goToScreen();
+        exitScreen();
+
+    }
 
 	void FixedUpdate () {
-		DirectionDefinition ();
+		if(!onScreen)DirectionDefinition ();
 
 	}
 
@@ -93,16 +102,16 @@ public class Movimentacao3D : MonoBehaviour {
 			transform.LookAt (new Vector3 (Directions [ActualDirection].position.x, transform.position.y, Directions [ActualDirection].position.z));
 
 			//Define se o Player esta em movimento ou não, alterando apenas a velocidade em x e em z, para nao alterar a gravidade.
-		if (InMovement) {
-			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+		if (InMovement && !onScreen) {
+			Vector3 V3 = rb.velocity;
 			V3.x = transform.forward.x * Speed;
 			V3.z = transform.forward.z * Speed;
-			Player.GetComponent<Rigidbody> ().velocity = V3;
-		} else if (!InMovement) {
-			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+            rb.velocity = V3;
+		} else if (!InMovement && !onScreen) {
+			Vector3 V3 = rb.velocity;
 			V3.x = transform.forward.x * 0;
 			V3.z = transform.forward.z * 0;
-			Player.GetComponent<Rigidbody> ().velocity = V3;
+            rb.velocity = V3;
 		}
 
 	}
@@ -116,26 +125,76 @@ public class Movimentacao3D : MonoBehaviour {
 		//se estiver no chao, pula, apertando A no controle.
 		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround) {
 			Jumping = true;
-			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+			Vector3 V3 = rb.velocity;
 			V3.y = JumpForce;
-			Player.GetComponent<Rigidbody> ().velocity = V3;
+            rb.velocity = V3;
 		}
 		if(Input.GetButtonUp("A P" + PlayerNumber)){
 			Jumping = false;
 		}
 
 
-		if(Jumping){
-			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+		if(Jumping && !onScreen){
+			Vector3 V3 = rb.velocity;
 			V3.y += JumpForce;
-			Player.GetComponent<Rigidbody> ().velocity = V3;
-		}
-		if(Player.GetComponent<Rigidbody> ().velocity.y > MaxJump){
+            rb.velocity = V3;
+            
+
+        }
+		if(rb.velocity.y > MaxJump && !onScreen)
+        {
 			Jumping = false;
 		}
-	}
+        if (Input.GetButtonDown("LB P" + PlayerNumber))
+        {
+            onScreen = true;
+        }
 
+    }
 
+    // variavel que fala quando o personagem vai voltar para o 3D
+    bool toWorld;
+
+    void goToScreen()
+    {
+        //testa se o jogador pediu pra ir pra tela
+        if (onScreen)
+        {
+            //desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
+            rb.useGravity = false;
+            transform.SetParent(camScreen);
+            transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao/10);
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, camScreen.localPosition, velTransicao);
+            //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation,Quaternion.AngleAxis(90,Vector3.right), velTransicao*10);
+
+            //se o jogador pedir pra descer
+            if (Input.GetButtonDown("RB P" + PlayerNumber))
+            {
+                //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
+                transform.SetParent(null);
+                toWorld = true;
+                rb.useGravity = true;
+                onScreen = false;
+            }
+        }
+    }
+    
+    //funçao que tira ele da tela
+    void exitScreen()
+    {
+        //se a variavel q fala pra ele sair da tela tiver ligada ele deve consertar o tamanho e a rotação do personagem
+        if (toWorld)
+        {
+            transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
+        }
+        //uma vez que o tamanho esta ok a variavel pode ficar falsa.
+        if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
+        {
+            toWorld = false;
+        }
+    }
 
 
     //Ver o metodo no CameraControl
