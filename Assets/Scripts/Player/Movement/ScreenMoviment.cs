@@ -17,37 +17,7 @@ public class ScreenMoviment : MonoBehaviour {
 	}
 	
 	void Update () {
-			pos = Camera.main.WorldToViewportPoint (transform.position);
-			pos.x = Mathf.Clamp01 (pos.x);
-			pos.y = Mathf.Clamp01 (pos.y);
-			transform.position = Camera.main.ViewportToWorldPoint (pos);
-		if(moveTo) {
-			if (!InScreen) {
-				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (pos.x, pos.y, 3)), 10 * Time.deltaTime);
-				transform.localEulerAngles = Vector3.MoveTowards (transform.localEulerAngles, new Vector3(Camera.main.transform.localEulerAngles.x,transform.localEulerAngles.y,transform.localEulerAngles.z) , Time.deltaTime * 50);
-				if (transform.position == Camera.main.ViewportToWorldPoint (new Vector3 (pos.x, pos.y, 3))  && transform.localEulerAngles == new Vector3(Camera.main.transform.localEulerAngles.x,transform.localEulerAngles.y,transform.localEulerAngles.z)) {
-					Offset =Camera.main.ViewportToWorldPoint (new Vector3 (pos.x, pos.y, 3)) - posZ;
-					InScreen = true;
-					moveTo = false;
-				}
-			} else {
-				transform.position = Vector3.MoveTowards (transform.position, new Vector3(transform.position.x, posZ.y,posZ.z), 5 * Time.deltaTime);
-				transform.localEulerAngles = Vector3.MoveTowards (transform.localEulerAngles, RotationP , Time.deltaTime * 50);
-				if (transform.position == new Vector3(transform.position.x ,posZ.y,posZ.z) && transform.eulerAngles == RotationP) {
-					InScreen = false;
-					moveTo = false;
-				}
-			}
-		}
-	
-		if (!moveTo && Input.GetButtonDown("LB P1")) {
-			if (!InScreen) {
-				posZ = transform.position;
-				RotationP = transform.localEulerAngles;
-				transform.LookAt (Camera.main.transform);
-			}
-			moveTo = true;
-		}
+			
 	}
 
 	void OnEnable(){
