@@ -72,13 +72,15 @@ public class CameraControl : MonoBehaviour {
     {
         for (int i = 0; i < players.Length; i++)
         {
-            Vector3 testOffScreen = Camera.main.WorldToViewportPoint(players[i].position);
-            if ((testOffScreen.x <= 0.1 || testOffScreen.x >= 0.9 || testOffScreen.y <= 0.1 || testOffScreen.y >= 0.9))
-            {
-                alguemFora = true;
-                if (distancia >= maxDistancia)
+            if(players[i].GetComponent<Movimentacao3D>().onScreen == false) { 
+                Vector3 testOffScreen = Camera.main.WorldToViewportPoint(players[i].position);
+                if ((testOffScreen.x <= 0.1 || testOffScreen.x >= 0.9 || testOffScreen.y <= 0.1 || testOffScreen.y >= 0.9))
                 {
-                    lockPlayerMovement(players[i].transform);
+                    alguemFora = true;
+                    if (distancia >= maxDistancia)
+                    {
+                        lockPlayerMovement(players[i].transform);
+                    }
                 }
             }
         }

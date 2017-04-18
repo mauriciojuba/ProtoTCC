@@ -26,12 +26,13 @@ public class Movimentacao3D : MonoBehaviour {
 	[SerializeField] private bool InGround;
 
 	public Camera CameraMain;
-    
 
+    public Transform playerRoot;
+    public Transform direcoes;
     public Transform camScreen;
     public float velTransicao;
     public bool onScreen;
-
+    Quaternion direct2D;
 
     public LayerMask NoIgnoredLayers = -1;
 	[SerializeField] private float MaxJump;
@@ -40,7 +41,8 @@ public class Movimentacao3D : MonoBehaviour {
         rb = Player.GetComponent<Rigidbody>();
         CameraMain = Camera.main;
 		ActualDirection = 3;
-	}
+        direct2D = Quaternion.Euler(90f, 0f, 0f);
+    }
 
 	void Update(){
 		//TestPosition ();
@@ -51,7 +53,7 @@ public class Movimentacao3D : MonoBehaviour {
     }
 
 	void FixedUpdate () {
-		if(!onScreen)DirectionDefinition ();
+        DirectionDefinition ();
 
 	}
 
@@ -63,58 +65,94 @@ public class Movimentacao3D : MonoBehaviour {
 				//Define a direção para Cima-Esquerda.
 				if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0) {
 					ActualDirection = 4;
-				} 
+                direct2D = Quaternion.Euler(225f, 90f, 90f);
+            } 
 			//Define a direção para Cima-Direita.
 			else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0) {
 					ActualDirection = 5;
-				} 
+                    direct2D = Quaternion.Euler(315f, 90f, 90f);
+            } 
 			//Define a direção para Cima.
 			else {
 					ActualDirection = 0;
-				}
+                direct2D = Quaternion.Euler(270f, 90f, 90f);
+
+            }
 			} else if (Input.GetAxisRaw ("Vertical P" + PlayerNumber) < 0) {
 				InMovement = true;
 				//Define a direção para Baixo-Esquerda
 				if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0) {
 					ActualDirection = 6;
-				} 
+                direct2D = Quaternion.Euler(135f, 90f, 90f);
+            } 
 			//Define a direção para Baixo-Direita
 			else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0) {
 					ActualDirection = 7;
-				} 
+                direct2D = Quaternion.Euler(45f, 90f, 90f);
+            } 
 			//Define a direção para Baixo.
 			else {
 					ActualDirection = 1;
-				}
+                    direct2D = Quaternion.Euler(90f, 90f, 90f);
+                }
 			} 
 		//Define a direção para Esquerda
 		else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0) {
 				InMovement = true;
 				ActualDirection = 2;
-			} 
+            direct2D = Quaternion.Euler(180f, 90f, 90f);
+            
+        } 
 		//Define a direção para Direita
 		else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0) {
 				InMovement = true;
 				ActualDirection = 3;
-			} else {
-				InMovement = false;
-			}
-			transform.LookAt (new Vector3 (Directions [ActualDirection].position.x, transform.position.y, Directions [ActualDirection].position.z));
+            direct2D = Quaternion.Euler(0f, 90f, 90f);
+        }
+        else {
+            InMovement = false;
+        }
+        if (!onScreen) transform.LookAt(new Vector3(Directions[ActualDirection].position.x, transform.position.y, Directions[ActualDirection].position.z));
+        else if (reachScreen) transform.localRotation = direct2D;
 
-			//Define se o Player esta em movimento ou não, alterando apenas a velocidade em x e em z, para nao alterar a gravidade.
-		if (InMovement && !onScreen) {
-			Vector3 V3 = rb.velocity;
-			V3.x = transform.forward.x * Speed;
-			V3.z = transform.forward.z * Speed;
-            rb.velocity = V3;
-		} else if (!InMovement && !onScreen) {
-			Vector3 V3 = rb.velocity;
-			V3.x = transform.forward.x * 0;
-			V3.z = transform.forward.z * 0;
-            rb.velocity = V3;
-		}
-
-	}
+        //Define se o Player esta em movimento ou não, alterando apenas a velocidade em x e em z, para nao alterar a gravidade.
+        if (!onScreen)
+        {
+            if (InMovement)
+            {
+                Vector3 V3 = rb.velocity;
+                V3.x = transform.forward.x * Speed;
+                V3.z = transform.forward.z * Speed;
+                rb.velocity = V3;
+            }
+            else if (!InMovement)
+            {
+                Vector3 V3 = rb.velocity;
+                V3.x = transform.forward.x * 0;
+                V3.z = transform.forward.z * 0;
+                rb.velocity = V3;
+            }
+        }
+        else
+        {
+            if (InMovement)
+            {
+                Vector3 V3 = rb.velocity;
+                V3.x = transform.forward.x * Speed / 10;
+                V3.z = transform.forward.z * Speed / 10;
+                V3.y = transform.forward.z * Speed / 10;
+                rb.velocity = V3;
+            }
+            else if (!InMovement)
+            {
+                Vector3 V3 = rb.velocity;
+                V3.x = transform.forward.x * 0;
+                V3.z = transform.forward.z * 0;
+                V3.y = transform.forward.z * 0;
+                rb.velocity = V3;
+            }
+        }
+    }
 
 	//função para pulo
 	void Jump(){
@@ -123,7 +161,7 @@ public class Movimentacao3D : MonoBehaviour {
 		Debug.DrawLine (Player.transform.position,Player.transform.position - Vector3.up * 1.1f);
 
 		//se estiver no chao, pula, apertando A no controle.
-		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround) {
+		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround &&!onScreen) {
 			Jumping = true;
 			Vector3 V3 = rb.velocity;
 			V3.y = JumpForce;
@@ -147,34 +185,48 @@ public class Movimentacao3D : MonoBehaviour {
 		}
         if (Input.GetButtonDown("LB P" + PlayerNumber))
         {
+            //desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
+            rb.useGravity = false;
+            transform.SetParent(camScreen);
             onScreen = true;
         }
 
     }
 
     // variavel que fala quando o personagem vai voltar para o 3D
-    bool toWorld;
+    bool toWorld,reachScreen;
 
     void goToScreen()
     {
         //testa se o jogador pediu pra ir pra tela
         if (onScreen)
         {
-            //desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
-            rb.useGravity = false;
-            transform.SetParent(camScreen);
             transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao/10);
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, camScreen.localPosition, velTransicao);
-            //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation,Quaternion.AngleAxis(90,Vector3.right), velTransicao*10);
+            //variavel para parar de controlar o jogador após ele chegar na tela
+            if (!reachScreen)
+            {
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, camScreen.localPosition, velTransicao);
+                //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
+                transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
+                if (transform.localPosition == camScreen.localPosition && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right))
+                {
+                    reachScreen = true;
+                }
+            }
+            //coloca as esferas de direções na tela também;
+            direcoes.transform.SetParent(camScreen);
+            direcoes.transform.localRotation = Quaternion.AngleAxis(270, Vector3.right);
+
 
             //se o jogador pedir pra descer
             if (Input.GetButtonDown("RB P" + PlayerNumber))
             {
                 //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
-                transform.SetParent(null);
+                transform.SetParent(playerRoot);
+                direcoes.transform.SetParent(playerRoot);
                 toWorld = true;
                 rb.useGravity = true;
+                reachScreen = false;
                 onScreen = false;
             }
         }
@@ -188,6 +240,7 @@ public class Movimentacao3D : MonoBehaviour {
         {
             transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
             transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
+            direcoes.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right);
         }
         //uma vez que o tamanho esta ok a variavel pode ficar falsa.
         if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
