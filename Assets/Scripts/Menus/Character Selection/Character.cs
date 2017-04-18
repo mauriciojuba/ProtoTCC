@@ -9,4 +9,5 @@ public class Character : ScriptableObject {
 	public GameObject CharacterModel;
 	public int PlayerNumber;
 	public float Life;
+	public SpecialSkill Special;
 }

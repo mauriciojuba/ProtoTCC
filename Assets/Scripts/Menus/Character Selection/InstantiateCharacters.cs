@@ -30,6 +30,7 @@ public class InstantiateCharacters : MonoBehaviour {
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<Movimentacao3D> ().PlayerNumber = DataS.P1SelectedCharacter.PlayerNumber;
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeQuant = DataS.P1SelectedCharacter.Life;
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeOF = Life.LifeType.Player;
+			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<UseSpecial> ().Special = DataS.P1SelectedCharacter.Special;
 
 
 			P1.transform.FindChild ("3D_Player").tag = "Player1_3D";
@@ -50,6 +51,7 @@ public class InstantiateCharacters : MonoBehaviour {
 				//ativa o script de movimentacao 2D para o jogador 1
 				P2.transform.FindChild ("2D_Player").gameObject.GetComponent<Movimentacao2D> ().PlayerNumber = DataS.P2SelectedCharacter.PlayerNumber;
 				P2.transform.FindChild ("2D_Player").tag = "Player2_2D";
+				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<UseSpecial> ().Special = DataS.P2SelectedCharacter.Special;
 			}
 		}
 	}		

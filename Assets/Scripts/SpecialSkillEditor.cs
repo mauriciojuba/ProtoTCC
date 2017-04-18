@@ -22,12 +22,18 @@ public class SpecialSkillEditor : Editor
 			if (group.visible == false)
 			{
 				EditorGUI.indentLevel++;
+				EditorGUILayout.PrefixLabel ("Button To Use");
+				myScript.ButtonToUse = EditorGUILayout.TextField (myScript.ButtonToUse);
 				EditorGUILayout.PrefixLabel("Distance To Rush");
 				myScript.RushDistance = EditorGUILayout.FloatField (myScript.RushDistance);
 				EditorGUILayout.PrefixLabel("Rush Damage");
 				myScript.RushDamage = EditorGUILayout.FloatField (myScript.RushDamage);
 				EditorGUILayout.PrefixLabel ("Push Force");
+				myScript.RushPushForce = EditorGUILayout.FloatField (myScript.RushPushForce);
+				EditorGUILayout.PrefixLabel ("Rush Velocity");
 				myScript.RushForce = EditorGUILayout.FloatField (myScript.RushForce);
+
+
 				EditorGUI.indentLevel--;
 			}
 		}
@@ -37,11 +43,15 @@ public class SpecialSkillEditor : Editor
 			if (group.visible == false)
 			{
 				EditorGUI.indentLevel++;
+				EditorGUILayout.PrefixLabel ("Button To Use");
+				myScript.ButtonToUse = EditorGUILayout.TextField (myScript.ButtonToUse);
 				EditorGUILayout.PrefixLabel("Prefab of Magic");
 				myScript.MagicPrefab = EditorGUILayout.ObjectField (myScript.MagicPrefab,typeof(GameObject),false);
 				myScript.MyStyle = (SpecialSkill.MagicStyle)EditorGUILayout.EnumPopup ("Style of Magic", myScript.MyStyle);
 				switch (myScript.MyStyle) {
 				case SpecialSkill.MagicStyle.Projectile:
+					EditorGUILayout.PrefixLabel ("Qunatity of Projectiles");
+					myScript.ProjectileQuant = EditorGUILayout.IntSlider (myScript.ProjectileQuant, 1, 10);
 					EditorGUILayout.PrefixLabel ("Projectile Damage");
 					myScript.ProjectileDamage = EditorGUILayout.FloatField (myScript.ProjectileDamage);
 					EditorGUILayout.PrefixLabel ("Projectile Force");

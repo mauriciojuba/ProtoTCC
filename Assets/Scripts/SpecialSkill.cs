@@ -8,6 +8,7 @@ public class SpecialSkill : ScriptableObject
 	public float RushDistance;
 	public float RushDamage;
 	public float RushForce;
+	public float RushPushForce;
 	#endregion
 
 	public bool Magic;
@@ -17,6 +18,7 @@ public class SpecialSkill : ScriptableObject
 	public MagicStyle MyStyle;
 
 	#region Projectile
+	public int ProjectileQuant;
 	public float ProjectileForce;
 	public float ProjectileDamage;
 	#endregion
@@ -30,9 +32,5 @@ public class SpecialSkill : ScriptableObject
 	#endregion
 	#endregion
 
-
-	public bool disableBool;
-	public string someString;
-	public Color someColor = Color.white;
-	public int someNumber = 0;
+	public string ButtonToUse;
 }

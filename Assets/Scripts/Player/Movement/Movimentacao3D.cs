@@ -38,7 +38,10 @@ public class Movimentacao3D : MonoBehaviour {
     public LayerMask NoIgnoredLayers = -1;
 	[SerializeField] private float MaxJump;
 	private bool Jumping;
+
+	public bool CanMove;
 	void Start () {
+		CanMove = true;
         rb = Player.GetComponent<Rigidbody>();
         CameraMain = Camera.main;
 		ActualDirection = 3;
@@ -47,14 +50,18 @@ public class Movimentacao3D : MonoBehaviour {
 
 	void Update(){
 		//TestPosition ();
-		Jump ();
-        goToScreen();
-        exitScreen();
-
+		if (CanMove) {
+			Jump ();
+			goToScreen ();
+			exitScreen ();
+		}
     }
 
 	void FixedUpdate () {
-        DirectionDefinition ();
+		if (CanMove) {
+			DirectionDefinition ();
+		}
+		
 
 	}
 
