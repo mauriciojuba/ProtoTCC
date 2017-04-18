@@ -26,13 +26,14 @@ public class Movimentacao3D : MonoBehaviour {
 	[SerializeField] private bool InGround;
 
 	public Camera CameraMain;
-
+    public CameraControl DollyCam;
     public Transform playerRoot;
     public Transform direcoes;
     public Transform camScreen;
     public float velTransicao;
     public bool onScreen;
     Quaternion direct2D;
+    float _2dY,_2dX;
 
     public LayerMask NoIgnoredLayers = -1;
 	[SerializeField] private float MaxJump;
@@ -154,6 +155,7 @@ public class Movimentacao3D : MonoBehaviour {
         }
     }
 
+    
 	//função para pulo
 	void Jump(){
 		//verifica se o player esta encostando no chão
@@ -183,11 +185,13 @@ public class Movimentacao3D : MonoBehaviour {
         {
 			Jumping = false;
 		}
-        if (Input.GetButtonDown("LB P" + PlayerNumber))
+        if (Input.GetButtonDown("LB P" + PlayerNumber) && !onScreen)
         {
             //desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
             rb.useGravity = false;
             transform.SetParent(camScreen);
+            _2dX = Random.Range(-1.5f, +1.5f);
+            _2dY = Random.Range(-0.8f, +0.8f);
             onScreen = true;
         }
 
@@ -201,14 +205,15 @@ public class Movimentacao3D : MonoBehaviour {
         //testa se o jogador pediu pra ir pra tela
         if (onScreen)
         {
-            transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao/10);
             //variavel para parar de controlar o jogador após ele chegar na tela
             if (!reachScreen)
             {
-                transform.localPosition = Vector3.MoveTowards(transform.localPosition, camScreen.localPosition, velTransicao);
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
+                    camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
                 //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
                 transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
-                if (transform.localPosition == camScreen.localPosition && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right))
+                transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao / 10);
+                if (transform.localPosition == camScreen.localPosition && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
                 {
                     reachScreen = true;
                 }
@@ -238,12 +243,14 @@ public class Movimentacao3D : MonoBehaviour {
         //se a variavel q fala pra ele sair da tela tiver ligada ele deve consertar o tamanho e a rotação do personagem
         if (toWorld)
         {
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(DollyCam.CalculaCamTarget(DollyCam.numPlayers).x + _2dX,
+                    2f, DollyCam.CalculaCamTarget(DollyCam.numPlayers).z + _2dY), velTransicao);
             transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
             transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
             direcoes.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right);
         }
         //uma vez que o tamanho esta ok a variavel pode ficar falsa.
-        if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
+        if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f && transform.localPosition.z <= 2f)
         {
             toWorld = false;
         }

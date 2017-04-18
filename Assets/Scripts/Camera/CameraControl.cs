@@ -6,7 +6,7 @@ public class CameraControl : MonoBehaviour {
 
     [SerializeField] Transform[] players;
     Transform DollyCam;
-    int numPlayers = 0;
+    public int numPlayers = 0;
     [SerializeField] float velocidadeMovimento;
     [SerializeField] float distancia = 8;
     [SerializeField] float maxDistancia;
@@ -46,7 +46,7 @@ public class CameraControl : MonoBehaviour {
     }
 
     //marca o ponto entre os jogadores que a camera ficará olhando
-    Vector3 CalculaCamTarget(int numPlayers)
+    public Vector3 CalculaCamTarget(int numPlayers)
     {
         switch (numPlayers)
         {
