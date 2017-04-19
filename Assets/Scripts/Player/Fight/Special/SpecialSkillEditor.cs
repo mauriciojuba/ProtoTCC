@@ -63,8 +63,10 @@ public class SpecialSkillEditor : Editor
 					EditorGUILayout.PrefixLabel ("Distance to AOE Go");
 					myScript.AOEDistance = EditorGUILayout.FloatField (myScript.AOEDistance);
 					EditorGUILayout.BeginVertical ();
-					EditorGUILayout.PrefixLabel ("Force to Pull/Push");
+					EditorGUILayout.PrefixLabel ("AOE Speed");
 					myScript.AOEForce = EditorGUILayout.FloatField (myScript.AOEForce);
+					EditorGUILayout.PrefixLabel ("Force to Pull/Push");
+					myScript.AOEPushForce = EditorGUILayout.FloatField (myScript.AOEPushForce);
 					EditorGUILayout.EndVertical ();
 					EditorGUILayout.PrefixLabel ("Pull Enemies");
 					myScript.Pull = EditorGUILayout.Toggle (myScript.Pull);

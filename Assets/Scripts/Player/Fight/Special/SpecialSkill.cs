@@ -27,6 +27,7 @@ public class SpecialSkill : ScriptableObject
 	public float AOEDistance;
 	public float AOEDamage;
 	public float AOEForce;
+	public float AOEPushForce;
 	public bool Pull;
 	public bool Push;
 	#endregion
