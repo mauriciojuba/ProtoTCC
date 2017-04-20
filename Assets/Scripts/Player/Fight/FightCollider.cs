@@ -8,12 +8,13 @@ public class FightCollider : MonoBehaviour {
 
 	void OnTriggerEnter (Collider col){
 		//aplicar a função de causar dano.
-        if (col.gameObject.GetComponent<Life>() != null)
-        {
-            //Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
+		if (col.gameObject.GetComponent<Life> () != null) {
+			//Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
 			col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
 			col.gameObject.GetComponent<Life> ().UpdateLife ();
-        }
+		} else {
+			Debug.LogWarning ("Deal " + Damage + " Damage");
+		}
 		GetComponent<BoxCollider> ().enabled = false;
 	}
 }

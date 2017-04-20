@@ -8,7 +8,7 @@ public class PickThrow : MonoBehaviour {
 	[SerializeField] private float Radius;
 	[SerializeField] private Collider ColliderInRange;
 	[SerializeField] private GameObject PickedObj;
-	[SerializeField] private Transform FixPoint;
+	[SerializeField] private Transform FixPoint, FixPoint2;
 	private int PlayerNum;
 	[SerializeField] private bool CanPick;
 	[Range(500,2000)]
@@ -36,7 +36,7 @@ public class PickThrow : MonoBehaviour {
 		RaycastHit hit;
 
 		if (Physics.Raycast (transform.position  - (transform.up / 2),transform.forward, out hit,2)) {
-			if (hit.collider.CompareTag ("Enemy")) {
+			if (hit.collider.CompareTag ("Enemy") || hit.collider.CompareTag("Box")) {
 				ColliderInRange = hit.collider;
 			} else {
 				ColliderInRange = null;
@@ -50,15 +50,40 @@ public class PickThrow : MonoBehaviour {
 		if (ColliderInRange == null)
 			return;
 
-		CanPick = false;
-		PickedObj = ColliderInRange.gameObject;
-		PickedObj.transform.SetParent (FixPoint);
-		PickedObj.transform.position = FixPoint.position;
-		PickedObj.transform.rotation = FixPoint.rotation;
-		PickedObj.GetComponent<Rigidbody> ().isKinematic = true;
+		if (ColliderInRange.CompareTag ("Box")) {
+			CanPick = false;
+			PickedObj = ColliderInRange.gameObject;
+			PickedObj.transform.SetParent (FixPoint);
+			PickedObj.transform.position = FixPoint.position;
+			PickedObj.transform.rotation = FixPoint.rotation;
+			PickedObj.GetComponent<Rigidbody> ().isKinematic = true;
+		} else if (ColliderInRange.CompareTag ("Enemy")) {
+			CanPick = false;
+			PickedObj = ColliderInRange.gameObject;
+			PickedObj.transform.SetParent (FixPoint2);
+			PickedObj.transform.position = FixPoint2.position;
+			PickedObj.transform.rotation = FixPoint2.rotation;
+			PickedObj.GetComponent<Rigidbody> ().isKinematic = true;
+		}
 	}
 
 	void ThrowObject(){
+		if (PickedObj.CompareTag ("Box")) {
+			PickedObj.transform.SetParent (null);
+			PickedObj.GetComponent<Rigidbody> ().isKinematic = false;
+			PickedObj.GetComponent<Rigidbody> ().AddForce (PickedObj.transform.forward * Force);
+			PickedObj = null;
+			CanPick = true;
+		} else if (PickedObj.CompareTag ("Enemy")) {
+			PickedObj.transform.SetParent (FixPoint);
+			PickedObj.transform.position = FixPoint.position;
+			PickedObj.transform.rotation = FixPoint.rotation;
+			StartCoroutine (ThrowEnemy ());
+		}
+	}
+
+	IEnumerator ThrowEnemy(){
+		yield return new WaitForSeconds (0.5f);
 		PickedObj.transform.SetParent (null);
 		PickedObj.GetComponent<Rigidbody> ().isKinematic = false;
 		PickedObj.GetComponent<Rigidbody> ().AddForce (PickedObj.transform.forward * Force);
