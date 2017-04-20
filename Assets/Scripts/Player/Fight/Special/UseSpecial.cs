@@ -10,6 +10,9 @@ public class UseSpecial : MonoBehaviour {
 	Vector3 InitPos;
 	public Rigidbody RB;
 
+	public float SpecialBar;
+	public int SpecialItens;
+
 	void Start(){
 		PlayerNumber = GetComponent<Movimentacao3D> ().PlayerNumber;
 		RB = GetComponent<Rigidbody> ();
@@ -17,7 +20,7 @@ public class UseSpecial : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown (SpecialRef.ButtonToUse + PlayerNumber) && !Use) {
+		if (Input.GetButtonDown (SpecialRef.ButtonToUse + PlayerNumber) && !Use && SpecialItens > 0) {
 			if (SpecialRef.Rush) {
 				Use = true;
 				InitPos = transform.position;
@@ -25,7 +28,7 @@ public class UseSpecial : MonoBehaviour {
 			} else {
 				UseTheSpecial ();
 			}
-
+			SpecialItens--;
 			Vector3 v3 = RB.velocity;
 			v3.x = 0;
 			v3.z = 0;
@@ -36,6 +39,12 @@ public class UseSpecial : MonoBehaviour {
 			UseTheSpecial ();
 	}
 
+	public void UpdateBar(){
+		if (SpecialBar >= 100) {
+			SpecialBar -= 100;
+			SpecialItens++;
+		}
+	}
 
 	public void UseTheSpecial(){
 		if (SpecialRef.Rush) {

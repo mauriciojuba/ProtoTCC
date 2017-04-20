@@ -14,13 +14,17 @@ public class RecoveryItem : MonoBehaviour {
             {
                 if (other.gameObject.GetComponent<Life>() != null)
                 {
-                    //Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
                     other.gameObject.GetComponent<Life>().LifeQuant += valorRecuperacao;
+					other.gameObject.GetComponent<Life> ().UpdateLife ();
                 }
             }
             if (RecuperaESP)
             {
-                //completar quando estiver com barra de especial implementada
+				if (other.gameObject.GetComponent<UseSpecial>() != null)
+				{
+					other.gameObject.GetComponent<UseSpecial>().SpecialBar += valorRecuperacao;
+					other.gameObject.GetComponent<UseSpecial> ().UpdateBar ();
+				}
             }
             Destroy(gameObject);
         }

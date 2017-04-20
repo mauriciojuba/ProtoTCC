@@ -31,12 +31,7 @@ public class InstantiateCharacters : MonoBehaviour {
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeQuant = DataS.P1SelectedCharacter.Life;
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeOF = Life.LifeType.Player;
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<UseSpecial> ().SpecialRef = DataS.P1SelectedCharacter.Special;
-
-
 			P1.transform.FindChild ("3D_Player").tag = "Player1_3D";
-			//ativa o script de movimentacao 2D para o jogador 1
-			P1.transform.FindChild ("2D_Player").gameObject.GetComponent<Movimentacao2D> ().PlayerNumber = DataS.P1SelectedCharacter.PlayerNumber;
-			P1.transform.FindChild ("2D_Player").tag = "Player1_2D";
 
 			if (P2Model != null) {
 				//instancia o modelo de personagem do jogador 2.
@@ -47,11 +42,8 @@ public class InstantiateCharacters : MonoBehaviour {
 				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<Movimentacao3D> ().PlayerNumber = DataS.P2SelectedCharacter.PlayerNumber;
 				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeQuant = DataS.P2SelectedCharacter.Life;
 				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeOF = Life.LifeType.Player;
-				P2.transform.FindChild ("3D_Player").tag = "Player2_3D";
-				//ativa o script de movimentacao 2D para o jogador 1
-				P2.transform.FindChild ("2D_Player").gameObject.GetComponent<Movimentacao2D> ().PlayerNumber = DataS.P2SelectedCharacter.PlayerNumber;
-				P2.transform.FindChild ("2D_Player").tag = "Player2_2D";
 				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<UseSpecial> ().SpecialRef = DataS.P2SelectedCharacter.Special;
+				P2.transform.FindChild ("3D_Player").tag = "Player2_3D";			
 			}
 		}
 	}		
