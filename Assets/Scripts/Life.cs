@@ -25,28 +25,38 @@ public class Life : MonoBehaviour {
 
     #region Variables For Players Life
     public List<GameObject> ListOfImg;
-	private int PlayerNumber;
+	[SerializeField] private int PlayerNumber;
 	private GameObject LifeOBJ;
 	private GameObject Container;
 	private int Division;
 	private int QuantImgInScene;
 	[SerializeField] private int QuantImg;
 	[SerializeField] private GameObject LifeSpritePrefab;
+	[SerializeField] private GameObject ScreenGlass;
+	private float X, InitialX;
     #endregion
 
-    void Start () {
+    void Awake () {
         if (LifeOF == LifeType.Player)
         {
             PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
-            LifeOBJ = GameObject.Find("UI").transform.FindChild("LifeP" + PlayerNumber).gameObject;
-            Container = LifeOBJ.transform.FindChild("Container").gameObject;
+          //  LifeOBJ = GameObject.Find("UI").transform.FindChild("LifeP" + PlayerNumber).gameObject;
+          //  Container = LifeOBJ.transform.FindChild("Container").gameObject;
 			//mudar a quantidade de vida para imagem aqui
             Division = 30;
+			if (PlayerNumber == 1) {
+				InitialX = 0.06f;
+				X = InitialX;
+			}
             UpdateLife();
         }
+
 	}
 
 	void Update(){
+		if (Input.GetKey (KeyCode.Space)) {
+			UpdateLife ();
+		}
 		if (QuantImgInScene < QuantImg && LifeOF == LifeType.Player) {
 			UpdateLife ();
 		}
@@ -87,25 +97,29 @@ public class Life : MonoBehaviour {
     }
 
 	void PlayerLife(){
-		LifeOBJ.SetActive (true);
 		QuantImg = (int)LifeQuant / Division;
 		if (QuantImgInScene < QuantImg) {
-				GameObject gb = GameObject.Instantiate (LifeSpritePrefab);
-				gb.transform.SetParent (Container.transform);
-				QuantImgInScene++;
-				ListOfImg.Add (gb);
+			GameObject gb = GameObject.Instantiate (LifeSpritePrefab,Camera.main.ViewportToWorldPoint(new Vector3(-0.5f,0.5f,1)),ScreenGlass.transform.rotation);
+			gb.transform.SetParent (ScreenGlass.transform);
+			QuantImgInScene++;
+			gb.GetComponent<Rigidbody> ().useGravity = false;
+			gb.GetComponent<Rigidbody> ().isKinematic = true;
+			gb.gameObject.GetComponent<LifePos> ().PlayerNumber = PlayerNumber;
+			gb.gameObject.GetComponent<LifePos> ().X = X;
+			X += InitialX;
+			ListOfImg.Add (gb);
 		} else if (QuantImgInScene > QuantImg) {
-			Destroy (ListOfImg [QuantImgInScene - 1]);
+			Destroy (ListOfImg [QuantImgInScene - 1],15);
+			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().freezeRotation = false;
+			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().isKinematic = false;
+			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().AddForce (ListOfImg [QuantImgInScene - 1].transform.up * 100);
+			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().useGravity = true;
+			ListOfImg [QuantImgInScene - 1].GetComponent<LifePos> ().StartCoroutine (ListOfImg [QuantImgInScene - 1].GetComponent<LifePos> ().SetScale ());
 			ListOfImg.RemoveAt (QuantImgInScene - 1);
 			QuantImgInScene--;
+			X -= InitialX;
 		}
 
-		if (Input.GetButtonDown ("LB P" + PlayerNumber)) {
-			LifeQuant -= Random.Range (20, 50);
-		}
-		if (Input.GetButtonDown ("RB P" + PlayerNumber)) {
-			LifeQuant += Random.Range (20, 50);
-		}
 	}
 
 	void EnemyLife(){

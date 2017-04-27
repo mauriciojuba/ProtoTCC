@@ -20,6 +20,9 @@ public class UseSpecial : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (SpecialRef == null) {
+			return;
+		}
 		if (Input.GetButtonDown (SpecialRef.ButtonToUse + PlayerNumber) && !Use && SpecialItens > 0) {
 			if (SpecialRef.Rush) {
 				Use = true;
