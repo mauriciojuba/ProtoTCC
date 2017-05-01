@@ -40,16 +40,23 @@ public class Movimentacao3D : MonoBehaviour {
 	private bool Jumping;
 
 	public bool CanMove;
+
+
+	private Animator Anim;
 	void Start () {
 		CanMove = true;
         rb = Player.GetComponent<Rigidbody>();
         CameraMain = Camera.main;
 		ActualDirection = 3;
         direct2D = Quaternion.Euler(90f, 0f, 0f);
+		if (gameObject.GetComponent<Animator>() != null) {
+			Anim = GetComponent<Animator> ();
+		}
     }
 
 	void Update(){
 		//TestPosition ();
+		SetAnimations();
 		if (CanMove) {
 			Jump ();
 			goToScreen ();
@@ -171,7 +178,9 @@ public class Movimentacao3D : MonoBehaviour {
 
 		//se estiver no chao, pula, apertando A no controle.
 		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround &&!onScreen) {
+			
 			Jumping = true;
+			SetJumpAnim ();
 			Vector3 V3 = rb.velocity;
 			V3.y = JumpForce;
             rb.velocity = V3;
@@ -195,7 +204,8 @@ public class Movimentacao3D : MonoBehaviour {
         if (Input.GetButtonDown("LB P" + PlayerNumber) && !onScreen)
         {
             //desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
-            rb.useGravity = false;
+			SetAnimOnScreen();
+			rb.useGravity = false;
             transform.SetParent(camScreen);
             _2dX = Random.Range(-1.5f, +1.5f);
             _2dY = Random.Range(-0.8f, +0.8f);
@@ -234,6 +244,7 @@ public class Movimentacao3D : MonoBehaviour {
             if (Input.GetButtonDown("RB P" + PlayerNumber))
             {
                 //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
+				SetAnimOffScreen();
                 transform.SetParent(playerRoot);
                 direcoes.transform.SetParent(playerRoot);
                 toWorld = true;
@@ -286,6 +297,47 @@ public class Movimentacao3D : MonoBehaviour {
 			Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
 			/*Mathf.Clamp (*/transform.position.y/*, Bottomborder, Topborder)*/,
 			Mathf.Clamp (transform.position.z,Bottomborder,Topborder ));
+	}
+
+	void SetAnimations(){
+		if (Anim == null) {
+			return;
+		}
+		if (rb.velocity.y > 0)
+			Anim.SetBool ("Jumping", true);
+		else
+			Anim.SetBool ("Jumping", false);
+		Anim.SetBool ("InAir", !InGround);
+		Anim.SetBool ("InMovement", InMovement);
+	}
+
+	void SetJumpAnim(){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetTrigger ("Jump");
+	}
+
+	void SetAttackAnim(int AttackNumber){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetTrigger ("Attack");
+		Anim.SetInteger ("AttackNumber", AttackNumber);
+	}
+
+	void SetAnimOnScreen(){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetTrigger ("JumpScreen");
+	}
+
+	void SetAnimOffScreen(){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetTrigger ("JumpOffScreen");
 	}
 }
 
