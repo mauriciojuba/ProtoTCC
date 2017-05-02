@@ -42,7 +42,7 @@ public class Movimentacao3D : MonoBehaviour {
 	public bool CanMove;
 
 
-	private Animator Anim;
+	public Animator Anim;
 	void Start () {
 		CanMove = true;
         rb = Player.GetComponent<Rigidbody>();
@@ -318,7 +318,7 @@ public class Movimentacao3D : MonoBehaviour {
 		Anim.SetTrigger ("Jump");
 	}
 
-	void SetAttackAnim(int AttackNumber){
+	public void SetAttackAnim(int AttackNumber){
 		if (Anim == null) {
 			return;
 		}
