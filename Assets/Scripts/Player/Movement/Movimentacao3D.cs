@@ -49,9 +49,6 @@ public class Movimentacao3D : MonoBehaviour {
         CameraMain = Camera.main;
 		ActualDirection = 3;
         direct2D = Quaternion.Euler(90f, 0f, 0f);
-		if (gameObject.GetComponent<Animator>() != null) {
-			Anim = GetComponent<Animator> ();
-		}
     }
 
 	void Update(){
