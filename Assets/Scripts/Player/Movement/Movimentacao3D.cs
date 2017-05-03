@@ -43,6 +43,7 @@ public class Movimentacao3D : MonoBehaviour {
 
 
 	public Animator Anim;
+    public Transform model;
 	void Start () {
 		CanMove = true;
         rb = Player.GetComponent<Rigidbody>();
@@ -220,7 +221,8 @@ public class Movimentacao3D : MonoBehaviour {
     }
 
     // variavel que fala quando o personagem vai voltar para o 3D
-    [SerializeField] private bool toWorld,reachScreen;
+    [SerializeField] private bool reachScreen;
+    public bool toWorld;
 
     void goToScreen()
     {
@@ -234,6 +236,7 @@ public class Movimentacao3D : MonoBehaviour {
                     camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
                 //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
                 transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
+                model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 10);
                 transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao / 10);
 				if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY,camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
                 {
@@ -249,12 +252,10 @@ public class Movimentacao3D : MonoBehaviour {
             if (Input.GetButtonDown("RB P" + PlayerNumber))
             {
                 //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
-				SetAnimOffScreen();
+				//SetAnimOffScreen();
                 transform.SetParent(playerRoot);
                 direcoes.transform.SetParent(playerRoot);
                 toWorld = true;
-				rb.velocity = Vector3.zero;
-                rb.useGravity = true;
                 reachScreen = false;
                 onScreen = false;
             }
@@ -267,17 +268,22 @@ public class Movimentacao3D : MonoBehaviour {
         //se a variavel q fala pra ele sair da tela tiver ligada ele deve consertar o tamanho e a rotação do personagem
         if (toWorld)
         {
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(DollyCam.CalculaCamTarget(DollyCam.numPlayers).x + _2dX,
-                    2f, DollyCam.CalculaCamTarget(DollyCam.numPlayers).z + _2dY), velTransicao);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
+                    1f, DollyCam.target.position.z), velTransicao);
             transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
             transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
+            model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0,0,0), velTransicao * 5);
             direcoes.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right);
         }
         //uma vez que o tamanho esta ok a variavel pode ficar falsa.
-        if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f && transform.localPosition.z <= 2f)
+        if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
         {
+            rb.velocity = Vector3.zero;
+            rb.useGravity = true;
+            model.localRotation = Quaternion.Euler(0, 0, 0);
             toWorld = false;
         }
+        Debug.Log("" + transform.localScale + " / " + transform.localRotation.x + " / " + transform.position.z + "");
     }
 
 
