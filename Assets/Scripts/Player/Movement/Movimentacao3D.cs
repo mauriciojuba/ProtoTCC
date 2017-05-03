@@ -136,8 +136,16 @@ public class Movimentacao3D : MonoBehaviour {
             if (InMovement)
             {
                 Vector3 V3 = rb.velocity;
-                V3.x = transform.forward.x * Speed;
-                V3.z = transform.forward.z * Speed;
+				if (Input.GetAxis ("Horizontal P" + PlayerNumber) > 0) {
+					V3.x = transform.forward.x * Input.GetAxis ("Horizontal P" + PlayerNumber) * Speed;
+				} else if (Input.GetAxis ("Horizontal P" + PlayerNumber) < 0) {
+					V3.x = transform.forward.x * -Input.GetAxis ("Horizontal P" + PlayerNumber) * Speed;
+				}
+				if (Input.GetAxis ("Vertical P" + PlayerNumber) > 0) {
+					V3.z = transform.forward.z * Input.GetAxis ("Vertical P" + PlayerNumber) * Speed;
+				} else if (Input.GetAxis ("Vertical P" + PlayerNumber) < 0) {
+					V3.z = transform.forward.z * -Input.GetAxis ("Vertical P" + PlayerNumber) * Speed;
+				}
                 rb.velocity = V3;
             }
             else if (!InMovement)
@@ -215,7 +223,7 @@ public class Movimentacao3D : MonoBehaviour {
     }
 
     // variavel que fala quando o personagem vai voltar para o 3D
-    bool toWorld,reachScreen;
+    [SerializeField] private bool toWorld,reachScreen;
 
     void goToScreen()
     {
@@ -230,7 +238,7 @@ public class Movimentacao3D : MonoBehaviour {
                 //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
                 transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
                 transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao / 10);
-                if (transform.localPosition == camScreen.localPosition && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
+				if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY,camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
                 {
                     reachScreen = true;
                 }
@@ -248,6 +256,7 @@ public class Movimentacao3D : MonoBehaviour {
                 transform.SetParent(playerRoot);
                 direcoes.transform.SetParent(playerRoot);
                 toWorld = true;
+				rb.velocity = Vector3.zero;
                 rb.useGravity = true;
                 reachScreen = false;
                 onScreen = false;
@@ -309,6 +318,7 @@ public class Movimentacao3D : MonoBehaviour {
 			Anim.SetBool ("Jumping", false);
 		Anim.SetBool ("InAir", !InGround);
 		Anim.SetBool ("InMovement", InMovement);
+		Anim.SetBool ("ReachScreen", reachScreen);
 	}
 
 	void SetJumpAnim(){
