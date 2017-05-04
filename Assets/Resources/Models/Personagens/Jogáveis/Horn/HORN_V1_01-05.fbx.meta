@@ -295,6 +295,8 @@ ModelImporter:
     7400052: Holding
     7400054: Attack Holding
     7400056: Throw
+    7400058: teste
+    7400060: Take 001
     9500000: //RootNode
     13700000: Horn:Capa
     13700002: Horn:Corpo
@@ -325,7 +327,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Take 001
-      firstFrame: 1002
+      firstFrame: 1004
       lastFrame: 1030
       wrapMode: 0
       orientationOffsetY: 0
@@ -336,9 +338,9 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -630,7 +632,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -917,15 +919,15 @@ ModelImporter:
       lastFrame: 140
       wrapMode: 0
       orientationOffsetY: 0
-      level: -0.6
+      level: 0
       cycleOffset: 0
       loop: 0
-      hasAdditiveReferencePose: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
-      loopBlendPositionXZ: 1
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
@@ -1217,6 +1219,300 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: DIA
+        weight: 1
+      - path: Horn:back
+        weight: 1
+      - path: Horn:bottom
+        weight: 1
+      - path: Horn:Horn
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:group2
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:group2/Horn:L_Toe_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:L_Walk
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:L_Walk/Horn:L_Leg_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:group1
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:group1/Horn:R_Toe_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:R_Walk
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:R_Walk/Horn:R_Leg_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:L_Knee_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:R_Knee_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Elbow_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Arm_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ind_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ind_01_CTRL/Horn:L_Ind_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ring_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ring_01_CTRL/Horn:L_Ring_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Thumb_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Thumb_01_CTRL/Horn:L_Thumb_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Wing_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:Neck_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:Neck_CTRL/Horn:Jaw_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Elbow_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Arm_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ind_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ind_01_CTRL/Horn:R_Ind_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ring_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ring_01_CTRL/Horn:R_Ring_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Thumb_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Thumb_01_CTRL/Horn:R_Thumb_01_CTRL
+          1
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Wing_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toe_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toe_03/Horn:L_Toe_03_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_01/Horn:L_Toe_01_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_02/Horn:L_Toe_02_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toe_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toe_03/Horn:R_Toe_03_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_01/Horn:R_Toe_01_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_02/Horn:R_Toe_02_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01/Horn:L_Ind_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01/Horn:L_Ind_02/Horn:L_Ind_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01/Horn:L_Ring_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01/Horn:L_Ring_02/Horn:L_Ring_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01/Horn:L_Thumb_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01/Horn:L_Thumb_02/Horn:L_Thumb_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing/Horn:L_Wing_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing/Horn:L_Wing_01/Horn:L_Wing_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Head_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Jaw
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Jaw/Horn:Jaw_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01/Horn:R_Ind_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01/Horn:R_Ind_02/Horn:R_Ind_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01/Horn:R_Ring_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01/Horn:R_Ring_02/Horn:R_Ring_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01/Horn:R_Thumb_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01/Horn:R_Thumb_02/Horn:R_Thumb_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing/Horn:R_Wing_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing/Horn:R_Wing_01/Horn:R_Wing_02
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Capa
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Corpo
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Mand
+        weight: 1
+      - path: Horn:left
+        weight: 1
+      - path: left
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump Air
+      takeName: Take 001
+      firstFrame: 145
+      lastFrame: 165
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 1.71
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -1499,315 +1795,21 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Jump Air
-      takeName: Take 001
-      firstFrame: 140
-      lastFrame: 165
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: back
-        weight: 1
-      - path: DIA
-        weight: 1
-      - path: Horn:back
-        weight: 1
-      - path: Horn:bottom
-        weight: 1
-      - path: Horn:Horn
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:group2
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:group2/Horn:L_Toe_ikHandle
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:L_Walk
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:L_Walk/Horn:L_Leg_ikHandle
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_02_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_03_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:group1
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:group1/Horn:R_Toe_ikHandle
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:R_Walk
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:R_Walk/Horn:R_Leg_ikHandle
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_02_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_03_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:L_Knee_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:R_Knee_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Elbow_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Arm_ikHandle
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ind_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ind_01_CTRL/Horn:L_Ind_02_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ring_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ring_01_CTRL/Horn:L_Ring_02_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Thumb_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Thumb_01_CTRL/Horn:L_Thumb_02_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Wing_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:Neck_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:Neck_CTRL/Horn:Jaw_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Elbow_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Arm_ikHandle
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ind_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ind_01_CTRL/Horn:R_Ind_02_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ring_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ring_01_CTRL/Horn:R_Ring_02_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Thumb_01_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Thumb_01_CTRL/Horn:R_Thumb_01_CTRL
-          1
-        weight: 1
-      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Wing_CTRL
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toe_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toe_03/Horn:L_Toe_03_End
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_01/Horn:L_Toe_01_End
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_02/Horn:L_Toe_02_End
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toe_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toe_03/Horn:R_Toe_03_End
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_01/Horn:R_Toe_01_End
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_02/Horn:R_Toe_02_End
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01/Horn:L_Ind_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01/Horn:L_Ind_02/Horn:L_Ind_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01/Horn:L_Ring_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01/Horn:L_Ring_02/Horn:L_Ring_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01/Horn:L_Thumb_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01/Horn:L_Thumb_02/Horn:L_Thumb_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing/Horn:L_Wing_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing/Horn:L_Wing_01/Horn:L_Wing_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Head_End
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Jaw
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Jaw/Horn:Jaw_End
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
-          1
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
-          1/Horn:R_Ind_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
-          1/Horn:R_Ind_01/Horn:R_Ind_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
-          1/Horn:R_Ind_01/Horn:R_Ind_02/Horn:R_Ind_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
-          1/Horn:R_Ring_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
-          1/Horn:R_Ring_01/Horn:R_Ring_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
-          1/Horn:R_Ring_01/Horn:R_Ring_02/Horn:R_Ring_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01/Horn:R_Thumb_02
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01/Horn:R_Thumb_02/Horn:R_Thumb_03
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing/Horn:R_Wing_01
-        weight: 1
-      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing/Horn:R_Wing_01/Horn:R_Wing_02
-        weight: 1
-      - path: Horn:Horn/Horn:MALHA
-        weight: 1
-      - path: Horn:Horn/Horn:MALHA/Horn:Capa
-        weight: 1
-      - path: Horn:Horn/Horn:MALHA/Horn:Corpo
-        weight: 1
-      - path: Horn:Horn/Horn:MALHA/Horn:Mand
-        weight: 1
-      - path: Horn:left
-        weight: 1
-      - path: left
-        weight: 1
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: Jump Down
       takeName: Take 001
-      firstFrame: 179
+      firstFrame: 180
       lastFrame: 210
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: 0.18
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -2398,7 +2400,7 @@ ModelImporter:
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -2687,12 +2689,12 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -2967,7 +2969,7 @@ ModelImporter:
         weight: 1
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 226
     - serializedVersion: 16
       name: Go To Screen Reach
       takeName: Take 001
@@ -2981,11 +2983,11 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
@@ -3276,10 +3278,10 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
@@ -3570,10 +3572,10 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
@@ -4157,10 +4159,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -4746,7 +4748,7 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -5033,16 +5035,16 @@ ModelImporter:
       lastFrame: 425
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: 1.8
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -5319,7 +5321,7 @@ ModelImporter:
         weight: 1
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     - serializedVersion: 16
       name: Pushing On Screen
       takeName: Take 001
@@ -5919,13 +5921,13 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
@@ -8559,6 +8561,594 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 952
       lastFrame: 1001
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: DIA
+        weight: 1
+      - path: Horn:back
+        weight: 1
+      - path: Horn:bottom
+        weight: 1
+      - path: Horn:Horn
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:group2
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:group2/Horn:L_Toe_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:L_Walk
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:L_Walk/Horn:L_Leg_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:group1
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:group1/Horn:R_Toe_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:R_Walk
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:R_Walk/Horn:R_Leg_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:L_Knee_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:R_Knee_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Elbow_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Arm_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ind_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ind_01_CTRL/Horn:L_Ind_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ring_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ring_01_CTRL/Horn:L_Ring_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Thumb_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Thumb_01_CTRL/Horn:L_Thumb_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Wing_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:Neck_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:Neck_CTRL/Horn:Jaw_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Elbow_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Arm_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ind_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ind_01_CTRL/Horn:R_Ind_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ring_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ring_01_CTRL/Horn:R_Ring_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Thumb_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Thumb_01_CTRL/Horn:R_Thumb_01_CTRL
+          1
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Wing_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toe_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toe_03/Horn:L_Toe_03_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_01/Horn:L_Toe_01_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_02/Horn:L_Toe_02_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toe_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toe_03/Horn:R_Toe_03_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_01/Horn:R_Toe_01_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_02/Horn:R_Toe_02_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01/Horn:L_Ind_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01/Horn:L_Ind_02/Horn:L_Ind_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01/Horn:L_Ring_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01/Horn:L_Ring_02/Horn:L_Ring_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01/Horn:L_Thumb_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01/Horn:L_Thumb_02/Horn:L_Thumb_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing/Horn:L_Wing_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing/Horn:L_Wing_01/Horn:L_Wing_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Head_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Jaw
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Jaw/Horn:Jaw_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01/Horn:R_Ind_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01/Horn:R_Ind_02/Horn:R_Ind_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01/Horn:R_Ring_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01/Horn:R_Ring_02/Horn:R_Ring_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01/Horn:R_Thumb_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01/Horn:R_Thumb_02/Horn:R_Thumb_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing/Horn:R_Wing_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing/Horn:R_Wing_01/Horn:R_Wing_02
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Capa
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Corpo
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Mand
+        weight: 1
+      - path: Horn:left
+        weight: 1
+      - path: left
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: teste
+      takeName: Take 001
+      firstFrame: 843
+      lastFrame: 863
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: DIA
+        weight: 1
+      - path: Horn:back
+        weight: 1
+      - path: Horn:bottom
+        weight: 1
+      - path: Horn:Horn
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:group2
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:group2/Horn:L_Toe_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:L_Walk
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Foot/Horn:L_Walk/Horn:L_Leg_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:L_Foot_CTRL/Horn:L_Toe_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:group1
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:group1/Horn:R_Toe_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:R_Walk
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Foot/Horn:R_Walk/Horn:R_Leg_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:R_Foot_CTRL/Horn:R_Toe_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:L_Knee_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:R_Knee_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Elbow_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Arm_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ind_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ind_01_CTRL/Horn:L_Ind_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ring_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Ring_01_CTRL/Horn:L_Ring_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Thumb_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Arm_CTRL/Horn:L_Hand_CTRL/Horn:L_Thumb_01_CTRL/Horn:L_Thumb_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:L_Shoulder_CTRL/Horn:L_Wing_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:Neck_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:Neck_CTRL/Horn:Jaw_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Elbow_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Arm_ikHandle
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ind_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ind_01_CTRL/Horn:R_Ind_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ring_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Ring_01_CTRL/Horn:R_Ring_02_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Thumb_01_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Arm_CTRL/Horn:R_Hand_CTRL/Horn:R_Thumb_01_CTRL/Horn:R_Thumb_01_CTRL
+          1
+        weight: 1
+      - path: Horn:Horn/Horn:Base_CTRL/Horn:Root_CTRL/Horn:Spine_01_CTRL/Horn:Spine_02_CTRL/Horn:Spine_03_CTRL/Horn:Spine_04_CTRL/Horn:R_Shoulder_CTRL/Horn:R_Wing_CTRL
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toe_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toe_03/Horn:L_Toe_03_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_01/Horn:L_Toe_01_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:L_Leg/Horn:L_Knee/Horn:L_Foot 1/Horn:L_Toes/Horn:L_Toe_02/Horn:L_Toe_02_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toe_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toe_03/Horn:R_Toe_03_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_01/Horn:R_Toe_01_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:R_Leg/Horn:R_Knee/Horn:R_Foot 1/Horn:R_Toes/Horn:R_Toe_02/Horn:R_Toe_02_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01/Horn:L_Ind_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ind_01/Horn:L_Ind_02/Horn:L_Ind_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01/Horn:L_Ring_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:joint18/Horn:L_Ring_01/Horn:L_Ring_02/Horn:L_Ring_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01/Horn:L_Thumb_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Arm/Horn:L_Elbow/Horn:L_Hand/Horn:L_Thumb_01/Horn:L_Thumb_02/Horn:L_Thumb_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing/Horn:L_Wing_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:L_Shoulder/Horn:L_Wing/Horn:L_Wing_01/Horn:L_Wing_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Head_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Jaw
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:Neck/Horn:Head/Horn:Jaw/Horn:Jaw_End
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01/Horn:R_Ind_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ind_01/Horn:R_Ind_02/Horn:R_Ind_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01/Horn:R_Ring_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:joint18
+          1/Horn:R_Ring_01/Horn:R_Ring_02/Horn:R_Ring_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01/Horn:R_Thumb_02
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Arm/Horn:R_Elbow/Horn:R_Hand/Horn:R_Thumb_01/Horn:R_Thumb_02/Horn:R_Thumb_03
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing/Horn:R_Wing_01
+        weight: 1
+      - path: Horn:Horn/Horn:JOINTS/Horn:ROOT/Horn:Spine_01/Horn:Spine_02/Horn:Spine_03/Horn:Spine_04/Horn:R_Shoulder/Horn:R_Wing/Horn:R_Wing_01/Horn:R_Wing_02
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Capa
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Corpo
+        weight: 1
+      - path: Horn:Horn/Horn:MALHA/Horn:Mand
+        weight: 1
+      - path: Horn:left
+        weight: 1
+      - path: left
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 823
+      lastFrame: 843
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

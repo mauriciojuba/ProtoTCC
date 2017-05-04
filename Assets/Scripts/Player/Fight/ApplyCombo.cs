@@ -7,6 +7,7 @@ public class ApplyCombo: MonoBehaviour{
 	private Combo combo1 = new Combo(new string[] {"X","X","X"});
 	private Movimentacao3D AnimRef;
 	public List<int> IndexCombo;
+	public bool Attacking;
 
 	void Start(){
 		combo1.PlayerNumber = GetComponent<Movimentacao3D> ().PlayerNumber;
@@ -19,15 +20,26 @@ public class ApplyCombo: MonoBehaviour{
 				IndexCombo.Add (combo1.CurrentIndex);
 			}
 			AnimRef.SetAttackAnim (IndexCombo [0]);
+			Attacking = combo1.Attacking;
 		}
 		if (IndexCombo.Count > 0) {
 			if (AnimRef.Anim.GetCurrentAnimatorStateInfo (1).IsName ("Attack " + IndexCombo [0])) {
 				if (IndexCombo.Count > 1) {
 					AnimRef.SetAttackAnim (IndexCombo [1]);
 					IndexCombo.Remove (IndexCombo [0]);
-				} else
+				} else {
+					AnimRef.SetAttackAnim (0);
 					IndexCombo.Clear ();
+				}
 			}
+
+			if (!Attacking) {
+				AnimRef.SetAttackAnim (0);
+				IndexCombo.Clear ();
+			}
+		}
+		if (Time.time > combo1.TimeLastButtonPressed + combo1.TimeBetweenButtons) {
+			Attacking = false;
 		}
 	}
 }
@@ -41,7 +53,7 @@ public class Combo{
 	public bool Attacking;
 
 	public float TimeBetweenButtons = 0.4f;
-	private float TimeLastButtonPressed;
+	public float TimeLastButtonPressed;
 	public Combo(string[] b){
 		Buttons = b;
 	}
@@ -49,18 +61,18 @@ public class Combo{
 	public bool CheckCombo(){
 		if (Time.time > TimeLastButtonPressed + TimeBetweenButtons) {
 			CurrentIndex = 0;
+			Attacking = false;
 		}
 		if (CurrentIndex < Buttons.Length) {
 			if(Buttons[CurrentIndex] == "X" && Input.GetButtonDown("X P" + PlayerNumber) || Buttons[CurrentIndex] == "Y" && Input.GetButtonDown("Y P" + PlayerNumber)){
 				TimeLastButtonPressed = Time.time;
 				CurrentIndex++;
+				Attacking = true;
 				return true;
 			}
-
-			if (CurrentIndex >= Buttons.Length) {
-				CurrentIndex = 0;
-				return false;
-			}
+		}
+		if (CurrentIndex >= Buttons.Length) {
+			CurrentIndex = 0;
 		}
 		return false;
 	}

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Movimentacao3D : MonoBehaviour {
 
+	[Header("controle de velocidade")]
+	[Tooltip("A velocidade é controlada pelo analógico?")]
+	[SerializeField] private bool SpeedControl;
+
     private Rigidbody rb;
 	//Array de direções que o player pode olhar
 	public Transform[] Directions;
@@ -134,15 +138,20 @@ public class Movimentacao3D : MonoBehaviour {
             if (InMovement)
             {
                 Vector3 V3 = rb.velocity;
-				if (Input.GetAxis ("Horizontal P" + PlayerNumber) > 0) {
-					V3.x = transform.forward.x * Input.GetAxis ("Horizontal P" + PlayerNumber) * Speed;
-				} else if (Input.GetAxis ("Horizontal P" + PlayerNumber) < 0) {
-					V3.x = transform.forward.x * -Input.GetAxis ("Horizontal P" + PlayerNumber) * Speed;
-				}
-				if (Input.GetAxis ("Vertical P" + PlayerNumber) > 0) {
-					V3.z = transform.forward.z * Input.GetAxis ("Vertical P" + PlayerNumber) * Speed;
-				} else if (Input.GetAxis ("Vertical P" + PlayerNumber) < 0) {
-					V3.z = transform.forward.z * -Input.GetAxis ("Vertical P" + PlayerNumber) * Speed;
+				if (SpeedControl) {
+					if (Input.GetAxis ("Horizontal P" + PlayerNumber) > 0) {
+						V3.x = transform.forward.x * Input.GetAxis ("Horizontal P" + PlayerNumber) * Speed;
+					} else if (Input.GetAxis ("Horizontal P" + PlayerNumber) < 0) {
+						V3.x = transform.forward.x * -Input.GetAxis ("Horizontal P" + PlayerNumber) * Speed;
+					}
+					if (Input.GetAxis ("Vertical P" + PlayerNumber) > 0) {
+						V3.z = transform.forward.z * Input.GetAxis ("Vertical P" + PlayerNumber) * Speed;
+					} else if (Input.GetAxis ("Vertical P" + PlayerNumber) < 0) {
+						V3.z = transform.forward.z * -Input.GetAxis ("Vertical P" + PlayerNumber) * Speed;
+					}
+				} else {
+					V3.x = transform.forward.x * Speed;
+					V3.z = transform.forward.z * Speed;
 				}
                 rb.velocity = V3;
             }
@@ -211,6 +220,10 @@ public class Movimentacao3D : MonoBehaviour {
         {
             //desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
 			SetAnimOnScreen();
+			Jumping = true;
+			Vector3 V3 = rb.velocity;
+			V3.y = JumpForce;
+			rb.velocity = V3;
 			rb.useGravity = false;
             transform.SetParent(camScreen);
             _2dX = Random.Range(-1.5f, +1.5f);
@@ -228,7 +241,7 @@ public class Movimentacao3D : MonoBehaviour {
     {
         //testa se o jogador pediu pra ir pra tela
         if (onScreen)
-        {
+		{
             //variavel para parar de controlar o jogador após ele chegar na tela
             if (!reachScreen)
             {
@@ -240,6 +253,7 @@ public class Movimentacao3D : MonoBehaviour {
                 transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao / 10);
 				if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY,camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
                 {
+					Jumping = false;
                     reachScreen = true;
                 }
             }
@@ -253,6 +267,7 @@ public class Movimentacao3D : MonoBehaviour {
             {
                 //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
 				//SetAnimOffScreen();
+				SetAnimOffScreen();
                 transform.SetParent(playerRoot);
                 direcoes.transform.SetParent(playerRoot);
                 toWorld = true;
@@ -278,7 +293,6 @@ public class Movimentacao3D : MonoBehaviour {
         //uma vez que o tamanho esta ok a variavel pode ficar falsa.
         if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
         {
-            rb.velocity = Vector3.zero;
             rb.useGravity = true;
             model.localRotation = Quaternion.Euler(0, 0, 0);
             toWorld = false;
