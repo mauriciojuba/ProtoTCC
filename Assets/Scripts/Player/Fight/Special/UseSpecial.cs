@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class UseSpecial : MonoBehaviour {
 
+	public Transform ScreenGlass;
+
 	public SpecialSkill SpecialRef;
 	public int PlayerNumber;
 	public bool Use;
 	Vector3 InitPos;
 	public Rigidbody RB;
 
-	public float SpecialBar;
 	public int SpecialItens;
+	public List<GameObject> SpecialInScreen;
 
 	void Start(){
 		PlayerNumber = GetComponent<Movimentacao3D> ().PlayerNumber;
@@ -43,10 +45,7 @@ public class UseSpecial : MonoBehaviour {
 	}
 
 	public void UpdateBar(){
-		if (SpecialBar >= 100) {
-			SpecialBar -= 100;
-			SpecialItens++;
-		}
+		
 	}
 
 	public void UseTheSpecial(){

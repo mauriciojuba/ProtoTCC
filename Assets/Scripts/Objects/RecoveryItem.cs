@@ -17,16 +17,30 @@ public class RecoveryItem : MonoBehaviour {
                     other.gameObject.GetComponent<Life>().LifeQuant += valorRecuperacao;
 					other.gameObject.GetComponent<Life> ().UpdateLife ();
                 }
+				Destroy(gameObject);
             }
             if (RecuperaESP)
             {
+				transform.SetParent (other.transform);
+				transform.position = transform.parent.position;
+				GetComponent<SpecialPos> ().XRef = other.GetComponent<UseSpecial> ();
+				GetComponent<SpecialPos> ().PlayerNumber = other.GetComponent<UseSpecial> ().PlayerNumber;
+				GetComponent<SpecialPos> ().enabled = true;
+				SetCollectedAnimations ();
 				if (other.gameObject.GetComponent<UseSpecial>() != null)
 				{
-					other.gameObject.GetComponent<UseSpecial>().SpecialBar += valorRecuperacao;
+					other.gameObject.GetComponent<UseSpecial> ().SpecialItens++;
 					other.gameObject.GetComponent<UseSpecial> ().UpdateBar ();
 				}
+				Destroy (GetComponent<Collider> ());
+				Destroy (GetComponent<Rigidbody> ());
             }
-            Destroy(gameObject);
+            
         }
     }
+
+	public void SetCollectedAnimations(){
+		if(GetComponent<Animator> () != null)
+			GetComponent<Animator> ().SetBool ("Collected", true);
+	}
 }
