@@ -57,7 +57,7 @@ public class Movimentacao3D : MonoBehaviour {
     }
 
 	void Update(){
-		//TestPosition ();
+		TestPosition ();
 		SetAnimations();
 		if (CanMove) {
 			Jump ();
@@ -303,26 +303,24 @@ public class Movimentacao3D : MonoBehaviour {
 
     //Ver o metodo no CameraControl
 	void TestPosition(){
-		//Calcula a distancia entre o personagem e a camera.
-		var DistanceZ = (transform.position - CameraMain.transform.position).z;
+		if (reachScreen) {
+			//Calcula o ponto maximo de movimentação pra esquerda.
+			var Leftborder = CameraMain.ViewportToWorldPoint (new Vector3 (-0.2f, 0, 1)).x;
 
-		//Calcula o ponto maximo de movimentação pra esquerda.
-		var Leftborder = CameraMain.ViewportToWorldPoint (new Vector3 (0.01f, 0, DistanceZ)).x;
+			//Calcula o ponto maximo de movimentação pra direita.
+			var Rightborder = CameraMain.ViewportToWorldPoint (new Vector3 (1.2f, 0, 1)).x;
 
-		//Calcula o ponto maximo de movimentação pra direita.
-		var Rightborder = CameraMain.ViewportToWorldPoint (new Vector3 (0.99f, 0, DistanceZ)).x;
+			//Calcula o ponto maximo de movimentação pra Baixo.
+			var Bottomborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, 1)).y;
 
-		//Calcula o ponto maximo de movimentação pra Baixo.
-		var Bottomborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, 3)).z;
+			//Calcula o ponto maximo de movimentação pra Cima.
+			var Topborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 1, 1)).y;
 
-		//Calcula o ponto maximo de movimentação pra Cima.
-		var Topborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, 48)).z;
-
-		//Mantem o personagem sempre dentro do espaço da camera.
-		transform.position = new Vector3 (
-			Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
-			/*Mathf.Clamp (*/transform.position.y/*, Bottomborder, Topborder)*/,
-			Mathf.Clamp (transform.position.z,Bottomborder,Topborder ));
+			//Mantem o personagem sempre dentro do espaço da camera.
+			transform.position = new Vector3 (Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
+											  transform.position.y,
+			                             	  transform.position.z);
+		}
 	}
 
 	void SetAnimations(){
