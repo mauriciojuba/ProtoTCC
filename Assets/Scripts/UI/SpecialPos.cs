@@ -19,14 +19,13 @@ public class SpecialPos : MonoBehaviour {
 		if (PlayerNumber == 1) {
 			Y = 0.75f;
 			Z = 1;
-			X = X * (XRef.SpecialInScreen.Count + 1);
+			X = X * (XRef.SpecialInScreen.Count);
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.A))
-			SetGoToScreenAnimation ();
+		
 		if (SetPos) {
 			if (transform.position != Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z))) {
 				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)), Speed * Time.deltaTime);

@@ -314,308 +314,6 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle B
-      takeName: Take 001
-      firstFrame: 316
-      lastFrame: 344
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Firefly:back
-        weight: 1
-      - path: Firefly:bottom
-        weight: 1
-      - path: Firefly:Brilhinho
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Abdomen_RT_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Abdomen_RT_CTRL/Firefly:Abdomen_01_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_A_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_A_CTRL/Firefly:L_Paw_A_ikHandle
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_B_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_B_CTRL/Firefly:L_Paw_B_ikHandle
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_C_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_C_CTRL/Firefly:L_Paw_C_ikHandle
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL/Firefly:L_Wing_A_03_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL/Firefly:L_Wing_A_03_CTRL/Firefly:L_Wing_A_04_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL/Firefly:L_Wing_A_03_CTRL/Firefly:L_Wing_A_04_CTRL/Firefly:L_Wing_A_05_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL/Firefly:L_Wing_A_03_CTRL/Firefly:L_Wing_A_04_CTRL/Firefly:L_Wing_A_05_CTRL/Firefly:L_Wing_A_06_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL/Firefly:L_Wing_B_02_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL/Firefly:L_Wing_B_02_CTRL/Firefly:L_Wing_B_03_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL/Firefly:L_Wing_B_02_CTRL/Firefly:L_Wing_B_03_CTRL/Firefly:L_Wing_B_04_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL/Firefly:L_Wing_B_02_CTRL/Firefly:L_Wing_B_03_CTRL/Firefly:L_Wing_B_04_CTRL/Firefly:L_Wing_B_05_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL/Firefly:L_Feeler_01_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL/Firefly:L_Feeler_01_CTRL/Firefly:L_Feeler_02_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL/Firefly:L_Feeler_01_CTRL/Firefly:L_Feeler_02_CTRL/Firefly:L_Feeler_03_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL/Firefly:L_Feeler_01_CTRL/Firefly:L_Feeler_02_CTRL/Firefly:L_Feeler_03_CTRL/Firefly:L_Feeler_04_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Jaw_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL/Firefly:R_Feeler_01_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL/Firefly:R_Feeler_01_CTRL/Firefly:R_Feeler_02_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL/Firefly:R_Feeler_01_CTRL/Firefly:R_Feeler_02_CTRL/Firefly:R_Feeler_03_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL/Firefly:R_Feeler_01_CTRL/Firefly:R_Feeler_02_CTRL/Firefly:R_Feeler_03_CTRL/Firefly:R_Feeler_04_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Jaw_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_A_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_A_CTRL/Firefly:R_Paw_A_ikHandle
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_B_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_B_CTRL/Firefly:R_Paw_B_ikHandle
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_C_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_C_CTRL/Firefly:R_Paw_C_ikHandle
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL/Firefly:R_Wing_A_03_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL/Firefly:R_Wing_A_03_CTRL/Firefly:R_Wing_A_04_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL/Firefly:R_Wing_A_03_CTRL/Firefly:R_Wing_A_04_CTRL/Firefly:R_Wing_A_05_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL/Firefly:R_Wing_A_03_CTRL/Firefly:R_Wing_A_04_CTRL/Firefly:R_Wing_A_05_CTRL/Firefly:R_Wing_A_06_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL/Firefly:R_Wing_B_02_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL/Firefly:R_Wing_B_02_CTRL/Firefly:R_Wing_B_03_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL/Firefly:R_Wing_B_02_CTRL/Firefly:R_Wing_B_03_CTRL/Firefly:R_Wing_B_04_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL/Firefly:R_Wing_B_02_CTRL/Firefly:R_Wing_B_03_CTRL/Firefly:R_Wing_B_04_CTRL/Firefly:R_Wing_B_05_CTRL
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Abdomen_RT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Abdomen_RT/Firefly:Abdomen_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Abdomen_RT/Firefly:Abdomen_01/Firefly:Abdomen_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_A_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_A_01/Firefly:L_Paw_A_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_A_01/Firefly:L_Paw_A_02/Firefly:L_Paw_A_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_B_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_B_01/Firefly:L_Paw_B_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_B_01/Firefly:L_Paw_B_02/Firefly:L_Paw_B_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_C_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_C_01/Firefly:L_Paw_C_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_C_01/Firefly:L_Paw_C_02/Firefly:L_Paw_C_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03/Firefly:L_Wing_A_04
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03/Firefly:L_Wing_A_04/Firefly:L_Wing_A_05
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03/Firefly:L_Wing_A_04/Firefly:L_Wing_A_05/Firefly:L_Wing_A_06
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03/Firefly:L_Wing_A_04/Firefly:L_Wing_A_05/Firefly:L_Wing_A_06/Firefly:L_Wing_A_07
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02/Firefly:L_Wing_B_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02/Firefly:L_Wing_B_03/Firefly:L_Wing_B_04
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02/Firefly:L_Wing_B_03/Firefly:L_Wing_B_04/Firefly:L_Wing_B_05
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02/Firefly:L_Wing_B_03/Firefly:L_Wing_B_04/Firefly:L_Wing_B_05/Firefly:L_Wing_B_06
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01/Firefly:L_Feeler_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01/Firefly:L_Feeler_02/Firefly:L_Feeler_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01/Firefly:L_Feeler_02/Firefly:L_Feeler_03/Firefly:L_Feeler_04
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01/Firefly:L_Feeler_02/Firefly:L_Feeler_03/Firefly:L_Feeler_04/Firefly:L_Feeler_05
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01/Firefly:R_Feeler_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01/Firefly:R_Feeler_02/Firefly:R_Feeler_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01/Firefly:R_Feeler_02/Firefly:R_Feeler_03/Firefly:R_Feeler_04
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01/Firefly:R_Feeler_02/Firefly:R_Feeler_03/Firefly:R_Feeler_04/Firefly:R_Feeler_05
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT/Firefly:L_Jaw_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT/Firefly:L_Jaw_01/Firefly:L_Jaw_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT/Firefly:R_Jaw_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT/Firefly:R_Jaw_01/Firefly:R_Jaw_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_A_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_A_01/Firefly:R_Paw_A_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_A_01/Firefly:R_Paw_A_02/Firefly:R_Paw_A_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_B_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_B_01/Firefly:R_Paw_B_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_B_01/Firefly:R_Paw_B_02/Firefly:R_Paw_B_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_C_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_C_01/Firefly:R_Paw_C_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_C_01/Firefly:R_Paw_C_02/Firefly:R_Paw_C_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03/Firefly:R_Wing_A_04
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03/Firefly:R_Wing_A_04/Firefly:R_Wing_A_05
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03/Firefly:R_Wing_A_04/Firefly:R_Wing_A_05/Firefly:R_Wing_A_06
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03/Firefly:R_Wing_A_04/Firefly:R_Wing_A_05/Firefly:R_Wing_A_06/Firefly:R_Wing_A_07
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02/Firefly:R_Wing_B_03
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02/Firefly:R_Wing_B_03/Firefly:R_Wing_B_04
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02/Firefly:R_Wing_B_03/Firefly:R_Wing_B_04/Firefly:R_Wing_B_05
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02/Firefly:R_Wing_B_03/Firefly:R_Wing_B_04/Firefly:R_Wing_B_05/Firefly:R_Wing_B_06
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:Vagalume_MESH
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:Vagalume_MESH/Firefly:Body
-        weight: 1
-      - path: Firefly:Brilhinho/Firefly:Vagalume_MESH/Firefly:Eyes
-        weight: 1
-      - path: left
-        weight: 1
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: Wings
       takeName: Take 001
       firstFrame: 1
@@ -628,10 +326,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -934,8 +632,8 @@ ModelImporter:
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -1824,6 +1522,308 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: Idle B
+      takeName: Take 001
+      firstFrame: 316
+      lastFrame: 344
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Firefly:back
+        weight: 1
+      - path: Firefly:bottom
+        weight: 1
+      - path: Firefly:Brilhinho
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Abdomen_RT_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Abdomen_RT_CTRL/Firefly:Abdomen_01_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_A_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_A_CTRL/Firefly:L_Paw_A_ikHandle
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_B_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_B_CTRL/Firefly:L_Paw_B_ikHandle
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_C_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Paw_C_CTRL/Firefly:L_Paw_C_ikHandle
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL/Firefly:L_Wing_A_03_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL/Firefly:L_Wing_A_03_CTRL/Firefly:L_Wing_A_04_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL/Firefly:L_Wing_A_03_CTRL/Firefly:L_Wing_A_04_CTRL/Firefly:L_Wing_A_05_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_A_01_CTRL/Firefly:L_Wing_A_02_CTRL/Firefly:L_Wing_A_03_CTRL/Firefly:L_Wing_A_04_CTRL/Firefly:L_Wing_A_05_CTRL/Firefly:L_Wing_A_06_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL/Firefly:L_Wing_B_02_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL/Firefly:L_Wing_B_02_CTRL/Firefly:L_Wing_B_03_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL/Firefly:L_Wing_B_02_CTRL/Firefly:L_Wing_B_03_CTRL/Firefly:L_Wing_B_04_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:L_Wings_RT_CTRL/Firefly:L_Wing_B_01_CTRL/Firefly:L_Wing_B_02_CTRL/Firefly:L_Wing_B_03_CTRL/Firefly:L_Wing_B_04_CTRL/Firefly:L_Wing_B_05_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL/Firefly:L_Feeler_01_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL/Firefly:L_Feeler_01_CTRL/Firefly:L_Feeler_02_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL/Firefly:L_Feeler_01_CTRL/Firefly:L_Feeler_02_CTRL/Firefly:L_Feeler_03_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Feeler_RT_CTRL/Firefly:L_Feeler_01_CTRL/Firefly:L_Feeler_02_CTRL/Firefly:L_Feeler_03_CTRL/Firefly:L_Feeler_04_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:L_Jaw_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL/Firefly:R_Feeler_01_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL/Firefly:R_Feeler_01_CTRL/Firefly:R_Feeler_02_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL/Firefly:R_Feeler_01_CTRL/Firefly:R_Feeler_02_CTRL/Firefly:R_Feeler_03_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Feeler_RT_CTRL/Firefly:R_Feeler_01_CTRL/Firefly:R_Feeler_02_CTRL/Firefly:R_Feeler_03_CTRL/Firefly:R_Feeler_04_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:Neck_CTRL/Firefly:Head_CTRL/Firefly:R_Jaw_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_A_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_A_CTRL/Firefly:R_Paw_A_ikHandle
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_B_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_B_CTRL/Firefly:R_Paw_B_ikHandle
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_C_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Paw_C_CTRL/Firefly:R_Paw_C_ikHandle
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL/Firefly:R_Wing_A_03_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL/Firefly:R_Wing_A_03_CTRL/Firefly:R_Wing_A_04_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL/Firefly:R_Wing_A_03_CTRL/Firefly:R_Wing_A_04_CTRL/Firefly:R_Wing_A_05_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_A_01_CTRL/Firefly:R_Wing_A_02_CTRL/Firefly:R_Wing_A_03_CTRL/Firefly:R_Wing_A_04_CTRL/Firefly:R_Wing_A_05_CTRL/Firefly:R_Wing_A_06_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL/Firefly:R_Wing_B_02_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL/Firefly:R_Wing_B_02_CTRL/Firefly:R_Wing_B_03_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL/Firefly:R_Wing_B_02_CTRL/Firefly:R_Wing_B_03_CTRL/Firefly:R_Wing_B_04_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:BASE_CTRL/Firefly:ROOT_CTRL/Firefly:Spine_CTRL/Firefly:R_Wings_RT_CTRL/Firefly:R_Wing_B_01_CTRL/Firefly:R_Wing_B_02_CTRL/Firefly:R_Wing_B_03_CTRL/Firefly:R_Wing_B_04_CTRL/Firefly:R_Wing_B_05_CTRL
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Abdomen_RT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Abdomen_RT/Firefly:Abdomen_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Abdomen_RT/Firefly:Abdomen_01/Firefly:Abdomen_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_A_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_A_01/Firefly:L_Paw_A_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_A_01/Firefly:L_Paw_A_02/Firefly:L_Paw_A_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_B_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_B_01/Firefly:L_Paw_B_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_B_01/Firefly:L_Paw_B_02/Firefly:L_Paw_B_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_C_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_C_01/Firefly:L_Paw_C_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Paws_RT/Firefly:L_Paw_C_01/Firefly:L_Paw_C_02/Firefly:L_Paw_C_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03/Firefly:L_Wing_A_04
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03/Firefly:L_Wing_A_04/Firefly:L_Wing_A_05
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03/Firefly:L_Wing_A_04/Firefly:L_Wing_A_05/Firefly:L_Wing_A_06
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_A_01/Firefly:L_Wing_A_02/Firefly:L_Wing_A_03/Firefly:L_Wing_A_04/Firefly:L_Wing_A_05/Firefly:L_Wing_A_06/Firefly:L_Wing_A_07
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02/Firefly:L_Wing_B_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02/Firefly:L_Wing_B_03/Firefly:L_Wing_B_04
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02/Firefly:L_Wing_B_03/Firefly:L_Wing_B_04/Firefly:L_Wing_B_05
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:L_Wings_RT/Firefly:L_Wing_B_01/Firefly:L_Wing_B_02/Firefly:L_Wing_B_03/Firefly:L_Wing_B_04/Firefly:L_Wing_B_05/Firefly:L_Wing_B_06
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01/Firefly:L_Feeler_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01/Firefly:L_Feeler_02/Firefly:L_Feeler_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01/Firefly:L_Feeler_02/Firefly:L_Feeler_03/Firefly:L_Feeler_04
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:L_Feeler_RT/Firefly:L_Feeler_01/Firefly:L_Feeler_02/Firefly:L_Feeler_03/Firefly:L_Feeler_04/Firefly:L_Feeler_05
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01/Firefly:R_Feeler_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01/Firefly:R_Feeler_02/Firefly:R_Feeler_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01/Firefly:R_Feeler_02/Firefly:R_Feeler_03/Firefly:R_Feeler_04
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Haed_End/Firefly:R_Feeler_RT/Firefly:R_Feeler_01/Firefly:R_Feeler_02/Firefly:R_Feeler_03/Firefly:R_Feeler_04/Firefly:R_Feeler_05
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT/Firefly:L_Jaw_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT/Firefly:L_Jaw_01/Firefly:L_Jaw_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT/Firefly:R_Jaw_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:Neck/Firefly:Head/Firefly:Jaw_RT/Firefly:R_Jaw_01/Firefly:R_Jaw_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_A_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_A_01/Firefly:R_Paw_A_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_A_01/Firefly:R_Paw_A_02/Firefly:R_Paw_A_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_B_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_B_01/Firefly:R_Paw_B_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_B_01/Firefly:R_Paw_B_02/Firefly:R_Paw_B_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_C_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_C_01/Firefly:R_Paw_C_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Paws_RT/Firefly:R_Paw_C_01/Firefly:R_Paw_C_02/Firefly:R_Paw_C_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03/Firefly:R_Wing_A_04
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03/Firefly:R_Wing_A_04/Firefly:R_Wing_A_05
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03/Firefly:R_Wing_A_04/Firefly:R_Wing_A_05/Firefly:R_Wing_A_06
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_A_01/Firefly:R_Wing_A_02/Firefly:R_Wing_A_03/Firefly:R_Wing_A_04/Firefly:R_Wing_A_05/Firefly:R_Wing_A_06/Firefly:R_Wing_A_07
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02/Firefly:R_Wing_B_03
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02/Firefly:R_Wing_B_03/Firefly:R_Wing_B_04
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02/Firefly:R_Wing_B_03/Firefly:R_Wing_B_04/Firefly:R_Wing_B_05
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:JOINTS/Firefly:ROOT/Firefly:Spine/Firefly:R_Wings_RT/Firefly:R_Wing_B_01/Firefly:R_Wing_B_02/Firefly:R_Wing_B_03/Firefly:R_Wing_B_04/Firefly:R_Wing_B_05/Firefly:R_Wing_B_06
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:Vagalume_MESH
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:Vagalume_MESH/Firefly:Body
+        weight: 1
+      - path: Firefly:Brilhinho/Firefly:Vagalume_MESH/Firefly:Eyes
+        weight: 1
+      - path: left
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: Colected
       takeName: Take 001
       firstFrame: 345
@@ -1847,7 +1847,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.99071217
+      - time: 0.91950464
         functionName: SetGoToScreenAnimation
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 70470f9c1e032734e8b13394f8df3fcd,
@@ -2136,8 +2136,8 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
-    meshCompression: 0
+    globalScale: 20
+    meshCompression: 3
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
