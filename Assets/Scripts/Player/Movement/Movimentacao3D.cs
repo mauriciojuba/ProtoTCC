@@ -364,5 +364,33 @@ public class Movimentacao3D : MonoBehaviour {
 		}
 		Anim.SetTrigger ("JumpOffScreen");
 	}
+
+	public void SetGrabAnim(){
+		if(Anim == null){
+			return;
+		}
+		Anim.SetTrigger ("Grab");
+	}
+
+	public void SetGrabbedAnim(bool Grabbed){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetBool ("Grabbed", Grabbed);
+	}
+
+	public void SetGrabbingAnim(bool Grabbing){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetBool ("Grabbing", Grabbing);
+	}
+
+	public void SetGrabbedFalse(){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetBool ("Grabbed", false);
+	}
 }
 

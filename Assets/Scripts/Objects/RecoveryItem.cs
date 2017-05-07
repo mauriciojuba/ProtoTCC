@@ -23,6 +23,7 @@ public class RecoveryItem : MonoBehaviour {
             {
 				transform.SetParent (other.transform);
 				transform.position = transform.parent.position;
+				other.GetComponent<UseSpecial> ().SpecialInScreen.Add (gameObject);
 				GetComponent<SpecialPos> ().XRef = other.GetComponent<UseSpecial> ();
 				GetComponent<SpecialPos> ().PlayerNumber = other.GetComponent<UseSpecial> ().PlayerNumber;
 				GetComponent<SpecialPos> ().enabled = true;
