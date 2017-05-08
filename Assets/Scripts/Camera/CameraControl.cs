@@ -9,10 +9,10 @@ public class CameraControl : MonoBehaviour {
     Transform DollyCam;
     public int numPlayers = 0;
     [SerializeField] float velocidadeMovimento;
-    [SerializeField] float distancia = 8;
-    [SerializeField] float maxDistancia;
-    [SerializeField] float minDistancia;
-    [SerializeField] float velocidadeZoom;
+    [SerializeField] float distancia = 15;
+    [SerializeField] float offSetY;
+    //[SerializeField] float minDistancia;
+    //[SerializeField] float velocidadeZoom;
 
 
     bool alguemFora;
@@ -35,7 +35,7 @@ public class CameraControl : MonoBehaviour {
             DollyCam.position = Vector3.SmoothDamp(DollyCam.position, posicionaCamera(CalculaCamTarget(numPlayers)), ref vel, (velocidadeMovimento / 10) * Time.deltaTime);
             target.position = CalculaCamTarget(numPlayers);
         }
-        ControlaBordaTela();
+        //ControlaBordaTela();
 
 
     }
@@ -99,7 +99,7 @@ public class CameraControl : MonoBehaviour {
     {
         if (!playerOnScreen)
         {
-            return new Vector3(_target.x, _target.y + distancia, _target.z - distancia - 2);
+            return new Vector3(_target.x, _target.y + distancia, _target.z - distancia + offSetY);
         }
         else
         {
@@ -108,7 +108,7 @@ public class CameraControl : MonoBehaviour {
     }
 
     
-    void ControlaBordaTela()
+    /*void ControlaBordaTela()
     {
         for (int i = 0; i < players.Length; i++)
         {
@@ -151,7 +151,7 @@ public class CameraControl : MonoBehaviour {
             }
         }
 
-    }
+    }*/
     
     void lockPlayerMovement(Transform t)
     {
