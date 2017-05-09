@@ -20,33 +20,21 @@ public class Fight : MonoBehaviour
 
     void Awake()
     {
-        PlayerNumberRef = GetComponent<Movimentacao3D>();
-        DamageCollider.enabled = false;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        //liga o collider de dano, e define um dano randomico.
-        if (Input.GetButtonDown("X P" + PlayerNumberRef.PlayerNumber))
-        {
-            DamageCollider.enabled = true;
-            DamageCollider.gameObject.GetComponent<FightCollider>().Damage = Random.Range(MinDamage, MaxDamage);
-        }
-        if (Input.GetButtonUp("X P" + PlayerNumberRef.PlayerNumber))
-        {
-            DamageCollider.enabled = false;
-        }
-
-        if (Input.GetButtonDown("Y P" + PlayerNumberRef.PlayerNumber))
-        {
-            DamageCollider.enabled = true;
-            DamageCollider.gameObject.GetComponent<FightCollider>().Damage = Random.Range(MinStrongDamage, MaxStrongDamage);
-
-        }
-        if (Input.GetButtonUp("Y P" + PlayerNumberRef.PlayerNumber))
-        {
-            DamageCollider.enabled = false;
-        }
+       
     }
+
+	public void ActiveCollider(){
+		DamageCollider.enabled = true;
+		DamageCollider.gameObject.GetComponent<FightCollider>().Damage = Random.Range(MinDamage, MaxDamage);
+	}
+
+	public void DesactiveCollider(){
+		DamageCollider.enabled = false;
+	}
 }
