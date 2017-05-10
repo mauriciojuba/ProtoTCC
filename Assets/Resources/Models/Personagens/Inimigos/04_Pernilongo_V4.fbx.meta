@@ -474,6 +474,7 @@ ModelImporter:
     7400044: Death
     7400046: 'Go Off Screen Down '
     7400048: Patrolling
+    7400050: Wings
     9500000: //RootNode
     13700000: Pernilongo:Body
     13700002: Pernilongo:Eyes
@@ -12744,7 +12745,7 @@ ModelImporter:
       name: Idle
       takeName: Take 001
       firstFrame: 571
-      lastFrame: 600
+      lastFrame: 599
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -15200,6 +15201,618 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Pernilongo:back
+        weight: 1
+      - path: Pernilongo:left
+        weight: 1
+      - path: Pernilongo:Mosca
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot/Pernilongo:L_Rotate
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot/Pernilongo:L_Rotate/Pernilongo:L_TipToe
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot/Pernilongo:L_Rotate/Pernilongo:L_TipToe/Pernilongo:L_Ball_Bend
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot/Pernilongo:L_Rotate/Pernilongo:L_TipToe/Pernilongo:L_Ball_Bend/Pernilongo:L_Ball_ikHandle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot/Pernilongo:L_Rotate/Pernilongo:L_TipToe/Pernilongo:L_Toe_Bend
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot/Pernilongo:L_Rotate/Pernilongo:L_TipToe/Pernilongo:L_Toe_Bend/Pernilongo:L_Toe_ikHandle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot/Pernilongo:L_Rotate/Pernilongo:L_TipToe/Pernilongo:L_Walk
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:L_Foot_CTRL/Pernilongo:L_Foot/Pernilongo:L_Rotate/Pernilongo:L_TipToe/Pernilongo:L_Walk/Pernilongo:L_Ankle_ikHandle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot/Pernilongo:R_Rotate
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot/Pernilongo:R_Rotate/Pernilongo:R_TipToe
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot/Pernilongo:R_Rotate/Pernilongo:R_TipToe/Pernilongo:R_Ball_Bend
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot/Pernilongo:R_Rotate/Pernilongo:R_TipToe/Pernilongo:R_Ball_Bend/Pernilongo:R_Ball_ikHandle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot/Pernilongo:R_Rotate/Pernilongo:R_TipToe/Pernilongo:R_Toe_Bend
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot/Pernilongo:R_Rotate/Pernilongo:R_TipToe/Pernilongo:R_Toe_Bend/Pernilongo:R_Toe_ikHandle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot/Pernilongo:R_Rotate/Pernilongo:R_TipToe/Pernilongo:R_Walk
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:R_Foot_CTRL/Pernilongo:R_Foot/Pernilongo:R_Rotate/Pernilongo:R_TipToe/Pernilongo:R_Walk/Pernilongo:R_Ankle_ikHandle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:L_Knee_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:R_Knee_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Abdomen_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Abdomen_RT_CTRL/Pernilongo:Abdomen_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Abdomen_RT_CTRL/Pernilongo:Abdomen_01_CTRL/Pernilongo:Abdomen_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Abdomen_RT_CTRL/Pernilongo:Abdomen_01_CTRL/Pernilongo:Abdomen_02_CTRL/Pernilongo:Abdomen_03_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Ind_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Ind_RT_CTRL/Pernilongo:L_Ind_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Ind_RT_CTRL/Pernilongo:L_Ind_01_CTRL/Pernilongo:L_Ind_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Mid_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Mid_RT_CTRL/Pernilongo:L_Mid_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Mid_RT_CTRL/Pernilongo:L_Mid_01_CTRL/Pernilongo:L_Mid_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Pinky_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Pinky_RT_CTRL/Pernilongo:L_Pinky_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Pinky_RT_CTRL/Pernilongo:L_Pinky_01_CTRL/Pernilongo:L_Pinky_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Thumb_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Thumb_RT_CTRL/Pernilongo:L_Thumb_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Thumb_RT_CTRL/Pernilongo:L_Thumb_01_CTRL/Pernilongo:L_Thumb_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Arm_CTRL
+          1/Pernilongo:L_Wrist_ikHandle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Arm_CTRL/Pernilongo:L_Elbow_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Shoulder_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Shoulder_CTRL/Pernilongo:L_Wing_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Shoulder_CTRL/Pernilongo:L_Wing_RT_CTRL/Pernilongo:L_Wing_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Shoulder_CTRL/Pernilongo:L_Wing_RT_CTRL/Pernilongo:L_Wing_01_CTRL/Pernilongo:L_Wing_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Shoulder_CTRL/Pernilongo:L_Wing_RT_CTRL/Pernilongo:L_Wing_01_CTRL/Pernilongo:L_Wing_02_CTRL/Pernilongo:L_Wing_03_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Shoulder_CTRL/Pernilongo:L_Wing_RT_CTRL/Pernilongo:L_Wing_01_CTRL/Pernilongo:L_Wing_02_CTRL/Pernilongo:L_Wing_03_CTRL/Pernilongo:L_Wing_04_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:L_Shoulder_CTRL/Pernilongo:L_Wing_RT_CTRL/Pernilongo:L_Wing_01_CTRL/Pernilongo:L_Wing_02_CTRL/Pernilongo:L_Wing_03_CTRL/Pernilongo:L_Wing_04_CTRL/Pernilongo:L_Wing_05_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:L_Feeler_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:L_Feeler_RT_CTRL/Pernilongo:L_Feeler_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:L_Feeler_RT_CTRL/Pernilongo:L_Feeler_01_CTRL/Pernilongo:L_Feeler_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:L_Feeler_RT_CTRL/Pernilongo:L_Feeler_01_CTRL/Pernilongo:L_Feeler_02_CTRL/Pernilongo:L_Feeler_03_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL/Pernilongo:Proboscis_05_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL/Pernilongo:Proboscis_05_CTRL/Pernilongo:Proboscis_06_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL/Pernilongo:Proboscis_05_CTRL/Pernilongo:Proboscis_06_CTRL/Pernilongo:Proboscis_07_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL/Pernilongo:Proboscis_05_CTRL/Pernilongo:Proboscis_06_CTRL/Pernilongo:Proboscis_07_CTRL/Pernilongo:Proboscis_08_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL/Pernilongo:Proboscis_05_CTRL/Pernilongo:Proboscis_06_CTRL/Pernilongo:Proboscis_07_CTRL/Pernilongo:Proboscis_08_CTRL/Pernilongo:Proboscis_09_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL/Pernilongo:Proboscis_05_CTRL/Pernilongo:Proboscis_06_CTRL/Pernilongo:Proboscis_07_CTRL/Pernilongo:Proboscis_08_CTRL/Pernilongo:Proboscis_09_CTRL/Pernilongo:Proboscis_10_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL/Pernilongo:Proboscis_05_CTRL/Pernilongo:Proboscis_06_CTRL/Pernilongo:Proboscis_07_CTRL/Pernilongo:Proboscis_08_CTRL/Pernilongo:Proboscis_09_CTRL/Pernilongo:Proboscis_10_CTRL/Pernilongo:Proboscis_11_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:Proboscis_RT_CTRL/Pernilongo:Proboscis_01_CTRL/Pernilongo:Proboscis_02_CTRL/Pernilongo:Proboscis_03_CTRL/Pernilongo:Proboscis_04_CTRL/Pernilongo:Proboscis_05_CTRL/Pernilongo:Proboscis_06_CTRL/Pernilongo:Proboscis_07_CTRL/Pernilongo:Proboscis_08_CTRL/Pernilongo:Proboscis_09_CTRL/Pernilongo:Proboscis_10_CTRL/Pernilongo:Proboscis_11_CTRL/Pernilongo:Proboscis_12_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:R_Feeler_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:R_Feeler_RT_CTRL/Pernilongo:R_Feeler_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:R_Feeler_RT_CTRL/Pernilongo:R_Feeler_01_CTRL/Pernilongo:R_Feeler_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:Neck_RT/Pernilongo:Neck_01/Pernilongo:Neck_02/Pernilongo:Neck_03/Pernilongo:Neck_04/Pernilongo:R_Feeler_RT_CTRL/Pernilongo:R_Feeler_01_CTRL/Pernilongo:R_Feeler_02_CTRL/Pernilongo:R_Feeler_03_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Ind_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Ind_RT_CTRL/Pernilongo:R_Ind_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Ind_RT_CTRL/Pernilongo:R_Ind_01_CTRL/Pernilongo:R_Ind_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Mid_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Mid_RT_CTRL/Pernilongo:R_Mid_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Mid_RT_CTRL/Pernilongo:R_Mid_01_CTRL/Pernilongo:R_Mid_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Pinky_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Pinky_RT_CTRL/Pernilongo:R_Pinky_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Pinky_RT_CTRL/Pernilongo:R_Pinky_01_CTRL/Pernilongo:R_Pinky_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Thumb_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Thumb_RT_CTRL/Pernilongo:R_Thumb_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Thumb_RT_CTRL/Pernilongo:R_Thumb_01_CTRL/Pernilongo:R_Thumb_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Arm_CTRL/Pernilongo:R_Wrist_ikHandle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:nurbsCircle11/Pernilongo:R_Elbow_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:R_Shoulder_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:R_Shoulder_CTRL/Pernilongo:R_Wing_RT_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:R_Shoulder_CTRL/Pernilongo:R_Wing_RT_CTRL/Pernilongo:R_Wing_01_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:R_Shoulder_CTRL/Pernilongo:R_Wing_RT_CTRL/Pernilongo:R_Wing_01_CTRL/Pernilongo:R_Wing_02_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:R_Shoulder_CTRL/Pernilongo:R_Wing_RT_CTRL/Pernilongo:R_Wing_01_CTRL/Pernilongo:R_Wing_02_CTRL/Pernilongo:R_Wing_03_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:R_Shoulder_CTRL/Pernilongo:R_Wing_RT_CTRL/Pernilongo:R_Wing_01_CTRL/Pernilongo:R_Wing_02_CTRL/Pernilongo:R_Wing_03_CTRL/Pernilongo:R_Wing_04_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:BASE_CTRL/Pernilongo:ROOT_CTRL/Pernilongo:Spine_RT/Pernilongo:Spine_01/Pernilongo:Spine_02/Pernilongo:R_Shoulder_CTRL/Pernilongo:R_Wing_RT_CTRL/Pernilongo:R_Wing_01_CTRL/Pernilongo:R_Wing_02_CTRL/Pernilongo:R_Wing_03_CTRL/Pernilongo:R_Wing_04_CTRL/Pernilongo:R_Wing_05_CTRL
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Abdomen_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Abdomen_RT/Pernilongo:Abdomen_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Abdomen_RT/Pernilongo:Abdomen_01/Pernilongo:Abdomen_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Abdomen_RT/Pernilongo:Abdomen_01/Pernilongo:Abdomen_02/Pernilongo:Abdomen_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Abdomen_RT/Pernilongo:Abdomen_01/Pernilongo:Abdomen_02/Pernilongo:Abdomen_03/Pernilongo:Abdomen_04
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:L_leg_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:L_leg_RT/Pernilongo:L_Knee
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:L_leg_RT/Pernilongo:L_Knee/Pernilongo:L_Ankle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:L_leg_RT/Pernilongo:L_Knee/Pernilongo:L_Ankle/Pernilongo:L_Toe_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:L_leg_RT/Pernilongo:L_Knee/Pernilongo:L_Ankle/Pernilongo:L_Toe_RT/Pernilongo:L_Toe_End
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:R_leg_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:R_leg_RT/Pernilongo:R_Knee
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:R_leg_RT/Pernilongo:R_Knee/Pernilongo:R_Ankle
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:R_leg_RT/Pernilongo:R_Knee/Pernilongo:R_Ankle/Pernilongo:R_Toe_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:R_leg_RT/Pernilongo:R_Knee/Pernilongo:R_Ankle/Pernilongo:R_Toe_RT/Pernilongo:R_Toe_End
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Indcator_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Indcator_RT/Pernilongo:L_Ind_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Indcator_RT/Pernilongo:L_Ind_01/Pernilongo:L_Ind_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Indcator_RT/Pernilongo:L_Ind_01/Pernilongo:L_Ind_02/Pernilongo:L_Ind_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Middle_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Middle_RT/Pernilongo:L_Mid_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Middle_RT/Pernilongo:L_Mid_01/Pernilongo:L_Mid_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Middle_RT/Pernilongo:L_Mid_01/Pernilongo:L_Mid_02/Pernilongo:L_Mid_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Pinky_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Pinky_RT/Pernilongo:L_Pinky_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Pinky_RT/Pernilongo:L_Pinky_01/Pernilongo:L_Pinky_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Fingers_RT/Pernilongo:L_Pinky_RT/Pernilongo:L_Pinky_01/Pernilongo:L_Pinky_02/Pernilongo:L_Pinky_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Thumb_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Thumb_RT/Pernilongo:L_Thumb_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Thumb_RT/Pernilongo:L_Thumb_01/Pernilongo:L_Thumb_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Arm/Pernilongo:L_Elbow/Pernilongo:L_Wrist/Pernilongo:L_Thumb_RT/Pernilongo:L_Thumb_01/Pernilongo:L_Thumb_02/Pernilongo:L_Thumb_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Wing_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Wing_RT/Pernilongo:L_Wing_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Wing_RT/Pernilongo:L_Wing_01/Pernilongo:L_Wing_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Wing_RT/Pernilongo:L_Wing_01/Pernilongo:L_Wing_02/Pernilongo:L_Wing_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Wing_RT/Pernilongo:L_Wing_01/Pernilongo:L_Wing_02/Pernilongo:L_Wing_03/Pernilongo:L_Wing_04
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Wing_RT/Pernilongo:L_Wing_01/Pernilongo:L_Wing_02/Pernilongo:L_Wing_03/Pernilongo:L_Wing_04/Pernilongo:L_Wing_05
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:L_Shoulder/Pernilongo:L_Wing_RT/Pernilongo:L_Wing_01/Pernilongo:L_Wing_02/Pernilongo:L_Wing_03/Pernilongo:L_Wing_04/Pernilongo:L_Wing_05/Pernilongo:L_Wing_06
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Head_End
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:L_Feeler_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:L_Feeler_RT/Pernilongo:L_Feeler_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:L_Feeler_RT/Pernilongo:L_Feeler_01/Pernilongo:L_Feeler_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:L_Feeler_RT/Pernilongo:L_Feeler_01/Pernilongo:L_Feeler_02/Pernilongo:L_Feeler_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:L_Feeler_RT/Pernilongo:L_Feeler_01/Pernilongo:L_Feeler_02/Pernilongo:L_Feeler_03/Pernilongo:L_Feeler_04
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05/Pernilongo:Proboscis_06
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05/Pernilongo:Proboscis_06/Pernilongo:Proboscis_07
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05/Pernilongo:Proboscis_06/Pernilongo:Proboscis_07/Pernilongo:Proboscis_08
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05/Pernilongo:Proboscis_06/Pernilongo:Proboscis_07/Pernilongo:Proboscis_08/Pernilongo:Proboscis_09
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05/Pernilongo:Proboscis_06/Pernilongo:Proboscis_07/Pernilongo:Proboscis_08/Pernilongo:Proboscis_09/Pernilongo:Proboscis_10
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05/Pernilongo:Proboscis_06/Pernilongo:Proboscis_07/Pernilongo:Proboscis_08/Pernilongo:Proboscis_09/Pernilongo:Proboscis_10/Pernilongo:Proboscis_11
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05/Pernilongo:Proboscis_06/Pernilongo:Proboscis_07/Pernilongo:Proboscis_08/Pernilongo:Proboscis_09/Pernilongo:Proboscis_10/Pernilongo:Proboscis_11/Pernilongo:Proboscis_12
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:Proboscis_RT/Pernilongo:Proboscis_01/Pernilongo:Proboscis_02/Pernilongo:Proboscis_03/Pernilongo:Proboscis_04/Pernilongo:Proboscis_05/Pernilongo:Proboscis_06/Pernilongo:Proboscis_07/Pernilongo:Proboscis_08/Pernilongo:Proboscis_09/Pernilongo:Proboscis_10/Pernilongo:Proboscis_11/Pernilongo:Proboscis_12/Pernilongo:Proboscis_13
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:R_Feeler_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:R_Feeler_RT/Pernilongo:R_Feeler_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:R_Feeler_RT/Pernilongo:R_Feeler_01/Pernilongo:R_Feeler_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:R_Feeler_RT/Pernilongo:R_Feeler_01/Pernilongo:R_Feeler_02/Pernilongo:R_Feeler_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:Neck_RT 1/Pernilongo:Neck_01
+          1/Pernilongo:Neck_02 1/Pernilongo:Neck_03 1/Pernilongo:Neck_04 1/Pernilongo:Head_RT/Pernilongo:R_Feeler_RT/Pernilongo:R_Feeler_01/Pernilongo:R_Feeler_02/Pernilongo:R_Feeler_03/Pernilongo:R_Feeler_04
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:L_Wing_RT1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:L_Wing_RT1/Pernilongo:L_Wing_01
+          1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:L_Wing_RT1/Pernilongo:L_Wing_01
+          1/Pernilongo:L_Wing_02 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:L_Wing_RT1/Pernilongo:L_Wing_01
+          1/Pernilongo:L_Wing_02 1/Pernilongo:L_Wing_03 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:L_Wing_RT1/Pernilongo:L_Wing_01
+          1/Pernilongo:L_Wing_02 1/Pernilongo:L_Wing_03 1/Pernilongo:L_Wing_04 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:L_Wing_RT1/Pernilongo:L_Wing_01
+          1/Pernilongo:L_Wing_02 1/Pernilongo:L_Wing_03 1/Pernilongo:L_Wing_04 1/Pernilongo:L_Wing_05
+          1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:L_Wing_RT1/Pernilongo:L_Wing_01
+          1/Pernilongo:L_Wing_02 1/Pernilongo:L_Wing_03 1/Pernilongo:L_Wing_04 1/Pernilongo:L_Wing_05
+          1/Pernilongo:L_Wing_06 1
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Indcator_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Indcator_RT/Pernilongo:R_Ind_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Indcator_RT/Pernilongo:R_Ind_01/Pernilongo:R_Ind_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Indcator_RT/Pernilongo:R_Ind_01/Pernilongo:R_Ind_02/Pernilongo:R_Ind_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Middle_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Middle_RT/Pernilongo:R_Mid_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Middle_RT/Pernilongo:R_Mid_01/Pernilongo:R_Mid_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Middle_RT/Pernilongo:R_Mid_01/Pernilongo:R_Mid_02/Pernilongo:R_Mid_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Pinky_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Pinky_RT/Pernilongo:R_Pinky_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Pinky_RT/Pernilongo:R_Pinky_01/Pernilongo:R_Pinky_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Fingers_RT/Pernilongo:R_Pinky_RT/Pernilongo:R_Pinky_01/Pernilongo:R_Pinky_02/Pernilongo:R_Pinky_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Thumb_RT
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Thumb_RT/Pernilongo:R_Thumb_01
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Thumb_RT/Pernilongo:R_Thumb_01/Pernilongo:R_Thumb_02
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:JOINTS/Pernilongo:ROOT/Pernilongo:Spine_RT
+          1/Pernilongo:Spine_01 1/Pernilongo:Spine_02 1/Pernilongo:R_Shoulder/Pernilongo:R_Arm/Pernilongo:R_Elbow/Pernilongo:R_Wrist/Pernilongo:R_Thumb_RT/Pernilongo:R_Thumb_01/Pernilongo:R_Thumb_02/Pernilongo:R_Thumb_03
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:MESH
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:MESH/Pernilongo:Body
+        weight: 1
+      - path: Pernilongo:Mosca/Pernilongo:MESH/Pernilongo:Eyes
+        weight: 1
+      - path: top1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Wings
+      takeName: Take 001
+      firstFrame: 11
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
