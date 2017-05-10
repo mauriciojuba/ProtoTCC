@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class FSMMosquito : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class FSMMosquito : MonoBehaviour
     #region Variaveis
 
     public GameObject Target;
+    public List<GameObject> Players;
 
     public Transform[] waypoints;
 
@@ -21,14 +23,15 @@ public class FSMMosquito : MonoBehaviour
     public float Vision = 5f;           //Area Para o Npc Identificar o Player
     public float SafeDist = 10f;        //Area Para o Npc desistir de perceguir o Player
     public float EnemyDist = 2f;        //Area para Iniciar o Ataque
-    public int Life = 100;              //Vida Do NPC
+    public float Life = 100;              //Vida Do NPC
 
 
     public bool TakeDamage = false;      //Verifica se o player levou dano
-    public float Distace;               //Distancia entre o NPC e o player
+    [SerializeField] private float Distace;               //Distancia entre o NPC e o player
+    [SerializeField] private float TimeToChangeTarget = 5f;
     private float BasicDamage;          //Valor base de Dano
 
-
+    private float[] PlayersDist = new float[2];
     public Animator MosquitoAni;        //Aramazena as animações do mosquito
     private Transform myTransform;      //
     private int currentWayPoint;        //
@@ -44,6 +47,15 @@ public class FSMMosquito : MonoBehaviour
 
     void Start()
     {
+
+        if (GameObject.FindWithTag("Player1_3D") != null)
+            Players.Add(GameObject.FindWithTag("Player1_3D"));
+
+        if (GameObject.FindWithTag("Player2_3D") != null)
+            Players.Add(GameObject.FindWithTag("Player2_3D"));
+
+        CalculaDistancia();
+        StartCoroutine(CalcDist());
 
         MosquitoAni = gameObject.GetComponent<Animator>();
         TimeTo = TimeToNextPoint;
@@ -67,6 +79,9 @@ public class FSMMosquito : MonoBehaviour
 
     public void FixedUpdate()
     {
+
+
+
 
         Distace = Vector3.Distance(Target.transform.position, gameObject.transform.position);
 
@@ -139,13 +154,35 @@ public class FSMMosquito : MonoBehaviour
         if (NomeEstado == "StepBack")
             state = FSMStates.StepBack;
 
+
         cor = false;
 
+    }
+
+    IEnumerator CalcDist()
+    {
+        yield return new WaitForSeconds(TimeToChangeTarget);
+        CalculaDistancia();
+        StartCoroutine(CalcDist());
     }
 
     #endregion
 
     #region Minhas funcoes
+
+    public void CalculaDistancia()
+    {
+        for (int i = 0; i < Players.Count; i++)
+        {
+            PlayersDist[i] = Vector3.Distance(Players[i].transform.position, gameObject.transform.position);
+        }
+
+        if (PlayersDist[0] < PlayersDist[1])
+            Target = Players[0];
+        else
+            Target = Players[1];
+
+    }
 
     public void HitBoxOn()
     {
@@ -219,6 +256,7 @@ public class FSMMosquito : MonoBehaviour
     private void Walk()
     {
 
+        MosquitoAni.SetBool("IsWalk", true);
         Vector3 dir = Target.transform.position;
 
         //rotaciona o Npc apontando para o alvo
@@ -278,12 +316,19 @@ public class FSMMosquito : MonoBehaviour
         if (!cor)
         {
             MosquitoAni.SetTrigger("TakeDamage");
-            StartCoroutine(EsperaAnim(1f, "StepBack"));
-            cor = true;
             Life -= 20;
+            if (Life > 0)
+            {
+                StartCoroutine(EsperaAnim(1f, "StepBack"));
+                cor = true;
+            }
+
+            else
+                state = FSMStates.Die;
+
         }
 
-        
+
         TakeDamage = false;
 
     }
@@ -330,6 +375,11 @@ public class FSMMosquito : MonoBehaviour
     #region Die
     private void Die()
     {
+        MosquitoAni.SetBool("UsingWings", false);
+        MosquitoAni.SetTrigger("Death");
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
+
 
     }
     #endregion

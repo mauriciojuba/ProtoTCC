@@ -8,7 +8,9 @@ public class Life : MonoBehaviour {
 
 
 	public enum LifeType {Player, Enemy, Boss, Object};
-	public LifeType LifeOF;
+    public enum EnemyType {Mosquito};
+    public LifeType LifeOF;
+    public EnemyType TypeEnemy;
 	public float LifeQuant;
     public GameObject[] Loot;
     [Range(0,100)]
@@ -16,7 +18,9 @@ public class Life : MonoBehaviour {
 
 
     #region Variables For Enemys Life
-    AIRig ai;
+
+
+
     #endregion
 
     #region Variables For Objects Life
@@ -48,10 +52,9 @@ public class Life : MonoBehaviour {
 				InitialX = 0.06f;
 				X = InitialX;
 			}
-            UpdateLife();
         }
-
-	}
+        UpdateLife();
+    }
 
 	void Update(){
 		if (Input.GetKey (KeyCode.Space)) {
@@ -123,9 +126,14 @@ public class Life : MonoBehaviour {
 	}
 
 	void EnemyLife(){
-        ai = GetComponentInChildren<AIRig>();
-        ai.AI.WorkingMemory.SetItem("takingDamage", true);
-        ai.AI.WorkingMemory.SetItem("vida", LifeQuant);
+        switch (TypeEnemy)
+        {
+            case EnemyType.Mosquito:
+               gameObject.GetComponent<FSMMosquito>().Life = LifeQuant;
+                break;
+        }
+        //ai.AI.WorkingMemory.SetItem("takingDamage", true);
+        //ai.AI.WorkingMemory.SetItem("vida", LifeQuant);
     }
 
 	void BossLife(){
