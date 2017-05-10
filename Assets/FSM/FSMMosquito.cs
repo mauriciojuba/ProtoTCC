@@ -40,6 +40,7 @@ public class FSMMosquito : MonoBehaviour
     private float TimeTo;               //
     private bool cor = false;
     public GameObject hitbox;
+    public bool grappled = false;
 
     #endregion
 
@@ -63,7 +64,6 @@ public class FSMMosquito : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
     }
-
 
     public void OnDrawGizmos()
     {
@@ -312,9 +312,6 @@ public class FSMMosquito : MonoBehaviour
     #region Damage
     private void Damage()
     {
-
-
-
         MosquitoAni.SetBool("IsWalk", false);
         if (!cor)
         {
@@ -325,13 +322,9 @@ public class FSMMosquito : MonoBehaviour
                 StartCoroutine(EsperaAnim(1f, "StepBack"));
                 cor = true;
             }
-
             else
                 state = FSMStates.Die;
-
         }
-
-
         TakeDamage = false;
 
     }
@@ -357,13 +350,18 @@ public class FSMMosquito : MonoBehaviour
     #region Grappled
     private void Grappled()
     {
-
+        MosquitoAni.SetBool("IsIdle", true);
+        MosquitoAni.SetBool("IsParolling", false);
+        MosquitoAni.SetBool("FightingWalk", false);
+        MosquitoAni.SetBool("UsingWings", false);
     }
     #endregion
 
     #region Thrown
     private void Thrown()
     {
+
+
 
     }
     #endregion
