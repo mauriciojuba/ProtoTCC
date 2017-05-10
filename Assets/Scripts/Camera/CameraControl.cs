@@ -153,9 +153,11 @@ public class CameraControl : MonoBehaviour {
 
     }*/
     
+
+
     void lockPlayerMovement(Transform t)
     {
-        //trava o movimento do jogador
-    }
+	// travar o movimento do player
+	}
 }
 

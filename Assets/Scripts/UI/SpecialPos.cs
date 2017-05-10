@@ -56,7 +56,6 @@ public class SpecialPos : MonoBehaviour {
 		if (Anim != null) {
 			Anim.SetBool ("GoToScreen", true);
 		}
-		transform.parent.GetComponent<UseSpecial> ().SpecialInScreen.Add (gameObject);
 		transform.SetParent (transform.parent.GetComponent<UseSpecial> ().ScreenGlass);
 		SetPos = true;
 	}

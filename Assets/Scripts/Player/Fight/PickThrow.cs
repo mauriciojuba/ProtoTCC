@@ -23,18 +23,20 @@ public class PickThrow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		LocateObject ();
-		if (Input.GetButtonDown ("B P" + PlayerNum) && !Grabbing) {
-			if (CanPick) {
-				transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
-			} else {
-				transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
+		if (PlayerNum != 0) {
+			if (Input.GetButtonDown ("B P" + PlayerNum) && !Grabbing) {
+				if (CanPick) {
+					transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
+				} else {
+					transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
+				}
 			}
 		}
 	}
 
 
 	void LocateObject(){
-		Debug.DrawRay (transform.position + (transform.up / 2), transform.forward * 2, Color.red);
+		//Debug.DrawRay (transform.position + (transform.up / 2), transform.forward * 2, Color.red);
 		RaycastHit hit;
 
 		if (Physics.Raycast (transform.position  + (transform.up / 2),transform.forward, out hit,2)) {
@@ -102,6 +104,8 @@ public class PickThrow : MonoBehaviour {
 	}
 
 	public void SetGrabbedFalse(){
+		Grabbing = !Grabbing;
+		transform.parent.GetComponent<Movimentacao3D> ().CanMove = !Grabbing;
 		transform.parent.GetComponent<Movimentacao3D> ().SetGrabbedFalse ();
 	}
 }

@@ -15,6 +15,8 @@ public class UseSpecial : MonoBehaviour {
 	public int SpecialItens;
 	public List<GameObject> SpecialInScreen;
 
+	[SerializeField] private float forwardX,forwardY,forwardZ;
+
 	void Start(){
 		PlayerNumber = GetComponent<Movimentacao3D> ().PlayerNumber;
 		RB = GetComponent<Rigidbody> ();
@@ -25,21 +27,26 @@ public class UseSpecial : MonoBehaviour {
 		if (SpecialRef == null) {
 			return;
 		}
-		if (Input.GetButtonDown (SpecialRef.ButtonToUse + PlayerNumber) && !Use && SpecialItens > 0) {
-			if (SpecialRef.Rush) {
-				Use = true;
-				InitPos = transform.position;
-				gameObject.GetComponent<Movimentacao3D> ().CanMove = false;
-			} else {
-				UseTheSpecial ();
-			}
-			SpecialItens--;
-			Vector3 v3 = RB.velocity;
-			v3.x = 0;
-			v3.z = 0;
-			RB.velocity = v3;
-		}
 
+		forwardX = transform.forward.x;
+		forwardY = transform.forward.y;
+		forwardZ = transform.forward.z;
+		if (!GetComponent<Movimentacao3D> ().onScreen && GetComponent<Movimentacao3D> ().InGround) {
+			if (Input.GetButtonDown (SpecialRef.ButtonToUse + PlayerNumber) && !Use && SpecialItens > 0) {
+				if (SpecialRef.Rush) {
+					Use = true;
+					InitPos = transform.position;
+					gameObject.GetComponent<Movimentacao3D> ().CanMove = false;
+				} else {
+					UseTheSpecial ();
+				}
+				SpecialItens--;
+				Vector3 v3 = RB.velocity;
+				v3.x = 0;
+				v3.z = 0;
+				RB.velocity = v3;
+			}
+		}
 		if (Use)
 			UseTheSpecial ();
 	}

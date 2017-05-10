@@ -27,7 +27,7 @@ public class Movimentacao3D : MonoBehaviour {
 	public GameObject Player;
 
 	[SerializeField] private float JumpForce;
-	[SerializeField] private bool InGround;
+	public bool InGround;
 
 	public Camera CameraMain;
     public CameraControl DollyCam;
@@ -57,7 +57,7 @@ public class Movimentacao3D : MonoBehaviour {
     }
 
 	void Update(){
-		TestPosition ();
+		//TestPosition ();
 		SetAnimations();
 		if (CanMove) {
 			Jump ();
@@ -189,7 +189,7 @@ public class Movimentacao3D : MonoBehaviour {
 	void Jump(){
 		//verifica se o player esta encostando no chão
 		InGround = Physics.Linecast (Player.transform.position, Player.transform.position - Vector3.up * 1.1f, NoIgnoredLayers);
-		Debug.DrawLine (Player.transform.position,Player.transform.position - Vector3.up * 1.1f);
+		//Debug.DrawLine (Player.transform.position,Player.transform.position - Vector3.up * 1.1f);
 
 		//se estiver no chao, pula, apertando A no controle.
 		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround &&!onScreen) {
