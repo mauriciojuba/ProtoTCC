@@ -139,14 +139,14 @@ public class Movimentacao3D : MonoBehaviour {
             {
                 Vector3 V3 = rb.velocity;
 				if (SpeedControl) {
-					if (Input.GetAxis ("Horizontal P" + PlayerNumber) > 0) {
+					if (Input.GetAxis ("Horizontal P" + PlayerNumber) > 0 && allowRight) {
 						V3.x = transform.forward.x * Input.GetAxis ("Horizontal P" + PlayerNumber) * Speed;
-					} else if (Input.GetAxis ("Horizontal P" + PlayerNumber) < 0) {
+					} else if (Input.GetAxis ("Horizontal P" + PlayerNumber) < 0 && allowLeft) {
 						V3.x = transform.forward.x * -Input.GetAxis ("Horizontal P" + PlayerNumber) * Speed;
 					}
-					if (Input.GetAxis ("Vertical P" + PlayerNumber) > 0) {
+					if (Input.GetAxis ("Vertical P" + PlayerNumber ) > 0 && allowUp) {
 						V3.z = transform.forward.z * Input.GetAxis ("Vertical P" + PlayerNumber) * Speed;
-					} else if (Input.GetAxis ("Vertical P" + PlayerNumber) < 0) {
+					} else if (Input.GetAxis ("Vertical P" + PlayerNumber) < 0 && allowDown) {
 						V3.z = transform.forward.z * -Input.GetAxis ("Vertical P" + PlayerNumber) * Speed;
 					}
 				} else {
