@@ -45,7 +45,7 @@ public class Movimentacao3D : MonoBehaviour {
 
 	public bool CanMove;
 
-
+	bool allowUp,allowDown,allowRight,allowLeft;
 	public Animator Anim;
     public Transform model;
 	void Start () {
@@ -57,7 +57,7 @@ public class Movimentacao3D : MonoBehaviour {
     }
 
 	void Update(){
-		//TestPosition ();
+		TestPosition ();
 		SetAnimations();
 		if (CanMove) {
 			Jump ();
@@ -171,6 +171,20 @@ public class Movimentacao3D : MonoBehaviour {
                 V3.x = transform.forward.x * Speed / 10;
                 V3.z = transform.forward.z * Speed / 10;
                 V3.y = transform.forward.z * Speed / 10;
+				if(!allowDown && V3.y<0){
+					V3.y = 0;
+					V3.z = 0;
+				}
+				if(!allowUp && V3.y>0){
+					V3.y = 0;
+					V3.z = 0;
+				}
+				if(!allowLeft && V3.x<0){
+					V3.x = 0;
+				}
+				if(!allowRight && V3.x>0){
+					V3.x = 0;
+				}
                 rb.velocity = V3;
             }
             else if (!InMovement)
@@ -297,29 +311,36 @@ public class Movimentacao3D : MonoBehaviour {
             model.localRotation = Quaternion.Euler(0, 0, 0);
             toWorld = false;
         }
-        Debug.Log("" + transform.localScale + " / " + transform.localRotation.x + " / " + transform.position.z + "");
+        
     }
 
 
     //Ver o metodo no CameraControl
 	void TestPosition(){
-		if (reachScreen) {
-			//Calcula o ponto maximo de movimentação pra esquerda.
-			var Leftborder = CameraMain.ViewportToWorldPoint (new Vector3 (-0.2f, 0, 1)).x;
-
-			//Calcula o ponto maximo de movimentação pra direita.
-			var Rightborder = CameraMain.ViewportToWorldPoint (new Vector3 (1.2f, 0, 1)).x;
-
-			//Calcula o ponto maximo de movimentação pra Baixo.
-			var Bottomborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 0, 1)).y;
-
-			//Calcula o ponto maximo de movimentação pra Cima.
-			var Topborder = CameraMain.ViewportToWorldPoint (new Vector3 (0, 1, 1)).y;
-
-			//Mantem o personagem sempre dentro do espaço da camera.
-			transform.position = new Vector3 (Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
-											  transform.position.y,
-			                             	  transform.position.z);
+		Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+		if(pos.x <= 0.1f){
+			allowLeft = false;
+		}
+		else{
+			allowLeft = true;
+		}
+		if(0.9f <= pos.x){
+			allowRight = false;
+		}
+		else{
+			allowRight = true;
+		}
+		if(pos.y <= 0.1f){
+			allowDown = false;
+		} 
+		else{
+			allowDown = true;
+		}
+		if(0.9f <= pos.y){
+			allowUp = false;
+		}
+		else{
+			allowUp = true;
 		}
 	}
 
