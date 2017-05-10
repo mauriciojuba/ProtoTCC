@@ -35,7 +35,7 @@ public class FSMMosquito : MonoBehaviour
     public Animator MosquitoAni;        //Aramazena as animações do mosquito
     private Transform myTransform;      //
     private int currentWayPoint;        //
-    private Rigidbody rb;               //
+    [SerializeField] private Rigidbody rb;               //
     public float TimeToNextPoint = 5f;  //Tempo para o proximo way point
     private float TimeTo;               //
     private bool cor = false;
@@ -61,7 +61,7 @@ public class FSMMosquito : MonoBehaviour
         MosquitoAni = gameObject.GetComponent<Animator>();
         TimeTo = TimeToNextPoint;
         myTransform = transform;
-        rb = GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<Rigidbody>();
 
     }
 
