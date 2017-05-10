@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FSMMosquito : MonoBehaviour {
+public class FSMMosquito : MonoBehaviour
+{
 
     #region FSM States
     public enum FSMStates { Idle, Walk, ATK1, ATK2, Damage, StepBack, Grappled, Thrown, DrainLife, Die, Fall, Transition, Patrol };
@@ -14,38 +15,43 @@ public class FSMMosquito : MonoBehaviour {
 
     public Transform[] waypoints;
 
-    public float MoveSpeed;
-    public float RotationSpeed;
+    public float MoveSpeed;             //Velocidade De Movimentção
+    public float RotationSpeed;         //Velocidade De Rotação
 
-    public float Vision = 5f;
-    public float SafeDist = 10f;
-    public float EnemyDist = 2f;
-    public int Life = 100;
-
-    public bool levoudano = false;
-
-    public float Distace;
-
-    private float BasicDamage;
+    public float Vision = 5f;           //Area Para o Npc Identificar o Player
+    public float SafeDist = 10f;        //Area Para o Npc desistir de perceguir o Player
+    public float EnemyDist = 2f;        //Area para Iniciar o Ataque
+    public int Life = 100;              //Vida Do NPC
 
 
-    public Animator MosquitoAni;
-    private Transform myTransform;
-    private int currentWayPoint;
-    private Rigidbody rb;
-    public float TimeToNextPoint = 5f;
-    private float TimeTo;
+    public bool TakeDamage = false;      //Verifica se o player levou dano
+    public float Distace;               //Distancia entre o NPC e o player
+    private float BasicDamage;          //Valor base de Dano
+
+
+    public Animator MosquitoAni;        //Aramazena as animações do mosquito
+    private Transform myTransform;      //
+    private int currentWayPoint;        //
+    private Rigidbody rb;               //
+    public float TimeToNextPoint = 5f;  //Tempo para o proximo way point
+    private float TimeTo;               //
+    private bool cor = false;
+    public GameObject hitbox;
+
     #endregion
 
     #region Unity Functions
 
-    void Start () {
+    void Start()
+    {
 
         MosquitoAni = gameObject.GetComponent<Animator>();
         TimeTo = TimeToNextPoint;
         myTransform = transform;
         rb = GetComponent<Rigidbody>();
+
     }
+
 
     public void OnDrawGizmos()
     {
@@ -57,10 +63,10 @@ public class FSMMosquito : MonoBehaviour {
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, SafeDist);
-
     }
 
-    public void FixedUpdate(){
+    public void FixedUpdate()
+    {
 
         Distace = Vector3.Distance(Target.transform.position, gameObject.transform.position);
 
@@ -125,10 +131,37 @@ public class FSMMosquito : MonoBehaviour {
         }
 
     }
-	#endregion
 
-	#region Idle
-	private void Idle(){
+    IEnumerator EsperaAnim(float tempo, string NomeEstado)
+    {
+
+        yield return new WaitForSeconds(tempo);
+        if (NomeEstado == "StepBack")
+            state = FSMStates.StepBack;
+
+        cor = false;
+
+    }
+
+    #endregion
+
+    #region Minhas funcoes
+
+    public void HitBoxOn()
+    {
+        hitbox.SetActive(true);
+    }
+
+    public void HitBoxOff()
+    {
+        hitbox.SetActive(false);
+    }
+
+    #endregion
+
+    #region Idle
+    private void Idle()
+    {
 
         MosquitoAni.SetBool("IsIdle", true);
 
@@ -151,8 +184,9 @@ public class FSMMosquito : MonoBehaviour {
 
         }
 
-        // if (........)
-        //state = FSMStates.Estado_2;
+        if (TakeDamage)
+            state = FSMStates.Damage;
+
     }
     #endregion
 
@@ -172,71 +206,101 @@ public class FSMMosquito : MonoBehaviour {
         else
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
 
-        if(Distace < Vision)
+        if (Distace < Vision)
             state = FSMStates.Walk;
+
+        if (TakeDamage)
+            state = FSMStates.Damage;
 
     }
     #endregion
 
     #region Walk
-    private void Walk(){
+    private void Walk()
+    {
 
         Vector3 dir = Target.transform.position;
 
         //rotaciona o Npc apontando para o alvo
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Target.transform.position- myTransform.position), Time.deltaTime * RotationSpeed);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Target.transform.position - myTransform.position), Time.deltaTime * RotationSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
         if (Distace > EnemyDist && Vector3.Distance(Target.transform.position, gameObject.transform.position) < SafeDist)
         {
-            
-            
+
+
             //Move o Npc para o alvo;
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
         }
 
-        if(Distace > SafeDist +1)
+        if (Distace <= EnemyDist)
+            state = FSMStates.ATK1;
+
+        if (Distace > SafeDist + 1)
             state = FSMStates.Patrol;
 
-        if (levoudano)
+        if (TakeDamage)
             state = FSMStates.Damage;
 
     }
-	#endregion
+    #endregion
 
-	#region ATK1
-	private void ATK1(){
+    #region ATK1
+    private void ATK1()
+    {
+        if (!cor)
+        {
+            MosquitoAni.SetTrigger("ATK1");
+        }
 
-	}
+        state = FSMStates.Walk;
+
+        if (TakeDamage)
+            state = FSMStates.Damage;
+
+    }
     #endregion
 
     #region ATK2
-    private void ATK2(){
+    private void ATK2()
+    {
 
-	}
+    }
     #endregion
 
     #region Damage
     private void Damage()
     {
-        Life -= 20;
-        levoudano = false;
 
-        state = FSMStates.StepBack;
+
+
+        MosquitoAni.SetBool("IsWalk", false);
+        if (!cor)
+        {
+            MosquitoAni.SetTrigger("TakeDamage");
+            StartCoroutine(EsperaAnim(1f, "StepBack"));
+            cor = true;
+            Life -= 20;
+        }
+
+        
+        TakeDamage = false;
+
     }
     #endregion
 
     #region Step back
     private void StepBack()
     {
-        
+
+
+        TimeToNextPoint = 0;
         //rotaciona o Npc apontando para lodo oposto do alvo
-        myTransform.rotation = Quaternion.Slerp(myTransform.rotation,  Quaternion.LookRotation(myTransform.position - Target.transform.position), RotationSpeed * Time.deltaTime);
+        myTransform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(myTransform.position - Target.transform.position), RotationSpeed * Time.deltaTime);
         //Move o Npc para o alvo;
         transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
         if (Distace > SafeDist + 2)
-
             state = FSMStates.Idle;
 
     }
