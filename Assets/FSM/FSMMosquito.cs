@@ -28,17 +28,20 @@ public class FSMMosquito : MonoBehaviour {
 
     private float BasicDamage;
 
+
+    public Animator MosquitoAni;
     private Transform myTransform;
     private int currentWayPoint;
     private Rigidbody rb;
     public float TimeToNextPoint = 5f;
     private float TimeTo;
-
     #endregion
 
     #region Unity Functions
 
     void Start () {
+
+        MosquitoAni = gameObject.GetComponent<Animator>();
         TimeTo = TimeToNextPoint;
         myTransform = transform;
         rb = GetComponent<Rigidbody>();
@@ -127,32 +130,44 @@ public class FSMMosquito : MonoBehaviour {
 	#region Idle
 	private void Idle(){
 
+        MosquitoAni.SetBool("IsIdle", true);
+
         //Verifica se o player entrou no alcance da visao do mosquito
         if (Vector3.Distance(Target.transform.position, gameObject.transform.position) < Vision)
+        {
+            MosquitoAni.SetBool("IsIdle", false);
             state = FSMStates.Walk;
+        }
+        TimeToNextPoint -= Time.deltaTime;
+        if (TimeToNextPoint < 0)
+        {
+            currentWayPoint++;
+            if (currentWayPoint >= waypoints.Length)
+                currentWayPoint = 0;
+            TimeToNextPoint = TimeTo;
 
-		// if (........)
-		//state = FSMStates.Estado_2;
-	}
+            MosquitoAni.SetBool("IsIdle", false);
+            state = FSMStates.Patrol;
+
+        }
+
+        // if (........)
+        //state = FSMStates.Estado_2;
+    }
     #endregion
 
     #region Patrol
     private void Patrol()
     {
+        MosquitoAni.SetBool("IsWalk", true);
         Vector3 dir = waypoints[currentWayPoint].position - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
         if (dir.sqrMagnitude <= 1)
         {
-            TimeToNextPoint -= Time.deltaTime;
-            if (TimeToNextPoint < 0)
-            {
-                currentWayPoint++;
-                if (currentWayPoint >= waypoints.Length)
-                    currentWayPoint = 0;
-                TimeToNextPoint = TimeTo;
-            }
+            MosquitoAni.SetBool("IsWalk", false);
+            state = FSMStates.Idle;
         }
         else
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
@@ -166,12 +181,18 @@ public class FSMMosquito : MonoBehaviour {
     #region Walk
     private void Walk(){
 
+        Vector3 dir = Target.transform.position;
+
+        //rotaciona o Npc apontando para o alvo
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Target.transform.position- myTransform.position), Time.deltaTime * RotationSpeed);
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+
         if (Distace > EnemyDist && Vector3.Distance(Target.transform.position, gameObject.transform.position) < SafeDist)
         {
-            //rotaciona o Npc apontando para o alvo
-            myTransform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(Target.transform.position - myTransform.position), RotationSpeed * Time.deltaTime);
+            
+            
             //Move o Npc para o alvo;
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+            rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
         }
 
         if(Distace > SafeDist +1)
