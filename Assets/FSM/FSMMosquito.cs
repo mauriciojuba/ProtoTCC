@@ -230,14 +230,14 @@ public class FSMMosquito : MonoBehaviour
     #region Patrol
     private void Patrol()
     {
-        MosquitoAni.SetBool("IsWalk", true);
+        MosquitoAni.SetBool("IsParolling", true);
         Vector3 dir = waypoints[currentWayPoint].position - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
         if (dir.sqrMagnitude <= 1)
         {
-            MosquitoAni.SetBool("IsWalk", false);
+            MosquitoAni.SetBool("IsParolling", false);
             state = FSMStates.Idle;
         }
         else
@@ -256,7 +256,7 @@ public class FSMMosquito : MonoBehaviour
     private void Walk()
     {
 
-        MosquitoAni.SetBool("IsWalk", true);
+        MosquitoAni.SetBool("FightingWalk", true);
         Vector3 dir = Target.transform.position;
 
         //rotaciona o Npc apontando para o alvo
@@ -275,7 +275,10 @@ public class FSMMosquito : MonoBehaviour
             state = FSMStates.ATK1;
 
         if (Distace > SafeDist + 1)
+        {
+            MosquitoAni.SetBool("FightingWalk", false);
             state = FSMStates.Patrol;
+        }
 
         if (TakeDamage)
             state = FSMStates.Damage;
