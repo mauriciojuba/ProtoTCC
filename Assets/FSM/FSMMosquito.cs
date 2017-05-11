@@ -41,6 +41,9 @@ public class FSMMosquito : MonoBehaviour
     private bool cor = false;
     public GameObject hitbox;
     public bool grappled = false;
+	[SerializeField] private float CooldownAtk = 3f;
+	[SerializeField] private float TimerAtk;
+	[SerializeField] private float MaxLife;
 
     #endregion
 
@@ -62,6 +65,7 @@ public class FSMMosquito : MonoBehaviour
         TimeTo = TimeToNextPoint;
         myTransform = transform;
         rb = gameObject.GetComponent<Rigidbody>();
+		MaxLife = Life;
 
     }
 
@@ -193,12 +197,12 @@ public class FSMMosquito : MonoBehaviour
 
     public void HitBoxOn()
     {
-        hitbox.SetActive(true);
+		hitbox.GetComponent<Collider> ().enabled = true;
     }
 
     public void HitBoxOff()
     {
-        hitbox.SetActive(false);
+		hitbox.GetComponent<Collider> ().enabled = false;
     }
 
     #endregion
@@ -250,9 +254,10 @@ public class FSMMosquito : MonoBehaviour
         else
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
 
-        if (Distace < Vision)
-            state = FSMStates.Walk;
-
+		if (Distace < Vision) {
+			MosquitoAni.SetBool("IsParolling", false);
+			state = FSMStates.Walk;
+		}
         if (TakeDamage)
             state = FSMStates.Damage;
 
@@ -278,8 +283,11 @@ public class FSMMosquito : MonoBehaviour
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
         }
 
-        if (Distace <= EnemyDist)
-            state = FSMStates.ATK1;
+		TimerAtk += Time.deltaTime;
+		if (Distace <= EnemyDist && TimerAtk >= CooldownAtk) {
+			state = FSMStates.ATK1;
+			TimerAtk = 0;
+		}
 
         if (Distace > SafeDist + 1)
         {
@@ -296,10 +304,9 @@ public class FSMMosquito : MonoBehaviour
     #region ATK1
     private void ATK1()
     {
-        if (!cor)
-        {
-            MosquitoAni.SetTrigger("ATK1");
-        }
+		
+	 	MosquitoAni.SetTrigger ("ATK1");
+		
 
         state = FSMStates.Walk;
 
@@ -319,20 +326,21 @@ public class FSMMosquito : MonoBehaviour
     #region Damage
     private void Damage()
     {
-        MosquitoAni.SetBool("IsWalk", false);
+        MosquitoAni.SetBool("FightingWalk", false);
         if (!cor)
         {
-            MosquitoAni.SetTrigger("TakeDamage");
-            Life -= 20;
-            if (Life > 0)
+			if (Life > 0 && Life <= MaxLife * 0.2f)
             {
                 StartCoroutine(EsperaAnim(1f, "StepBack"));
                 cor = true;
             }
-            else
+			else if(Life <= 0)
                 state = FSMStates.Die;
         }
         TakeDamage = false;
+		if (MosquitoAni.GetCurrentAnimatorStateInfo (0).IsName ("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo (0).normalizedTime >= 0.7f) {
+			state = FSMStates.Walk;
+		}
 
     }
     #endregion
@@ -341,7 +349,7 @@ public class FSMMosquito : MonoBehaviour
     private void StepBack()
     {
 
-
+		MosquitoAni.SetBool("FightingWalk", false);
         TimeToNextPoint = 0;
         //rotaciona o Npc apontando para lodo oposto do alvo
         myTransform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(myTransform.position - Target.transform.position), RotationSpeed * Time.deltaTime);
@@ -405,4 +413,8 @@ public class FSMMosquito : MonoBehaviour
 
     }
     #endregion
+
+	public void SetTakeDamageAnim(){
+		MosquitoAni.SetTrigger("TakeDamage");
+	}
 }

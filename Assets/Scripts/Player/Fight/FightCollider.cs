@@ -15,6 +15,10 @@ public class FightCollider : MonoBehaviour {
 		} else {
 			Debug.LogWarning ("Deal " + Damage + " Damage");
 		}
+		if (col.gameObject.GetComponent<FSMMosquito> () != null) {
+			col.gameObject.GetComponent<FSMMosquito> ().state = FSMMosquito.FSMStates.Damage;
+			col.gameObject.GetComponent<FSMMosquito> ().SetTakeDamageAnim ();
+		}
 		GetComponent<BoxCollider> ().enabled = false;
 	}
 }
