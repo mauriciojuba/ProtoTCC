@@ -44,6 +44,10 @@ public class FSMMosquito : MonoBehaviour
 	[SerializeField] private float CooldownAtk = 3f;
 	[SerializeField] private float TimerAtk;
 	[SerializeField] private float MaxLife;
+	private bool returned;
+	[SerializeField] private Collider DeathCollider;
+
+
 
     #endregion
 
@@ -150,6 +154,12 @@ public class FSMMosquito : MonoBehaviour
         }
 
     }
+
+	IEnumerator ResetStates(){
+		yield return new WaitForSeconds (1);
+		state = FSMStates.Patrol;
+		returned = false;
+	}
 
     IEnumerator EsperaAnim(float tempo, string NomeEstado)
     {
@@ -329,7 +339,7 @@ public class FSMMosquito : MonoBehaviour
         MosquitoAni.SetBool("FightingWalk", false);
         if (!cor)
         {
-			if (Life > 0 && Life <= MaxLife * 0.2f)
+			if (Life > 0 && Life <= MaxLife * 0.2f && !grappled)
             {
                 StartCoroutine(EsperaAnim(1f, "StepBack"));
                 cor = true;
@@ -338,8 +348,10 @@ public class FSMMosquito : MonoBehaviour
                 state = FSMStates.Die;
         }
         TakeDamage = false;
-		if (MosquitoAni.GetCurrentAnimatorStateInfo (0).IsName ("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo (0).normalizedTime >= 0.7f) {
+		if (MosquitoAni.GetCurrentAnimatorStateInfo (0).IsName ("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo (0).normalizedTime >= 0.7f && !grappled && Life > 0) {
 			state = FSMStates.Walk;
+		} else if (MosquitoAni.GetCurrentAnimatorStateInfo (0).IsName ("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo (0).normalizedTime >= 0.7f && grappled && Life > 0) {
+			state = FSMStates.Grappled;
 		}
 
     }
@@ -365,6 +377,7 @@ public class FSMMosquito : MonoBehaviour
     #region Grappled
     private void Grappled()
     {
+		grappled = true;
         MosquitoAni.SetBool("IsIdle", true);
         MosquitoAni.SetBool("IsParolling", false);
         MosquitoAni.SetBool("FightingWalk", false);
@@ -375,9 +388,15 @@ public class FSMMosquito : MonoBehaviour
     #region Thrown
     private void Thrown()
     {
-
-
-
+		grappled = false;
+		MosquitoAni.SetBool("IsIdle", false);
+		MosquitoAni.SetBool("IsParolling", false);
+		MosquitoAni.SetBool("FightingWalk", false);
+		MosquitoAni.SetBool("UsingWings", false);
+		if (!returned) {
+			StartCoroutine (ResetStates ());
+			returned = true;
+		}
     }
     #endregion
 
@@ -394,9 +413,7 @@ public class FSMMosquito : MonoBehaviour
         MosquitoAni.SetBool("UsingWings", false);
         MosquitoAni.SetTrigger("Death");
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
-
-
-
+		DeathCollider.enabled = true;
     }
     #endregion
 
