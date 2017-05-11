@@ -172,16 +172,23 @@ public class FSMMosquito : MonoBehaviour
 
     public void CalculaDistancia()
     {
-        for (int i = 0; i < Players.Count; i++)
+        if (Players.Count > 1)
         {
-            PlayersDist[i] = Vector3.Distance(Players[i].transform.position, gameObject.transform.position);
+            for (int i = 0; i < Players.Count; i++)
+            {
+                PlayersDist[i] = Vector3.Distance(Players[i].transform.position, gameObject.transform.position);
+            }
+
+            if (PlayersDist[0] < PlayersDist[1])
+                Target = Players[0];
+            else
+                Target = Players[1];
         }
+        else if(Players.Count == 1) {
 
-        if (PlayersDist[0] < PlayersDist[1])
             Target = Players[0];
-        else
-            Target = Players[1];
 
+        }
     }
 
     public void HitBoxOn()
