@@ -6,6 +6,7 @@ public class RecoveryItem : MonoBehaviour {
 
     public bool RecuperaHP, RecuperaESP;
     public int valorRecuperacao;
+	public GameObject Player;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +22,7 @@ public class RecoveryItem : MonoBehaviour {
             }
             if (RecuperaESP)
             {
+				Player = other.gameObject;
 				transform.SetParent (other.transform);
 				transform.position = transform.parent.position;
 				other.GetComponent<UseSpecial> ().SpecialInScreen.Add (gameObject);
@@ -28,11 +30,7 @@ public class RecoveryItem : MonoBehaviour {
 				GetComponent<SpecialPos> ().PlayerNumber = other.GetComponent<UseSpecial> ().PlayerNumber;
 				GetComponent<SpecialPos> ().enabled = true;
 				SetCollectedAnimations ();
-				if (other.gameObject.GetComponent<UseSpecial>() != null)
-				{
-					other.gameObject.GetComponent<UseSpecial> ().SpecialItens++;
-					other.gameObject.GetComponent<UseSpecial> ().UpdateBar ();
-				}
+
 				Destroy (GetComponent<Collider> ());
 				Destroy (GetComponent<Rigidbody> ());
             }
@@ -43,5 +41,13 @@ public class RecoveryItem : MonoBehaviour {
 	public void SetCollectedAnimations(){
 		if(GetComponent<Animator> () != null)
 			GetComponent<Animator> ().SetBool ("Collected", true);
+	}
+
+	public void ADDSpecial(){
+		if (Player.GetComponent<UseSpecial>() != null)
+		{
+			Player.GetComponent<UseSpecial> ().SpecialItens++;
+			Player.GetComponent<UseSpecial> ().UpdateBar ();
+		}
 	}
 }

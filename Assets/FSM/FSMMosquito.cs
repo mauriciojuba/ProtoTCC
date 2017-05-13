@@ -392,7 +392,7 @@ public class FSMMosquito : MonoBehaviour
 		MosquitoAni.SetBool("IsIdle", false);
 		MosquitoAni.SetBool("IsParolling", false);
 		MosquitoAni.SetBool("FightingWalk", false);
-		MosquitoAni.SetBool("UsingWings", false);
+		MosquitoAni.SetBool("UsingWings", true);
 		if (!returned) {
 			StartCoroutine (ResetStates ());
 			returned = true;

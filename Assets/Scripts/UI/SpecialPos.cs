@@ -13,6 +13,7 @@ public class SpecialPos : MonoBehaviour {
 	public float MultiplierScaleSpeed;
 	public Animator Anim;
 	public UseSpecial XRef;
+	private bool AddSpecial;
 	void OnEnable () {
 		X = 0.05f;
 		Anim = GetComponent<Animator> ();
@@ -42,6 +43,7 @@ public class SpecialPos : MonoBehaviour {
 			}
 			if (transform.localScale != new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet)) {
 				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet), Speed * Time.deltaTime * MultiplierScaleSpeed);
+			} else {
 			}
 		}
 	}
@@ -49,6 +51,11 @@ public class SpecialPos : MonoBehaviour {
 	void SetReachAnimation(){
 		if (Anim != null) {
 			Anim.SetBool ("ReachedScreen", true);
+			if (!AddSpecial) {
+				gameObject.GetComponent<RecoveryItem> ().ADDSpecial ();
+				gameObject.GetComponent<RecoveryItem> ().Player = null;
+				AddSpecial = true;
+			}
 		}
 	}
 

@@ -20,10 +20,11 @@ public class LifePos : MonoBehaviour {
 		if (!SetS) {
 			if (transform.position != Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z))) {
 				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)), Speed * Time.deltaTime);
+				transform.localEulerAngles = Vector3.Lerp (transform.localEulerAngles, new Vector3 (0, 90, 90), Speed * Time.deltaTime * 5);
 			}
 		} else {
-			transform.localScale = Vector3.MoveTowards(transform.localScale,new Vector3 (1, 1, 1),Speed * Time.deltaTime * 2);
-			if (transform.localScale == new Vector3 (1, 1, 1)) {
+			transform.localScale = Vector3.MoveTowards(transform.localScale,new Vector3 (2, 2, 2),Speed * Time.deltaTime * 2);
+			if (transform.localScale == new Vector3 (2, 2, 2)) {
 				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (-1, transform.position.y, transform.position.z)), Speed * Time.deltaTime);
 
 			}

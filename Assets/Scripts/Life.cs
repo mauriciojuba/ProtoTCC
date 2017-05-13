@@ -44,10 +44,8 @@ public class Life : MonoBehaviour {
         if (LifeOF == LifeType.Player)
         {
             PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
-          //  LifeOBJ = GameObject.Find("UI").transform.FindChild("LifeP" + PlayerNumber).gameObject;
-          //  Container = LifeOBJ.transform.FindChild("Container").gameObject;
 			//mudar a quantidade de vida para imagem aqui
-            Division = 30;
+            Division = 50;
 			if (PlayerNumber == 1) {
 				InitialX = 0.06f;
 				X = InitialX;
@@ -57,9 +55,7 @@ public class Life : MonoBehaviour {
     }
 
 	void Update(){
-		if (Input.GetKey (KeyCode.Space)) {
-			UpdateLife ();
-		}
+		
 		if (QuantImgInScene < QuantImg && LifeOF == LifeType.Player) {
 			UpdateLife ();
 		}
@@ -100,6 +96,9 @@ public class Life : MonoBehaviour {
     }
 
 	void PlayerLife(){
+		if (LifeQuant <= Division) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene (0);
+		}
 		QuantImg = (int)LifeQuant / Division;
 		if (QuantImgInScene < QuantImg) {
 			GameObject gb = GameObject.Instantiate (LifeSpritePrefab,Camera.main.ViewportToWorldPoint(new Vector3(-0.5f,0.5f,1)),ScreenGlass.transform.rotation);
