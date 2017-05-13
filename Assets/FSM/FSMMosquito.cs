@@ -233,50 +233,42 @@ public class FSMMosquito : MonoBehaviour
 
     void goToScreen()
     {
-        //testa se o jogador pediu pra ir pra tela
-        if (onScreen)
+        if (!reachScreen)
         {
-            //variavel para parar de controlar o jogador após ele chegar na tela
-            if (!reachScreen)
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
+                camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
+            //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
+            transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), velTransicao / 10);
+            if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
             {
-                transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
-                    camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
-                //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
-                transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
-                transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), velTransicao / 10);
-                if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
-                {
-                    Jumping = false;
-                    reachScreen = true;
-                }
+                Jumping = false; //???? que isso aqui man? serve pra que?
+                reachScreen = true;
             }
+        }
 
-            //se o jogador pedir pra descer
-            if (descer)
-            {
-                //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
-                //SetAnimOffScreen();
-                transform.SetParent(null);
-                toWorld = true;
-                reachScreen = false;
-                onScreen = false;
-            }
+        //se o jogador pedir pra descer
+        if (descer)
+        {
+            //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
+            //SetAnimOffScreen();
+            transform.SetParent(null);
+            toWorld = true;
+            reachScreen = false;
+            onScreen = false;
+            state = FSMStates.Fall;
         }
     }
 
     void exitScreen()
     {
-        //se a variavel q fala pra ele sair da tela tiver ligada ele deve consertar o tamanho e a rotação do personagem
-        if (toWorld)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
-                    1f, DollyCam.target.position.z), velTransicao);
-            transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
-            model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0, 0, 0), velTransicao * 5);
-            direcoes.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right);
-        }
-        //uma vez que o tamanho esta ok a variavel pode ficar falsa.
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
+                1f, DollyCam.target.position.z), velTransicao);
+        transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
+        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
+        model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0, 0, 0), velTransicao * 5);
+        
+
         if (transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
         {
             rb.useGravity = true;
@@ -491,21 +483,22 @@ public class FSMMosquito : MonoBehaviour
     #region Fall
     private void Fall()
     {
-
+        if(toWorld) exitScreen();
+        else state = FSMStates.Idle;
     }
     #endregion
 
     #region GoToScreen
     private void GoToScreen()
     {
-        rb.useGravity = false;
-        transform.SetParent(camScreen);
-        _2dX = Random.Range(-1.5f, +1.5f);
-        _2dY = Random.Range(-0.8f, +0.8f);
-        onScreen = true;
-
-        onScreen = true;
-        goToScreen();
+        if(!onScreen){
+            rb.useGravity = false;
+            transform.SetParent(camScreen);
+            _2dX = Random.Range(-1.5f, +1.5f);
+            _2dY = Random.Range(-0.8f, +0.8f);
+            onScreen = true;
+        }
+        else goToScreen();
     }
     #endregion
 
