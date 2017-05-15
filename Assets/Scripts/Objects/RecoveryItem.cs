@@ -23,7 +23,7 @@ public class RecoveryItem : MonoBehaviour {
             if (RecuperaESP)
             {
 				Player = other.gameObject;
-				transform.SetParent (other.transform);
+				transform.SetParent (Player.transform);
 				transform.position = transform.parent.position;
 				other.GetComponent<UseSpecial> ().SpecialInScreen.Add (gameObject);
 				GetComponent<SpecialPos> ().XRef = other.GetComponent<UseSpecial> ();

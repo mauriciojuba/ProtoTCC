@@ -14,6 +14,8 @@ public class SpecialPos : MonoBehaviour {
 	public Animator Anim;
 	public UseSpecial XRef;
 	private bool AddSpecial;
+
+	public bool GoOffScreen;
 	void OnEnable () {
 		X = 0.05f;
 		Anim = GetComponent<Animator> ();
@@ -26,7 +28,11 @@ public class SpecialPos : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+		if (GoOffScreen) {
+			SetPosOffScreen ();
+		}
+
+
 		if (SetPos) {
 			if (transform.position != Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z))) {
 				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)), Speed * Time.deltaTime);
@@ -51,6 +57,7 @@ public class SpecialPos : MonoBehaviour {
 	void SetReachAnimation(){
 		if (Anim != null) {
 			Anim.SetBool ("ReachedScreen", true);
+			Anim.SetBool ("GoToScreen", false);
 			if (!AddSpecial) {
 				gameObject.GetComponent<RecoveryItem> ().ADDSpecial ();
 				gameObject.GetComponent<RecoveryItem> ().Player = null;
@@ -66,4 +73,20 @@ public class SpecialPos : MonoBehaviour {
 		transform.SetParent (transform.parent.GetComponent<UseSpecial> ().ScreenGlass);
 		SetPos = true;
 	}
+
+	public void SetPosOffScreen (){
+		if (Anim != null) {
+			Anim.SetBool ("GoToScreen", true);
+			Anim.SetBool ("ReachedScreen", false);
+
+		}
+		if (transform.position != Camera.main.ViewportToWorldPoint (new Vector3 (-0.5f, Y, Z))) {
+			transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (-0.5f, Y, Z)), Speed * Time.deltaTime / 10);
+			transform.LookAt (Camera.main.ViewportToWorldPoint (new Vector3 (-0.5f, Y, Z)));
+		} else {
+			Destroy (gameObject);
+		}
+	}
+
+
 }

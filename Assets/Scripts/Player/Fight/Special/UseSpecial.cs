@@ -41,6 +41,9 @@ public class UseSpecial : MonoBehaviour {
 					UseTheSpecial ();
 				}
 				SpecialItens--;
+				SpecialInScreen [SpecialInScreen.Count - 1].GetComponent<SpecialPos> ().GoOffScreen = true;
+				SpecialInScreen [SpecialInScreen.Count - 1].GetComponent<SpecialPos> ().SetPos = false;
+				SpecialInScreen.Remove (SpecialInScreen [SpecialInScreen.Count - 1]);
 				Vector3 v3 = RB.velocity;
 				v3.x = 0;
 				v3.z = 0;
