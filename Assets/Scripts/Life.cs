@@ -39,6 +39,7 @@ public class Life : MonoBehaviour {
 	[SerializeField] private GameObject ScreenGlass;
 	private float X, InitialX;
     #endregion
+	[SerializeField] private bool UpdateL;
 
     void Awake () {
         if (LifeOF == LifeType.Player)
@@ -55,7 +56,11 @@ public class Life : MonoBehaviour {
     }
 
 	void Update(){
-		
+		if (UpdateL) {
+			UpdateLife ();
+			UpdateL = false;
+		}
+
 		if (QuantImgInScene < QuantImg && LifeOF == LifeType.Player) {
 			UpdateLife ();
 		}
@@ -97,7 +102,8 @@ public class Life : MonoBehaviour {
 
 	void PlayerLife(){
 		if (LifeQuant <= Division) {
-			UnityEngine.SceneManagement.SceneManager.LoadScene (0);
+			GetComponent<Movimentacao3D> ().CanMove = false;
+			GetComponent<Movimentacao3D> ().Stuned = true;
 		}
 		QuantImg = (int)LifeQuant / Division;
 		if (QuantImgInScene < QuantImg) {

@@ -44,6 +44,7 @@ public class Movimentacao3D : MonoBehaviour {
 	private bool Jumping;
 
 	public bool CanMove;
+	public bool Stuned;
 
 	bool allowUp,allowDown,allowRight,allowLeft;
 	public Animator Anim;
@@ -355,6 +356,7 @@ public class Movimentacao3D : MonoBehaviour {
 		Anim.SetBool ("InAir", !InGround);
 		Anim.SetBool ("InMovement", InMovement);
 		Anim.SetBool ("ReachScreen", reachScreen);
+		Anim.SetBool ("Stuned", Stuned);
 	}
 
 	void SetJumpAnim(){
@@ -412,6 +414,21 @@ public class Movimentacao3D : MonoBehaviour {
 			return;
 		}
 		Anim.SetBool ("Grabbed", false);
+	}
+
+	public void SetTakeDamageAnim(){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetTrigger ("TakeDamage");
+	}
+
+	public void CanMoveFalse(){
+		CanMove = false;
+	}
+
+	public void CanMoveTrue(){
+		CanMove = true;
 	}
 }
 

@@ -8,6 +8,11 @@ public class FightCollider : MonoBehaviour {
 
 	void OnTriggerEnter (Collider col){
 		//aplicar a função de causar dano.
+		if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player2_3D") ||
+		    col.CompareTag ("Player3_3D") || col.CompareTag ("Player4_3D")) 
+		{
+			col.GetComponent<Movimentacao3D> ().SetTakeDamageAnim ();
+		}
 		if (col.gameObject.GetComponent<Life> () != null) {
 			//Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
 			col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;

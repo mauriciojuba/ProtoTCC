@@ -133,4 +133,12 @@ public class PickThrow : MonoBehaviour {
 		transform.parent.GetComponent<Movimentacao3D> ().CanMove = !Grabbing;
 		transform.parent.GetComponent<Movimentacao3D> ().SetGrabbedFalse ();
 	}
+
+	public void CanMoveFalse(){
+		transform.parent.GetComponent<Movimentacao3D>().CanMove = false;
+	}
+
+	public void CanMoveTrue(){
+		transform.parent.GetComponent<Movimentacao3D>().CanMove = true;
+	}
 }
