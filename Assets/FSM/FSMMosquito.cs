@@ -6,7 +6,7 @@ public class FSMMosquito : MonoBehaviour
 {
 
     #region FSM States
-    public enum FSMStates { Idle, Walk, ATK1, ATK2, Damage, StepBack, Grappled, Thrown, DrainLife, Die, Fall, Transition, Patrol, GoToScreen };
+    public enum FSMStates { Idle, Walk, ATK1, ATK2, Damage, StepBack, Grappled, Thrown, DrainLife, Die, Fall, Transition, Patrol, GoToScreen, OnScreen };
     public FSMStates state = FSMStates.Idle;
     #endregion
 
@@ -53,7 +53,6 @@ public class FSMMosquito : MonoBehaviour
     [SerializeField] private bool reachScreen;
     public float velTransicao;
     public Transform model;
-    private bool Jumping;
     public Transform direcoes;
     public bool toWorld;
     public CameraControl DollyCam;
@@ -166,6 +165,11 @@ public class FSMMosquito : MonoBehaviour
                 GoToScreen();
                 break;
 
+            case FSMStates.OnScreen:
+                OnScreen();
+                break;
+
+
 
         }
 
@@ -238,11 +242,10 @@ public class FSMMosquito : MonoBehaviour
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
                 camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
             //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(180, Vector3.right), velTransicao * 10);
             transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), velTransicao / 10);
-            if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
+            if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(180, Vector3.right) && transform.localScale == new Vector3(0.5f, 0.5f, 0.5f))
             {
-                Jumping = false; //???? que isso aqui man? serve pra que?
                 reachScreen = true;
             }
         }
@@ -431,7 +434,16 @@ public class FSMMosquito : MonoBehaviour
         //Move o Npc para o alvo;
         transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
-        if (Distace > SafeDist + 2)
+        if (Distace > SafeDist + 2 && Life <= MaxLife * 0.2f)
+        {
+            MosquitoAni.SetTrigger("GoToScreen");
+            MosquitoAni.SetBool("UsingWings", false);
+            MosquitoAni.SetBool("GoingToScreen", true);
+
+            state = FSMStates.GoToScreen;
+        }
+
+        else if (Distace > SafeDist + 2)
             state = FSMStates.Idle;
 
     }
@@ -499,6 +511,20 @@ public class FSMMosquito : MonoBehaviour
             onScreen = true;
         }
         else goToScreen();
+
+        if (reachScreen)
+        {
+            MosquitoAni.SetBool("GoingToScreen", false);
+            state = FSMStates.OnScreen;
+        }
+    }
+    #endregion
+
+    #region OnScreen
+    private void OnScreen()
+    {
+
+
     }
     #endregion
 
@@ -506,12 +532,6 @@ public class FSMMosquito : MonoBehaviour
     #region Transition
     private void Transition()
     {
-
-        
-
-
-
-
     }
     #endregion
 
