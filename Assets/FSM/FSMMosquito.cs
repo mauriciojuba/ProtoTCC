@@ -6,7 +6,8 @@ public class FSMMosquito : MonoBehaviour
 {
 
     #region FSM States
-    public enum FSMStates { Idle, Walk, ATK1, ATK2, Damage, StepBack, Grappled, Thrown, DrainLife, Die, Fall, Transition, Patrol, GoToScreen, OnScreen };
+    public enum FSMStates { Idle, Walk, ATK1, ATK2, Damage, StepBack, Grappled, Thrown, DrainLife, Die, Fall, Transition, Patrol, GoToScreen,
+                           OnScreen, GoToWorld};
     public FSMStates state = FSMStates.Idle;
     #endregion
 
@@ -165,6 +166,10 @@ public class FSMMosquito : MonoBehaviour
                 GoToScreen();
                 break;
 
+            case FSMStates.GoToWorld:
+                GoToWorld();
+                break;
+
             case FSMStates.OnScreen:
                 OnScreen();
                 break;
@@ -233,6 +238,15 @@ public class FSMMosquito : MonoBehaviour
     public void HitBoxOff()
     {
 		hitbox.GetComponent<Collider> ().enabled = false;
+    }
+
+    void Descer() {
+
+        transform.SetParent(null);
+        toWorld = true;
+        reachScreen = false;
+        onScreen = false;
+
     }
 
     void goToScreen()
@@ -523,8 +537,28 @@ public class FSMMosquito : MonoBehaviour
     #region OnScreen
     private void OnScreen()
     {
+        if(Life >= 0.5f * MaxLife)
+        {
+            Descer();
+            state = FSMStates.GoToWorld;
+        }
 
 
+    }
+    #endregion
+
+    #region GoToWorld
+    private void GoToWorld()
+    {
+        exitScreen();
+        MosquitoAni.SetBool("UsingWings", true);
+        MosquitoAni.SetBool("GoingToWorld", true);
+        if (!toWorld)
+        {
+            MosquitoAni.SetBool("GoingToWorld", false);
+            MosquitoAni.SetBool("FightingWalk", true);
+            state = FSMStates.StepBack;
+        }
     }
     #endregion
 
