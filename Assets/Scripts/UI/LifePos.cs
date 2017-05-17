@@ -24,10 +24,10 @@ public class LifePos : MonoBehaviour {
 			}
 		} else {
 			transform.localScale = Vector3.MoveTowards(transform.localScale,new Vector3 (2, 2, 2),Speed * Time.deltaTime * 2);
-			if (transform.localScale == new Vector3 (2, 2, 2)) {
-				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (-1, transform.position.y, transform.position.z)), Speed * Time.deltaTime);
-
-			}
+//			if (transform.localScale == new Vector3 (2, 2, 2)) {
+//				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (-1, transform.position.y, transform.position.z)), Speed * Time.deltaTime);
+//
+//			}
 		}
 	}
 
