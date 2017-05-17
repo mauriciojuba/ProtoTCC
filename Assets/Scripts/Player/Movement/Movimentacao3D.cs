@@ -44,11 +44,13 @@ public class Movimentacao3D : MonoBehaviour {
 	private bool Jumping;
 
 	public bool CanMove;
-	public bool Stuned;
+	public bool Stunned;
 
 	bool allowUp,allowDown,allowRight,allowLeft;
 	public Animator Anim;
     public Transform model;
+
+	[SerializeField] private GameObject ResurrectCol;
 	void Start () {
 		CanMove = true;
         rb = Player.GetComponent<Rigidbody>();
@@ -58,6 +60,7 @@ public class Movimentacao3D : MonoBehaviour {
     }
 
 	void Update(){
+		ResurrectCol.gameObject.SetActive (Stunned);
 		TestPosition ();
 		SetAnimations();
 		if (CanMove) {
@@ -356,7 +359,7 @@ public class Movimentacao3D : MonoBehaviour {
 		Anim.SetBool ("InAir", !InGround);
 		Anim.SetBool ("InMovement", InMovement);
 		Anim.SetBool ("ReachScreen", reachScreen);
-		Anim.SetBool ("Stuned", Stuned);
+		Anim.SetBool ("Stuned", Stunned);
 	}
 
 	void SetJumpAnim(){

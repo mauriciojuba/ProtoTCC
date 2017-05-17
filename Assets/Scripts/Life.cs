@@ -37,6 +37,7 @@ public class Life : MonoBehaviour {
 	[SerializeField] private int QuantImg;
 	[SerializeField] private GameObject LifeSpritePrefab;
 	[SerializeField] private GameObject ScreenGlass;
+	[SerializeField] private CameraControl DollyCam;
 	private float X, InitialX;
     #endregion
 	[SerializeField] private bool UpdateL;
@@ -103,7 +104,9 @@ public class Life : MonoBehaviour {
 	void PlayerLife(){
 		if (LifeQuant <= Division) {
 			GetComponent<Movimentacao3D> ().CanMove = false;
-			GetComponent<Movimentacao3D> ().Stuned = true;
+			GetComponent<Movimentacao3D> ().Stunned = true;
+			if (!DollyCam.StunnedPlayers.Contains (gameObject))
+				DollyCam.StunnedPlayers.Add (gameObject);
 		}
 		QuantImg = (int)LifeQuant / Division;
 		if (QuantImgInScene < QuantImg) {

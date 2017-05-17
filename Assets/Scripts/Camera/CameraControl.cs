@@ -22,6 +22,8 @@ public class CameraControl : MonoBehaviour {
 
     public Transform target;
 
+	public List<GameObject> StunnedPlayers;
+
     private void Start()
     {
         DollyCam = transform;
@@ -41,6 +43,8 @@ public class CameraControl : MonoBehaviour {
     }
     private void Update()
     {
+		ResetGame ();
+
         for (int i = 0; i < players.Length; i++)
         {
             if (players[i] != null|| players[i].GetComponent<Movimentacao3D>() != null )
@@ -153,7 +157,12 @@ public class CameraControl : MonoBehaviour {
 
     }*/
     
-
+	void ResetGame(){
+		if (StunnedPlayers.Count == players.Length) {
+			//colocar o nome da cena aqui----------------------\|/
+			UnityEngine.SceneManagement.SceneManager.LoadScene (0);
+		}
+	}
 
     void lockPlayerMovement(Transform t)
     {
