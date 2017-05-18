@@ -16,48 +16,59 @@ public class FSMMosquito : MonoBehaviour
     public GameObject Target;
     public List<GameObject> Players;
 
-    public Transform[] waypoints;
-
-    public float MoveSpeed;             //Velocidade De Movimentção
-    public float RotationSpeed;         //Velocidade De Rotação
-
-    public float Vision = 5f;           //Area Para o Npc Identificar o Player
-    public float SafeDist = 10f;        //Area Para o Npc desistir de perceguir o Player
-    public float EnemyDist = 2f;        //Area para Iniciar o Ataque
-    public float Life = 100;              //Vida Do NPC
-
-    public Transform camScreen;
-    float _2dY, _2dX;
-    public bool onScreen;
+    private GameObject VidaPlayer;
+    private GameObject VidaTatu;
 
 
-    public bool TakeDamage = false;      //Verifica se o player levou dano
-    [SerializeField] private float Distace;               //Distancia entre o NPC e o player
-    [SerializeField] private float TimeToChangeTarget = 5f;
-    private float BasicDamage;          //Valor base de Dano
+    private Transform TargetLife;                              // 
+    public List<GameObject> PlayersLife;
+    public Transform TargetLifeTrasf;
 
+
+    public float MoveSpeed;                                    //Velocidade De Movimentção
+    public float RotationSpeed;                                //Velocidade De Rotação
+
+
+    public Transform[] waypoints;                              //Lista de Waypoints
+
+    public float Vision = 5f;                                  //Area Para o Npc Identificar o Player
+    public float SafeDist = 10f;                               //Area Para o Npc desistir de perceguir o Player
+    public float EnemyDist = 2f;                               //Area para Iniciar o Ataque
+    public float LifeDrainDist = 1f;
+
+
+
+    public float Life = 100;                                   //Vida Do NPC
+    [SerializeField] private float MaxLife;                    //Vida Maxima
+
+    public bool TakeDamage = false;                            //Verifica se o player levou dano
     private float[] PlayersDist = new float[2];
-    public Animator MosquitoAni;        //Aramazena as animações do mosquito
-    private Transform myTransform;      //
-    private int currentWayPoint;        //
-    [SerializeField] private Rigidbody rb;               //
-    public float TimeToNextPoint = 5f;  //Tempo para o proximo way point
-    private float TimeTo;               //
+    public Animator MosquitoAni;                               //Aramazena as animações do mosquito
+    private Transform myTransform;                             //
+    private int currentWayPoint;                               //
+    public float TimeToNextPoint = 5f;                         //Tempo para o proximo way point
+    private float TimeTo;                                      //
     private bool cor = false;
-    public GameObject hitbox;
-    public bool grappled = false;
-	[SerializeField] private float CooldownAtk = 3f;
-	[SerializeField] private float TimerAtk;
-	[SerializeField] private float MaxLife;
-	private bool returned;
+    public GameObject hitbox;                                  //Hitbox do ataque do mosquito
+    public bool grappled = false;                              //Verifica se o mosquito esta sendo agarrado
+    [SerializeField] private Rigidbody rb;                     //
+    [SerializeField] private float CooldownAtk = 3f;           //Tempo de recarga do ataque
+	[SerializeField] private float TimerAtk;                   //Tempo de recarga do ataque
+    [SerializeField] private float Distace;                    //Distancia entre o NPC e o player
+    [SerializeField] private float TimeToChangeTarget = 5f;    //
 	[SerializeField] private Collider DeathCollider;
     [SerializeField] private bool reachScreen;
-    public float velTransicao;
-    public Transform model;
+    public float velTransicao;                                 //Velocidade da tranzição 
+    public Transform model;                                    
     public Transform direcoes;
     public bool toWorld;
     public CameraControl DollyCam;
     private bool descer = false;
+    private bool returned;
+    public Transform camScreen;
+    float _2dY, _2dX;
+    public bool onScreen;
+
 
 
 
@@ -68,8 +79,12 @@ public class FSMMosquito : MonoBehaviour
     void Start()
     {
 
+
+
         if (GameObject.FindWithTag("Player1_3D") != null)
+        {
             Players.Add(GameObject.FindWithTag("Player1_3D"));
+        }
 
         if (GameObject.FindWithTag("Player2_3D") != null)
             Players.Add(GameObject.FindWithTag("Player2_3D"));
@@ -95,13 +110,11 @@ public class FSMMosquito : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, SafeDist);
+
     }
 
     public void FixedUpdate()
     {
-
-
-
 
         Distace = Vector3.Distance(Target.transform.position, gameObject.transform.position);
 
@@ -208,6 +221,42 @@ public class FSMMosquito : MonoBehaviour
     #endregion
 
     #region Minhas funcoes
+
+
+    public void PegaVidaPlayer()
+    {
+        VidaPlayer = Players[(int)Random.Range(0, Players.Count - 1)];
+
+        VidaTatu = VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
+    }
+
+    public void MovePraVida()
+    {
+        float distance;
+
+        distance = Vector3.Distance(VidaTatu.transform.position, transform.position);
+
+        if(distance > LifeDrainDist)
+        {
+            //vai ate a vida
+
+            // Vector3 dir = VidaTatu.transform.position - transform.position;
+            // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
+            // transform.eulerAngles = new Vector3(0, 0, 0);
+
+            // rb.MovePosition(transform.position + transform.up * Time.deltaTime * MoveSpeed);
+
+        }
+
+        else
+        {
+
+        }
+
+
+    }
+
+    //Calcula a Distancia do Player mais Proximo 
 
     public void CalculaDistancia()
     {
@@ -494,6 +543,7 @@ public class FSMMosquito : MonoBehaviour
     {
 
     }
+
     #endregion
 
     #region Die
@@ -528,6 +578,7 @@ public class FSMMosquito : MonoBehaviour
 
         if (reachScreen)
         {
+            PegaVidaPlayer();
             MosquitoAni.SetBool("GoingToScreen", false);
             state = FSMStates.OnScreen;
         }
@@ -537,13 +588,14 @@ public class FSMMosquito : MonoBehaviour
     #region OnScreen
     private void OnScreen()
     {
+
+        MovePraVida();
+
         if(Life >= 0.5f * MaxLife)
         {
             Descer();
             state = FSMStates.GoToWorld;
         }
-
-
     }
     #endregion
 
