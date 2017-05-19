@@ -9,7 +9,7 @@ public class CameraControl : MonoBehaviour {
     Transform DollyCam;
     public int numPlayers = 0;
     [SerializeField] float velocidadeMovimento;
-    [SerializeField] float distancia = 15;
+    public float distancia = 15;
     [SerializeField] float offSetY;
     //[SerializeField] float minDistancia;
     //[SerializeField] float velocidadeZoom;
