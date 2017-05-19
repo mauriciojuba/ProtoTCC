@@ -65,6 +65,9 @@ public class Life : MonoBehaviour {
 		if (QuantImgInScene < QuantImg && LifeOF == LifeType.Player) {
 			UpdateLife ();
 		}
+		if (LifeOF == LifeType.Object) {
+			UpdateLife ();
+		}
 	}
 
     
@@ -84,15 +87,12 @@ public class Life : MonoBehaviour {
 			    break;
 		}
 	}
-
     void ObjectLife()
     {
         if (LifeQuant <= 0)
         {
-            GameObject bo = Instantiate(ObjDestruido, transform.position, Quaternion.identity);
+			Instantiate(ObjDestruido, transform.position, Quaternion.identity);
             DropLoot();
-            Destroy(bo, 3f);
-            Destroy(this);
             Destroy(gameObject);
         }
     }
