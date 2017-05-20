@@ -16,13 +16,8 @@ public class FSMMosquito : MonoBehaviour
     public GameObject Target;
     public List<GameObject> Players;
 
-    private GameObject VidaPlayer;
-    private GameObject VidaTatu;
-
-
-    private Transform TargetLife;                              // 
-    public List<GameObject> PlayersLife;
-    public Transform TargetLifeTrasf;
+    public GameObject VidaPlayer;
+    public GameObject VidaTatu;
 
 
     public float MoveSpeed;                                    //Velocidade De Movimentção
@@ -231,20 +226,20 @@ public class FSMMosquito : MonoBehaviour
     {
         VidaPlayer = Players[(int)Random.Range(0, Players.Count - 1)];
 
-        VidaTatu = VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
+        VidaTatu = (GameObject) VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
     }
-
+    public Transform direction;
     public void MovePraVida()
     {
-        float distance;
+        //colocar o modelo no centro do objeto pernilongo
+        ModelMosquito.transform.localPosition = new Vector3(ModelMosquito.transform.localPosition.x,ModelMosquito.transform.localPosition.y,-1f);
 
-        distance = Vector3.Distance(VidaTatu.transform.position, transform.position);
+        //para não olhar direto pro tatu
+        Vector3 correctLook = Vector3.Lerp(direction.position,VidaTatu.transform.position,RotationSpeed*Time.deltaTime);
 
-        if(distance > LifeDrainDist)
-        {
-
-
-            transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed * Time.deltaTime);
+        //olha para o tatu e coloca arruma a posição, ponta-cabeça
+        transform.LookAt(correctLook,new Vector3(-1,-1,1));
+                //transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed * Time.deltaTime);
 
 
             // PROBELMA Aki ------------------------------------------------------------------------------------------------------------
@@ -255,18 +250,9 @@ public class FSMMosquito : MonoBehaviour
             //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
             //transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y,0 );
 
-            //transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed);
 
             //rb.MovePosition(transform.position + VidaTatu.transform.position * Time.deltaTime * MoveSpeed);
-
-        }
-
-        else
-        {
-
-        }
-
-
     }
 
     //Calcula a Distancia do Player mais Proximo 
