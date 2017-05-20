@@ -54,7 +54,7 @@ public class OptionsPlayer : MonoBehaviour {
 				Jump ();
 			}
 			if (CameraMain.gameObject.GetComponent<CameraMenu> ().InOptions) {
-				TestPosition ();
+				//TestPosition ();
 			}
 			if (InStairs) {
 				if (Input.GetButtonDown ("X P1")) {
