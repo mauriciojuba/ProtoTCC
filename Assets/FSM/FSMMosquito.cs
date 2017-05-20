@@ -36,6 +36,7 @@ public class FSMMosquito : MonoBehaviour
     public float EnemyDist = 2f;                               //Area para Iniciar o Ataque
     public float LifeDrainDist = 1f;
 
+    public GameObject ModelMosquito;         //
 
 
     public float Life = 100;                                   //Vida Do NPC
@@ -79,6 +80,7 @@ public class FSMMosquito : MonoBehaviour
     void Start()
     {
 
+       
 
 
         if (GameObject.FindWithTag("Player1_3D") != null)
@@ -115,6 +117,8 @@ public class FSMMosquito : MonoBehaviour
 
     public void FixedUpdate()
     {
+
+        //print(transform.localRotation);
 
         Distace = Vector3.Distance(Target.transform.position, gameObject.transform.position);
 
@@ -238,13 +242,22 @@ public class FSMMosquito : MonoBehaviour
 
         if(distance > LifeDrainDist)
         {
+
+
+            transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed * Time.deltaTime);
+
+
+            // PROBELMA Aki ------------------------------------------------------------------------------------------------------------
             //vai ate a vida
 
-            // Vector3 dir = VidaTatu.transform.position - transform.position;
-            // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
-            // transform.eulerAngles = new Vector3(0, 0, 0);
 
-            // rb.MovePosition(transform.position + transform.up * Time.deltaTime * MoveSpeed);
+            //Vector3 dir = VidaTatu.transform.position - transform.position;
+            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
+            //transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y,0 );
+
+            //transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed);
+
+            //rb.MovePosition(transform.position + VidaTatu.transform.position * Time.deltaTime * MoveSpeed);
 
         }
 
@@ -305,9 +318,10 @@ public class FSMMosquito : MonoBehaviour
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
                 camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
             //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(180, Vector3.right), velTransicao * 10);
+            ModelMosquito.transform.localRotation = Quaternion.RotateTowards(ModelMosquito.transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
+            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
             transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), velTransicao / 10);
-            if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(180, Vector3.right) && transform.localScale == new Vector3(0.5f, 0.5f, 0.5f))
+            if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.5f, 0.5f, 0.5f))
             {
                 reachScreen = true;
             }
@@ -590,6 +604,8 @@ public class FSMMosquito : MonoBehaviour
     {
 
         MovePraVida();
+
+
 
         if(Life >= 0.5f * MaxLife)
         {
