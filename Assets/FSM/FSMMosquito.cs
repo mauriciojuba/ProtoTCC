@@ -6,8 +6,11 @@ public class FSMMosquito : MonoBehaviour
 {
 
     #region FSM States
-    public enum FSMStates { Idle, Walk, ATK1, ATK2, Damage, StepBack, Grappled, Thrown, DrainLife, Die, Fall, Transition, Patrol, GoToScreen,
-                           OnScreen, GoToWorld};
+    public enum FSMStates
+    {
+        Idle, Walk, ATK1, ATK2, Damage, StepBack, Grappled, Thrown, DrainLife, Die, Fall, Transition, Patrol, GoToScreen,
+        OnScreen, GoToWorld
+    };
     public FSMStates state = FSMStates.Idle;
     #endregion
 
@@ -31,7 +34,8 @@ public class FSMMosquito : MonoBehaviour
     public float EnemyDist = 2f;                               //Area para Iniciar o Ataque
     public float LifeDrainDist = 1f;
 
-    public GameObject ModelMosquito;         //
+    public GameObject ModelMosquito;
+    private float LifeDist;
 
 
     public float Life = 100;                                   //Vida Do NPC
@@ -45,17 +49,17 @@ public class FSMMosquito : MonoBehaviour
     public float TimeToNextPoint = 5f;                         //Tempo para o proximo way point
     private float TimeTo;                                      //
     private bool cor = false;
-    public GameObject hitbox;                                  //Hitbox do ataque do mosquito
+    public GameObject[] hitbox;                                  //Hitbox do ataque do mosquito
     public bool grappled = false;                              //Verifica se o mosquito esta sendo agarrado
     [SerializeField] private Rigidbody rb;                     //
     [SerializeField] private float CooldownAtk = 3f;           //Tempo de recarga do ataque
-	[SerializeField] private float TimerAtk;                   //Tempo de recarga do ataque
+    [SerializeField] private float TimerAtk;                   //Tempo de recarga do ataque
     [SerializeField] private float Distace;                    //Distancia entre o NPC e o player
     [SerializeField] private float TimeToChangeTarget = 5f;    //
-	[SerializeField] private Collider DeathCollider;
+    [SerializeField] private Collider DeathCollider;
     [SerializeField] private bool reachScreen;
     public float velTransicao;                                 //Velocidade da tranzição 
-    public Transform model;                                    
+    public Transform model;
     public Transform direcoes;
     public bool toWorld;
     public CameraControl DollyCam;
@@ -75,7 +79,7 @@ public class FSMMosquito : MonoBehaviour
     void Start()
     {
 
-       
+
 
 
         if (GameObject.FindWithTag("Player1_3D") != null)
@@ -93,7 +97,7 @@ public class FSMMosquito : MonoBehaviour
         TimeTo = TimeToNextPoint;
         myTransform = transform;
         rb = gameObject.GetComponent<Rigidbody>();
-		MaxLife = Life;
+        MaxLife = Life;
 
     }
 
@@ -192,11 +196,12 @@ public class FSMMosquito : MonoBehaviour
 
     }
 
-	IEnumerator ResetStates(){
-		yield return new WaitForSeconds (1);
-		state = FSMStates.Patrol;
-		returned = false;
-	}
+    IEnumerator ResetStates()
+    {
+        yield return new WaitForSeconds(1);
+        state = FSMStates.Patrol;
+        returned = false;
+    }
 
     IEnumerator EsperaAnim(float tempo, string NomeEstado)
     {
@@ -226,36 +231,40 @@ public class FSMMosquito : MonoBehaviour
     {
         VidaPlayer = Players[(int)Random.Range(0, Players.Count - 1)];
 
-        VidaTatu = (GameObject) VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
+        VidaTatu = (GameObject)VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
     }
     public Transform direction;
     public void MovePraVida()
     {
+        LifeDist = Vector3.Distance(VidaTatu.transform.position, gameObject.transform.position);
+
         //colocar o modelo no centro do objeto pernilongo
-        ModelMosquito.transform.localPosition = new Vector3(ModelMosquito.transform.localPosition.x,ModelMosquito.transform.localPosition.y,-1f);
+        ModelMosquito.transform.localPosition = new Vector3(ModelMosquito.transform.localPosition.x, ModelMosquito.transform.localPosition.y, -1f);
 
         //para não olhar direto pro tatu
-        Vector3 correctLook = Vector3.Lerp(direction.position,VidaTatu.transform.position,RotationSpeed*Time.deltaTime);
+        Vector3 correctLook = Vector3.Lerp(direction.position, VidaTatu.transform.position, RotationSpeed * Time.deltaTime);
 
         //olha para o tatu e coloca arruma a posição, ponta-cabeça
-        transform.LookAt(correctLook,new Vector3(-1,-1,1));
-                //transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed * Time.deltaTime);
+        transform.LookAt(correctLook, new Vector3(-1, -1, 1));
 
+        // transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed);
 
-            // PROBELMA Aki ------------------------------------------------------------------------------------------------------------
-            //vai ate a vida
-
-
-            //Vector3 dir = VidaTatu.transform.position - transform.position;
-            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
-            //transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y,0 );
-
-            transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed);
-
-            //rb.MovePosition(transform.position + VidaTatu.transform.position * Time.deltaTime * MoveSpeed);
+        rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
     }
 
     //Calcula a Distancia do Player mais Proximo 
+
+    public void DrainLifeEnd()
+    {
+        Descer();
+        MoveSpeed = 4f;
+        Life += 50;
+        
+            MosquitoAni.SetBool("GoingToWorld", true);
+        MosquitoAni.SetBool("LifeDrain", false);
+        state = FSMStates.GoToWorld;
+
+    }
 
     public void CalculaDistancia()
     {
@@ -271,7 +280,8 @@ public class FSMMosquito : MonoBehaviour
             else
                 Target = Players[1];
         }
-        else if(Players.Count == 1) {
+        else if (Players.Count == 1)
+        {
 
             Target = Players[0];
 
@@ -280,15 +290,24 @@ public class FSMMosquito : MonoBehaviour
 
     public void HitBoxOn()
     {
-		hitbox.GetComponent<Collider> ().enabled = true;
+        if (!onScreen)
+            hitbox[0].GetComponent<Collider>().enabled = true;
+
+        else
+            hitbox[1].GetComponent<Collider>().enabled = true;
     }
 
     public void HitBoxOff()
     {
-		hitbox.GetComponent<Collider> ().enabled = false;
+        if (!onScreen)
+            hitbox[0].GetComponent<Collider>().enabled = false;
+
+        else
+            hitbox[1].GetComponent<Collider>().enabled = false;
     }
 
-    void Descer() {
+    void Descer()
+    {
 
         transform.SetParent(null);
         toWorld = true;
@@ -330,10 +349,12 @@ public class FSMMosquito : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
                 1f, DollyCam.target.position.z), velTransicao);
+
+        ModelMosquito.transform.localRotation = Quaternion.RotateTowards(ModelMosquito.transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 10);
         transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
         transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
         model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0, 0, 0), velTransicao * 5);
-        
+
 
         if (transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
         {
@@ -393,10 +414,11 @@ public class FSMMosquito : MonoBehaviour
         else
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
 
-		if (Distace < Vision) {
-			MosquitoAni.SetBool("IsParolling", false);
-			state = FSMStates.Walk;
-		}
+        if (Distace < Vision)
+        {
+            MosquitoAni.SetBool("IsParolling", false);
+            state = FSMStates.Walk;
+        }
         if (TakeDamage)
             state = FSMStates.Damage;
 
@@ -422,11 +444,12 @@ public class FSMMosquito : MonoBehaviour
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
         }
 
-		TimerAtk += Time.deltaTime;
-		if (Distace <= EnemyDist && TimerAtk >= CooldownAtk) {
-			state = FSMStates.ATK1;
-			TimerAtk = 0;
-		}
+        TimerAtk += Time.deltaTime;
+        if (Distace <= EnemyDist && TimerAtk >= CooldownAtk)
+        {
+            state = FSMStates.ATK1;
+            TimerAtk = 0;
+        }
 
         if (Distace > SafeDist + 1)
         {
@@ -443,9 +466,8 @@ public class FSMMosquito : MonoBehaviour
     #region ATK1
     private void ATK1()
     {
-		
-	 	MosquitoAni.SetTrigger ("ATK1");
-		
+
+        MosquitoAni.SetTrigger("ATK1");
 
         state = FSMStates.Walk;
 
@@ -468,20 +490,23 @@ public class FSMMosquito : MonoBehaviour
         MosquitoAni.SetBool("FightingWalk", false);
         if (!cor)
         {
-			if (Life > 0 && Life <= MaxLife * 0.2f && !grappled)
+            if (Life > 0 && Life <= MaxLife * 0.2f && !grappled)
             {
                 StartCoroutine(EsperaAnim(1f, "StepBack"));
                 cor = true;
             }
-			else if(Life <= 0)
+            else if (Life <= 0)
                 state = FSMStates.Die;
         }
         TakeDamage = false;
-		if (MosquitoAni.GetCurrentAnimatorStateInfo (0).IsName ("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo (0).normalizedTime >= 0.7f && !grappled && Life > 0) {
-			state = FSMStates.Walk;
-		} else if (MosquitoAni.GetCurrentAnimatorStateInfo (0).IsName ("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo (0).normalizedTime >= 0.7f && grappled && Life > 0) {
-			state = FSMStates.Grappled;
-		}
+        if (MosquitoAni.GetCurrentAnimatorStateInfo(0).IsName("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.7f && !grappled && Life > 0)
+        {
+            state = FSMStates.Walk;
+        }
+        else if (MosquitoAni.GetCurrentAnimatorStateInfo(0).IsName("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.7f && grappled && Life > 0)
+        {
+            state = FSMStates.Grappled;
+        }
 
     }
     #endregion
@@ -490,7 +515,7 @@ public class FSMMosquito : MonoBehaviour
     private void StepBack()
     {
 
-		MosquitoAni.SetBool("FightingWalk", false);
+        MosquitoAni.SetBool("FightingWalk", false);
         TimeToNextPoint = 0;
         //rotaciona o Npc apontando para lodo oposto do alvo
         myTransform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(myTransform.position - Target.transform.position), RotationSpeed * Time.deltaTime);
@@ -515,7 +540,7 @@ public class FSMMosquito : MonoBehaviour
     #region Grappled
     private void Grappled()
     {
-		grappled = true;
+        grappled = true;
         MosquitoAni.SetBool("IsIdle", true);
         MosquitoAni.SetBool("IsParolling", false);
         MosquitoAni.SetBool("FightingWalk", false);
@@ -526,21 +551,24 @@ public class FSMMosquito : MonoBehaviour
     #region Thrown
     private void Thrown()
     {
-		grappled = false;
-		MosquitoAni.SetBool("IsIdle", false);
-		MosquitoAni.SetBool("IsParolling", false);
-		MosquitoAni.SetBool("FightingWalk", false);
-		MosquitoAni.SetBool("UsingWings", true);
-		if (!returned) {
-			StartCoroutine (ResetStates ());
-			returned = true;
-		}
+        grappled = false;
+        MosquitoAni.SetBool("IsIdle", false);
+        MosquitoAni.SetBool("IsParolling", false);
+        MosquitoAni.SetBool("FightingWalk", false);
+        MosquitoAni.SetBool("UsingWings", true);
+        if (!returned)
+        {
+            StartCoroutine(ResetStates());
+            returned = true;
+        }
     }
     #endregion
 
     #region Drain Life
     private void DrainLife()
     {
+
+        MosquitoAni.SetBool("LifeDrain", true);
 
     }
 
@@ -552,14 +580,14 @@ public class FSMMosquito : MonoBehaviour
         MosquitoAni.SetBool("UsingWings", false);
         MosquitoAni.SetTrigger("Death");
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
-		DeathCollider.enabled = true;
+        DeathCollider.enabled = true;
     }
     #endregion
 
     #region Fall
     private void Fall()
     {
-        if(toWorld) exitScreen();
+        if (toWorld) exitScreen();
         else state = FSMStates.Idle;
     }
     #endregion
@@ -567,7 +595,8 @@ public class FSMMosquito : MonoBehaviour
     #region GoToScreen
     private void GoToScreen()
     {
-        if(!onScreen){
+        if (!onScreen)
+        {
             rb.useGravity = false;
             transform.SetParent(camScreen);
             _2dX = Random.Range(-1.5f, +1.5f);
@@ -591,9 +620,12 @@ public class FSMMosquito : MonoBehaviour
 
         MovePraVida();
 
+        MoveSpeed = 0.5f;
 
+        if (LifeDist <= LifeDrainDist)
+            state = FSMStates.DrainLife;
 
-        if(Life >= 0.5f * MaxLife)
+        if (Life >= 0.5f * MaxLife)
         {
             Descer();
             state = FSMStates.GoToWorld;
@@ -623,7 +655,8 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
-	public void SetTakeDamageAnim(){
-		MosquitoAni.SetTrigger("TakeDamage");
-	}
+    public void SetTakeDamageAnim()
+    {
+        MosquitoAni.SetTrigger("TakeDamage");
+    }
 }
