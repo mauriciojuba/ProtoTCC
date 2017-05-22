@@ -33,6 +33,7 @@ public class Lever : MonoBehaviour {
 		if (Player.GetComponent<OptionsPlayer> ().UsingLever) {
 			if (Input.GetButtonDown ("B P1")) {
 				Player.GetComponent<OptionsPlayer> ().UsingLever = false;
+				//fazer o apply do options direto aqui
 			}
 		}
 	}
