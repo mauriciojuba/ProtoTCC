@@ -255,6 +255,8 @@ public class Movimentacao3D : MonoBehaviour {
     [SerializeField] private bool reachScreen;
     public bool toWorld;
 
+bool landOnScreen;
+float preventMovLock = 0;
     void goToScreen()
     {
         //testa se o jogador pediu pra ir pra tela
@@ -266,14 +268,28 @@ public class Movimentacao3D : MonoBehaviour {
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
                     camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
                 //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
-                transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
-                model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 10);
-                transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao / 10);
-				if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY,camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.25f, 0.25f, 0.25f))
-                {
-					Jumping = false;
-                    reachScreen = true;
-                }
+                transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao/4);
+				if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY,camScreen.localPosition.z))
+				{
+					landOnScreen = true;
+				}
+				if(landOnScreen){
+					transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao/2);
+                	model.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao/2);
+					Debug.Log("model "+ model.localRotation.x);
+					Debug.Log("object "+ transform.localRotation.x);
+					if(preventMovLock>=3f){
+						reachScreen = true;
+						preventMovLock = 0f;
+					}else{
+						preventMovLock+=Time.deltaTime;
+					}
+
+					
+				}
+				if(model.localRotation.x >= 0.58f && transform.localRotation.x >= 0.69f){
+					reachScreen = true;
+				}
             }
             //coloca as esferas de direções na tela também;
             direcoes.transform.SetParent(camScreen);
@@ -290,6 +306,7 @@ public class Movimentacao3D : MonoBehaviour {
                 direcoes.transform.SetParent(playerRoot);
                 toWorld = true;
                 reachScreen = false;
+				landOnScreen = false;
                 onScreen = false;
             }
         }
@@ -303,9 +320,9 @@ public class Movimentacao3D : MonoBehaviour {
         {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
                     1f, DollyCam.target.position.z), velTransicao);
-            transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
-            transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
-            model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0,0,0), velTransicao * 5);
+            transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1, 1, 1), velTransicao / 4);
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
+            model.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0,0,0), velTransicao * 5);
             direcoes.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right);
         }
         //uma vez que o tamanho esta ok a variavel pode ficar falsa.
@@ -358,7 +375,7 @@ public class Movimentacao3D : MonoBehaviour {
 			Anim.SetBool ("Jumping", false);
 		Anim.SetBool ("InAir", !InGround);
 		Anim.SetBool ("InMovement", InMovement);
-		Anim.SetBool ("ReachScreen", reachScreen);
+		Anim.SetBool ("ReachScreen", landOnScreen);
 		Anim.SetBool ("Stuned", Stunned);
 	}
 
