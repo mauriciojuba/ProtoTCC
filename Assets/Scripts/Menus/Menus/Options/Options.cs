@@ -11,7 +11,7 @@ public class Options : MonoBehaviour {
 	public GameObject Lever;
 
 	[SerializeField] private float Speed;
-	[Range(1.5f,5)]
+	[Range(1.5f,25)]
 	[SerializeField] private float SliderSpeed;
 
 	[HideInInspector]

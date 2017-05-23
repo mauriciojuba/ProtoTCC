@@ -9,18 +9,21 @@ public class SliderObj : MonoBehaviour {
 	[SerializeField] private Slider SliderToReference;
 	[SerializeField] private AudioMixerGroup GroupToChange;
 	[SerializeField] private float Test;
+	[SerializeField] private float Divisor;
 	private float XPos;
 	void Start () {
 		XPos = transform.position.x;
+		Test = SliderToReference.value;
+		UpdateGroup ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = new Vector3 (XPos + SliderToReference.value, transform.position.y, transform.position.z);
-		//pegar o valor do slider aqui
+		transform.position = new Vector3 (XPos + (SliderToReference.value / Divisor), transform.position.y, transform.position.z);
+		Test = SliderToReference.value;
 	}
 
 	public void UpdateGroup(){
-		GroupToChange.audioMixer.SetFloat (GroupToChange.name, SliderToReference.value);
+			GroupToChange.audioMixer.SetFloat (GroupToChange.name, Test);
 	}
 }
