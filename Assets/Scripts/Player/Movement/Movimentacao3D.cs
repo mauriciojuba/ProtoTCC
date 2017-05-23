@@ -268,7 +268,7 @@ float preventMovLock = 0;
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
                     camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
                 //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
-                transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao/4);
+                transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(0.25f, 0.25f, 0.25f), velTransicao/6);
 				if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY,camScreen.localPosition.z))
 				{
 					landOnScreen = true;
@@ -329,7 +329,7 @@ float preventMovLock = 0;
         if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
         {
             rb.useGravity = true;
-            model.localRotation = Quaternion.Euler(0, 0, 0);
+            //model.localRotation = Quaternion.Euler(0, 0, 0);
             toWorld = false;
         }
         
