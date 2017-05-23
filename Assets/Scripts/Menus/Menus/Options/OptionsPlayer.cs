@@ -196,14 +196,6 @@ public class OptionsPlayer : MonoBehaviour {
 			Mathf.Clamp (transform.position.z,Bottomborder,Topborder ));
 	}
 
-	void OnBecameInvisible(){
-		if (Menus) {
-			if (CameraMain.gameObject.GetComponent<CameraMenu> ().InMainMenu) {
-				UnityEngine.SceneManagement.SceneManager.LoadScene ("Inicio");
-			}
-		}
-	}
-
 	public IEnumerator StarMove(){
 		yield return new WaitForSeconds (1);
 		CanMove = true;
