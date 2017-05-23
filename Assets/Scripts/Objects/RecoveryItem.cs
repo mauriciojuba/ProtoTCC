@@ -17,8 +17,8 @@ public class RecoveryItem : MonoBehaviour {
                 {
                     other.gameObject.GetComponent<Life>().LifeQuant += valorRecuperacao;
 					other.gameObject.GetComponent<Life> ().UpdateLife ();
+
                 }
-				Destroy(gameObject);
             }
             if (RecuperaESP)
             {

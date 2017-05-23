@@ -80,7 +80,7 @@ public class FSMMosquito : MonoBehaviour
     {
 
 
-
+        //Encontra os player
 
         if (GameObject.FindWithTag("Player1_3D") != null)
         {
@@ -89,6 +89,7 @@ public class FSMMosquito : MonoBehaviour
 
         if (GameObject.FindWithTag("Player2_3D") != null)
             Players.Add(GameObject.FindWithTag("Player2_3D"));
+
 
         CalculaDistancia();
         StartCoroutine(CalcDist());
@@ -101,6 +102,7 @@ public class FSMMosquito : MonoBehaviour
 
     }
 
+    //mostra as distancias de interacoes do mosquitpo
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
@@ -116,8 +118,6 @@ public class FSMMosquito : MonoBehaviour
 
     public void FixedUpdate()
     {
-
-        //print(transform.localRotation);
 
         Distace = Vector3.Distance(Target.transform.position, gameObject.transform.position);
 
@@ -210,7 +210,6 @@ public class FSMMosquito : MonoBehaviour
         if (NomeEstado == "StepBack")
             state = FSMStates.StepBack;
 
-
         cor = false;
 
     }
@@ -226,7 +225,7 @@ public class FSMMosquito : MonoBehaviour
 
     #region Minhas funcoes
 
-
+    //pega a posicao da ultima vida de um player e seta como alvo
     public void PegaVidaPlayer()
     {
         VidaPlayer = Players[(int)Random.Range(0, Players.Count - 1)];
@@ -234,6 +233,9 @@ public class FSMMosquito : MonoBehaviour
         VidaTatu = (GameObject)VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
     }
     public Transform direction;
+
+    //move o mosquito para a vida  do player
+
     public void MovePraVida()
     {
         LifeDist = Vector3.Distance(VidaTatu.transform.position, gameObject.transform.position);
@@ -252,7 +254,7 @@ public class FSMMosquito : MonoBehaviour
         rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
     }
 
-    //Calcula a Distancia do Player mais Proximo 
+    //executa quando acaba a animaçao sugar a vida do player
 
     public void DrainLifeEnd()
     {
@@ -265,6 +267,8 @@ public class FSMMosquito : MonoBehaviour
         state = FSMStates.GoToWorld;
 
     }
+
+    //Calcula a Distancia do Player mais Proximo 
 
     public void CalculaDistancia()
     {
@@ -288,6 +292,8 @@ public class FSMMosquito : MonoBehaviour
         }
     }
 
+    //Liga as hitbox de ataque do mosquito
+
     public void HitBoxOn()
     {
         if (!onScreen)
@@ -296,6 +302,8 @@ public class FSMMosquito : MonoBehaviour
         else
             hitbox[1].GetComponent<Collider>().enabled = true;
     }
+
+    //Desliga as hitbox de ataque do mosquito
 
     public void HitBoxOff()
     {
@@ -315,6 +323,8 @@ public class FSMMosquito : MonoBehaviour
         onScreen = false;
 
     }
+
+    //faz o mosquito ir para a tela
 
     void goToScreen()
     {
@@ -345,6 +355,8 @@ public class FSMMosquito : MonoBehaviour
         }
     }
 
+    //faz o mosquito sair da tela
+
     void exitScreen()
     {
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
@@ -367,6 +379,7 @@ public class FSMMosquito : MonoBehaviour
 
     #endregion
 
+    //executado quado esta patrulhando 
     #region Idle
     private void Idle()
     {
@@ -398,6 +411,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado de patrulha do mosquito
     #region Patrol
     private void Patrol()
     {
@@ -425,6 +439,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado do mosquito indo atraz do player
     #region Walk
     private void Walk()
     {
@@ -463,6 +478,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado de ataque fraco do mosquito
     #region ATK1
     private void ATK1()
     {
@@ -477,6 +493,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado de ataque forte do mosquito
     #region ATK2
     private void ATK2()
     {
@@ -484,6 +501,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado de dano do mosquito
     #region Damage
     private void Damage()
     {
@@ -511,6 +529,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado que faz o mosquito recuar
     #region Step back
     private void StepBack()
     {
@@ -537,6 +556,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado do mosquito agarrado
     #region Grappled
     private void Grappled()
     {
@@ -548,6 +568,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado do mosquito sendo arremessado
     #region Thrown
     private void Thrown()
     {
@@ -564,6 +585,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado do mosquito sugando a vida do player
     #region Drain Life
     private void DrainLife()
     {
@@ -574,6 +596,7 @@ public class FSMMosquito : MonoBehaviour
 
     #endregion
 
+    //estado de morte do mosquito
     #region Die
     private void Die()
     {
@@ -584,6 +607,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado do mosquito caindo da tela
     #region Fall
     private void Fall()
     {
@@ -592,6 +616,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado do mosquito indo pra tela 
     #region GoToScreen
     private void GoToScreen()
     {
@@ -614,6 +639,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado de movimentacao do mosquito na tela 
     #region OnScreen
     private void OnScreen()
     {
@@ -633,6 +659,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
+    //estado do mosquito indo pro mundo
     #region GoToWorld
     private void GoToWorld()
     {
@@ -648,7 +675,7 @@ public class FSMMosquito : MonoBehaviour
     }
     #endregion
 
-
+    //deletar
     #region Transition
     private void Transition()
     {
