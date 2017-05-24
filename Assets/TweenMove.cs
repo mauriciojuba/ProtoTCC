@@ -23,6 +23,11 @@ public class TweenMove : MonoBehaviour
 
     }
 
+    public void olhala()
+    {
+        iTween.LookTo(gameObject, iTween.Hash("looktarget", target.transform, "time", 3 , "easetype", "easeInOutQuad"));
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -31,7 +36,9 @@ public class TweenMove : MonoBehaviour
 
         if (move)
         {
-            iTween.MoveTo(gameObject,iTween.Hash("path", iTweenPath.GetPath(Path), "time", time, "orienttopath", true));
+            iTween.MoveTo(gameObject,iTween.Hash("path", iTweenPath.GetPath(Path), "time", time, "orienttopath", true , "oncomplete", "olhala" , "easetype" , "easeInOutQuad"));
+
+            
 
             move = false;
         }
