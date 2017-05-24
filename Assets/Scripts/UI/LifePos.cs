@@ -14,7 +14,7 @@ public class LifePos : MonoBehaviour {
 	public GameObject Player;
 
 	void Start () {
-		if (PlayerNumber == 1) {
+		if (PlayerNumber == 1 || PlayerNumber == 2) {
 			if (Tatuzinho)
 				Y = 0.9f;
 			else
@@ -28,7 +28,10 @@ public class LifePos : MonoBehaviour {
     {
 
 		if (!Tatuzinho) {
-			X = Player.GetComponent<Life> ().X + 0.007f;
+			if (PlayerNumber == 1)
+				X = Player.GetComponent<Life> ().X + 0.007f;
+			else if (PlayerNumber == 2)
+				X = Player.GetComponent<Life> ().X;
 		}
         if (!SetS)
         {

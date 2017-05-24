@@ -51,6 +51,9 @@ public class Life : MonoBehaviour {
 			if (PlayerNumber == 1) {
 				InitialX = 0.06f;
 				X = InitialX;
+			} else if (PlayerNumber == 2) {
+				InitialX = 0.06f;
+				X = 0.70f;
 			}
         }
         UpdateLife();

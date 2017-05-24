@@ -21,8 +21,8 @@ public class RecoveryItem : MonoBehaviour {
 					GetComponent<LifePos> ().enabled = true;
 					GetComponent<LifePos> ().Player = Player;
 					transform.SetParent (Player.GetComponent<Movimentacao3D>().camScreen);
-					Destroy (GetComponent<Collider> ());
-					Destroy (GetComponent<Rigidbody> ());
+//					Destroy (GetComponent<Collider> ());
+//					Destroy (GetComponent<Rigidbody> ());
                 }
             }
             if (RecuperaESP)
