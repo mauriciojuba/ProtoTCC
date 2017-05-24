@@ -72,11 +72,15 @@ public class PickThrow : MonoBehaviour {
 
 		if (ColliderInRange.CompareTag ("Box")) {
 			CanPick = false;
+			transform.parent.GetComponent<Movimentacao3D> ().SetGrabbedAnim (true);
 			PickedObj = ColliderInRange.gameObject;
-			PickedObj.transform.SetParent (FixPoint);
-			PickedObj.transform.position = FixPoint.position;
-			PickedObj.transform.rotation = FixPoint.rotation;
+			PickedCollider = ColliderInRange.gameObject;
+			PickedObj.transform.SetParent (FixPoint2);
+			PickedObj.transform.position = FixPoint2.position;
+			PickedObj.transform.rotation = FixPoint2.rotation;
+			PickedObj.GetComponent<Collider>().isTrigger = true;
 			PickedObj.GetComponent<Rigidbody> ().isKinematic = true;
+			transform.parent.GetComponent<ApplyCombo> ().enabled = false;
 		} else if (ColliderInRange.CompareTag ("Enemy")) {
 			transform.parent.GetComponent<Movimentacao3D> ().SetGrabbedAnim (true);
 			CanPick = false;
@@ -93,11 +97,12 @@ public class PickThrow : MonoBehaviour {
 
 	void ThrowObject(){
 		if (PickedCollider.CompareTag ("Box")) {
-			PickedObj.transform.SetParent (null);
-			PickedObj.GetComponent<Rigidbody> ().isKinematic = false;
-			PickedObj.GetComponent<Rigidbody> ().AddForce (PickedObj.transform.forward * Force);
-			PickedObj = null;
-			CanPick = true;
+			transform.parent.GetComponent<Movimentacao3D> ().SetGrabbedAnim (false);
+			PickedObj.transform.SetParent (FixPoint);
+//			PickedObj.GetComponent<Rigidbody> ().isKinematic = false;
+//			PickedObj.GetComponent<Rigidbody> ().AddForce (PickedObj.transform.forward * Force);
+//			PickedObj = null;
+//			CanPick = true;
 		} else if (PickedCollider.CompareTag ("Enemy")) {
 			transform.parent.GetComponent<Movimentacao3D> ().SetGrabbedAnim (false);
 			PickedCollider.transform.SetParent (FixPoint);
@@ -115,7 +120,13 @@ public class PickThrow : MonoBehaviour {
 		PickedCollider.transform.SetParent (null);
 		PickedCollider.GetComponent<Rigidbody> ().isKinematic = false;
 		PickedCollider.transform.eulerAngles = new Vector3(0,0,0);
-		PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.forward * Force);
+		if (PickedCollider.CompareTag ("Box")) {
+			PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.forward * Force * 2);
+			PickedCollider.GetComponent<DestruirObjeto> ().Throwed = true;
+			transform.parent.GetComponent<ApplyCombo> ().enabled = true;
+		} else {
+			PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.forward * Force);
+		}
 		PickedCollider.GetComponent<Collider>().isTrigger = false;
 		PickedObj = null;
 		PickedCollider = null;

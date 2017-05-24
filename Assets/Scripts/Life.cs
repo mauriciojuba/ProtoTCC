@@ -9,8 +9,10 @@ public class Life : MonoBehaviour {
 
 	public enum LifeType {Player, Enemy, Boss, Object};
     public enum EnemyType {Mosquito};
+	public enum ObjectType {Box, Barricade};
     public LifeType LifeOF;
     public EnemyType TypeEnemy;
+	public ObjectType TypeOfObject;
 	public float LifeQuant;
     public GameObject[] Loot;
     [Range(0,100)]
@@ -94,7 +96,19 @@ public class Life : MonoBehaviour {
     {
         if (LifeQuant <= 0)
         {
-			Instantiate(ObjDestruido, transform.position, Quaternion.identity);
+			switch(TypeOfObject){
+			case ObjectType.Box:
+				GameObject GB = GameObject.Instantiate (ObjDestruido, transform.position, Quaternion.identity) as GameObject;
+				Component[] RBGB;
+				RBGB = GB.transform.GetComponentsInChildren<Rigidbody> ();
+				foreach (Rigidbody rb in RBGB) {
+					rb.velocity = gameObject.GetComponent<Rigidbody> ().velocity;
+				}
+				break;
+			case ObjectType.Barricade:
+				Instantiate (ObjDestruido, transform.position, Quaternion.identity);
+				break;
+			}
             DropLoot();
             Destroy(gameObject);
         }
