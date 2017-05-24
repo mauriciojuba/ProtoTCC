@@ -4804,7 +4804,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk Screen
       takeName: Take 001
-      firstFrame: 130
+      firstFrame: 190
       lastFrame: 230
       wrapMode: 0
       orientationOffsetY: 0
@@ -4812,7 +4812,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
