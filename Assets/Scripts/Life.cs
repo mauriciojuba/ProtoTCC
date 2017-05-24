@@ -38,7 +38,7 @@ public class Life : MonoBehaviour {
 	[SerializeField] private GameObject LifeSpritePrefab;
 	[SerializeField] private GameObject ScreenGlass;
 	[SerializeField] private CameraControl DollyCam;
-	private float X, InitialX;
+	public float X, InitialX;
     #endregion
 	[SerializeField] private bool UpdateL;
 
@@ -110,7 +110,7 @@ public class Life : MonoBehaviour {
 		}
 		QuantImg = (int)LifeQuant / Division;
 		if (QuantImgInScene < QuantImg) {
-			GameObject gb = GameObject.Instantiate (LifeSpritePrefab,Camera.main.ViewportToWorldPoint(new Vector3(-0.5f,0.5f,1)),ScreenGlass.transform.rotation);
+			GameObject gb = GameObject.Instantiate (LifeSpritePrefab,Camera.main.ViewportToWorldPoint(new Vector3(X,1.5f,1)),ScreenGlass.transform.rotation);
 			gb.transform.SetParent (ScreenGlass.transform);
 			QuantImgInScene++;
 			gb.GetComponent<Rigidbody> ().useGravity = false;

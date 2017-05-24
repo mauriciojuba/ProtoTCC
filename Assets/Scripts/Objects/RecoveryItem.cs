@@ -15,9 +15,14 @@ public class RecoveryItem : MonoBehaviour {
             {
                 if (other.gameObject.GetComponent<Life>() != null)
                 {
-                    other.gameObject.GetComponent<Life>().LifeQuant += valorRecuperacao;
-					other.gameObject.GetComponent<Life> ().UpdateLife ();
-
+					Player = other.gameObject;
+					GetComponent<LifePos> ().X = Player.GetComponent<Life> ().X + 0.007f;
+					GetComponent<LifePos> ().PlayerNumber = Player.GetComponent<Movimentacao3D> ().PlayerNumber;
+					GetComponent<LifePos> ().enabled = true;
+					GetComponent<LifePos> ().Player = Player;
+					transform.SetParent (Player.GetComponent<Movimentacao3D>().camScreen);
+					Destroy (GetComponent<Collider> ());
+					Destroy (GetComponent<Rigidbody> ());
                 }
             }
             if (RecuperaESP)
@@ -49,5 +54,11 @@ public class RecoveryItem : MonoBehaviour {
 			Player.GetComponent<UseSpecial> ().SpecialItens++;
 			Player.GetComponent<UseSpecial> ().UpdateBar ();
 		}
+	}
+
+	public void PlusLife(){
+		Player.gameObject.GetComponent<Life>().LifeQuant += valorRecuperacao;
+		Player.gameObject.GetComponent<Life> ().UpdateLife ();
+		Destroy (this);
 	}
 }

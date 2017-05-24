@@ -10,11 +10,15 @@ public class LifePos : MonoBehaviour {
     public float ScaleToSet;
     public float MultiplierScaleSpeed;
     private bool SetS;
-
+	public bool Tatuzinho;
+	public GameObject Player;
 
 	void Start () {
 		if (PlayerNumber == 1) {
-			Y = 0.8f;
+			if (Tatuzinho)
+				Y = 0.9f;
+			else
+				Y = 0.87f;
 		}
 
 	}
@@ -22,13 +26,22 @@ public class LifePos : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
+		if (!Tatuzinho) {
+			X = Player.GetComponent<Life> ().X + 0.007f;
+		}
         if (!SetS)
         {
-            if (transform.position != Camera.main.ViewportToWorldPoint(new Vector3(X, Y, Z)))
-            {
-                transform.position = Vector3.MoveTowards(transform.position, Camera.main.ViewportToWorldPoint(new Vector3(X, Y, Z)), Speed * Time.deltaTime);
-                transform.localEulerAngles = Vector3.Lerp(transform.localEulerAngles, new Vector3(0, 90, 90), Speed * Time.deltaTime * 5);
-            }
+			if (transform.position != Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z))) {
+				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)), Speed * Time.deltaTime);
+				transform.localEulerAngles = Vector3.Lerp (transform.localEulerAngles, new Vector3 (0, 90, 90), Speed * Time.deltaTime * 5);
+			} else {
+				if (!Tatuzinho) {
+					if (GetComponent<RecoveryItem> () != null)
+						GetComponent<RecoveryItem> ().PlusLife ();
+					Destroy (this);
+				}
+			}
 
             if (transform.localScale != new Vector3(ScaleToSet, ScaleToSet, ScaleToSet))
             {
