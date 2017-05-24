@@ -210,6 +210,9 @@ public class FSMMosquito : MonoBehaviour
         if (NomeEstado == "StepBack")
             state = FSMStates.StepBack;
 
+        if(NomeEstado == "OnScreen")
+            state = FSMStates.OnScreen;
+
         cor = false;
 
     }
@@ -505,25 +508,36 @@ public class FSMMosquito : MonoBehaviour
     #region Damage
     private void Damage()
     {
-        MosquitoAni.SetBool("FightingWalk", false);
-        if (!cor)
+        if (!onScreen)
         {
-            if (Life > 0 && Life <= MaxLife * 0.2f && !grappled)
+            MosquitoAni.SetBool("FightingWalk", false);
+            if (!cor)
             {
-                StartCoroutine(EsperaAnim(1f, "StepBack"));
-                cor = true;
+                if (Life > 0 && Life <= MaxLife * 0.2f && !grappled)
+                {
+                    StartCoroutine(EsperaAnim(1f, "StepBack"));
+                    cor = true;
+                }
+                else if (Life <= 0)
+                    state = FSMStates.Die;
             }
-            else if (Life <= 0)
-                state = FSMStates.Die;
+            TakeDamage = false;
+            if (MosquitoAni.GetCurrentAnimatorStateInfo(0).IsName("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.7f && !grappled && Life > 0)
+            {
+                state = FSMStates.Walk;
+            }
+            else if (MosquitoAni.GetCurrentAnimatorStateInfo(0).IsName("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.7f && grappled && Life > 0)
+            {
+                state = FSMStates.Grappled;
+            }
         }
-        TakeDamage = false;
-        if (MosquitoAni.GetCurrentAnimatorStateInfo(0).IsName("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.7f && !grappled && Life > 0)
+        if (onScreen)
         {
-            state = FSMStates.Walk;
-        }
-        else if (MosquitoAni.GetCurrentAnimatorStateInfo(0).IsName("Take Damage") && MosquitoAni.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.7f && grappled && Life > 0)
-        {
-            state = FSMStates.Grappled;
+            MosquitoAni.SetTrigger("TakeDamageScreen");
+            TakeDamage = false;
+            state = FSMStates.OnScreen;
+
+
         }
 
     }
@@ -589,7 +603,8 @@ public class FSMMosquito : MonoBehaviour
     #region Drain Life
     private void DrainLife()
     {
-
+        if(TakeDamage)
+        state = FSMStates.Damage;
         MosquitoAni.SetBool("LifeDrain", true);
 
     }
@@ -600,10 +615,23 @@ public class FSMMosquito : MonoBehaviour
     #region Die
     private void Die()
     {
-        MosquitoAni.SetBool("UsingWings", false);
-        MosquitoAni.SetTrigger("Death");
-        gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        DeathCollider.enabled = true;
+        if (!onScreen)
+        {
+            MosquitoAni.SetBool("UsingWings", false);
+            MosquitoAni.SetTrigger("Death");
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            DeathCollider.enabled = true;
+        }
+
+        else
+        {
+            exitScreen();
+            MosquitoAni.SetBool("UsingWings", false);
+            MosquitoAni.SetTrigger("Death");
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            DeathCollider.enabled = true;
+        }
+
     }
     #endregion
 
@@ -643,6 +671,11 @@ public class FSMMosquito : MonoBehaviour
     #region OnScreen
     private void OnScreen()
     {
+
+        if (TakeDamage)
+        {
+            state = FSMStates.Damage;
+        }
 
         MovePraVida();
 
