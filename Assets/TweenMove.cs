@@ -10,42 +10,89 @@ public class TweenMove : MonoBehaviour
     public float time;
 
     public GameObject target;
+    public GameObject MenuTarget;
     
     // public GameObject Target;
 
     public bool volta;
 
-    // Use this for initialization
-    void Start()
+
+    public void GoToMenu(string Tela)
     {
-
-
-
+        Path = Tela;
+        move = true;
     }
 
     public void olhala()
     {
+
+        iTween.MoveTo(gameObject, iTween.Hash("y" , 13 , "time" , 5));
         iTween.LookTo(gameObject, iTween.Hash("looktarget", target.transform, "time", 3 , "easetype", "easeInOutQuad"));
     }
+
+
+    public void olhaMenu()
+    {
+
+        iTween.LookTo(gameObject, iTween.Hash("looktarget", MenuTarget.transform, "time", 2 , "easetype", "easeInOutQuad"));
+    }
+
 
     // Update is called once per frame
     void Update()
     {
 
-        // transform.LookAt(Target.transform.position);
-
         if (move)
         {
-            iTween.MoveTo(gameObject,iTween.Hash("path", iTweenPath.GetPath(Path), "time", time, "orienttopath", true , "oncomplete", "olhala" , "easetype" , "easeInOutQuad"));
+            if (Path == "Options")
+            {
+                time = 9;
 
-            
+                iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(Path), "time", time, "orienttopath", true, "oncomplete", "olhala", "easetype", "easeInOutQuad"));
 
-            move = false;
+                time = 13;
+
+                Path = "OptionsMenu";
+
+                move = false;
+            }
+
+            else if(Path == "Game")
+            {
+                time = 5;
+
+                iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(Path), "time", time, "orienttopath", true, "easetype", "easeInOutQuad"));
+
+                move = false;
+            }
+
+            else if(Path == "Creditos")
+            {
+
+                time = 5;
+                iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(Path), "time", time, "orienttopath", true, "easetype", "easeInOutQuad"));
+
+                Path = "CreditosMenu";
+
+                move = false;
+            }
+
+
+            else if (Path == "Exit")
+            {
+
+                time = 5;
+
+                iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(Path), "time", time, "orienttopath", true, "easetype", "easeInOutQuad"));
+
+                move = false;
+            }
+
         }
 
         if (volta)
         {
-            iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath(Path), "time", time));
+            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(Path), "time", time/2, "oncomplete", "olhaMenu", "orienttopath", true, "easetype", "easeInOutQuad"));
 
             volta = false;
         }
