@@ -99,7 +99,10 @@ public class FSMMosquito : MonoBehaviour
         myTransform = transform;
         rb = gameObject.GetComponent<Rigidbody>();
         MaxLife = Life;
-
+		if (GameObject.FindWithTag("ScreenGlass") != null)
+			camScreen = GameObject.FindWithTag ("ScreenGlass").transform;
+		if (GameObject.FindWithTag ("DollyCam") != null)
+			DollyCam = GameObject.FindWithTag ("DollyCam").GetComponent<CameraControl> ();
     }
 
     //mostra as distancias de interacoes do mosquitpo
@@ -341,6 +344,9 @@ public class FSMMosquito : MonoBehaviour
             transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), velTransicao / 10);
             if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.5f, 0.5f, 0.5f))
             {
+				transform.localPosition = new Vector3 (camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z);
+				transform.localRotation = Quaternion.AngleAxis (90, Vector3.right);
+				rb.velocity = Vector3.zero;
                 reachScreen = true;
             }
         }
@@ -606,6 +612,12 @@ public class FSMMosquito : MonoBehaviour
         if(TakeDamage)
         state = FSMStates.Damage;
         MosquitoAni.SetBool("LifeDrain", true);
+		//para não olhar direto pro tatu
+		Vector3 correctLook = Vector3.Lerp(direction.position, VidaTatu.transform.position, RotationSpeed * Time.deltaTime);
+
+		//olha para o tatu e coloca arruma a posição, ponta-cabeça
+		transform.LookAt(correctLook, new Vector3(-1, -1, 1));
+
 
     }
 

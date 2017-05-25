@@ -6848,6 +6848,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.9324894
+        functionName: SetGrabbingFalse
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
