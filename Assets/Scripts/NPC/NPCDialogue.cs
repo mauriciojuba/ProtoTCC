@@ -60,6 +60,7 @@ public class NPCDialogue : MonoBehaviour {
 				StartCoroutine (Scroll ());
 				InDialogue = true;
 				DialogueActive.DialogueActive = true;
+				P1T.gameObject.GetComponent<Movimentacao3D> ().CanMove = false;
 			}
 			if (Input.GetButtonDown ("A P1") && Vector3.Distance (transform.position, Target.position)
 			     < 5 && InDialogue) {
@@ -75,6 +76,7 @@ public class NPCDialogue : MonoBehaviour {
 						StartCoroutine (Scroll ());
 					} else {
 						//se a linha que esta sendo mostrada for a ultima, desativa o dialogo.
+						P1T.gameObject.GetComponent<Movimentacao3D> ().CanMove = true;
 						ActualWords = 0;
 						NPCText.text = "";
 						InDialogue = false;
@@ -82,6 +84,8 @@ public class NPCDialogue : MonoBehaviour {
 						//se caso tiver mais de um tipo de dialogo, ele passa para o proximo dialogo.
 						if (ActualDialogue < QuantDialogues.Length - 1) {
 							ActualDialogue++;
+						} else {
+							ActualDialogue = 0;
 						}
 					}
 				}
