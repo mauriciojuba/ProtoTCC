@@ -26,9 +26,8 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void SounEffect(string name,GameObject OBJpai){
-         GameObject Ignore;
-
-        Ignore = new GameObject(name);
+		GameObject Ignore = new GameObject(name);
+		Ignore.name = name;
 		Ignore.AddComponent<AudioSource> ();
         Ignore.transform.SetParent(OBJpai.transform);
         if(OBJpai != null)
@@ -68,7 +67,7 @@ public class AudioManager : MonoBehaviour {
                     if (!a.Loop)
                     {
                         Destroy(GameObject.Find(name), Sons.clip.length);
-                        Sons = null;
+						//Sons = null;
                     }
 				}
 			}
@@ -86,8 +85,7 @@ public class AudioManager : MonoBehaviour {
 		}else{
 			Debug.LogError("AudioEvent " + name + " is using the default name of 'null'. Rename it and try again.");
 		}
-		isPresent = false;
-		
+		isPresent = false;		
 	}
 
 	public void Musica(string name){
