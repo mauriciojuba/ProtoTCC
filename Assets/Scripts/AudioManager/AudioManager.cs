@@ -9,29 +9,32 @@ public class AudioManager : MonoBehaviour {
 	float defVolume;
 	float defPitch;
 	bool isPresent;
-	GameObject Ignore;
 	public bool Effect;
+    AudioSource Sons;
 
-	[Header("Teste de AudioEvent:")]
+    [Header("Teste de AudioEvent:")]
 	public string eventName = null;
 
 
-	public void playSound(string name){
+	public void playSound(string name,GameObject OBJpai){
 
 		if (Effect)
-			SounEffect (name);
+			SounEffect (name, OBJpai);
 		else
 			Musica (name);
 
 	}
 
-	public void SounEffect(string name){
+	public void SounEffect(string name,GameObject OBJpai){
+         GameObject Ignore;
 
-
-		Ignore = new GameObject (name);
+        Ignore = new GameObject(name);
 		Ignore.AddComponent<AudioSource> ();
+        Ignore.transform.SetParent(OBJpai.transform);
+        if(OBJpai != null)
+        Ignore.transform.position = OBJpai.transform.position;
 
-		AudioSource Sons;
+		
 		Sons = GameObject.Find (name).GetComponent<AudioSource> ();
 
 		defVolume = Sons.volume;
@@ -47,6 +50,9 @@ public class AudioManager : MonoBehaviour {
 					Sons.volume = a.volume; //assimila o volume do AudioEvent
 					Sons.pitch = a.pitch; //assimila o pitch do AudioEvent
 					Sons.priority = a.priority;
+                    Sons.spatialBlend = a.spatialSlend;
+                    Sons.minDistance = a.minDistance;
+                    Sons.maxDistance = a.maxDistance;
 
 					if (a.Loop)
 						Sons.loop = true;
@@ -58,10 +64,12 @@ public class AudioManager : MonoBehaviour {
 						Debug.LogError("AudioEvent " + a.audioEventName + " has no AudioClip!");
 						break;
 					}
-						
-					if(!a.Loop)
-						Destroy(GameObject.Find (name),Sons.clip.length);
 
+                    if (!a.Loop)
+                    {
+                        Destroy(GameObject.Find(name), Sons.clip.length);
+                        Sons = null;
+                    }
 				}
 			}
 
@@ -98,9 +106,12 @@ public class AudioManager : MonoBehaviour {
 					source.volume = a.volume; //assimila o volume do AudioEvent
 					source.pitch = a.pitch; //assimila o pitch do AudioEvent
 					source.priority = a.priority;
+                    source.spatialBlend = a.spatialSlend;
+                    source.minDistance = a.minDistance;
+                    source.maxDistance = a.maxDistance;
 
 
-					if(a.audioClip!=null){
+                    if (a.audioClip!=null){
 						source.clip = a.audioClip;
 						source.Play();
 					}else{
@@ -122,8 +133,13 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void stopSound(){
-		source.Stop();
-	}
+		
+        if(source != null)
+            source.Stop();
+        if(Sons != null)
+            Sons.Stop();
+
+    }
 
 	public float getVolume(string name){
 		if(name!="null"){

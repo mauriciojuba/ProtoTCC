@@ -13,4 +13,12 @@ public class AudioEvent : ScriptableObject{
 	[Range(0,256)]
 	public int priority = 128;
 	public bool Loop;
+
+    [Range(0f, 1f)]
+    public float spatialSlend = 0;
+
+    [Range(0f, 500f)]
+    public float minDistance = 0;
+    [Range(100f, 1000f)]
+    public float maxDistance = 100;
 }

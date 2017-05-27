@@ -11,8 +11,10 @@ public class AudioManagerEditor : Editor {
 		DrawDefaultInspector();
 		EditorGUILayout.LabelField("Volume " + myTarget.getVolume(myTarget.eventName));
 		EditorGUILayout.LabelField("Pitch " + myTarget.getPitch(myTarget.eventName));
-		if(GUILayout.Button("Play Audio")){
-			myTarget.playSound(myTarget.eventName);
+        
+
+        if (GUILayout.Button("Play Audio")){
+			myTarget.playSound(myTarget.eventName , null);
 		}
 		if(GUILayout.Button("Stop Audio")){
 			myTarget.stopSound();
