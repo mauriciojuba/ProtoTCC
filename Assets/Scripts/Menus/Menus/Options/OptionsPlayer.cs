@@ -148,8 +148,8 @@ public class OptionsPlayer : MonoBehaviour {
 	//função para pulo
 	void Jump(){
 		//verifica se o player esta encostando no chão
-		InGround = Physics.Linecast (Player.transform.position, Player.transform.position - Vector3.up * 1.1f, NoIgnoredLayers);
-		Debug.DrawLine (Player.transform.position,Player.transform.position - Vector3.up * 1.1f);
+		InGround = Physics.Linecast (Player.transform.position - new Vector3(0,0.5f,0), Player.transform.position - Vector3.up * 1.1f, NoIgnoredLayers);
+		Debug.DrawLine (Player.transform.position - new Vector3(0,0.5f,0) ,Player.transform.position - Vector3.up * 1.1f);
 
 		//se estiver no chao, pula, apertando A no controle.
 		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround) {

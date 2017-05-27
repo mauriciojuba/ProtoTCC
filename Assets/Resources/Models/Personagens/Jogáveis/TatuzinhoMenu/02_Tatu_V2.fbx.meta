@@ -1,174 +1,183 @@
 fileFormatVersion: 2
-guid: 35b9fe55795e6a0438aecbbbf6e8ee81
-timeCreated: 1494485820
+guid: 9e35d7fc26603da4c9398ca7204cb8cd
+timeCreated: 1495922174
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: left
-    100004: Tatu:Abdomen_01
-    100006: Tatu:Abdomen_01_CTRL
-    100008: Tatu:Abdomen_02
-    100010: Tatu:Abdomen_02_CTRL
-    100012: Tatu:Abdomen_03
-    100014: Tatu:Abdomen_03_CTRL
-    100016: Tatu:Abdomen_04
-    100018: Tatu:ARMADILLO
-    100020: Tatu:Armadillo
-    100022: Tatu:back
-    100024: Tatu:BASE_CTRL
-    100026: Tatu:Head
-    100028: Tatu:Head_CTRL
-    100030: Tatu:joint4
-    100032: Tatu:JOINTS
-    100034: Tatu:L_Feeler_01
-    100036: Tatu:L_Feeler_01_CTRL
-    100038: Tatu:L_Feeler_01_NULL
-    100040: Tatu:L_Feeler_02
-    100042: Tatu:L_Feeler_02_CTRL
-    100044: Tatu:L_Feeler_02_NULL
-    100046: Tatu:L_Feeler_03
-    100048: Tatu:L_Feeler_03_CTRL
-    100050: Tatu:L_Feeler_03_NULL
-    100052: Tatu:L_Feeler_04
-    100054: Tatu:L_Paw_A
-    100056: Tatu:L_Paw_A_CTRL
-    100058: Tatu:L_Paw_A_End
-    100060: Tatu:L_Paw_A_IK
-    100062: Tatu:L_Paw_A_Knee
-    100064: Tatu:L_Paw_A_Knee 1
-    100066: Tatu:L_Paw_B
-    100068: Tatu:L_Paw_B_CTRL
-    100070: Tatu:L_Paw_B_End
-    100072: Tatu:L_Paw_B_IK
-    100074: Tatu:L_Paw_B_Knee
-    100076: Tatu:L_Paw_B_Knee 1
-    100078: Tatu:L_Paw_C
-    100080: Tatu:L_Paw_C_CTRL
-    100082: Tatu:L_Paw_C_End
-    100084: Tatu:L_Paw_C_IK
-    100086: Tatu:L_Paw_C_Knee
-    100088: Tatu:L_Paw_C_Knee 1
-    100090: Tatu:MESH
-    100092: Tatu:R_Feeler_01
-    100094: Tatu:R_Feeler_01_CTRL
-    100096: Tatu:R_Feeler_01_NULL
-    100098: Tatu:R_Feeler_02
-    100100: Tatu:R_Feeler_02_CTRL
-    100102: Tatu:R_Feeler_02_NULL
-    100104: Tatu:R_Feeler_03
-    100106: Tatu:R_Feeler_03_CTRL
-    100108: Tatu:R_Feeler_03_NULL
-    100110: Tatu:R_Feeler_04
-    100112: Tatu:R_Paw_A
-    100114: Tatu:R_Paw_A_CTRL
-    100116: Tatu:R_Paw_A_End
-    100118: Tatu:R_Paw_A_IK
-    100120: Tatu:R_Paw_A_Knee
-    100122: Tatu:R_Paw_A_Knee 1
-    100124: Tatu:R_Paw_B
-    100126: Tatu:R_Paw_B_CTRL
-    100128: Tatu:R_Paw_B_End
-    100130: Tatu:R_Paw_B_IK
-    100132: Tatu:R_Paw_B_Knee
-    100134: Tatu:R_Paw_B_Knee 1
-    100136: Tatu:R_Paw_C
-    100138: Tatu:R_Paw_C_CTRL
-    100140: Tatu:R_Paw_C_End
-    100142: Tatu:R_Paw_C_IK
-    100144: Tatu:R_Paw_C_Knee
-    100146: Tatu:R_Paw_C_Knee 1
-    100148: Tatu:ROOT
-    100150: Tatu:ROOT_CTRL
+    100002: back
+    100004: bottom
+    100006: left
+    100008: Tatu:Abdomen_01
+    100010: Tatu:Abdomen_01_CTRL
+    100012: Tatu:Abdomen_02
+    100014: Tatu:Abdomen_02_CTRL
+    100016: Tatu:Abdomen_03
+    100018: Tatu:Abdomen_03_CTRL
+    100020: Tatu:Abdomen_04
+    100022: Tatu:ARMADILLO
+    100024: Tatu:Armadillo
+    100026: Tatu:back
+    100028: Tatu:BASE_CTRL
+    100030: Tatu:Head
+    100032: Tatu:Head_CTRL
+    100034: Tatu:joint4
+    100036: Tatu:JOINTS
+    100038: Tatu:L_Feeler_01
+    100040: Tatu:L_Feeler_01_CTRL
+    100042: Tatu:L_Feeler_01_NULL
+    100044: Tatu:L_Feeler_02
+    100046: Tatu:L_Feeler_02_CTRL
+    100048: Tatu:L_Feeler_02_NULL
+    100050: Tatu:L_Feeler_03
+    100052: Tatu:L_Feeler_03_CTRL
+    100054: Tatu:L_Feeler_03_NULL
+    100056: Tatu:L_Feeler_04
+    100058: Tatu:L_Paw_A
+    100060: Tatu:L_Paw_A_CTRL
+    100062: Tatu:L_Paw_A_End
+    100064: Tatu:L_Paw_A_IK
+    100066: Tatu:L_Paw_A_Knee
+    100068: Tatu:L_Paw_A_Knee 1
+    100070: Tatu:L_Paw_B
+    100072: Tatu:L_Paw_B_CTRL
+    100074: Tatu:L_Paw_B_End
+    100076: Tatu:L_Paw_B_IK
+    100078: Tatu:L_Paw_B_Knee
+    100080: Tatu:L_Paw_B_Knee 1
+    100082: Tatu:L_Paw_C
+    100084: Tatu:L_Paw_C_CTRL
+    100086: Tatu:L_Paw_C_End
+    100088: Tatu:L_Paw_C_IK
+    100090: Tatu:L_Paw_C_Knee
+    100092: Tatu:L_Paw_C_Knee 1
+    100094: Tatu:MESH
+    100096: Tatu:R_Feeler_01
+    100098: Tatu:R_Feeler_01_CTRL
+    100100: Tatu:R_Feeler_01_NULL
+    100102: Tatu:R_Feeler_02
+    100104: Tatu:R_Feeler_02_CTRL
+    100106: Tatu:R_Feeler_02_NULL
+    100108: Tatu:R_Feeler_03
+    100110: Tatu:R_Feeler_03_CTRL
+    100112: Tatu:R_Feeler_03_NULL
+    100114: Tatu:R_Feeler_04
+    100116: Tatu:R_Paw_A
+    100118: Tatu:R_Paw_A_CTRL
+    100120: Tatu:R_Paw_A_End
+    100122: Tatu:R_Paw_A_IK
+    100124: Tatu:R_Paw_A_Knee
+    100126: Tatu:R_Paw_A_Knee 1
+    100128: Tatu:R_Paw_B
+    100130: Tatu:R_Paw_B_CTRL
+    100132: Tatu:R_Paw_B_End
+    100134: Tatu:R_Paw_B_IK
+    100136: Tatu:R_Paw_B_Knee
+    100138: Tatu:R_Paw_B_Knee 1
+    100140: Tatu:R_Paw_C
+    100142: Tatu:R_Paw_C_CTRL
+    100144: Tatu:R_Paw_C_End
+    100146: Tatu:R_Paw_C_IK
+    100148: Tatu:R_Paw_C_Knee
+    100150: Tatu:R_Paw_C_Knee 1
+    100152: Tatu:ROOT
+    100154: Tatu:ROOT_CTRL
     400000: //RootNode
-    400002: left
-    400004: Tatu:Abdomen_01
-    400006: Tatu:Abdomen_01_CTRL
-    400008: Tatu:Abdomen_02
-    400010: Tatu:Abdomen_02_CTRL
-    400012: Tatu:Abdomen_03
-    400014: Tatu:Abdomen_03_CTRL
-    400016: Tatu:Abdomen_04
-    400018: Tatu:ARMADILLO
-    400020: Tatu:Armadillo
-    400022: Tatu:back
-    400024: Tatu:BASE_CTRL
-    400026: Tatu:Head
-    400028: Tatu:Head_CTRL
-    400030: Tatu:joint4
-    400032: Tatu:JOINTS
-    400034: Tatu:L_Feeler_01
-    400036: Tatu:L_Feeler_01_CTRL
-    400038: Tatu:L_Feeler_01_NULL
-    400040: Tatu:L_Feeler_02
-    400042: Tatu:L_Feeler_02_CTRL
-    400044: Tatu:L_Feeler_02_NULL
-    400046: Tatu:L_Feeler_03
-    400048: Tatu:L_Feeler_03_CTRL
-    400050: Tatu:L_Feeler_03_NULL
-    400052: Tatu:L_Feeler_04
-    400054: Tatu:L_Paw_A
-    400056: Tatu:L_Paw_A_CTRL
-    400058: Tatu:L_Paw_A_End
-    400060: Tatu:L_Paw_A_IK
-    400062: Tatu:L_Paw_A_Knee
-    400064: Tatu:L_Paw_A_Knee 1
-    400066: Tatu:L_Paw_B
-    400068: Tatu:L_Paw_B_CTRL
-    400070: Tatu:L_Paw_B_End
-    400072: Tatu:L_Paw_B_IK
-    400074: Tatu:L_Paw_B_Knee
-    400076: Tatu:L_Paw_B_Knee 1
-    400078: Tatu:L_Paw_C
-    400080: Tatu:L_Paw_C_CTRL
-    400082: Tatu:L_Paw_C_End
-    400084: Tatu:L_Paw_C_IK
-    400086: Tatu:L_Paw_C_Knee
-    400088: Tatu:L_Paw_C_Knee 1
-    400090: Tatu:MESH
-    400092: Tatu:R_Feeler_01
-    400094: Tatu:R_Feeler_01_CTRL
-    400096: Tatu:R_Feeler_01_NULL
-    400098: Tatu:R_Feeler_02
-    400100: Tatu:R_Feeler_02_CTRL
-    400102: Tatu:R_Feeler_02_NULL
-    400104: Tatu:R_Feeler_03
-    400106: Tatu:R_Feeler_03_CTRL
-    400108: Tatu:R_Feeler_03_NULL
-    400110: Tatu:R_Feeler_04
-    400112: Tatu:R_Paw_A
-    400114: Tatu:R_Paw_A_CTRL
-    400116: Tatu:R_Paw_A_End
-    400118: Tatu:R_Paw_A_IK
-    400120: Tatu:R_Paw_A_Knee
-    400122: Tatu:R_Paw_A_Knee 1
-    400124: Tatu:R_Paw_B
-    400126: Tatu:R_Paw_B_CTRL
-    400128: Tatu:R_Paw_B_End
-    400130: Tatu:R_Paw_B_IK
-    400132: Tatu:R_Paw_B_Knee
-    400134: Tatu:R_Paw_B_Knee 1
-    400136: Tatu:R_Paw_C
-    400138: Tatu:R_Paw_C_CTRL
-    400140: Tatu:R_Paw_C_End
-    400142: Tatu:R_Paw_C_IK
-    400144: Tatu:R_Paw_C_Knee
-    400146: Tatu:R_Paw_C_Knee 1
-    400148: Tatu:ROOT
-    400150: Tatu:ROOT_CTRL
+    400002: back
+    400004: bottom
+    400006: left
+    400008: Tatu:Abdomen_01
+    400010: Tatu:Abdomen_01_CTRL
+    400012: Tatu:Abdomen_02
+    400014: Tatu:Abdomen_02_CTRL
+    400016: Tatu:Abdomen_03
+    400018: Tatu:Abdomen_03_CTRL
+    400020: Tatu:Abdomen_04
+    400022: Tatu:ARMADILLO
+    400024: Tatu:Armadillo
+    400026: Tatu:back
+    400028: Tatu:BASE_CTRL
+    400030: Tatu:Head
+    400032: Tatu:Head_CTRL
+    400034: Tatu:joint4
+    400036: Tatu:JOINTS
+    400038: Tatu:L_Feeler_01
+    400040: Tatu:L_Feeler_01_CTRL
+    400042: Tatu:L_Feeler_01_NULL
+    400044: Tatu:L_Feeler_02
+    400046: Tatu:L_Feeler_02_CTRL
+    400048: Tatu:L_Feeler_02_NULL
+    400050: Tatu:L_Feeler_03
+    400052: Tatu:L_Feeler_03_CTRL
+    400054: Tatu:L_Feeler_03_NULL
+    400056: Tatu:L_Feeler_04
+    400058: Tatu:L_Paw_A
+    400060: Tatu:L_Paw_A_CTRL
+    400062: Tatu:L_Paw_A_End
+    400064: Tatu:L_Paw_A_IK
+    400066: Tatu:L_Paw_A_Knee
+    400068: Tatu:L_Paw_A_Knee 1
+    400070: Tatu:L_Paw_B
+    400072: Tatu:L_Paw_B_CTRL
+    400074: Tatu:L_Paw_B_End
+    400076: Tatu:L_Paw_B_IK
+    400078: Tatu:L_Paw_B_Knee
+    400080: Tatu:L_Paw_B_Knee 1
+    400082: Tatu:L_Paw_C
+    400084: Tatu:L_Paw_C_CTRL
+    400086: Tatu:L_Paw_C_End
+    400088: Tatu:L_Paw_C_IK
+    400090: Tatu:L_Paw_C_Knee
+    400092: Tatu:L_Paw_C_Knee 1
+    400094: Tatu:MESH
+    400096: Tatu:R_Feeler_01
+    400098: Tatu:R_Feeler_01_CTRL
+    400100: Tatu:R_Feeler_01_NULL
+    400102: Tatu:R_Feeler_02
+    400104: Tatu:R_Feeler_02_CTRL
+    400106: Tatu:R_Feeler_02_NULL
+    400108: Tatu:R_Feeler_03
+    400110: Tatu:R_Feeler_03_CTRL
+    400112: Tatu:R_Feeler_03_NULL
+    400114: Tatu:R_Feeler_04
+    400116: Tatu:R_Paw_A
+    400118: Tatu:R_Paw_A_CTRL
+    400120: Tatu:R_Paw_A_End
+    400122: Tatu:R_Paw_A_IK
+    400124: Tatu:R_Paw_A_Knee
+    400126: Tatu:R_Paw_A_Knee 1
+    400128: Tatu:R_Paw_B
+    400130: Tatu:R_Paw_B_CTRL
+    400132: Tatu:R_Paw_B_End
+    400134: Tatu:R_Paw_B_IK
+    400136: Tatu:R_Paw_B_Knee
+    400138: Tatu:R_Paw_B_Knee 1
+    400140: Tatu:R_Paw_C
+    400142: Tatu:R_Paw_C_CTRL
+    400144: Tatu:R_Paw_C_End
+    400146: Tatu:R_Paw_C_IK
+    400148: Tatu:R_Paw_C_Knee
+    400150: Tatu:R_Paw_C_Knee 1
+    400152: Tatu:ROOT
+    400154: Tatu:ROOT_CTRL
     4300000: Tatu:Armadillo
     7400000: Take 001
     7400002: Walk
-    7400004: Tail Swing
+    7400004: Shake Tail
     7400006: Ball Form
-    7400008: Rolling
-    7400010: Lay
-    7400012: Stay Up
-    7400014: Go Off Screen
-    7400016: Lifting up
-    7400018: Go To Screen
-    7400020: Idle
+    7400008: Out Ball Form
+    7400010: Roll
+    7400012: Lay Down
+    7400014: Get Up
+    7400016: Hind Legs
+    7400018: Falling Down
+    7400020: Rising On The Screen
+    7400022: Idle
+    7400024: Jump
+    7400026: Lever
+    7400028: Lever 2
+    7400030: Select Player
     9500000: //RootNode
     13700000: Tatu:Armadillo
   materials:
@@ -198,7 +207,7 @@ ModelImporter:
       name: Take 001
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 645
+      lastFrame: 1240
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -220,6 +229,10 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
         weight: 1
       - path: left
         weight: 1
@@ -397,7 +410,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -412,6 +425,10 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
         weight: 1
       - path: left
         weight: 1
@@ -579,7 +596,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Tail Swing
+      name: Shake Tail
       takeName: Take 001
       firstFrame: 41
       lastFrame: 90
@@ -604,6 +621,10 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
         weight: 1
       - path: left
         weight: 1
@@ -774,6 +795,202 @@ ModelImporter:
       name: Ball Form
       takeName: Take 001
       firstFrame: 91
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Tatu:ARMADILLO
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL/Tatu:L_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL/Tatu:R_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL/Tatu:Abdomen_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:joint4
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03/Tatu:L_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03/Tatu:R_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1/Tatu:L_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1/Tatu:R_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03/Tatu:Abdomen_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1/Tatu:L_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1/Tatu:R_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1/Tatu:L_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1/Tatu:R_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH/Tatu:Armadillo
+        weight: 1
+      - path: Tatu:back
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Out Ball Form
+      takeName: Take 001
+      firstFrame: 111
       lastFrame: 140
       wrapMode: 0
       orientationOffsetY: 0
@@ -797,6 +1014,10 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
       - path: left
         weight: 1
       - path: Tatu:ARMADILLO
@@ -963,7 +1184,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Rolling
+      name: Roll
       takeName: Take 001
       firstFrame: 141
       lastFrame: 180
@@ -973,7 +1194,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -989,6 +1210,10 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
       - path: left
         weight: 1
       - path: Tatu:ARMADILLO
@@ -1155,9 +1380,205 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Lay
+      name: Lay Down
       takeName: Take 001
       firstFrame: 181
+      lastFrame: 230
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Tatu:ARMADILLO
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL/Tatu:L_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL/Tatu:R_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL/Tatu:Abdomen_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:joint4
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03/Tatu:L_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03/Tatu:R_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1/Tatu:L_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1/Tatu:R_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03/Tatu:Abdomen_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1/Tatu:L_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1/Tatu:R_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1/Tatu:L_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1/Tatu:R_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH/Tatu:Armadillo
+        weight: 1
+      - path: Tatu:back
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Get Up
+      takeName: Take 001
+      firstFrame: 230
       lastFrame: 290
       wrapMode: 0
       orientationOffsetY: 0
@@ -1181,6 +1602,10 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
       - path: left
         weight: 1
       - path: Tatu:ARMADILLO
@@ -1347,7 +1772,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Stay Up
+      name: Hind Legs
       takeName: Take 001
       firstFrame: 291
       lastFrame: 410
@@ -1373,6 +1798,10 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
       - path: left
         weight: 1
       - path: Tatu:ARMADILLO
@@ -1539,7 +1968,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Go Off Screen
+      name: Falling Down
       takeName: Take 001
       firstFrame: 411
       lastFrame: 470
@@ -1565,197 +1994,9 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: left
+      - path: back
         weight: 1
-      - path: Tatu:ARMADILLO
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_IK
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_Knee
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_IK
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_Knee
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_IK
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_Knee
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_IK
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_Knee
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_IK
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_Knee
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_IK
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_Knee
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL/Tatu:L_Feeler_03_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL/Tatu:R_Feeler_03_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL/Tatu:Abdomen_03_CTRL
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:joint4
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03/Tatu:L_Feeler_04
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03/Tatu:R_Feeler_04
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
-          1
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
-          1/Tatu:L_Paw_A_End
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
-          1
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
-          1/Tatu:R_Paw_A_End
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03/Tatu:Abdomen_04
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
-          1
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
-          1/Tatu:L_Paw_C_End
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
-          1
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
-          1/Tatu:R_Paw_C_End
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
-          1
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
-          1/Tatu:L_Paw_B_End
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
-          1
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
-          1/Tatu:R_Paw_B_End
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:MESH
-        weight: 1
-      - path: Tatu:ARMADILLO/Tatu:MESH/Tatu:Armadillo
-        weight: 1
-      - path: Tatu:back
-        weight: 1
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Lifting up
-      takeName: Take 001
-      firstFrame: 471
-      lastFrame: 560
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
+      - path: bottom
         weight: 1
       - path: left
         weight: 1
@@ -1923,7 +2164,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Go To Screen
+      name: Rising On The Screen
       takeName: Take 001
       firstFrame: 561
       lastFrame: 615
@@ -1948,6 +2189,10 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
         weight: 1
       - path: left
         weight: 1
@@ -2118,14 +2363,14 @@ ModelImporter:
       name: Idle
       takeName: Take 001
       firstFrame: 617
-      lastFrame: 645
+      lastFrame: 635
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -2140,6 +2385,794 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Tatu:ARMADILLO
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL/Tatu:L_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL/Tatu:R_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL/Tatu:Abdomen_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:joint4
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03/Tatu:L_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03/Tatu:R_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1/Tatu:L_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1/Tatu:R_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03/Tatu:Abdomen_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1/Tatu:L_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1/Tatu:R_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1/Tatu:L_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1/Tatu:R_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH/Tatu:Armadillo
+        weight: 1
+      - path: Tatu:back
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 636
+      lastFrame: 700
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Tatu:ARMADILLO
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL/Tatu:L_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL/Tatu:R_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL/Tatu:Abdomen_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:joint4
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03/Tatu:L_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03/Tatu:R_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1/Tatu:L_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1/Tatu:R_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03/Tatu:Abdomen_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1/Tatu:L_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1/Tatu:R_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1/Tatu:L_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1/Tatu:R_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH/Tatu:Armadillo
+        weight: 1
+      - path: Tatu:back
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lever
+      takeName: Take 001
+      firstFrame: 701
+      lastFrame: 940
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Tatu:ARMADILLO
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL/Tatu:L_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL/Tatu:R_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL/Tatu:Abdomen_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:joint4
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03/Tatu:L_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03/Tatu:R_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1/Tatu:L_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1/Tatu:R_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03/Tatu:Abdomen_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1/Tatu:L_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1/Tatu:R_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1/Tatu:L_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1/Tatu:R_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH/Tatu:Armadillo
+        weight: 1
+      - path: Tatu:back
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lever 2
+      takeName: Take 001
+      firstFrame: 941
+      lastFrame: 1140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Tatu:ARMADILLO
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_A_CTRL/Tatu:L_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_B_CTRL/Tatu:L_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:L_Paw_C_CTRL/Tatu:L_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_A_CTRL/Tatu:R_Paw_A_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_B_CTRL/Tatu:R_Paw_B_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_IK
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:R_Paw_C_CTRL/Tatu:R_Paw_C_Knee
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:L_Feeler_01_NULL/Tatu:L_Feeler_01_CTRL/Tatu:L_Feeler_02_NULL/Tatu:L_Feeler_02_CTRL/Tatu:L_Feeler_03_NULL/Tatu:L_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_01_CTRL/Tatu:Head_CTRL/Tatu:R_Feeler_01_NULL/Tatu:R_Feeler_01_CTRL/Tatu:R_Feeler_02_NULL/Tatu:R_Feeler_02_CTRL/Tatu:R_Feeler_03_NULL/Tatu:R_Feeler_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:BASE_CTRL/Tatu:ROOT_CTRL/Tatu:Abdomen_02_CTRL/Tatu:Abdomen_03_CTRL
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:joint4
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:L_Feeler_01/Tatu:L_Feeler_02/Tatu:L_Feeler_03/Tatu:L_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:Head/Tatu:R_Feeler_01/Tatu:R_Feeler_02/Tatu:R_Feeler_03/Tatu:R_Feeler_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:L_Paw_A/Tatu:L_Paw_A_Knee
+          1/Tatu:L_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_01/Tatu:R_Paw_A/Tatu:R_Paw_A_Knee
+          1/Tatu:R_Paw_A_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:Abdomen_03/Tatu:Abdomen_04
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:L_Paw_C/Tatu:L_Paw_C_Knee
+          1/Tatu:L_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:Abdomen_02/Tatu:R_Paw_C/Tatu:R_Paw_C_Knee
+          1/Tatu:R_Paw_C_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:L_Paw_B/Tatu:L_Paw_B_Knee
+          1/Tatu:L_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:JOINTS/Tatu:ROOT/Tatu:R_Paw_B/Tatu:R_Paw_B_Knee
+          1/Tatu:R_Paw_B_End
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH
+        weight: 1
+      - path: Tatu:ARMADILLO/Tatu:MESH/Tatu:Armadillo
+        weight: 1
+      - path: Tatu:back
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Select Player
+      takeName: Take 001
+      firstFrame: 1141
+      lastFrame: 1240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: bottom
         weight: 1
       - path: left
         weight: 1
@@ -2309,8 +3342,8 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
-    meshCompression: 3
+    globalScale: 40
+    meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
