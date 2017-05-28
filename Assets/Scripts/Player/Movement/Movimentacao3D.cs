@@ -25,6 +25,7 @@ public class Movimentacao3D : MonoBehaviour {
 
 	//GO do personagem que sera movimentado.
 	public GameObject Player;
+	
 
 	[SerializeField] private float JumpForce;
 	public bool InGround;
@@ -49,6 +50,8 @@ public class Movimentacao3D : MonoBehaviour {
 	bool allowUp,allowDown,allowRight,allowLeft;
 	public Animator Anim;
     public Transform model;
+	public GameObject Sombra;
+	public LayerMask SombraIgnorePlayer;
 
 	[SerializeField] private GameObject ResurrectCol;
 	[SerializeField] private bool KeyboardCanControl;
@@ -68,6 +71,7 @@ public class Movimentacao3D : MonoBehaviour {
 		TestPosition ();
 		SetAnimations();
 		if (CanMove) {
+			CastShadowOnJump();
 			Jump ();
 			goToScreen ();
 			exitScreen ();
@@ -458,6 +462,17 @@ float preventMovLock = 0;
 		}
 		else{
 			allowUp = true;
+		}
+	}
+
+	void CastShadowOnJump(){
+		if(!onScreen){
+			Ray ray = new Ray(this.transform.position,Vector3.down);
+			RaycastHit hit;
+			if(Physics.Raycast(ray, out hit, 10f,SombraIgnorePlayer)){
+				Vector3 correctedPoint = new Vector3(hit.point.x,hit.point.y+0.1f,hit.point.z);
+				Sombra.transform.position = correctedPoint;
+			}
 		}
 	}
 
