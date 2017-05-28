@@ -14,10 +14,14 @@ public class PickThrow : MonoBehaviour {
 	[Range(500,2000)]
 	[SerializeField] private float Force;
 	[SerializeField] private bool Grabbing;
-
+	[SerializeField] private bool KeyboardCanControl;
+	[SerializeField] private Animator Anim;
 	void Start () {
 		PlayerNum = transform.parent.GetComponent<Movimentacao3D> ().PlayerNumber;
 		CanPick = true;
+
+		if (PlayerNum == 1)
+			KeyboardCanControl = true;
 	}
 	
 	// Update is called once per frame
@@ -40,11 +44,21 @@ public class PickThrow : MonoBehaviour {
 			}
 		}
 		if (PlayerNum != 0) {
-			if (Input.GetButtonDown ("B P" + PlayerNum) && !Grabbing) {
-				if (CanPick) {
-					transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
-				} else {
-					transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
+			if (KeyboardCanControl) {
+				if (Input.GetButtonDown ("B P" + PlayerNum) && !Grabbing || Input.GetKeyDown(KeyCode.L)) {
+					if (CanPick) {
+						transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
+					} else {
+						transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
+					}
+				}
+			} else {
+				if (Input.GetButtonDown ("B P" + PlayerNum) && !Grabbing) {
+					if (CanPick) {
+						transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
+					} else {
+						transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
+					}
 				}
 			}
 		}
@@ -121,11 +135,11 @@ public class PickThrow : MonoBehaviour {
 		PickedCollider.GetComponent<Rigidbody> ().isKinematic = false;
 		PickedCollider.transform.eulerAngles = new Vector3(0,0,0);
 		if (PickedCollider.CompareTag ("Box")) {
-			PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.forward * Force * 2);
+			PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.parent.forward * Force * 2);
 			PickedCollider.GetComponent<DestruirObjeto> ().Throwed = true;
 			transform.parent.GetComponent<ApplyCombo> ().enabled = true;
 		} else {
-			PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.forward * Force);
+			PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.parent.forward * Force);
 		}
 		PickedCollider.GetComponent<Collider>().isTrigger = false;
 		PickedObj = null;
@@ -156,6 +170,14 @@ public class PickThrow : MonoBehaviour {
 	public void SetGrabbingFalse(){
 		Grabbing = false;
 
+	}
+
+	public void SetRootMotionTrue(){
+		Anim.applyRootMotion = true;
+	}
+
+	public void SetRootMotionFalse(){
+		Anim.applyRootMotion = false;
 	}
 
 }

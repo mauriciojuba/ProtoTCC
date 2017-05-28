@@ -266,37 +266,37 @@ ModelImporter:
     4300000: Horn:Mand
     4300002: Horn:Capa
     4300004: Horn:Corpo
-    7400000: Idle
-    7400002: Walk
-    7400004: Jump Up
-    7400006: Run
-    7400008: Jump Air
-    7400010: Jump Down
-    7400012: Simple Attack
-    7400014: Strong Attack Start
-    7400016: Go To Screen Up
-    7400018: Go To Screen Reach
-    7400020: Go To Screen Going
-    7400022: Walk On Screen
-    7400024: Take Damage On Screen
-    7400026: Go To World Down
-    7400028: Walk 2
-    7400030: Attack On Screen
-    7400032: Go To World Going
-    7400034: Go To World Reach
-    7400036: Pushing On Screen
-    7400038: Idle On Screen
-    7400040: Strong Attack Release
-    7400042: Strong Attack Charging
-    7400044: Take Damage
-    7400046: Stunned
-    7400048: Walk On Battle
-    7400050: Grab
-    7400052: Holding
-    7400054: Attack Holding
-    7400056: Throw
-    7400058: Simple Attack End
-    7400060: Simple Attack Start
+    7400000: Idle_HORN
+    7400002: Walk_HORN
+    7400004: Jump Up_HORN
+    7400006: Run_HORN
+    7400008: Jump Air_HORN
+    7400010: Jump Down_HORN
+    7400012: Simple Attack_HORN
+    7400014: Strong Attack Start_HORN
+    7400016: Go To Screen Up_HORN
+    7400018: Go To Screen Reach_HORN
+    7400020: Go To Screen Going_HORN
+    7400022: Walk On Screen_HORN
+    7400024: Take Damage On Screen_HORN
+    7400026: Go To World Down_HORN
+    7400028: Walk 2_HORN
+    7400030: Attack On Screen_HORN
+    7400032: Go To World Going_HORN
+    7400034: Go To World Reach_HORN
+    7400036: Pushing On Screen_HORN
+    7400038: Idle On Screen_HORN
+    7400040: Strong Attack Release_HORN
+    7400042: Strong Attack Charging_HORN
+    7400044: Take Damage_HORN
+    7400046: Stunned_HORN
+    7400048: Walk On Battle_HORN
+    7400050: Grab_HORN
+    7400052: Holding_HORN
+    7400054: Attack Holding_HORN
+    7400056: Throw_HORN
+    7400058: Simple Attack End_HORN
+    7400060: Simple Attack Start_HORN
     9500000: //RootNode
     13700000: Horn:Capa
     13700002: Horn:Corpo
@@ -325,7 +325,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: Idle_HORN
       takeName: Take 001
       firstFrame: 1004
       lastFrame: 1030
@@ -619,7 +619,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk
+      name: Walk_HORN
       takeName: Take 001
       firstFrame: 1
       lastFrame: 40
@@ -913,7 +913,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Jump Up
+      name: Jump Up_HORN
       takeName: Take 001
       firstFrame: 120
       lastFrame: 140
@@ -926,11 +926,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -1215,7 +1215,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Run
+      name: Run_HORN
       takeName: Take 001
       firstFrame: 80
       lastFrame: 114
@@ -1509,7 +1509,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Jump Air
+      name: Jump Air_HORN
       takeName: Take 001
       firstFrame: 145
       lastFrame: 165
@@ -1522,11 +1522,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -1803,7 +1803,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Jump Down
+      name: Jump Down_HORN
       takeName: Take 001
       firstFrame: 180
       lastFrame: 210
@@ -1816,11 +1816,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -2097,7 +2097,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Simple Attack
+      name: Simple Attack_HORN
       takeName: Take 001
       firstFrame: 823
       lastFrame: 863
@@ -2407,7 +2407,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Strong Attack Start
+      name: Strong Attack Start_HORN
       takeName: Take 001
       firstFrame: 620
       lastFrame: 630
@@ -2701,7 +2701,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Go To Screen Up
+      name: Go To Screen Up_HORN
       takeName: Take 001
       firstFrame: 211
       lastFrame: 245
@@ -2995,7 +2995,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 226
     - serializedVersion: 16
-      name: Go To Screen Reach
+      name: Go To Screen Reach_HORN
       takeName: Take 001
       firstFrame: 276
       lastFrame: 300
@@ -3289,7 +3289,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Go To Screen Going
+      name: Go To Screen Going_HORN
       takeName: Take 001
       firstFrame: 245
       lastFrame: 275
@@ -3583,7 +3583,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk On Screen
+      name: Walk On Screen_HORN
       takeName: Take 001
       firstFrame: 434
       lastFrame: 473
@@ -3877,7 +3877,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Attack On Screen
+      name: Attack On Screen_HORN
       takeName: Take 001
       firstFrame: 515
       lastFrame: 552
@@ -4171,7 +4171,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Go To World Down
+      name: Go To World Down_HORN
       takeName: Take 001
       firstFrame: 301
       lastFrame: 331
@@ -4465,7 +4465,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk 2
+      name: Walk 2_HORN
       takeName: Take 001
       firstFrame: 41
       lastFrame: 75
@@ -4759,7 +4759,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Go To World Going
+      name: Go To World Going_HORN
       takeName: Take 001
       firstFrame: 340
       lastFrame: 370
@@ -5053,7 +5053,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Go To World Reach
+      name: Go To World Reach_HORN
       takeName: Take 001
       firstFrame: 370
       lastFrame: 425
@@ -5347,7 +5347,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Pushing On Screen
+      name: Pushing On Screen_HORN
       takeName: Take 001
       firstFrame: 475
       lastFrame: 514
@@ -5641,7 +5641,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Take Damage On Screen
+      name: Take Damage On Screen_HORN
       takeName: Take 001
       firstFrame: 555
       lastFrame: 585
@@ -5935,7 +5935,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle On Screen
+      name: Idle On Screen_HORN
       takeName: Take 001
       firstFrame: 586
       lastFrame: 615
@@ -6229,7 +6229,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Strong Attack Release
+      name: Strong Attack Release_HORN
       takeName: Take 001
       firstFrame: 660
       lastFrame: 710
@@ -6523,7 +6523,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Strong Attack Charging
+      name: Strong Attack Charging_HORN
       takeName: Take 001
       firstFrame: 630
       lastFrame: 660
@@ -6817,7 +6817,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Take Damage
+      name: Take Damage_HORN
       takeName: Take 001
       firstFrame: 711
       lastFrame: 735
@@ -7135,7 +7135,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Stunned
+      name: Stunned_HORN
       takeName: Take 001
       firstFrame: 740
       lastFrame: 779
@@ -7429,7 +7429,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk On Battle
+      name: Walk On Battle_HORN
       takeName: Take 001
       firstFrame: 781
       lastFrame: 820
@@ -7723,7 +7723,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Grab
+      name: Grab_HORN
       takeName: Take 001
       firstFrame: 865
       lastFrame: 895
@@ -8041,7 +8041,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Holding
+      name: Holding_HORN
       takeName: Take 001
       firstFrame: 900
       lastFrame: 930
@@ -8335,7 +8335,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Attack Holding
+      name: Attack Holding_HORN
       takeName: Take 001
       firstFrame: 931
       lastFrame: 951
@@ -8645,7 +8645,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Throw
+      name: Throw_HORN
       takeName: Take 001
       firstFrame: 952
       lastFrame: 1001
@@ -8971,7 +8971,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Simple Attack End
+      name: Simple Attack End_HORN
       takeName: Take 001
       firstFrame: 843
       lastFrame: 863
@@ -8985,10 +8985,10 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -8998,6 +8998,14 @@ ModelImporter:
         functionName: DesactiveCollider
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.98734283
+        functionName: CanMoveTrue
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -9273,7 +9281,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Simple Attack Start
+      name: Simple Attack Start_HORN
       takeName: Take 001
       firstFrame: 823
       lastFrame: 843
@@ -9287,10 +9295,10 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -9300,6 +9308,14 @@ ModelImporter:
         functionName: ActiveCollider
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.005062874
+        functionName: CanMoveFalse
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
           type: 3}
         floatParameter: 0
         intParameter: 0

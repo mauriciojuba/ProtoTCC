@@ -51,12 +51,16 @@ public class Movimentacao3D : MonoBehaviour {
     public Transform model;
 
 	[SerializeField] private GameObject ResurrectCol;
+	[SerializeField] private bool KeyboardCanControl;
 	void Start () {
 		CanMove = true;
         rb = Player.GetComponent<Rigidbody>();
         CameraMain = Camera.main;
 		ActualDirection = 3;
         direct2D = Quaternion.Euler(90f, 0f, 0f);
+
+		if (PlayerNumber == 1)
+			KeyboardCanControl = true;
     }
 
 	void Update(){
@@ -81,58 +85,111 @@ public class Movimentacao3D : MonoBehaviour {
 
 	//Define a direção que o player olha de acordo com os botoes que ele aperta.
 	void DirectionDefinition(){
+		if (KeyboardCanControl) {
+			if (Input.GetAxisRaw ("Vertical P" + PlayerNumber) > 0 || Input.GetKey(KeyCode.W)) {
+				InMovement = true;
+				//Define a direção para Cima-Esquerda.
+				if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0 || Input.GetKey(KeyCode.A)) {
+					ActualDirection = 4;
+					direct2D = Quaternion.Euler (225f, 90f, 90f);
+				} 
+				//Define a direção para Cima-Direita.
+				else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0 || Input.GetKey(KeyCode.D)) {
+					ActualDirection = 5;
+					direct2D = Quaternion.Euler (315f, 90f, 90f);
+				} 
+				//Define a direção para Cima.
+				else {
+					ActualDirection = 0;
+					direct2D = Quaternion.Euler (270f, 90f, 90f);
+
+				}
+			} else if (Input.GetAxisRaw ("Vertical P" + PlayerNumber) < 0 || Input.GetKey(KeyCode.S)) {
+				InMovement = true;
+				//Define a direção para Baixo-Esquerda
+				if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0 || Input.GetKey(KeyCode.A)) {
+					ActualDirection = 6;
+					direct2D = Quaternion.Euler (135f, 90f, 90f);
+				} 
+				//Define a direção para Baixo-Direita
+				else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0 || Input.GetKey(KeyCode.D)) {
+					ActualDirection = 7;
+					direct2D = Quaternion.Euler (45f, 90f, 90f);
+				} 
+				//Define a direção para Baixo.
+				else {
+					ActualDirection = 1;
+					direct2D = Quaternion.Euler (90f, 90f, 90f);
+				}
+			} 
+			//Define a direção para Esquerda
+			else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0 || Input.GetKey(KeyCode.A)) {
+				InMovement = true;
+				ActualDirection = 2;
+				direct2D = Quaternion.Euler (180f, 90f, 90f);
+
+			} 
+			//Define a direção para Direita
+			else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0 || Input.GetKey(KeyCode.D)) {
+				InMovement = true;
+				ActualDirection = 3;
+				direct2D = Quaternion.Euler (0f, 90f, 90f);
+			} else {
+				InMovement = false;
+			}
+		} else {
 			if (Input.GetAxisRaw ("Vertical P" + PlayerNumber) > 0) {
 				InMovement = true;
 				//Define a direção para Cima-Esquerda.
 				if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0) {
 					ActualDirection = 4;
-                direct2D = Quaternion.Euler(225f, 90f, 90f);
-            } 
+					direct2D = Quaternion.Euler (225f, 90f, 90f);
+				} 
 			//Define a direção para Cima-Direita.
 			else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0) {
 					ActualDirection = 5;
-                    direct2D = Quaternion.Euler(315f, 90f, 90f);
-            } 
+					direct2D = Quaternion.Euler (315f, 90f, 90f);
+				} 
 			//Define a direção para Cima.
 			else {
 					ActualDirection = 0;
-                direct2D = Quaternion.Euler(270f, 90f, 90f);
+					direct2D = Quaternion.Euler (270f, 90f, 90f);
 
-            }
+				}
 			} else if (Input.GetAxisRaw ("Vertical P" + PlayerNumber) < 0) {
 				InMovement = true;
 				//Define a direção para Baixo-Esquerda
 				if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0) {
 					ActualDirection = 6;
-                direct2D = Quaternion.Euler(135f, 90f, 90f);
-            } 
+					direct2D = Quaternion.Euler (135f, 90f, 90f);
+				} 
 			//Define a direção para Baixo-Direita
 			else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0) {
 					ActualDirection = 7;
-                direct2D = Quaternion.Euler(45f, 90f, 90f);
-            } 
+					direct2D = Quaternion.Euler (45f, 90f, 90f);
+				} 
 			//Define a direção para Baixo.
 			else {
 					ActualDirection = 1;
-                    direct2D = Quaternion.Euler(90f, 90f, 90f);
-                }
+					direct2D = Quaternion.Euler (90f, 90f, 90f);
+				}
 			} 
 		//Define a direção para Esquerda
 		else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0) {
 				InMovement = true;
 				ActualDirection = 2;
-            direct2D = Quaternion.Euler(180f, 90f, 90f);
+				direct2D = Quaternion.Euler (180f, 90f, 90f);
             
-        } 
+			} 
 		//Define a direção para Direita
 		else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0) {
 				InMovement = true;
 				ActualDirection = 3;
-            direct2D = Quaternion.Euler(0f, 90f, 90f);
-        }
-        else {
-            InMovement = false;
-        }
+				direct2D = Quaternion.Euler (0f, 90f, 90f);
+			} else {
+				InMovement = false;
+			}
+		}
         if (!onScreen) transform.LookAt(new Vector3(Directions[ActualDirection].position.x, transform.position.y, Directions[ActualDirection].position.z));
         else if (reachScreen) transform.localRotation = direct2D;
 
@@ -208,20 +265,32 @@ public class Movimentacao3D : MonoBehaviour {
 		//verifica se o player esta encostando no chão
 		InGround = Physics.Linecast (Player.transform.position, Player.transform.position - Vector3.up * 1.1f, NoIgnoredLayers);
 		//Debug.DrawLine (Player.transform.position,Player.transform.position - Vector3.up * 1.1f);
+		if (KeyboardCanControl) {
+			if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround && !onScreen || Input.GetKeyDown(KeyCode.K) && InGround && !onScreen) {
 
-		//se estiver no chao, pula, apertando A no controle.
-		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround &&!onScreen) {
+				Jumping = true;
+				SetJumpAnim ();
+				Vector3 V3 = rb.velocity;
+				V3.y = JumpForce;
+				rb.velocity = V3;
+			}
+			if (Input.GetButtonUp ("A P" + PlayerNumber) || Input.GetKeyUp(KeyCode.K)) {
+				Jumping = false;
+			}
+		} else {
+			//se estiver no chao, pula, apertando A no controle.
+			if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround && !onScreen) {
 			
-			Jumping = true;
-			SetJumpAnim ();
-			Vector3 V3 = rb.velocity;
-			V3.y = JumpForce;
-            rb.velocity = V3;
+				Jumping = true;
+				SetJumpAnim ();
+				Vector3 V3 = rb.velocity;
+				V3.y = JumpForce;
+				rb.velocity = V3;
+			}
+			if (Input.GetButtonUp ("A P" + PlayerNumber)) {
+				Jumping = false;
+			}
 		}
-		if(Input.GetButtonUp("A P" + PlayerNumber)){
-			Jumping = false;
-		}
-
 
 		if(Jumping && !onScreen){
 			Vector3 V3 = rb.velocity;
@@ -234,21 +303,35 @@ public class Movimentacao3D : MonoBehaviour {
         {
 			Jumping = false;
 		}
-        if (Input.GetButtonDown("LB P" + PlayerNumber) && !onScreen)
-        {
-            //desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
-			SetAnimOnScreen();
-			Jumping = true;
-			Vector3 V3 = rb.velocity;
-			V3.y = JumpForce;
-			rb.velocity = V3;
-			rb.useGravity = false;
-            transform.SetParent(camScreen);
-            _2dX = Random.Range(-1.5f, +1.5f);
-            _2dY = Random.Range(-0.8f, +0.8f);
-            onScreen = true;
-        }
-
+		if (KeyboardCanControl) {
+			if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen || Input.GetKeyDown(KeyCode.Q) && !onScreen) {
+				//desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
+				SetAnimOnScreen ();
+				Jumping = true;
+				Vector3 V3 = rb.velocity;
+				V3.y = JumpForce;
+				rb.velocity = V3;
+				rb.useGravity = false;
+				transform.SetParent (camScreen);
+				_2dX = Random.Range (-1.5f, +1.5f);
+				_2dY = Random.Range (-0.8f, +0.8f);
+				onScreen = true;
+			}
+		} else {
+			if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen) {
+				//desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
+				SetAnimOnScreen ();
+				Jumping = true;
+				Vector3 V3 = rb.velocity;
+				V3.y = JumpForce;
+				rb.velocity = V3;
+				rb.useGravity = false;
+				transform.SetParent (camScreen);
+				_2dX = Random.Range (-1.5f, +1.5f);
+				_2dY = Random.Range (-0.8f, +0.8f);
+				onScreen = true;
+			}
+		}
     }
 
     // variavel que fala quando o personagem vai voltar para o 3D
@@ -297,18 +380,31 @@ float preventMovLock = 0;
 
 
             //se o jogador pedir pra descer
-            if (Input.GetButtonDown("RB P" + PlayerNumber))
-            {
-                //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
-				//SetAnimOffScreen();
-				SetAnimOffScreen();
-                transform.SetParent(playerRoot);
-                direcoes.transform.SetParent(playerRoot);
-                toWorld = true;
-                reachScreen = false;
-				landOnScreen = false;
-                onScreen = false;
-            }
+			if (KeyboardCanControl) {
+				if (Input.GetButtonDown ("RB P" + PlayerNumber) || Input.GetKeyDown(KeyCode.E)) {
+					//tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
+					//SetAnimOffScreen();
+					SetAnimOffScreen ();
+					transform.SetParent (playerRoot);
+					direcoes.transform.SetParent (playerRoot);
+					toWorld = true;
+					reachScreen = false;
+					landOnScreen = false;
+					onScreen = false;
+				}
+			} else {
+				if (Input.GetButtonDown ("RB P" + PlayerNumber)) {
+					//tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
+					//SetAnimOffScreen();
+					SetAnimOffScreen ();
+					transform.SetParent (playerRoot);
+					direcoes.transform.SetParent (playerRoot);
+					toWorld = true;
+					reachScreen = false;
+					landOnScreen = false;
+					onScreen = false;
+				}
+			}
         }
     }
     

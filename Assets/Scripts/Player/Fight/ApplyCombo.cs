@@ -64,7 +64,8 @@ public class Combo{
 			Attacking = false;
 		}
 		if (CurrentIndex < Buttons.Length) {
-			if(Buttons[CurrentIndex] == "X" && Input.GetButtonDown("X P" + PlayerNumber) || Buttons[CurrentIndex] == "Y" && Input.GetButtonDown("Y P" + PlayerNumber)){
+			if(Buttons[CurrentIndex] == "X" && Input.GetButtonDown("X P" + PlayerNumber) || Buttons[CurrentIndex] == "X" && Input.GetKeyDown(KeyCode.J) ||
+			   Buttons[CurrentIndex] == "Y" && Input.GetButtonDown("Y P" + PlayerNumber) || Buttons[CurrentIndex] == "Y" && Input.GetKeyDown(KeyCode.I)){
 				TimeLastButtonPressed = Time.time;
 				CurrentIndex++;
 				Attacking = true;
