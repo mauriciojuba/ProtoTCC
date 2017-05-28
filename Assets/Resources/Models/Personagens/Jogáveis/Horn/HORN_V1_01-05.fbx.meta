@@ -641,7 +641,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.4881657
+        functionName: PlaySoundSFX
+        data: Horn_Footstep_01
+        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.01035503
+        functionName: PlaySoundSFX
+        data: Horn_Footstep_01
+        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -936,7 +952,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.33206114
+      - time: 0
         functionName: PlaySoundSFX
         data: Horn_JumpSFX_01
         objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
@@ -1237,7 +1253,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.16863912
+        functionName: PlaySoundSFX
+        data: Horn_Footstep_01
+        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.68343186
+        functionName: PlaySoundSFX
+        data: Horn_Footstep_01
+        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
