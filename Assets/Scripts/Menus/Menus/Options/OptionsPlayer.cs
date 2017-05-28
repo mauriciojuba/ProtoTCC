@@ -40,6 +40,9 @@ public class OptionsPlayer : MonoBehaviour {
 	[SerializeField] private float MaxJump;
 	private bool Jumping;
 	public bool CanMove;
+
+	[SerializeField] private Animator Anim;
+	[SerializeField] private GameObject Model;
 	void Start () {
 		CameraMain = Camera.main;
 		ActualDirection = 3;
@@ -49,6 +52,14 @@ public class OptionsPlayer : MonoBehaviour {
 
 	void FixedUpdate () {
 		if (Menus) {
+			if (UsingStairs) {
+				Model.transform.localEulerAngles = new Vector3 (-90, 0, 0);
+				Model.transform.localPosition = new Vector3 (0, 0, 1.36f);
+			} else {
+				Model.transform.localEulerAngles = new Vector3 (0, 0, 0);
+				Model.transform.localPosition = new Vector3 (0, -1.01f, 0);
+			}
+			SetAnimations ();
 			if (!UsingLever) {
 				DirectionDefinition ();
 				Jump ();
@@ -59,6 +70,7 @@ public class OptionsPlayer : MonoBehaviour {
 			if (InStairs) {
 				if (Input.GetButtonDown ("X P1")) {
 					UsingStairs = true;
+					ActualDirection = 0;
 				}
 			}
 			//quando o player estiver na escada, desliga a gravidade e altera apenas a velocidade Y do player.
@@ -71,6 +83,15 @@ public class OptionsPlayer : MonoBehaviour {
 				} else {
 					Vector3 V3 = GetComponent<Rigidbody> ().velocity;
 					V3.y = 0;
+					GetComponent<Rigidbody> ().velocity = V3;
+				}if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < -0.2f ||Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0.2f) {
+					Vector3 V3 = GetComponent<Rigidbody> ().velocity;
+					V3.x = StairsObj.transform.right.x * Speed * Input.GetAxis ("Horizontal P" + PlayerNumber);
+					GetComponent<Rigidbody> ().velocity = V3;
+				} 
+				else{
+					Vector3 V3 = GetComponent<Rigidbody> ().velocity;
+					V3.x = 0;
 					GetComponent<Rigidbody> ().velocity = V3;
 				}
 			} else {
@@ -90,11 +111,11 @@ public class OptionsPlayer : MonoBehaviour {
 		if (Input.GetAxisRaw ("Vertical P" + PlayerNumber) > 0) {
 			InMovement = true;
 			//Define a direção para Cima-Esquerda.
-			if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0) {
+			if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0 && !UsingStairs) {
 				ActualDirection = 4;
 			} 
 			//Define a direção para Cima-Direita.
-			else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0) {
+			else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0 && !UsingStairs) {
 				ActualDirection = 5;
 			} 
 			//Define a direção para Cima.
@@ -117,12 +138,12 @@ public class OptionsPlayer : MonoBehaviour {
 			}
 		} 
 		//Define a direção para Esquerda
-		else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0) {
+		else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) < 0 && !UsingStairs) {
 			InMovement = true;
 			ActualDirection = 2;
 		} 
 		//Define a direção para Direita
-		else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0) {
+		else if (Input.GetAxisRaw ("Horizontal P" + PlayerNumber) > 0 && !UsingStairs) {
 			InMovement = true;
 			ActualDirection = 3;
 		} else {
@@ -157,6 +178,7 @@ public class OptionsPlayer : MonoBehaviour {
 			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
 			V3.y = JumpForce;
 			Player.GetComponent<Rigidbody> ().velocity = V3;
+			Anim.SetTrigger ("Jump");
 		}
 		if(Input.GetButtonUp("A P" + PlayerNumber)){
 			Jumping = false;
@@ -194,6 +216,12 @@ public class OptionsPlayer : MonoBehaviour {
 			Mathf.Clamp (transform.position.x, Leftborder, Rightborder),
 			/*Mathf.Clamp (*/transform.position.y/*, Bottomborder, Topborder)*/,
 			Mathf.Clamp (transform.position.z,Bottomborder,Topborder ));
+	}
+
+	void SetAnimations(){
+		if (Anim != null) {
+			Anim.SetBool ("InMovement", InMovement);
+		}
 	}
 
 	public IEnumerator StarMove(){
