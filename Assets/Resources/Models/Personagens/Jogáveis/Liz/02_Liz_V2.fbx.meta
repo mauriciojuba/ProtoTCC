@@ -887,7 +887,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.19789842
+        functionName: PlaySoundSFX
+        data: Liz_Footstep_01
+        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.7285465
+        functionName: PlaySoundSFX
+        data: Liz_Footstep_01
+        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -1304,7 +1320,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.13485107
+        functionName: PlaySoundSFX
+        data: Liz_JumpSFX_01
+        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
