@@ -19,13 +19,15 @@ public class SFX : MonoBehaviour {
 
     public void AplicaMixer()
     {
-        Audio = GetComponent<AudioSource>();
-        Audio.outputAudioMixerGroup = Mixer;
+		if (GetComponent<AudioSource>() != null) {
+			Audio = GetComponent<AudioSource> ();
+			Audio.outputAudioMixerGroup = Mixer;
+		}
     }
 
     public void PlaySoundSfxGrupo(string Grupo)
     {
-        SoundManager.PlaySFX(gameObject, SoundManager.LoadFromGroup(Grupo));
+        SoundManager.PlaySFX(SoundManager.LoadFromGroup(Grupo));
         AplicaMixer();
     }
 

@@ -12,7 +12,9 @@ public class CameraMenu : MonoBehaviour {
 	public bool InOptions, InMainMenu;
 	
 	void Update () {
-
+		if (Input.GetButtonDown ("A P1")) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("Level 1A");
+		}
 		PlayerDirections.localEulerAngles = new Vector3 (PlayerDirections.localEulerAngles.x, gameObject.transform.localEulerAngles.y, PlayerDirections.localEulerAngles.z);
 		if (OptionsPos != null && MainMenuPos != null) {
 			//mantem as direções do player de acordo com a camera.

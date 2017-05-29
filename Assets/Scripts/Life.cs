@@ -116,9 +116,9 @@ public class Life : MonoBehaviour {
 				foreach (Rigidbody rb in RBGB) {
 					rb.velocity = gameObject.GetComponent<Rigidbody> ().velocity;
 				}
-
-                    sfx.PlaySoundSfxGrupo("Caixa Quebrando");
-
+				if (sfx != null) {
+					sfx.PlaySoundSfxGrupo ("Caixa Quebrando");
+				}
 				break;
 			case ObjectType.Barricade:
 				Instantiate (ObjDestruido, transform.position, Quaternion.identity);
