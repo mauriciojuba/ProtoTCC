@@ -43,7 +43,10 @@ public class SFX : MonoBehaviour {
                 Audio.outputAudioMixerGroup = Mixer;
             }
 
-
+            if (Objeto == "Destruct")
+            {
+                SoundManager.PlayCappedSFX(SoundManager.LoadFromGroup("Objetos Quebrando"), "1");
+            }
 
         }
     }
