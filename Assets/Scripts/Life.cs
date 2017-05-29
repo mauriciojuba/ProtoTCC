@@ -43,8 +43,20 @@ public class Life : MonoBehaviour {
 	public float X, InitialX;
     #endregion
 	[SerializeField] private bool UpdateL;
+    private SFX sfx;
+
+     void Start()
+    {
+        if(GetComponent<SFX>() != null)
+        {
+           sfx = GetComponent<SFX>();
+        }
+    }
 
     void Awake () {
+
+        
+
         if (LifeOF == LifeType.Player)
         {
             PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
@@ -104,6 +116,9 @@ public class Life : MonoBehaviour {
 				foreach (Rigidbody rb in RBGB) {
 					rb.velocity = gameObject.GetComponent<Rigidbody> ().velocity;
 				}
+
+                    sfx.PlaySoundSfxGrupo("Caixa Quebrando");
+
 				break;
 			case ObjectType.Barricade:
 				Instantiate (ObjDestruido, transform.position, Quaternion.identity);

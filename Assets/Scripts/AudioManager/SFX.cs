@@ -23,6 +23,13 @@ public class SFX : MonoBehaviour {
         Audio.outputAudioMixerGroup = Mixer;
     }
 
+    public void PlaySoundSfxGrupo(string Grupo)
+    {
+        SoundManager.PlaySFX(gameObject, SoundManager.LoadFromGroup(Grupo));
+        AplicaMixer();
+    }
+
+
     void OnCollisionEnter(Collision hit)
     {
         if(hit.gameObject.name == "Chao")
