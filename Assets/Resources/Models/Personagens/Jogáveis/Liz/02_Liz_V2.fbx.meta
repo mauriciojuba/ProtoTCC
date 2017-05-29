@@ -6773,7 +6773,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.24599
+        functionName: ActiveCollider
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5561493
+        functionName: DesactiveCollider
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -13080,7 +13096,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 15
+    globalScale: 20
     meshCompression: 3
     addColliders: 0
     importBlendShapes: 1

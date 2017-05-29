@@ -55,6 +55,10 @@ public class Movimentacao3D : MonoBehaviour {
 
 	[SerializeField] private GameObject ResurrectCol;
 	[SerializeField] private bool KeyboardCanControl;
+
+	[SerializeField] private float ScreenX,ScreenY,ScreenZ;
+	[SerializeField] private float RotScreenX, RotScreenY, RotScreenZ;
+	[SerializeField] private float WorldX, WorldY, WorldZ;
 	void Start () {
 		CanMove = true;
         rb = Player.GetComponent<Rigidbody>();
@@ -362,7 +366,9 @@ float preventMovLock = 0;
 				}
 				if(landOnScreen){
 					transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao/2);
-                	model.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao/2);
+                	//model.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao/2);
+					model.localEulerAngles = Vector3.Lerp(model.localEulerAngles, new Vector3(RotScreenX,RotScreenY,RotScreenZ), velTransicao/2);
+					model.localPosition = Vector3.Lerp (model.localPosition, new Vector3 (ScreenX, ScreenY, ScreenZ), velTransicao / 2);
 					Debug.Log("model "+ model.localRotation.x);
 					Debug.Log("object "+ transform.localRotation.x);
 					if(preventMovLock>=3f){
@@ -423,6 +429,7 @@ float preventMovLock = 0;
             transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1, 1, 1), velTransicao / 4);
             transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
             model.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0,0,0), velTransicao * 5);
+			model.localPosition = Vector3.Lerp (model.localPosition, new Vector3 (WorldX, WorldY, WorldZ), velTransicao * 5);
             direcoes.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right);
         }
         //uma vez que o tamanho esta ok a variavel pode ficar falsa.
