@@ -15,7 +15,8 @@ public class RecoveryItem : MonoBehaviour {
             {
                 if (other.gameObject.GetComponent<Life>() != null)
                 {
-					Player = other.gameObject;
+                    SoundManager.PlaySFX("ColetarVida");
+                    Player = other.gameObject;
 					GetComponent<LifePos> ().X = Player.GetComponent<Life> ().X + 0.007f;
 					GetComponent<LifePos> ().PlayerNumber = Player.GetComponent<Movimentacao3D> ().PlayerNumber;
 					GetComponent<LifePos> ().enabled = true;
