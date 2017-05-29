@@ -42,12 +42,14 @@ public class SFX : MonoBehaviour {
                 Audio = GetComponent<AudioSource>();
                 Audio.outputAudioMixerGroup = Mixer;
             }
+        }
 
+        if (hit.gameObject.name == "Roomba")
+        {
             if (Objeto == "Destruct")
             {
                 SoundManager.PlayCappedSFX(SoundManager.LoadFromGroup("Objetos Quebrando"), "1");
             }
-
         }
     }
 }

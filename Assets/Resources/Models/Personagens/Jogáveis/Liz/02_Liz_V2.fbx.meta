@@ -4272,6 +4272,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.008680344
+        functionName: PlaySoundSFX
+        data: Liz_GetHit
+        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
