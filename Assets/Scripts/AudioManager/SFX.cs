@@ -51,6 +51,14 @@ public class SFX : MonoBehaviour {
                 SoundManager.PlayCappedSFX(SoundManager.LoadFromGroup("Objetos Quebrando"), "1");
             }
         }
+
+
+        if(hit.gameObject.tag == "Player1" || hit.gameObject.tag == "Player2")
+        {
+            if(Objeto == "Metal")
+                SoundManager.PlaySFX(gameObject, SoundManager.LoadFromGroup("Tampinhas"));
+        }
+
     }
 }
 
