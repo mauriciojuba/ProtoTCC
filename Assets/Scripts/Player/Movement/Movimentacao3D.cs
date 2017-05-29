@@ -59,6 +59,8 @@ public class Movimentacao3D : MonoBehaviour {
 	[SerializeField] private float ScreenX,ScreenY,ScreenZ;
 	[SerializeField] private float RotScreenX, RotScreenY, RotScreenZ;
 	[SerializeField] private float WorldX, WorldY, WorldZ;
+
+	public bool Liz;
 	void Start () {
 		camScreen = GameObject.FindWithTag ("ScreenGlass").transform;
 		DollyCam = GameObject.FindWithTag ("DollyCam").GetComponent<CameraControl> ();
@@ -67,9 +69,9 @@ public class Movimentacao3D : MonoBehaviour {
         CameraMain = Camera.main;
 		ActualDirection = 3;
         direct2D = Quaternion.Euler(90f, 0f, 0f);
-
 		if (PlayerNumber == 1)
 			KeyboardCanControl = true;
+	  
     }
 
 	void Update(){
@@ -371,8 +373,6 @@ float preventMovLock = 0;
                 	//model.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao/2);
 					model.localEulerAngles = Vector3.Lerp(model.localEulerAngles, new Vector3(RotScreenX,RotScreenY,RotScreenZ), velTransicao/2);
 					model.localPosition = Vector3.Lerp (model.localPosition, new Vector3 (ScreenX, ScreenY, ScreenZ), velTransicao / 2);
-					Debug.Log("model "+ model.localRotation.x);
-					Debug.Log("object "+ transform.localRotation.x);
 					if(preventMovLock>=3f){
 						reachScreen = true;
 						preventMovLock = 0f;
@@ -419,6 +419,7 @@ float preventMovLock = 0;
     }
     
     //funçao que tira ele da tela
+	float contLiz;
     void exitScreen()
     {
         //se a variavel q fala pra ele sair da tela tiver ligada ele deve consertar o tamanho e a rotação do personagem
@@ -431,16 +432,36 @@ float preventMovLock = 0;
             model.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0,0,0), velTransicao * 5);
 			model.localPosition = Vector3.Lerp (model.localPosition, new Vector3 (WorldX, WorldY, WorldZ), velTransicao * 5);
             direcoes.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right);
+			if(Liz){
+				contLiz+=Time.deltaTime;
+				if(contLiz >= 2f){
+					CorrectAnimatorLiz();
+					contLiz = 0;
+				}
+			}
         }
         //uma vez que o tamanho esta ok a variavel pode ficar falsa.
         if(transform.localScale == new Vector3(1, 1, 1) /*&& transform.localRotation.x == 0f*/)
         {
+			contLiz = 0;
             rb.useGravity = true;
             //model.localRotation = Quaternion.Euler(0, 0, 0);
             toWorld = false;
         }
-        
+		Debug.Log(contLiz);
+		
     }
+	public void CorrectAnimatorLiz(){
+		transform.localScale = new Vector3(1, 1, 1);
+
+		onScreen = false;
+		toWorld = false;
+		rb.useGravity = true;
+		CanMove = true;
+		InGround = true;
+		InMovement = true;
+		Jumping = false;
+	}
 
 
     //Ver o metodo no CameraControl
