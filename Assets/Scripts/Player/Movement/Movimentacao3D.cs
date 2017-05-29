@@ -60,6 +60,8 @@ public class Movimentacao3D : MonoBehaviour {
 	[SerializeField] private float RotScreenX, RotScreenY, RotScreenZ;
 	[SerializeField] private float WorldX, WorldY, WorldZ;
 	void Start () {
+		camScreen = GameObject.FindWithTag ("ScreenGlass").transform;
+		DollyCam = GameObject.FindWithTag ("DollyCam").GetComponent<CameraControl> ();
 		CanMove = true;
         rb = Player.GetComponent<Rigidbody>();
         CameraMain = Camera.main;
@@ -377,8 +379,6 @@ float preventMovLock = 0;
 					}else{
 						preventMovLock+=Time.deltaTime;
 					}
-
-					
 				}
 				if(model.localRotation.x >= 0.58f && transform.localRotation.x >= 0.69f){
 					reachScreen = true;
@@ -425,7 +425,7 @@ float preventMovLock = 0;
         if (toWorld)
         {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
-                    1f, DollyCam.target.position.z), velTransicao);
+				transform.position.y, DollyCam.target.position.z), velTransicao);
             transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1, 1, 1), velTransicao / 4);
             transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
             model.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0,0,0), velTransicao * 5);
@@ -433,7 +433,7 @@ float preventMovLock = 0;
             direcoes.transform.localRotation = Quaternion.AngleAxis(0, Vector3.right);
         }
         //uma vez que o tamanho esta ok a variavel pode ficar falsa.
-        if(transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
+        if(transform.localScale == new Vector3(1, 1, 1) /*&& transform.localRotation.x == 0f*/)
         {
             rb.useGravity = true;
             //model.localRotation = Quaternion.Euler(0, 0, 0);

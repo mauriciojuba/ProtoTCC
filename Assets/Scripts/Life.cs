@@ -70,6 +70,8 @@ public class Life : MonoBehaviour {
 				X = 0.70f;
 			}
         }
+		ScreenGlass = GameObject.FindWithTag ("ScreenGlass");
+		DollyCam = GameObject.FindWithTag ("DollyCam").GetComponent<CameraControl>();
         UpdateLife();
     }
 

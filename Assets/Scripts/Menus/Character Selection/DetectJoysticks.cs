@@ -53,7 +53,7 @@ public class DetectJoysticks : MonoBehaviour {
 		if (QuantSelected == ActiveJoy) {
 			Timer -= Time.deltaTime;
 			if (Timer <= 0) {
-				UnityEngine.SceneManagement.SceneManager.LoadScene ("DU");
+				UnityEngine.SceneManagement.SceneManager.LoadScene ("Level 1A");
 			}
 		} else {
 			Timer = MaxTimer;
