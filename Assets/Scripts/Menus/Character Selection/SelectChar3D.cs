@@ -13,8 +13,8 @@ public class SelectChar3D : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col){
-		if (col.CompareTag ("Player1") || col.CompareTag ("Player2") ||
-		    col.CompareTag ("Player3") || col.CompareTag ("Player4"))
+		if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player2_3D") ||
+			col.CompareTag ("Player3_3D") || col.CompareTag ("Player4_3D"))
 			//////////////////////////////////////////////////////////////
 		{
 			col.GetComponent<DetectChar> ().CanSelect = true;
@@ -23,8 +23,8 @@ public class SelectChar3D : MonoBehaviour {
 	}
 
 	void OnTriggerExit (Collider col){
-		if (col.CompareTag ("Player1") || col.CompareTag ("Player2") ||
-			col.CompareTag ("Player3") || col.CompareTag ("Player4"))
+		if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player2_3D") ||
+			col.CompareTag ("Player3_3D") || col.CompareTag ("Player4_3D"))
 			//////////////////////////////////////////////////////////////
 		{
 			col.GetComponent<DetectChar> ().CanSelect = false;

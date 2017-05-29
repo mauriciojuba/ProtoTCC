@@ -12,6 +12,11 @@ public class OptionsHole : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if (col.CompareTag ("Player1_3D") && !Used) {
 			Used = true;
+			GoToSelection ();
+		}
+
+		/*if (col.CompareTag ("Player1_3D") && !Used) {
+			Used = true;
 			if (!MenuRef.InOptions) {
 				MenuRef.InOptions = true;
 				MenuRef.InMainMenu = false;
@@ -21,7 +26,7 @@ public class OptionsHole : MonoBehaviour {
 				MenuRef.InMainMenu = true;
 				MenuRef.Player.transform.position = MainMenuPos.position;
 			}
-		}
+		}*/
 	}
 
 	//o player só consegue entrar no buraco de novo dps q sair do collider.
@@ -29,5 +34,10 @@ public class OptionsHole : MonoBehaviour {
 		if (col.CompareTag ("Player1_3D")) {
 			Used = false;
 		}
+	}
+
+
+	void GoToSelection(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Selecao Personagens 3D");
 	}
 }
