@@ -12,14 +12,14 @@ public class SliderObj : MonoBehaviour {
 	[SerializeField] private float Divisor;
 	private float XPos;
 	void Start () {
-		XPos = transform.position.x;
+		XPos = transform.localPosition.x;
 		Test = SliderToReference.value;
 		UpdateGroup ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = new Vector3 (XPos + (SliderToReference.value / Divisor), transform.position.y, transform.position.z);
+		transform.localPosition = new Vector3 (XPos + (SliderToReference.value / Divisor), transform.localPosition.y, transform.localPosition.z);
 		Test = SliderToReference.value;
 	}
 

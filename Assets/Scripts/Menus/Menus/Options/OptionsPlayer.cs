@@ -79,6 +79,7 @@ public class OptionsPlayer : MonoBehaviour {
 			}
 			//quando o player estiver na escada, desliga a gravidade e altera apenas a velocidade Y do player.
 			if (UsingStairs) {
+				DirectionDefinition ();
 				GetComponent<Rigidbody> ().useGravity = false;
 				if (Input.GetAxis ("Vertical P1") > 0.2f || Input.GetAxis ("Vertical P1") < -0.2f) {
 					Vector3 V3 = GetComponent<Rigidbody> ().velocity;
