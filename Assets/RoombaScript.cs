@@ -19,7 +19,6 @@ public class RoombaScript : MonoBehaviour {
 	}
 
 	void EndGame(){
-        SoundManager.StopSFX();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Thanks");
 	}
 }

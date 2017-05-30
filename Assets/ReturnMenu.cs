@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReturnMenu : MonoBehaviour {
 
 	void ReturnToMenu(){
+		SoundManager.StopSFX();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Main Menu");
 	}
 }

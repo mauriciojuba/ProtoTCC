@@ -222,17 +222,29 @@ public class OptionsPlayer : MonoBehaviour {
 		Debug.DrawLine (Player.transform.position - new Vector3(0,0.5f,0) ,Player.transform.position - Vector3.up * 1.1f);
 
 		//se estiver no chao, pula, apertando A no controle.
-		if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround) {
-			Jumping = true;
-			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
-			V3.y = JumpForce;
-			Player.GetComponent<Rigidbody> ().velocity = V3;
-			Anim.SetTrigger ("Jump");
+		if (KeyboardCanControl) {
+			if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround || Input.GetKeyDown(KeyCode.K) && InGround) {
+				Jumping = true;
+				Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+				V3.y = JumpForce;
+				Player.GetComponent<Rigidbody> ().velocity = V3;
+				Anim.SetTrigger ("Jump");
+			}
+			if (Input.GetButtonUp ("A P" + PlayerNumber) || Input.GetKeyUp(KeyCode.K)) {
+				Jumping = false;
+			}
+		} else {
+			if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround) {
+				Jumping = true;
+				Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;
+				V3.y = JumpForce;
+				Player.GetComponent<Rigidbody> ().velocity = V3;
+				Anim.SetTrigger ("Jump");
+			}
+			if (Input.GetButtonUp ("A P" + PlayerNumber)) {
+				Jumping = false;
+			}
 		}
-		if(Input.GetButtonUp("A P" + PlayerNumber)){
-			Jumping = false;
-		}
-
 
 		if(Jumping){
 			Vector3 V3 = Player.GetComponent<Rigidbody> ().velocity;

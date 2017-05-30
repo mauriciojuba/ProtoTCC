@@ -49,14 +49,24 @@ public class DetectJoysticks : MonoBehaviour {
 		ActiveJoysticks ();
 		DetectActivity ();
 		DetectJoy ();
-
-		if (QuantSelected == ActiveJoy) {
-			Timer -= Time.deltaTime;
-			if (Timer <= 0) {
-				UnityEngine.SceneManagement.SceneManager.LoadScene ("Level 1A");
+		if (P1Connected) {
+			if (QuantSelected == ActiveJoy) {
+				Timer -= Time.deltaTime;
+				if (Timer <= 0) {
+					UnityEngine.SceneManagement.SceneManager.LoadScene ("Level 1A");
+				}
+			} else {
+				Timer = MaxTimer;
 			}
 		} else {
-			Timer = MaxTimer;
+			if (QuantSelected == 1) {
+				Timer -= Time.deltaTime;
+				if (Timer <= 0) {
+					UnityEngine.SceneManagement.SceneManager.LoadScene ("Level 1A");
+				}
+			} else {
+				Timer = MaxTimer;
+			}
 		}
 	}
 
@@ -134,21 +144,24 @@ public class DetectJoysticks : MonoBehaviour {
 		Joysticks = new string[Input.GetJoystickNames ().Length];
 		Joysticks = Input.GetJoystickNames ();
 	
-
-		if (Joysticks [0] != "")
-			P1Connected = true;
-		if (Joysticks.Length > 1 && Joysticks [1] != "")
-			P2Connected = true;
-		else
-			P2Connected = false;
-		if (Joysticks.Length > 2 && Joysticks [2] != "")
-			P3Connected = true;
-		else
-			P3Connected = false;
-		if (Joysticks.Length > 3 && Joysticks [3] != "")
-			P4Connected = true;
-		else
-			P4Connected = false;
+		if (Joysticks.Length > 0) {
+			if (Joysticks [0] != "")
+				P1Connected = true;
+			else
+				P1Connected = false;
+			if (Joysticks.Length > 1 && Joysticks [1] != "")
+				P2Connected = true;
+			else
+				P2Connected = false;
+			if (Joysticks.Length > 2 && Joysticks [2] != "")
+				P3Connected = true;
+			else
+				P3Connected = false;
+			if (Joysticks.Length > 3 && Joysticks [3] != "")
+				P4Connected = true;
+			else
+				P4Connected = false;
+		}
 	}
 
 	void DetectJoy(){
