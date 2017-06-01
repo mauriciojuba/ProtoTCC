@@ -53,7 +53,7 @@ public class SFX : MonoBehaviour {
         }
 
 
-        if(hit.gameObject.tag == "Player1" || hit.gameObject.tag == "Player2")
+        if(hit.gameObject.tag == "Player1_3D" || hit.gameObject.tag == "Player2_3D")
         {
             if(Objeto == "Metal")
                 SoundManager.PlaySFX(gameObject, SoundManager.LoadFromGroup("Tampinhas"));

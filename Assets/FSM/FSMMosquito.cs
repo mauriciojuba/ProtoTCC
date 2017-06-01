@@ -629,6 +629,10 @@ public class FSMMosquito : MonoBehaviour
     #region Die
     private void Die()
     {
+
+        Descer();
+        gameObject.GetComponent<Rigidbody>().useGravity = true;
+
         if (!onScreen)
         {
             MosquitoAni.SetBool("UsingWings", false);
