@@ -8,7 +8,7 @@ public class Life : MonoBehaviour {
 
 
 	public enum LifeType {Player, Enemy, Boss, Object};
-    public enum EnemyType {Mosquito};
+    public enum EnemyType {Mosquito, Aranha};
 	public enum ObjectType {Box, Barricade};
     public LifeType LifeOF;
     public EnemyType TypeEnemy;
@@ -173,6 +173,11 @@ public class Life : MonoBehaviour {
             case EnemyType.Mosquito:
                gameObject.GetComponent<FSMMosquito>().Life = LifeQuant;
                 break;
+
+            case EnemyType.Aranha:
+                gameObject.GetComponent<FSMAranha>().Life = LifeQuant;
+                break;
+
         }
         //ai.AI.WorkingMemory.SetItem("takingDamage", true);
         //ai.AI.WorkingMemory.SetItem("vida", LifeQuant);
