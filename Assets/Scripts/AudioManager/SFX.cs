@@ -31,6 +31,14 @@ public class SFX : MonoBehaviour {
         AplicaMixer();
     }
 
+    private void OnTriggerEnter(Collider hit)
+    {
+        if (hit.gameObject.name == "Chao")
+        {
+            if (Objeto == "Metal")
+                SoundManager.PlaySFX(gameObject, SoundManager.LoadFromGroup("Tampinhas"));
+        }
+    }
 
     void OnCollisionEnter(Collision hit)
     {
@@ -53,11 +61,7 @@ public class SFX : MonoBehaviour {
         }
 
 
-        if(hit.gameObject.tag == "Player1_3D" || hit.gameObject.tag == "Player2_3D")
-        {
-            if(Objeto == "Metal")
-                SoundManager.PlaySFX(gameObject, SoundManager.LoadFromGroup("Tampinhas"));
-        }
+       
 
     }
 }
