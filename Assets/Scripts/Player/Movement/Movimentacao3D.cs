@@ -391,7 +391,7 @@ float preventMovLock = 0;
 
             //se o jogador pedir pra descer
 			if (KeyboardCanControl) {
-				if (Input.GetButtonDown ("RB P" + PlayerNumber) || Input.GetKeyDown(KeyCode.E)) {
+				if (Input.GetButtonDown ("RB P" + PlayerNumber) || Input.GetKeyDown(KeyCode.T)) {
 					//tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
 					//SetAnimOffScreen();
 					SetAnimOffScreen ();

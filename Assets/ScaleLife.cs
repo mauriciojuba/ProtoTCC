@@ -9,6 +9,8 @@ public class ScaleLife : MonoBehaviour {
 	private bool SetScale;
 	private float ScaleToSet;
 
+	public bool dead;
+
 	void Start () {
 		
 	}
@@ -21,6 +23,10 @@ public class ScaleLife : MonoBehaviour {
 			if (transform.localScale == new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet)) {
 				SetScale = false;
 			}
+		}
+		if(dead){
+			SetScale = false;
+			transform.localScale = Vector3.Lerp(transform.localScale,new Vector3(6,6,6), 3f*Time.deltaTime);
 		}
 	}
 
