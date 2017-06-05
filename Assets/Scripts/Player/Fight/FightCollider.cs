@@ -5,6 +5,7 @@ using UnityEngine;
 public class FightCollider : MonoBehaviour {
 
 	public float Damage;
+    public GameObject particula;
 
 	void OnTriggerEnter (Collider col){
 		//aplicar a função de causar dano.
@@ -16,6 +17,11 @@ public class FightCollider : MonoBehaviour {
 		if (col.gameObject.GetComponent<Life> () != null) {
 			//Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
 			col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
+
+            //estou mudando para colocar particula
+            if(particula != null)
+            Instantiate(particula, transform.position, transform.rotation);
+
 			col.gameObject.GetComponent<Life> ().UpdateLife ();
 			if (col.gameObject.GetComponent<Life> ().LifeOF == Life.LifeType.Player) {
 				col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().TatuLife -= (int)Damage;
