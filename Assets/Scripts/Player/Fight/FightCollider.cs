@@ -17,6 +17,10 @@ public class FightCollider : MonoBehaviour {
 			//Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
 			col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
 			col.gameObject.GetComponent<Life> ().UpdateLife ();
+			if (col.gameObject.GetComponent<Life> ().LifeOF == Life.LifeType.Player) {
+				col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().TatuLife -= (int)Damage;
+				col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().UpdateScaleLife ();
+			}
 		} else {
 			Debug.LogWarning ("Deal " + Damage + " Damage");
 		}

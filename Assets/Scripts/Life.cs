@@ -35,7 +35,7 @@ public class Life : MonoBehaviour {
 	private GameObject LifeOBJ;
 	private GameObject Container;
 	private int Division;
-	private int QuantImgInScene;
+	public int QuantImgInScene;
 	[SerializeField] private int QuantImg;
 	[SerializeField] private GameObject LifeSpritePrefab;
 	[SerializeField] private GameObject ScreenGlass;
@@ -61,7 +61,7 @@ public class Life : MonoBehaviour {
         {
             PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
 			//mudar a quantidade de vida para imagem aqui
-            Division = 50;
+            Division = 100;
 			if (PlayerNumber == 1) {
 				InitialX = 0.06f;
 				X = InitialX;
@@ -151,13 +151,16 @@ public class Life : MonoBehaviour {
 			gb.GetComponent<Rigidbody> ().isKinematic = true;
 			gb.gameObject.GetComponent<LifePos> ().PlayerNumber = PlayerNumber;
 			gb.gameObject.GetComponent<LifePos> ().X = X;
+			gb.gameObject.GetComponent<LifePos> ().Player = gameObject;
+			gb.gameObject.GetComponent<ScaleLife> ().TotalTatuLife = Division;
+			gb.gameObject.GetComponent<ScaleLife> ().TatuLife = Division;
 			X += InitialX;
 			ListOfImg.Add (gb);
 		} else if (QuantImgInScene > QuantImg) {
 			Destroy (ListOfImg [QuantImgInScene - 1],15);
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().freezeRotation = false;
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().isKinematic = false;
-			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().AddForce (ListOfImg [QuantImgInScene - 1].transform.up * 100);
+			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().AddForce (Vector3.up * 100);
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().useGravity = true;
 			ListOfImg [QuantImgInScene - 1].GetComponent<LifePos> ().StartCoroutine (ListOfImg [QuantImgInScene - 1].GetComponent<LifePos> ().SetScale ());
 			ListOfImg.RemoveAt (QuantImgInScene - 1);
