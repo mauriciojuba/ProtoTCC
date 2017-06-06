@@ -281,9 +281,9 @@ public class FSMMosquito : MonoBehaviour
         }
         Destroy(part, 5f);
 
-        VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().LifeQuant -= 100;
+        //VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().LifeQuant -= 100;
 
-        VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+      //  VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
 
 
         Descer();
@@ -305,7 +305,7 @@ public class FSMMosquito : MonoBehaviour
 
         part.SetActive(true);
 
-
+		StartCoroutine (DrainLifeCor ());
 
     }
 
@@ -773,4 +773,57 @@ public class FSMMosquito : MonoBehaviour
     {
         MosquitoAni.SetTrigger("TakeDamage");
     }
+
+	IEnumerator DrainLifeCor(){
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+		yield return new WaitForSeconds (0.3f);
+		VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
+		VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
+		VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+		VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
+	}
 }

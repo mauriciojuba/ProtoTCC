@@ -6,6 +6,9 @@ public class FightCollider : MonoBehaviour {
 
 	public float Damage;
     public GameObject particula;
+	public string CharacterName;
+
+
 
 	void OnTriggerEnter (Collider col){
 		//aplicar a função de causar dano.
@@ -20,10 +23,10 @@ public class FightCollider : MonoBehaviour {
 
 
             //Som de Ataque do Horn
-            if(transform.parent.gameObject.transform.parent.gameObject.name == "Horn")
+			if(CharacterName == "Horn")
             SoundManager.PlaySFX(gameObject, "Horn_Atk_02");
 
-            if (transform.parent.gameObject.transform.parent.gameObject.name == "Liz")
+			if (CharacterName == "Liz")
                 SoundManager.PlaySFX(gameObject, "Liz_Atk_02");
 
             //coloca particula de Ataque
