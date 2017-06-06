@@ -73,6 +73,8 @@ public class FSMMosquito : MonoBehaviour
 
     public GameObject ParticulaLifeDrain;
 
+	public Transform rootJoint;
+
 
 
 
@@ -295,7 +297,7 @@ public class FSMMosquito : MonoBehaviour
         part = Instantiate(ParticulaLifeDrain, VidaTatu.transform.position, Quaternion.identity) as GameObject;
 		part.transform.parent = VidaTatu.transform;
 
-        part.GetComponent<ParticleHoming>().target = transform;
+		part.GetComponent<ParticleHoming>().target = rootJoint;
 
         part.SetActive(true);
 
