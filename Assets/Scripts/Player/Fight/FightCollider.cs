@@ -18,8 +18,13 @@ public class FightCollider : MonoBehaviour {
 			//Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
 			col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
 
-            //estou mudando para colocar particula
-            if(particula != null)
+
+            //Som de Ataque do Horn
+            if(transform.parent.gameObject.transform.parent.gameObject.name == "Horn")
+            SoundManager.PlaySFX(gameObject, "Horn_Atk_02");
+
+            //coloca particula de Ataque
+            if (particula != null)
             Instantiate(particula, transform.position, transform.rotation);
 
 			col.gameObject.GetComponent<Life> ().UpdateLife ();
