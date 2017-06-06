@@ -28,9 +28,14 @@ public class FightCollider : MonoBehaviour {
 
             //coloca particula de Ataque
             if (particula != null)
-            Instantiate(particula, transform.position, transform.rotation);
+            {
+                GameObject part = Instantiate(particula, transform.position, Quaternion.identity) as GameObject;
+                float timePart = part.GetComponent<ParticleSystem>().duration;
+                GameObject.Destroy(part, timePart);
 
-			col.gameObject.GetComponent<Life> ().UpdateLife ();
+            }
+
+            col.gameObject.GetComponent<Life> ().UpdateLife ();
 			if (col.gameObject.GetComponent<Life> ().LifeOF == Life.LifeType.Player) {
 				col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().TatuLife -= (int)Damage;
 				col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().UpdateScaleLife ();

@@ -6685,6 +6685,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.27378643
+        functionName: DrainLifeStart
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 4f74974012ef0b74e972a92bee464fdf,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

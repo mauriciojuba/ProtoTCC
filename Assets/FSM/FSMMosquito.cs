@@ -69,6 +69,10 @@ public class FSMMosquito : MonoBehaviour
     float _2dY, _2dX;
     public bool onScreen;
 
+    private GameObject part;
+
+    public GameObject ParticulaLifeDrain;
+
 
 
 
@@ -266,6 +270,16 @@ public class FSMMosquito : MonoBehaviour
 
     public void DrainLifeEnd()
     {
+
+        ParticleSystem particleemitter = part.GetComponent<ParticleSystem>();
+        if (particleemitter != null)
+        {
+            ParticleSystem.EmissionModule emit = particleemitter.emission;
+            emit.enabled = false;
+        }
+
+        Destroy(part, 5f);
+
         Descer();
         MoveSpeed = 4f;
         Life += 50;
@@ -273,6 +287,18 @@ public class FSMMosquito : MonoBehaviour
             MosquitoAni.SetBool("GoingToWorld", true);
         MosquitoAni.SetBool("LifeDrain", false);
         state = FSMStates.GoToWorld;
+
+    }
+
+    public void DrainLifeStart()
+    {
+        part = Instantiate(ParticulaLifeDrain, VidaTatu.transform.position, Quaternion.identity) as GameObject;
+
+        part.GetComponent<ParticleHoming>().target = transform;
+
+        part.SetActive(true);
+
+
 
     }
 
@@ -613,6 +639,9 @@ public class FSMMosquito : MonoBehaviour
     {
         if(TakeDamage)
         state = FSMStates.Damage;
+
+        
+
         MosquitoAni.SetBool("LifeDrain", true);
 		//para não olhar direto pro tatu
 		Vector3 correctLook = Vector3.Lerp(direction.position, VidaTatu.transform.position, RotationSpeed * Time.deltaTime);
