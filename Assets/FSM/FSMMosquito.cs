@@ -279,12 +279,16 @@ public class FSMMosquito : MonoBehaviour
             ParticleSystem.EmissionModule emit = particleemitter.emission;
             emit.enabled = false;
         }
-
         Destroy(part, 5f);
+
+        VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().LifeQuant -= 100;
+
+        VidaTatu.GetComponent<LifePos>().Player.GetComponent<Life>().UpdateL1 = true;
+
 
         Descer();
         MoveSpeed = 4f;
-        Life += 50;
+        Life += 100;
         
             MosquitoAni.SetBool("GoingToWorld", true);
         MosquitoAni.SetBool("LifeDrain", false);

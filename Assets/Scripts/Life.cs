@@ -45,7 +45,20 @@ public class Life : MonoBehaviour {
 	[SerializeField] private bool UpdateL;
     private SFX sfx;
 
-     void Start()
+    public bool UpdateL1
+    {
+        get
+        {
+            return UpdateL;
+        }
+
+        set
+        {
+            UpdateL = value;
+        }
+    }
+
+    void Start()
     {
         if(GetComponent<SFX>() != null)
         {
@@ -76,9 +89,9 @@ public class Life : MonoBehaviour {
     }
 
 	void Update(){
-		if (UpdateL) {
+		if (UpdateL1) {
 			UpdateLife ();
-			UpdateL = false;
+			UpdateL1 = false;
 		}
 
 		if (QuantImgInScene < QuantImg && LifeOF == LifeType.Player) {
