@@ -23,6 +23,9 @@ public class FightCollider : MonoBehaviour {
             if(transform.parent.gameObject.transform.parent.gameObject.name == "Horn")
             SoundManager.PlaySFX(gameObject, "Horn_Atk_02");
 
+            if (transform.parent.gameObject.transform.parent.gameObject.name == "Liz")
+                SoundManager.PlaySFX(gameObject, "Liz_Atk_02");
+
             //coloca particula de Ataque
             if (particula != null)
             Instantiate(particula, transform.position, transform.rotation);

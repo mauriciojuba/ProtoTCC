@@ -68,7 +68,7 @@ public class CameraControl : MonoBehaviour {
         //alterar a tag quando não for mais necessário o "3D" no final
         for (int i = 0; i == numPlayers; i++)
         {
-            Debug.Log("entrou");
+            //Debug.Log("entrou");
             if (GameObject.FindWithTag("Player"+(i+1)+"_3D") != null)
             {
                 Array.Resize(ref players, i + 1);

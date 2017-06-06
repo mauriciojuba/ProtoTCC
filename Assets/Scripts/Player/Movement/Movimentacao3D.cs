@@ -448,7 +448,7 @@ float preventMovLock = 0;
             //model.localRotation = Quaternion.Euler(0, 0, 0);
             toWorld = false;
         }
-		Debug.Log(contLiz);
+		//Debug.Log(contLiz);
 		
     }
 	public void CorrectAnimatorLiz(){
