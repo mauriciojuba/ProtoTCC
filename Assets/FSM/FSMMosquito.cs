@@ -293,6 +293,7 @@ public class FSMMosquito : MonoBehaviour
     public void DrainLifeStart()
     {
         part = Instantiate(ParticulaLifeDrain, VidaTatu.transform.position, Quaternion.identity) as GameObject;
+		part.transform.parent = VidaTatu.transform;
 
         part.GetComponent<ParticleHoming>().target = transform;
 
