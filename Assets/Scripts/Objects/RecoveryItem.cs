@@ -7,6 +7,11 @@ public class RecoveryItem : MonoBehaviour {
     public bool RecuperaHP, RecuperaESP;
     public int valorRecuperacao;
 	public GameObject Player;
+	public GameObject emitter;
+	public GameObject model;
+	public GameObject effect;
+	public float partTime;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +21,34 @@ public class RecoveryItem : MonoBehaviour {
                 if (other.gameObject.GetComponent<Life>() != null)
                 {
                     SoundManager.PlaySFX("ColetarVida");
+
+					if (emitter != null) { //desabilita efeitos graficos
+
+						Renderer rend = model.GetComponent<Renderer>(); // remove a emissao
+						Material mat = rend.material;
+						float emission = 0;
+						Color white = Color.white;
+						Color attrib = white * Mathf.LinearToGammaSpace (emission);
+						mat.SetColor ("_EmissionColor",attrib); // emissao end
+
+						ParticleSystem particleemitter = emitter.GetComponent<ParticleSystem>();
+						if (particleemitter != null) {
+							ParticleSystem.EmissionModule emit = particleemitter.emission;
+							emit.enabled = false;
+						}
+
+						Light lightemitter = emitter.GetComponent<Light> ();
+						if (lightemitter != null) {
+							lightemitter.enabled = false;
+						}
+					} //efeitos graficos end
+
+					if (effect != null) { //particula
+						partTime = effect.GetComponent<ParticleSystem> ().duration;
+						GameObject part = Instantiate (effect, transform.position, Quaternion.identity) as GameObject;
+						GameObject.Destroy (part, partTime);
+					} //particula end
+
                     Player = other.gameObject;
 					GetComponent<LifePos> ().X = Player.GetComponent<Life> ().X + 0.007f;
 					GetComponent<LifePos> ().PlayerNumber = Player.GetComponent<Movimentacao3D> ().PlayerNumber;
