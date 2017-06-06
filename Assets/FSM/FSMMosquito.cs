@@ -240,6 +240,8 @@ public class FSMMosquito : MonoBehaviour
     #region Minhas funcoes
 
     //pega a posicao da ultima vida de um player e seta como alvo
+
+
     public void PegaVidaPlayer()
     {
         VidaPlayer = Players[(int)Random.Range(0, Players.Count - 1)];
@@ -252,6 +254,7 @@ public class FSMMosquito : MonoBehaviour
 
     public void MovePraVida()
     {
+        if(VidaTatu.GetComponent<ScaleLife> ().TatuLife <= 0) DrainLifeEnd();
         LifeDist = Vector3.Distance(VidaTatu.transform.position, gameObject.transform.position);
 
         //colocar o modelo no centro do objeto pernilongo
