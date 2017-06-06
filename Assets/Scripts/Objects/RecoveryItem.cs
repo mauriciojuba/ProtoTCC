@@ -55,6 +55,7 @@ public class RecoveryItem : MonoBehaviour {
 					GetComponent<LifePos> ().enabled = true;
 					GetComponent<LifePos> ().Player = Player;
 					transform.SetParent (Player.GetComponent<Movimentacao3D>().camScreen);
+					gameObject.GetComponent<Rigidbody> ().isKinematic = true;
 //					Destroy (GetComponent<Collider> ());
 //					Destroy (GetComponent<Rigidbody> ());
                 }

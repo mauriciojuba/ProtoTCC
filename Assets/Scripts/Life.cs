@@ -215,7 +215,9 @@ public class Life : MonoBehaviour {
             {
                 int drop = Random.Range(0, Loot.Length);
                 Debug.Log(drop);
-                Instantiate(Loot[drop],transform.position,Quaternion.identity);
+				GameObject gb = GameObject.Instantiate(Loot[drop],transform.position,Quaternion.identity) as GameObject;
+				gb.GetComponent<Rigidbody> ().velocity = Vector3.zero;
+				gb.GetComponent<Rigidbody> ().AddForce (gb.transform.up * 3500);
             }
         }
     }
