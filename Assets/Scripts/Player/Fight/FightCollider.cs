@@ -27,7 +27,7 @@ public class FightCollider : MonoBehaviour {
             SoundManager.PlaySFX(gameObject, "Horn_Atk_02");
 
 			if (CharacterName == "Liz")
-                SoundManager.PlaySFX(gameObject, "Liz_Atk_02");
+                SoundManager.PlaySFX(gameObject, "Liz_Atk-02");
 
             //coloca particula de Ataque
             if (particula != null)
