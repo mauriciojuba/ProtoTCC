@@ -7,49 +7,64 @@ public class FightCollider : MonoBehaviour {
 	public float Damage;
     public GameObject particula;
 	public string CharacterName;
+	public GameObject Player;
 
 
 
 	void OnTriggerEnter (Collider col){
 		//aplicar a função de causar dano.
-		if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player2_3D") ||
-		    col.CompareTag ("Player3_3D") || col.CompareTag ("Player4_3D")) 
-		{
-			col.GetComponent<Movimentacao3D> ().SetTakeDamageAnim ();
-		}
-		if (col.gameObject.GetComponent<Life> () != null) {
-			//Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
-			col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
+		if (Player != null) {
+			if (Player.CompareTag ("Player1_3D") || Player.CompareTag ("Player2_3D") ||
+			    Player.CompareTag ("Player3_3D") || Player.CompareTag ("Player4_3D")) {
+				if (col.tag != "Player1_3D" && col.tag != "Player2_3D" && col.tag != "Player3_3D" && col.tag != "Player4_3D") {
+					if (col.gameObject.GetComponent<Life> () != null) {
+						//Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
+						col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
 
 
-            //Som de Ataque do Horn
-			if(CharacterName == "Horn")
-            SoundManager.PlaySFX(gameObject, "Horn_Atk_02");
+						//Som de Ataque do Horn
+						if (CharacterName == "Horn")
+							SoundManager.PlaySFX (gameObject, "Horn_Atk_02");
 
-			if (CharacterName == "Liz")
-                SoundManager.PlaySFX(gameObject, "Liz_Atk-02");
+						if (CharacterName == "Liz")
+							SoundManager.PlaySFX (gameObject, "Liz_Atk-02");
 
-            //coloca particula de Ataque
-            if (particula != null)
-            {
-                GameObject part = Instantiate(particula, transform.position, Quaternion.identity) as GameObject;
-                float timePart = part.GetComponent<ParticleSystem>().duration;
-                GameObject.Destroy(part, timePart);
+						//coloca particula de Ataque
+						if (particula != null) {
+							GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
+							float timePart = part.GetComponent<ParticleSystem> ().duration;
+							GameObject.Destroy (part, timePart);
+						}
 
-            }
+						col.gameObject.GetComponent<Life> ().UpdateLife ();
+						if (col.gameObject.GetComponent<FSMMosquito> () != null) {
+							if (col.gameObject.GetComponent<FSMMosquito> ().state == FSMMosquito.FSMStates.DrainLife) {
+								col.gameObject.GetComponent<FSMMosquito> ().StopAllCoroutines ();
+							}
+							col.gameObject.GetComponent<FSMMosquito> ().state = FSMMosquito.FSMStates.Damage;
+							col.gameObject.GetComponent<FSMMosquito> ().SetTakeDamageAnim ();
 
-            col.gameObject.GetComponent<Life> ().UpdateLife ();
-			if (col.gameObject.GetComponent<Life> ().LifeOF == Life.LifeType.Player) {
-				col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().TatuLife -= (int)Damage;
-				col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().UpdateScaleLife ();
+						}
+					}
+				}
 			}
 		} else {
-			Debug.LogWarning ("Deal " + Damage + " Damage");
+			if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player2_3D") ||
+			    col.CompareTag ("Player3_3D") || col.CompareTag ("Player4_3D")) {
+				col.GetComponent<Movimentacao3D> ().SetTakeDamageAnim ();
+			}
+			if (col.gameObject.GetComponent<Life> () != null) {
+				if (col.gameObject.GetComponent<Life> ().LifeOF == Life.LifeType.Player) {
+					if (particula != null) {
+						GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
+						float timePart = part.GetComponent<ParticleSystem> ().duration;
+						GameObject.Destroy (part, timePart);
+					}
+					col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().TatuLife -= (int)Damage;
+					col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().UpdateScaleLife ();
+				}
+				GetComponent<BoxCollider> ().enabled = false;
+			}
 		}
-		if (col.gameObject.GetComponent<FSMMosquito> () != null) {
-			col.gameObject.GetComponent<FSMMosquito> ().state = FSMMosquito.FSMStates.Damage;
-			col.gameObject.GetComponent<FSMMosquito> ().SetTakeDamageAnim ();
-		}
-		GetComponent<BoxCollider> ().enabled = false;
 	}
 }
