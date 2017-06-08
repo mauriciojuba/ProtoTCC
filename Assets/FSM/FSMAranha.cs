@@ -17,7 +17,9 @@ public class FSMAranha : MonoBehaviour
 
     public GameObject Target;
     public List<GameObject> Players;
+    public GameObject Muzle;
     public GameObject Shot;
+    public float force;
 
     public GameObject VidaPlayer;
     public GameObject VidaTatu;
@@ -180,19 +182,6 @@ public class FSMAranha : MonoBehaviour
         returned = false;
     }
 
-    IEnumerator EsperaAnim(float tempo, string NomeEstado)
-    {
-
-        yield return new WaitForSeconds(tempo);
-        if (NomeEstado == "StepBack")
-            state = FSMStates.StepBack;
-
-
-
-        cor = false;
-
-    }
-
     IEnumerator CalcDist()
     {
         yield return new WaitForSeconds(TimeToChangeTarget);
@@ -208,13 +197,12 @@ public class FSMAranha : MonoBehaviour
     public void PegaVidaPlayer()
     {
         VidaPlayer = Players[(int)Random.Range(0, Players.Count - 1)];
-
         VidaTatu = (GameObject)VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
     }
+
     public Transform direction;
 
     //move o mosquito para a vida  do player
-
     public void MovePraVida()
     {
         LifeDist = Vector3.Distance(VidaTatu.transform.position, gameObject.transform.position);
@@ -229,7 +217,6 @@ public class FSMAranha : MonoBehaviour
         transform.LookAt(correctLook, new Vector3(-1, -1, 1));
 
         // transform.position = Vector3.MoveTowards(transform.position, VidaTatu.transform.position, MoveSpeed);
-
         rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
     }
 
@@ -250,16 +237,15 @@ public class FSMAranha : MonoBehaviour
             else
                 Target = Players[1];
         }
+
+
         else if (Players.Count == 1)
         {
-
             Target = Players[0];
-
         }
     }
 
     //Liga as hitbox de ataque do mosquito
-
     public void HitBoxOn()
     {
         if (!onScreen)
@@ -284,82 +270,10 @@ public class FSMAranha : MonoBehaviour
                 hitbox[1].GetComponent<Collider>().enabled = false;
     }
 
-    void Descer()
-    {
-
-        transform.SetParent(null);
-        toWorld = true;
-        reachScreen = false;
-        onScreen = false;
-
-    }
-
     public void SpiderShot()
     {
-        
+        state = FSMStates.Patrol;
     }
-
-    //faz o mosquito ir para a tela
-
-    //------------------------------------------------------------------------------------------------------//
-    //void goToScreen()
-    // {
-    //     if (!reachScreen)
-    //     {
-    //         transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
-    //             camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
-    //         //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
-    //         ModelMosquito.transform.localRotation = Quaternion.RotateTowards(ModelMosquito.transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
-    //         transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
-    //         transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), velTransicao / 10);
-    //         if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.5f, 0.5f, 0.5f))
-    //         {
-    //	transform.localPosition = new Vector3 (camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z);
-    //	transform.localRotation = Quaternion.AngleAxis (90, Vector3.right);
-    //	rb.velocity = Vector3.zero;
-    //             reachScreen = true;
-    //         }
-    //     }
-
-    //     //se o jogador pedir pra descer
-    //     if (descer)
-    //     {
-    //         //tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
-    //         //SetAnimOffScreen();
-    //         transform.SetParent(null);
-    //         toWorld = true;
-    //         reachScreen = false;
-    //         onScreen = false;
-    //         state = FSMStates.Fall;
-    //     }
-    // }
-
-    //------------------------------------------------------------------------------------------------------//
-    //faz o mosquito sair da tela
-
-
-    //------------------------------------------------------------------------------------------------------//
-    //void exitScreen()
-    //{
-    //    transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
-    //            1f, DollyCam.target.position.z), velTransicao);
-
-    //    ModelMosquito.transform.localRotation = Quaternion.RotateTowards(ModelMosquito.transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 10);
-    //    transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
-    //    transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
-    //    model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0, 0, 0), velTransicao * 5);
-
-
-    //    if (transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
-    //    {
-    //        rb.useGravity = true;
-    //        model.localRotation = Quaternion.Euler(0, 0, 0);
-    //        toWorld = false;
-    //    }
-
-    //}
-    //------------------------------------------------------------------------------------------------------//
-
 
     #endregion
 
@@ -368,12 +282,8 @@ public class FSMAranha : MonoBehaviour
     private void Idle()
     {
 
-        AranhaAnimator.SetBool("IsIdle", true);
-
-        //Verifica se o player entrou no alcance da visao do mosquito
         if (Vector3.Distance(Target.transform.position, gameObject.transform.position) < Vision)
         {
-            AranhaAnimator.SetBool("IsIdle", false);
             state = FSMStates.Walk;
         }
         TimeToNextPoint -= Time.deltaTime;
@@ -383,8 +293,6 @@ public class FSMAranha : MonoBehaviour
             if (currentWayPoint >= waypoints.Length)
                 currentWayPoint = 0;
             TimeToNextPoint = TimeTo;
-
-            AranhaAnimator.SetBool("IsIdle", false);
             state = FSMStates.Patrol;
 
         }
@@ -399,14 +307,13 @@ public class FSMAranha : MonoBehaviour
     #region Patrol
     private void Patrol()
     {
-        AranhaAnimator.SetBool("IsParolling", true);
+
         Vector3 dir = waypoints[currentWayPoint].position - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
         if (dir.sqrMagnitude <= 1)
         {
-            AranhaAnimator.SetBool("IsParolling", false);
             state = FSMStates.Idle;
         }
         else
@@ -414,7 +321,6 @@ public class FSMAranha : MonoBehaviour
 
         if (Distace < Vision)
         {
-            AranhaAnimator.SetBool("IsParolling", false);
             state = FSMStates.Walk;
         }
         if (TakeDamage)
@@ -428,7 +334,6 @@ public class FSMAranha : MonoBehaviour
     private void Walk()
     {
 
-        AranhaAnimator.SetBool("FightingWalk", true);
         Vector3 dir = Target.transform.position;
 
         //rotaciona o Npc apontando para o alvo
@@ -443,16 +348,12 @@ public class FSMAranha : MonoBehaviour
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * MoveSpeed);
         }
 
-        TimerAtk += Time.deltaTime;
-        if (Distace <= EnemyDist && TimerAtk >= CooldownAtk)
-        {
+        if (Distace <= EnemyDist)
             state = FSMStates.ATK1;
-            TimerAtk = 0;
-        }
 
-        if (Distace > SafeDist + 1)
+        if (Distace > SafeDist)
         {
-            AranhaAnimator.SetBool("FightingWalk", false);
+           
             state = FSMStates.Patrol;
         }
 
@@ -466,17 +367,21 @@ public class FSMAranha : MonoBehaviour
     #region ATK1
     private void ATK1()
     {
-        //intanciar o gameobjec do tiro da aranha.
-        iTween.LookTo(gameObject, iTween.Hash("looktarget", Target.transform, "time", 3, "oncomplete", "SpiderShot"));
 
+        //rotaciona o Npc apontando para o alvo
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Target.transform.position - myTransform.position), Time.deltaTime * RotationSpeed);
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
-        AranhaAnimator.SetTrigger("ATK1");
-
-        state = FSMStates.Walk;
-
+        TimerAtk += Time.deltaTime;
+        if (Distace <= EnemyDist && TimerAtk >= CooldownAtk)
+        {
+            state = FSMStates.ATK2;
+            TimerAtk = 0;
+        }
+        if (Distace > EnemyDist)
+            state = FSMStates.Patrol;
         if (TakeDamage)
             state = FSMStates.Damage;
-
     }
     #endregion
 
@@ -484,6 +389,12 @@ public class FSMAranha : MonoBehaviour
     #region ATK2
     private void ATK2()
     {
+        GameObject part = Instantiate(Shot, transform.position, Quaternion.identity) as GameObject;
+        part.GetComponent<Rigidbody>().AddForce(transform.forward * force);
+        Destroy(part, 5);
+
+            state = FSMStates.ATK1;
+
 
     }
     #endregion
@@ -494,13 +405,10 @@ public class FSMAranha : MonoBehaviour
     {
         if (!onScreen)
         {
-            AranhaAnimator.SetBool("FightingWalk", false);
             if (!cor)
             {
                 if (Life > 0 && Life <= MaxLife * 0.2f && !grappled)
                 {
-                    StartCoroutine(EsperaAnim(1f, "StepBack"));
-                    cor = true;
                 }
                 else if (Life <= 0)
                     state = FSMStates.Die;
@@ -519,7 +427,6 @@ public class FSMAranha : MonoBehaviour
     }
     #endregion
 
-    //estado que faz o mosquito recuar
     #region Step back
     private void StepBack()
     {
@@ -580,16 +487,8 @@ public class FSMAranha : MonoBehaviour
     #region Die
     private void Die()
     {
-
-        Descer();
         gameObject.GetComponent<Rigidbody>().useGravity = true;
 
-        if (!onScreen)
-        {
-            AranhaAnimator.SetTrigger("Death");
-            gameObject.GetComponent<CapsuleCollider>().enabled = false;
-            DeathCollider.enabled = true;
-        }
     }
     #endregion
 
