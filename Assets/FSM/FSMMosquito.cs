@@ -75,7 +75,7 @@ public class FSMMosquito : MonoBehaviour
 
 	public Transform rootJoint;
 
-	private float LifeDrainInit;
+
 
 
     #endregion
@@ -291,7 +291,7 @@ public class FSMMosquito : MonoBehaviour
 
         Descer();
         MoveSpeed = 4f;
-        
+        Life += 100;
         
             MosquitoAni.SetBool("GoingToWorld", true);
         MosquitoAni.SetBool("LifeDrain", false);
@@ -307,7 +307,7 @@ public class FSMMosquito : MonoBehaviour
 		part.GetComponent<ParticleHoming>().target = rootJoint;
 
         part.SetActive(true);
-		LifeDrainInit = VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant;
+
 		StartCoroutine (DrainLifeCor ());
 
     }
@@ -360,7 +360,7 @@ public class FSMMosquito : MonoBehaviour
 
     void Descer()
     {
-		rb.isKinematic = false;
+
         transform.SetParent(null);
         toWorld = true;
         reachScreen = false;
@@ -579,8 +579,8 @@ public class FSMMosquito : MonoBehaviour
         {
             MosquitoAni.SetTrigger("TakeDamageScreen");
             TakeDamage = false;
-          //  state = FSMStates.OnScreen;
-			Descer ();
+            state = FSMStates.OnScreen;
+
 
         }
 
@@ -735,7 +735,7 @@ public class FSMMosquito : MonoBehaviour
         }
 
         MovePraVida();
-		rb.isKinematic = true;
+
         MoveSpeed = 0.5f;
 
         if (LifeDist <= LifeDrainDist)
@@ -778,14 +778,12 @@ public class FSMMosquito : MonoBehaviour
     }
 
 	IEnumerator DrainLifeCor(){
-		while (	VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant > LifeDrainInit - 100) {
+		while (VidaTatu.GetComponent<ScaleLife> ().TatuLife > 0) {
+			yield return new WaitForSeconds (0.3f);
 			VidaTatu.GetComponent<ScaleLife> ().TatuLife -= 10;
 			VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().LifeQuant -= 10;
 			VidaTatu.GetComponent<LifePos> ().Player.GetComponent<Life> ().UpdateL1 = true;
 			VidaTatu.GetComponent<ScaleLife> ().UpdateScaleLife ();
-			Life += 10;
-			GetComponent<Life> ().LifeQuant += 10;
-			yield return new WaitForSeconds (0.3f);
 		}
 	}
 }

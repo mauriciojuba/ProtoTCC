@@ -173,11 +173,11 @@ public class Life : MonoBehaviour {
 			Destroy (ListOfImg [QuantImgInScene - 1],15);
 			ListOfImg [QuantImgInScene - 1].transform.SetParent(null);
 			ListOfImg [QuantImgInScene - 1].GetComponent<LifePos> ().enabled = false;
+			ListOfImg [QuantImgInScene - 1].GetComponent<ScaleLife> ().dead = true;
 			ListOfImg [QuantImgInScene - 1].GetComponent<Animator>().enabled = false;
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().freezeRotation = false;
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().isKinematic = false;
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().useGravity = true;
-			ListOfImg [QuantImgInScene - 1].GetComponent<ScaleLife> ().dead = true;
 			
 			ListOfImg.RemoveAt (QuantImgInScene - 1);
 			QuantImgInScene--;

@@ -66,7 +66,7 @@ public class PickThrow : MonoBehaviour {
 
 
 	void LocateObject(){
-		//Debug.DrawRay (transform.position + (transform.up / 2), transform.forward * 2, Color.red);
+		Debug.DrawRay (transform.position + (transform.up / 2), transform.forward * 2, Color.red);
 		RaycastHit hit;
 
 		if (Physics.Raycast (transform.position  + (transform.up / 2),transform.forward, out hit,2)) {
