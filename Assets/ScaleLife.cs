@@ -26,7 +26,7 @@ public class ScaleLife : MonoBehaviour {
 		}
 		if(dead){
 			SetScale = false;
-			transform.localScale = Vector3.Lerp(transform.localScale,new Vector3(6,6,6), 3f*Time.deltaTime);
+			transform.localScale = Vector3.Lerp(transform.localScale,new Vector3(6,6,6), 2f*Time.deltaTime);
 		}
 	}
 

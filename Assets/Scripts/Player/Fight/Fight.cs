@@ -16,17 +16,23 @@ public class Fight : MonoBehaviour
     [SerializeField] private Collider DamageCollider;
 
 
-    private Movimentacao3D PlayerNumberRef;
+	[SerializeField] private Movimentacao3D PlayerNumberRef;
+	[SerializeField] private string CharacterName;
 
     void Awake()
     {
-       
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+		if (CharacterName == "Liz") {
+			if (PlayerNumberRef.onScreen) {
+				DamageCollider.GetComponent<BoxCollider> ().size = new Vector3 (1, 2, 1);
+			} else {
+				DamageCollider.GetComponent<BoxCollider> ().size = new Vector3 (1, 0.5f, 0.5f);
+			}
+		}
     }
 
 	public void ActiveCollider(){
