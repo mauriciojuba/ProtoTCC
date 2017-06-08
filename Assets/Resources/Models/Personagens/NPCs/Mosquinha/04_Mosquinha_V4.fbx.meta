@@ -1,0 +1,230 @@
+fileFormatVersion: 2
+guid: 37988a8398dea984a9265a840773f4e7
+timeCreated: 1496895612
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: left
+    100004: Mosquinha:Abdomen_01
+    100006: Mosquinha:Abdomen_01_CTRL
+    100008: Mosquinha:Abdomen_02
+    100010: Mosquinha:Abdomen_02_CTRL
+    100012: Mosquinha:Abdomen_03
+    100014: Mosquinha:back
+    100016: Mosquinha:BASE_CTRL
+    100018: Mosquinha:Body
+    100020: Mosquinha:Eyes
+    100022: Mosquinha:Head
+    100024: Mosquinha:Head_CTRL
+    100026: Mosquinha:Head_End
+    100028: Mosquinha:JOINTS
+    100030: Mosquinha:L_Paw_A_01
+    100032: Mosquinha:L_Paw_A_02
+    100034: Mosquinha:L_Paw_A_CTRL
+    100036: Mosquinha:L_Paw_B_01
+    100038: Mosquinha:L_Paw_B_02
+    100040: Mosquinha:L_Paw_B_CTRL
+    100042: Mosquinha:L_Paw_C_01
+    100044: Mosquinha:L_Paw_C_02
+    100046: Mosquinha:L_Paw_C_CTRL
+    100048: Mosquinha:L_Paw_C_CTRL1
+    100050: Mosquinha:L_Wing_A_01
+    100052: Mosquinha:L_Wing_A_01 1
+    100054: Mosquinha:L_Wing_A_02
+    100056: Mosquinha:L_Wing_A_02 1
+    100058: Mosquinha:L_Wing_A_03
+    100060: Mosquinha:L_Wing_A_03 1
+    100062: Mosquinha:L_Wing_A_04
+    100064: Mosquinha:L_Wing_B_01
+    100066: Mosquinha:L_Wing_B_01 1
+    100068: Mosquinha:L_Wing_B_02
+    100070: Mosquinha:L_Wing_B_02 1
+    100072: Mosquinha:L_Wing_B_03
+    100074: Mosquinha:MESH
+    100076: Mosquinha:Mosquinha
+    100078: Mosquinha:Neck
+    100080: Mosquinha:Neck_CTRL
+    100082: Mosquinha:Proboscis_01
+    100084: Mosquinha:Proboscis_01_CTRL
+    100086: Mosquinha:Proboscis_02
+    100088: Mosquinha:Proboscis_02_CTRL
+    100090: Mosquinha:Proboscis_03
+    100092: Mosquinha:Proboscis_03_CTRL
+    100094: Mosquinha:Proboscis_04
+    100096: Mosquinha:Proboscis_04_CTRL
+    100098: Mosquinha:Proboscis_05
+    100100: Mosquinha:R_Paw_A_01
+    100102: Mosquinha:R_Paw_A_02
+    100104: Mosquinha:R_Paw_A_CTRL
+    100106: Mosquinha:R_Paw_B_01
+    100108: Mosquinha:R_Paw_B_02
+    100110: Mosquinha:R_Paw_B_CTRL
+    100112: Mosquinha:R_Paw_C_01
+    100114: Mosquinha:R_Paw_C_02
+    100116: Mosquinha:R_Wing_A_01
+    100118: Mosquinha:R_Wing_A_01 1
+    100120: Mosquinha:R_Wing_A_02
+    100122: Mosquinha:R_Wing_A_02 1
+    100124: Mosquinha:R_Wing_A_03
+    100126: Mosquinha:R_Wing_A_03 1
+    100128: Mosquinha:R_Wing_A_04
+    100130: Mosquinha:R_Wing_B_01
+    100132: Mosquinha:R_Wing_B_01 1
+    100134: Mosquinha:R_Wing_B_02
+    100136: Mosquinha:R_Wing_B_02 1
+    100138: Mosquinha:R_Wing_B_03
+    100140: Mosquinha:ROOT
+    100142: Mosquinha:ROOT_CTRL
+    400000: //RootNode
+    400002: left
+    400004: Mosquinha:Abdomen_01
+    400006: Mosquinha:Abdomen_01_CTRL
+    400008: Mosquinha:Abdomen_02
+    400010: Mosquinha:Abdomen_02_CTRL
+    400012: Mosquinha:Abdomen_03
+    400014: Mosquinha:back
+    400016: Mosquinha:BASE_CTRL
+    400018: Mosquinha:Body
+    400020: Mosquinha:Eyes
+    400022: Mosquinha:Head
+    400024: Mosquinha:Head_CTRL
+    400026: Mosquinha:Head_End
+    400028: Mosquinha:JOINTS
+    400030: Mosquinha:L_Paw_A_01
+    400032: Mosquinha:L_Paw_A_02
+    400034: Mosquinha:L_Paw_A_CTRL
+    400036: Mosquinha:L_Paw_B_01
+    400038: Mosquinha:L_Paw_B_02
+    400040: Mosquinha:L_Paw_B_CTRL
+    400042: Mosquinha:L_Paw_C_01
+    400044: Mosquinha:L_Paw_C_02
+    400046: Mosquinha:L_Paw_C_CTRL
+    400048: Mosquinha:L_Paw_C_CTRL1
+    400050: Mosquinha:L_Wing_A_01
+    400052: Mosquinha:L_Wing_A_01 1
+    400054: Mosquinha:L_Wing_A_02
+    400056: Mosquinha:L_Wing_A_02 1
+    400058: Mosquinha:L_Wing_A_03
+    400060: Mosquinha:L_Wing_A_03 1
+    400062: Mosquinha:L_Wing_A_04
+    400064: Mosquinha:L_Wing_B_01
+    400066: Mosquinha:L_Wing_B_01 1
+    400068: Mosquinha:L_Wing_B_02
+    400070: Mosquinha:L_Wing_B_02 1
+    400072: Mosquinha:L_Wing_B_03
+    400074: Mosquinha:MESH
+    400076: Mosquinha:Mosquinha
+    400078: Mosquinha:Neck
+    400080: Mosquinha:Neck_CTRL
+    400082: Mosquinha:Proboscis_01
+    400084: Mosquinha:Proboscis_01_CTRL
+    400086: Mosquinha:Proboscis_02
+    400088: Mosquinha:Proboscis_02_CTRL
+    400090: Mosquinha:Proboscis_03
+    400092: Mosquinha:Proboscis_03_CTRL
+    400094: Mosquinha:Proboscis_04
+    400096: Mosquinha:Proboscis_04_CTRL
+    400098: Mosquinha:Proboscis_05
+    400100: Mosquinha:R_Paw_A_01
+    400102: Mosquinha:R_Paw_A_02
+    400104: Mosquinha:R_Paw_A_CTRL
+    400106: Mosquinha:R_Paw_B_01
+    400108: Mosquinha:R_Paw_B_02
+    400110: Mosquinha:R_Paw_B_CTRL
+    400112: Mosquinha:R_Paw_C_01
+    400114: Mosquinha:R_Paw_C_02
+    400116: Mosquinha:R_Wing_A_01
+    400118: Mosquinha:R_Wing_A_01 1
+    400120: Mosquinha:R_Wing_A_02
+    400122: Mosquinha:R_Wing_A_02 1
+    400124: Mosquinha:R_Wing_A_03
+    400126: Mosquinha:R_Wing_A_03 1
+    400128: Mosquinha:R_Wing_A_04
+    400130: Mosquinha:R_Wing_B_01
+    400132: Mosquinha:R_Wing_B_01 1
+    400134: Mosquinha:R_Wing_B_02
+    400136: Mosquinha:R_Wing_B_02 1
+    400138: Mosquinha:R_Wing_B_03
+    400140: Mosquinha:ROOT
+    400142: Mosquinha:ROOT_CTRL
+    4300000: Mosquinha:Eyes
+    4300002: Mosquinha:Body
+    7400000: Idle_01
+    7400002: Idle_02
+    7400004: Idle_03
+    7400006: Walk
+    9500000: //RootNode
+    13700000: Mosquinha:Body
+    13700002: Mosquinha:Eyes
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 180
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
