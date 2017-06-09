@@ -20,9 +20,8 @@ public class FightCollider : MonoBehaviour {
 						//Aqui deve ser chamado o método(função) que substituirá o Update do script Life.
 						col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
 
-
-						//Som de Ataque do Horn
-						if (CharacterName == "Horn")
+                        //Som de Ataque do Horn
+                        if (CharacterName == "Horn")
 							SoundManager.PlaySFX (gameObject, "Horn_Atk_02");
 
 						if (CharacterName == "Liz")
@@ -69,7 +68,8 @@ public class FightCollider : MonoBehaviour {
 				}
 				col.gameObject.GetComponent<Life> ().UpdateLife ();
 			}
+            if(GetComponent<BoxCollider>() != null)
 			GetComponent<BoxCollider> ().enabled = false;
 		}
-	}
+    }
 }
