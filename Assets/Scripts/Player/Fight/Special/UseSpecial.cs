@@ -15,7 +15,9 @@ public class UseSpecial : MonoBehaviour {
 	public int SpecialItens;
 	public List<GameObject> SpecialInScreen;
 
+	[SerializeField] private PickThrow CheckGrab;
 	[SerializeField] private float forwardX,forwardY,forwardZ;
+	[SerializeField] private bool AnimatorControl;
 
 	void Start(){
 		PlayerNumber = GetComponent<Movimentacao3D> ().PlayerNumber;
@@ -31,15 +33,15 @@ public class UseSpecial : MonoBehaviour {
 		forwardX = transform.forward.x;
 		forwardY = transform.forward.y;
 		forwardZ = transform.forward.z;
-		if (!GetComponent<Movimentacao3D> ().onScreen && GetComponent<Movimentacao3D> ().InGround) {
+		if (!GetComponent<Movimentacao3D> ().onScreen && GetComponent<Movimentacao3D> ().InGround && !CheckGrab.Grabbing) {
 			if (Input.GetButtonDown (SpecialRef.ButtonToUse + PlayerNumber) && !Use && SpecialItens > 0) {
 				if (SpecialRef.Rush) {
 					Use = true;
 					InitPos = transform.position;
-					gameObject.GetComponent<Movimentacao3D> ().CanMove = false;
 				} else {
-					UseTheSpecial ();
+					gameObject.GetComponent<Movimentacao3D> ().SetSpecialAnim ();
 				}
+				gameObject.GetComponent<Movimentacao3D> ().CanMove = false;
 				SpecialItens--;
 				SpecialInScreen [SpecialInScreen.Count - 1].GetComponent<SpecialPos> ().GoOffScreen = true;
 				SpecialInScreen [SpecialInScreen.Count - 1].GetComponent<SpecialPos> ().SetPos = false;
@@ -78,28 +80,30 @@ public class UseSpecial : MonoBehaviour {
 				SP.Pull = SpecialRef.Pull;
 				SP.Push = SpecialRef.Push;
 				SP.InitPos = obj.transform.position;
-				gameObject.GetComponent<Movimentacao3D> ().CanMove = true;
+				if(!AnimatorControl)
+					gameObject.GetComponent<Movimentacao3D> ().CanMove = true;
+				Use = false;
 				break;
 			}
 		}
 	}
 
-	void OnCollisionEnter(Collision Col){
-		if (SpecialRef.Rush && Use) {
-			foreach (ContactPoint contact in Col.contacts) {
-				if (Col.collider.CompareTag ("Enemy")) {
-					Rigidbody RBE;
-					RBE = Col.collider.gameObject.GetComponent<Rigidbody> ();
-					if (RBE.mass < RB.mass) {
-						RBE.AddExplosionForce (SpecialRef.RushPushForce, Col.collider.transform.position, 10.0f, 3.0f);
-						//aplicar o dano no collider.
-					} else {
-						RB.velocity = Vector3.zero;
-						gameObject.GetComponent<Movimentacao3D> ().CanMove = true;
-						Use = false;
-					}
-				}
-			}
-		}
-	}
+//	void OnCollisionEnter(Collision Col){
+//		if (SpecialRef.Rush && Use) {
+//			foreach (ContactPoint contact in Col.contacts) {
+//				if (Col.collider.CompareTag ("Enemy")) {
+//					Rigidbody RBE;
+//					RBE = Col.collider.gameObject.GetComponent<Rigidbody> ();
+//					if (RBE.mass < RB.mass) {
+//						RBE.AddExplosionForce (SpecialRef.RushPushForce, Col.collider.transform.position, 10.0f, 3.0f);
+//						//aplicar o dano no collider.
+//					} else {
+//						RB.velocity = Vector3.zero;
+//						gameObject.GetComponent<Movimentacao3D> ().CanMove = true;
+//						Use = false;
+//					}
+//				}
+//			}
+//		}
+//	}
 }

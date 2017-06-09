@@ -25,8 +25,16 @@ public class Special : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider Col){
-		if (Col.CompareTag ("Enemy")) {
+		if (Col.CompareTag ("Enemy") || Col.CompareTag ("Interactable")) {
 			if (Pull) {
+				if (Col.GetComponent<FSMMosquito> () != null) {
+					Col.GetComponent<FSMMosquito> ().state = FSMMosquito.FSMStates.Damage;
+					Col.GetComponent<FSMMosquito> ().SetTakeDamageAnim ();
+					Col.GetComponent<FSMMosquito> ().Life -= Time.deltaTime * Damage;
+				}
+				if (Col.GetComponent<Life> () != null) {
+					Col.GetComponent<Life> ().LifeQuant -= Time.deltaTime * Damage;
+				}
 				Col.GetComponent<Rigidbody> ().AddExplosionForce (-PushForce, PosToPull.position, gameObject.GetComponent<SphereCollider> ().radius, 3.0f, ForceMode.VelocityChange);
 				//aplicar dano de tempo em tempo
 			} else if (Push) {

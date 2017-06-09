@@ -12,10 +12,10 @@ public class SpecialSkillEditor : Editor
 		myScript.Rush = EditorGUILayout.Toggle("Rush Skill", myScript.Rush);
 		myScript.Magic = EditorGUILayout.Toggle ("Magick Skill", myScript.Magic);
 
-		if (myScript.Rush)
-			myScript.Magic = false;
-		else
-			myScript.Magic = true;
+//		if (myScript.Rush)
+//			myScript.Magic = false;
+//		else
+//			myScript.Magic = true;
 
 		using (var group = new EditorGUILayout.FadeGroupScope(Convert.ToSingle(!myScript.Rush)))
 		{
@@ -62,12 +62,10 @@ public class SpecialSkillEditor : Editor
 					myScript.AOEDamage = EditorGUILayout.FloatField (myScript.AOEDamage);
 					EditorGUILayout.PrefixLabel ("Distance to AOE Go");
 					myScript.AOEDistance = EditorGUILayout.FloatField (myScript.AOEDistance);
-					EditorGUILayout.BeginVertical ();
 					EditorGUILayout.PrefixLabel ("AOE Speed");
 					myScript.AOEForce = EditorGUILayout.FloatField (myScript.AOEForce);
 					EditorGUILayout.PrefixLabel ("Force to Pull/Push");
 					myScript.AOEPushForce = EditorGUILayout.FloatField (myScript.AOEPushForce);
-					EditorGUILayout.EndVertical ();
 					EditorGUILayout.PrefixLabel ("Pull Enemies");
 					myScript.Pull = EditorGUILayout.Toggle (myScript.Pull);
 					EditorGUILayout.PrefixLabel ("Push Enemies");

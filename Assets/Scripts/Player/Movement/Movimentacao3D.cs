@@ -593,6 +593,13 @@ float preventMovLock = 0;
 		Anim.SetTrigger ("TakeDamage");
 	}
 
+	public void SetSpecialAnim(){
+		if (Anim == null) {
+			return;
+		}
+		Anim.SetTrigger ("UseSpecial");
+	}
+
 	public void CanMoveFalse(){
 		CanMove = false;
 	}

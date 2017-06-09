@@ -491,7 +491,7 @@ public class FSMMosquito : MonoBehaviour
     #region Walk
     private void Walk()
     {
-
+		MosquitoAni.SetBool ("IsParolling", false);
         MosquitoAni.SetBool("FightingWalk", true);
         Vector3 dir = Target.transform.position;
 

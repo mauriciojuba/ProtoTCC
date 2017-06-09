@@ -53,4 +53,8 @@ public class Fight : MonoBehaviour
 			StrongDamageCollider.enabled = false;
 		}
 	}
+
+	public void UseSpecial(){
+		PlayerNumberRef.gameObject.GetComponent<UseSpecial> ().UseTheSpecial ();
+	}
 }

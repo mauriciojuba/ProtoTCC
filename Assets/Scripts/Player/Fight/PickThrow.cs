@@ -13,7 +13,7 @@ public class PickThrow : MonoBehaviour {
 	[SerializeField] private bool CanPick;
 	[Range(500,2000)]
 	[SerializeField] private float Force;
-	[SerializeField] private bool Grabbing;
+	public bool Grabbing;
 	[SerializeField] private bool KeyboardCanControl;
 	[SerializeField] private Animator Anim;
 	void Start () {
@@ -174,10 +174,12 @@ public class PickThrow : MonoBehaviour {
 
 	public void SetRootMotionTrue(){
 		Anim.applyRootMotion = true;
+		transform.parent.GetComponent<Movimentacao3D>().CanMove = false;
 	}
 
 	public void SetRootMotionFalse(){
 		Anim.applyRootMotion = false;
+		transform.parent.GetComponent<Movimentacao3D>().CanMove = true;
 	}
 
 }

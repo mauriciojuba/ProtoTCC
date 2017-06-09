@@ -410,6 +410,7 @@ ModelImporter:
     7400056: Simple Attack Start_LIZ
     7400058: Simple Attack End_LIZ
     7400060: Selected
+    7400062: UseEspecial
     9500000: //RootNode
     13700000: LIZ:Body
     13700002: LIZ:Head
@@ -13206,6 +13207,447 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: LIZ:back
+        weight: 1
+      - path: LIZ:left
+        weight: 1
+      - path: LIZ:LIZ_3D
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot/LIZ:L_Foot_Rotate
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot/LIZ:L_Foot_Rotate/LIZ:L_Foot_TipToe
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot/LIZ:L_Foot_Rotate/LIZ:L_Foot_TipToe/LIZ:L_Foot_Bend
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot/LIZ:L_Foot_Rotate/LIZ:L_Foot_TipToe/LIZ:L_Foot_Bend/LIZ:L_Toe_ikHandle
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot/LIZ:L_Foot_Rotate/LIZ:L_Foot_TipToe/LIZ:L_Foot_Toe
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot/LIZ:L_Foot_Rotate/LIZ:L_Foot_TipToe/LIZ:L_Foot_Toe/LIZ:L_Toe_End_ikHandle
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot/LIZ:L_Foot_Rotate/LIZ:L_Foot_TipToe/LIZ:L_Foot_Walk
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:L_Foot_CTRL/LIZ:L_Foot/LIZ:L_Foot_Rotate/LIZ:L_Foot_TipToe/LIZ:L_Foot_Walk/LIZ:L_Foot_ikHandle
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot/LIZ:R_Foot_Rotate
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot/LIZ:R_Foot_Rotate/LIZ:R_Foot_TipToe
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot/LIZ:R_Foot_Rotate/LIZ:R_Foot_TipToe/LIZ:R_Foot_Bend
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot/LIZ:R_Foot_Rotate/LIZ:R_Foot_TipToe/LIZ:R_Foot_Bend/LIZ:R_Toe_ikHandle
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot/LIZ:R_Foot_Rotate/LIZ:R_Foot_TipToe/LIZ:R_Foot_Toe
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot/LIZ:R_Foot_Rotate/LIZ:R_Foot_TipToe/LIZ:R_Foot_Toe/LIZ:R_Toe_End_ikHandle
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot/LIZ:R_Foot_Rotate/LIZ:R_Foot_TipToe/LIZ:R_Foot_Walk
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:R_Foot_CTRL/LIZ:R_Foot/LIZ:R_Foot_Rotate/LIZ:R_Foot_TipToe/LIZ:R_Foot_Walk/LIZ:R_Foot_ikHandle
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:Abdomen_02_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:Abdomen_02_CTRL/LIZ:Abdomen_03_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:L_Wing_01_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:L_Wing_01_CTRL/LIZ:L_Wing_02_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:L_Wing_01_CTRL/LIZ:L_Wing_02_CTRL/LIZ:L_Wing_03_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:L_Wing_01_CTRL/LIZ:L_Wing_02_CTRL/LIZ:L_Wing_03_CTRL/LIZ:L_Wing_04_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:L_Wing_01_CTRL/LIZ:L_Wing_02_CTRL/LIZ:L_Wing_03_CTRL/LIZ:L_Wing_04_CTRL/LIZ:L_Wing_05_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:L_Wing_01_CTRL/LIZ:L_Wing_02_CTRL/LIZ:L_Wing_03_CTRL/LIZ:L_Wing_04_CTRL/LIZ:L_Wing_05_CTRL/LIZ:L_Wing_06_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:R_Wing_01_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:R_Wing_01_CTRL/LIZ:R_Wing_02_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:R_Wing_01_CTRL/LIZ:R_Wing_02_CTRL/LIZ:R_Wing_03_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:R_Wing_01_CTRL/LIZ:R_Wing_02_CTRL/LIZ:R_Wing_03_CTRL/LIZ:R_Wing_04_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:R_Wing_01_CTRL/LIZ:R_Wing_02_CTRL/LIZ:R_Wing_03_CTRL/LIZ:R_Wing_04_CTRL/LIZ:R_Wing_05_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Abdomen_01_CTRL/LIZ:R_Wing_01_CTRL/LIZ:R_Wing_02_CTRL/LIZ:R_Wing_03_CTRL/LIZ:R_Wing_04_CTRL/LIZ:R_Wing_05_CTRL/LIZ:R_Wing_06_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:L_Knee_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:R_Knee_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:L_Shoulder_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:L_Shoulder_CTRL/LIZ:L_Arm_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:L_Shoulder_CTRL/LIZ:L_Arm_CTRL/LIZ:L_Elbow_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:L_Shoulder_CTRL/LIZ:L_Arm_CTRL/LIZ:L_Elbow_CTRL/LIZ:L_Elbow_SUP_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:L_Shoulder_CTRL/LIZ:L_Arm_CTRL/LIZ:L_Elbow_CTRL/LIZ:L_Elbow_SUP_CTRL/LIZ:L_Hand_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:L_Shoulder_CTRL/LIZ:L_Arm_CTRL/LIZ:L_Elbow_CTRL/LIZ:L_Elbow_SUP_CTRL/LIZ:L_Hand_CTRL/LIZ:L_Hand_SUP_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:L_Shoulder_CTRL/LIZ:L_Arm_CTRL/LIZ:L_Elbow_CTRL/LIZ:L_Elbow_SUP_CTRL/LIZ:L_Hand_CTRL/LIZ:L_Hand_SUP_CTRL/LIZ:L_Toe_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Eye_Bot_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Eye_Top_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Feeler_01_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Feeler_01_CTRL/LIZ:L_Feeler_02_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Feeler_01_CTRL/LIZ:L_Feeler_02_CTRL/LIZ:L_Feeler_03_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Feeler_01_CTRL/LIZ:L_Feeler_02_CTRL/LIZ:L_Feeler_03_CTRL/LIZ:L_Feeler_04_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Feeler_01_CTRL/LIZ:L_Feeler_02_CTRL/LIZ:L_Feeler_03_CTRL/LIZ:L_Feeler_04_CTRL/LIZ:L_Feeler_05_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Feeler_01_CTRL/LIZ:L_Feeler_02_CTRL/LIZ:L_Feeler_03_CTRL/LIZ:L_Feeler_04_CTRL/LIZ:L_Feeler_05_CTRL/LIZ:L_Feeler_06_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Feeler_01_CTRL/LIZ:L_Feeler_02_CTRL/LIZ:L_Feeler_03_CTRL/LIZ:L_Feeler_04_CTRL/LIZ:L_Feeler_05_CTRL/LIZ:L_Feeler_06_CTRL/LIZ:L_Feeler_07_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:L_Feeler_01_CTRL/LIZ:L_Feeler_02_CTRL/LIZ:L_Feeler_03_CTRL/LIZ:L_Feeler_04_CTRL/LIZ:L_Feeler_05_CTRL/LIZ:L_Feeler_06_CTRL/LIZ:L_Feeler_07_CTRL/LIZ:L_Feeler_08_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Eye_Bot_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Eye_Top_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Feeler_01_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Feeler_01_CTRL/LIZ:R_Feeler_02_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Feeler_01_CTRL/LIZ:R_Feeler_02_CTRL/LIZ:R_Feeler_03_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Feeler_01_CTRL/LIZ:R_Feeler_02_CTRL/LIZ:R_Feeler_03_CTRL/LIZ:R_Feeler_04_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Feeler_01_CTRL/LIZ:R_Feeler_02_CTRL/LIZ:R_Feeler_03_CTRL/LIZ:R_Feeler_04_CTRL/LIZ:R_Feeler_05_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Feeler_01_CTRL/LIZ:R_Feeler_02_CTRL/LIZ:R_Feeler_03_CTRL/LIZ:R_Feeler_04_CTRL/LIZ:R_Feeler_05_CTRL/LIZ:R_Feeler_06_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Feeler_01_CTRL/LIZ:R_Feeler_02_CTRL/LIZ:R_Feeler_03_CTRL/LIZ:R_Feeler_04_CTRL/LIZ:R_Feeler_05_CTRL/LIZ:R_Feeler_06_CTRL/LIZ:R_Feeler_07_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:Neck_CTRL/LIZ:Head_CTRL/LIZ:R_Feeler_01_CTRL/LIZ:R_Feeler_02_CTRL/LIZ:R_Feeler_03_CTRL/LIZ:R_Feeler_04_CTRL/LIZ:R_Feeler_05_CTRL/LIZ:R_Feeler_06_CTRL/LIZ:R_Feeler_07_CTRL/LIZ:R_Feeler_08_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:R_Shoulder_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:R_Shoulder_CTRL/LIZ:R_Arm_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:R_Shoulder_CTRL/LIZ:R_Arm_CTRL/LIZ:R_Elbow_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:R_Shoulder_CTRL/LIZ:R_Arm_CTRL/LIZ:R_Elbow_CTRL/LIZ:R_Elbow_SUP_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:R_Shoulder_CTRL/LIZ:R_Arm_CTRL/LIZ:R_Elbow_CTRL/LIZ:R_Elbow_SUP_CTRL/LIZ:R_Hand_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:R_Shoulder_CTRL/LIZ:R_Arm_CTRL/LIZ:R_Elbow_CTRL/LIZ:R_Elbow_SUP_CTRL/LIZ:R_Hand_CTRL/LIZ:R_Hand_SUP_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:Base_CTRL/LIZ:ROOT_CTRL/LIZ:Spine_CTRL/LIZ:Spine_02_CTRL/LIZ:Spine_03_CTRL/LIZ:Spine_04_CTRL/LIZ:R_Shoulder_CTRL/LIZ:R_Arm_CTRL/LIZ:R_Elbow_CTRL/LIZ:R_Elbow_SUP_CTRL/LIZ:R_Hand_CTRL/LIZ:R_Hand_SUP_CTRL/LIZ:R_Toe_CTRL
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:Abdomen_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:Abdomen_02/LIZ:Abdomen_03
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:Abdomen_02/LIZ:Abdomen_03/LIZ:Abdomen_04
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:L_Wing_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:L_Wing_01/LIZ:L_Wing_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:L_Wing_01/LIZ:L_Wing_02/LIZ:L_Wing_03
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:L_Wing_01/LIZ:L_Wing_02/LIZ:L_Wing_03/LIZ:L_Wing_04
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:L_Wing_01/LIZ:L_Wing_02/LIZ:L_Wing_03/LIZ:L_Wing_04/LIZ:L_Wing_05
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:L_Wing_01/LIZ:L_Wing_02/LIZ:L_Wing_03/LIZ:L_Wing_04/LIZ:L_Wing_05/LIZ:L_Wing_06
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:L_Wing_01/LIZ:L_Wing_02/LIZ:L_Wing_03/LIZ:L_Wing_04/LIZ:L_Wing_05/LIZ:L_Wing_06/LIZ:L_Wing_07
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:R_Wing_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:R_Wing_01/LIZ:R_Wing_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:R_Wing_01/LIZ:R_Wing_02/LIZ:R_Wing_03
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:R_Wing_01/LIZ:R_Wing_02/LIZ:R_Wing_03/LIZ:R_Wing_04
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:R_Wing_01/LIZ:R_Wing_02/LIZ:R_Wing_03/LIZ:R_Wing_04/LIZ:R_Wing_05
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:R_Wing_01/LIZ:R_Wing_02/LIZ:R_Wing_03/LIZ:R_Wing_04/LIZ:R_Wing_05/LIZ:R_Wing_06
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Abdomen_01/LIZ:R_Wing_01/LIZ:R_Wing_02/LIZ:R_Wing_03/LIZ:R_Wing_04/LIZ:R_Wing_05/LIZ:R_Wing_06/LIZ:R_Wing_07
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:L_Leg
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:L_Leg/LIZ:L_Knee
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:L_Leg/LIZ:L_Knee/LIZ:L_Foot 1
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:L_Leg/LIZ:L_Knee/LIZ:L_Foot 1/LIZ:L_Toe
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:L_Leg/LIZ:L_Knee/LIZ:L_Foot 1/LIZ:L_Toe/LIZ:L_Toe_End
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:R_Leg
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:R_Leg/LIZ:R_Knee
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:R_Leg/LIZ:R_Knee/LIZ:R_Foot 1
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:R_Leg/LIZ:R_Knee/LIZ:R_Foot 1/LIZ:R_Toe
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:R_Leg/LIZ:R_Knee/LIZ:R_Foot 1/LIZ:R_Toe/LIZ:R_Toe_End
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder1
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder1/LIZ:L_Arm
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder1/LIZ:L_Arm/LIZ:L_Elbow_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder1/LIZ:L_Arm/LIZ:L_Elbow_01/LIZ:L_Elbow_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder1/LIZ:L_Arm/LIZ:L_Elbow_01/LIZ:L_Elbow_02/LIZ:L_Hand_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder1/LIZ:L_Arm/LIZ:L_Elbow_01/LIZ:L_Elbow_02/LIZ:L_Hand_01/LIZ:L_Hand_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder1/LIZ:L_Arm/LIZ:L_Elbow_01/LIZ:L_Elbow_02/LIZ:L_Hand_01/LIZ:L_Hand_02/LIZ:L_Toe_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:L_Shoulder1/LIZ:L_Arm/LIZ:L_Elbow_01/LIZ:L_Elbow_02/LIZ:L_Hand_01/LIZ:L_Hand_02/LIZ:L_Toe_01/LIZ:L_Toe_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes/LIZ:L_Eye_Center_Bot
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes/LIZ:L_Eye_Center_Bot/LIZ:L_Eye_Top
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes/LIZ:L_Eye_Center_Top
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes/LIZ:L_Eye_Center_Top/LIZ:L_Eye_Top 1
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes/LIZ:R_Eye_Center_Bot
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes/LIZ:R_Eye_Center_Bot/LIZ:R_Eye_Top
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes/LIZ:R_Eye_Center_Top
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Eyes/LIZ:R_Eye_Center_Top/LIZ:R_Eye_Top 1
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01/LIZ:L_Feeler_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01/LIZ:L_Feeler_02/LIZ:L_Feeler_03
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01/LIZ:L_Feeler_02/LIZ:L_Feeler_03/LIZ:L_Feeler_04
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01/LIZ:L_Feeler_02/LIZ:L_Feeler_03/LIZ:L_Feeler_04/LIZ:L_Feeler_05
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01/LIZ:L_Feeler_02/LIZ:L_Feeler_03/LIZ:L_Feeler_04/LIZ:L_Feeler_05/LIZ:L_Feeler_06
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01/LIZ:L_Feeler_02/LIZ:L_Feeler_03/LIZ:L_Feeler_04/LIZ:L_Feeler_05/LIZ:L_Feeler_06/LIZ:L_Feeler_07
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01/LIZ:L_Feeler_02/LIZ:L_Feeler_03/LIZ:L_Feeler_04/LIZ:L_Feeler_05/LIZ:L_Feeler_06/LIZ:L_Feeler_07/LIZ:L_Feeler_08
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:L_Feeler_01/LIZ:L_Feeler_02/LIZ:L_Feeler_03/LIZ:L_Feeler_04/LIZ:L_Feeler_05/LIZ:L_Feeler_06/LIZ:L_Feeler_07/LIZ:L_Feeler_08/LIZ:L_Feeler_09
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01/LIZ:R_Feeler_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01/LIZ:R_Feeler_02/LIZ:R_Feeler_03
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01/LIZ:R_Feeler_02/LIZ:R_Feeler_03/LIZ:R_Feeler_04
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01/LIZ:R_Feeler_02/LIZ:R_Feeler_03/LIZ:R_Feeler_04/LIZ:R_Feeler_05
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01/LIZ:R_Feeler_02/LIZ:R_Feeler_03/LIZ:R_Feeler_04/LIZ:R_Feeler_05/LIZ:R_Feeler_06
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01/LIZ:R_Feeler_02/LIZ:R_Feeler_03/LIZ:R_Feeler_04/LIZ:R_Feeler_05/LIZ:R_Feeler_06/LIZ:R_Feeler_07
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01/LIZ:R_Feeler_02/LIZ:R_Feeler_03/LIZ:R_Feeler_04/LIZ:R_Feeler_05/LIZ:R_Feeler_06/LIZ:R_Feeler_07/LIZ:R_Feeler_08
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:Neck/LIZ:Head
+          1/LIZ:Head_Top/LIZ:R_Feeler_01/LIZ:R_Feeler_02/LIZ:R_Feeler_03/LIZ:R_Feeler_04/LIZ:R_Feeler_05/LIZ:R_Feeler_06/LIZ:R_Feeler_07/LIZ:R_Feeler_08/LIZ:R_Feeler_09
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:R_Shoulder
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:R_Shoulder/LIZ:R_Arm
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:R_Shoulder/LIZ:R_Arm/LIZ:R_Elbow_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:R_Shoulder/LIZ:R_Arm/LIZ:R_Elbow_01/LIZ:R_Elbow_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:R_Shoulder/LIZ:R_Arm/LIZ:R_Elbow_01/LIZ:R_Elbow_02/LIZ:R_Hand_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:R_Shoulder/LIZ:R_Arm/LIZ:R_Elbow_01/LIZ:R_Elbow_02/LIZ:R_Hand_01/LIZ:R_Hand_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:R_Shoulder/LIZ:R_Arm/LIZ:R_Elbow_01/LIZ:R_Elbow_02/LIZ:R_Hand_01/LIZ:R_Hand_02/LIZ:R_Toe_01
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:JOINTS/LIZ:ROOT/LIZ:Spine_01/LIZ:Spine_02/LIZ:Spine_03/LIZ:Spine_04/LIZ:R_Shoulder/LIZ:R_Arm/LIZ:R_Elbow_01/LIZ:R_Elbow_02/LIZ:R_Hand_01/LIZ:R_Hand_02/LIZ:R_Toe_01/LIZ:R_Toe_02
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:Body
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:Head
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:L_Eye
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:L_Eyelid_B
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:L_Eyelid_T
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:L_Feeler
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:L_Jaw
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:L_Wing
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:R_Eye
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:R_Eyelid_B
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:R_Eyelid_T
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:R_Feeler
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:R_Jaw
+        weight: 1
+      - path: LIZ:LIZ_3D/LIZ:MALHA/LIZ:R_Wing
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: UseEspecial
+      takeName: Take 001
+      firstFrame: 511
+      lastFrame: 580
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: SetRootMotionTrue
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.47338933
+        functionName: UseSpecial
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.97862524
+        functionName: SetRootMotionFalse
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
