@@ -12,8 +12,9 @@ public class Fight : MonoBehaviour
     //dano minimo e maximo do ataque forte.
     public float MinStrongDamage;
     public float MaxStrongDamage;
-
+	public float StrongDamage;
     [SerializeField] private Collider DamageCollider;
+	[SerializeField] private Collider StrongDamageCollider;
 
 
 	[SerializeField] private Movimentacao3D PlayerNumberRef;
@@ -35,12 +36,21 @@ public class Fight : MonoBehaviour
 		}
     }
 
-	public void ActiveCollider(){
-		DamageCollider.enabled = true;
-		DamageCollider.gameObject.GetComponent<FightCollider>().Damage = Random.Range(MinDamage, MaxDamage);
+	public void ActiveCollider(string StyleDamage){
+		if (StyleDamage == "Basic") {
+			DamageCollider.enabled = true;
+			DamageCollider.gameObject.GetComponent<FightCollider> ().Damage = Random.Range (MinDamage, MaxDamage);
+		} else if (StyleDamage == "Strong") {
+			StrongDamageCollider.enabled = true;
+			StrongDamageCollider.gameObject.GetComponent<FightCollider> ().Damage = StrongDamage;
+		}
 	}
 
-	public void DesactiveCollider(){
-		DamageCollider.enabled = false;
+	public void DesactiveCollider(string StyleDamage){
+		if (StyleDamage == "Basic") {
+			DamageCollider.enabled = false;
+		} else if (StyleDamage == "Strong") {
+			StrongDamageCollider.enabled = false;
+		}
 	}
 }

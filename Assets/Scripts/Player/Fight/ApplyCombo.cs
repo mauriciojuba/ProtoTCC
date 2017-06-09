@@ -6,8 +6,11 @@ using UnityEngine;
 public class ApplyCombo: MonoBehaviour{
 	private Combo combo1 = new Combo(new string[] {"X","X","X"});
 	private Movimentacao3D AnimRef;
+	[SerializeField] private Fight DamageRef;
 	public List<int> IndexCombo;
 	public bool Attacking;
+	public bool ChargingAttack;
+	public bool ChargedAttack;
 
 	void Start(){
 		combo1.PlayerNumber = GetComponent<Movimentacao3D> ().PlayerNumber;
@@ -15,32 +18,65 @@ public class ApplyCombo: MonoBehaviour{
 	}
 
 	void Update(){
-		if (combo1.CheckCombo ()) {
-			if (!IndexCombo.Contains (combo1.CurrentIndex)) {
-				IndexCombo.Add (combo1.CurrentIndex);
+//		if (Input.GetButtonDown ("Y P" + AnimRef.PlayerNumber)) {
+//			ChargingAttack = true;
+//			AnimRef.SetStrongAttackAnim ("Charging");
+//			DamageRef.StrongDamage = DamageRef.MinStrongDamage;
+//		}
+//		if (Input.GetButtonUp ("Y P" + AnimRef.PlayerNumber)) {
+//			ExecuteChargedAttack ();
+//		}
+//		if (!ChargingAttack) {
+			if (combo1.CheckCombo ()) {
+				if (!IndexCombo.Contains (combo1.CurrentIndex)) {
+					IndexCombo.Add (combo1.CurrentIndex);
+				}
+				AnimRef.SetAttackAnim (IndexCombo [0]);
+				Attacking = combo1.Attacking;
 			}
-			AnimRef.SetAttackAnim (IndexCombo [0]);
-			Attacking = combo1.Attacking;
-		}
-		if (IndexCombo.Count > 0) {
-			if (AnimRef.Anim.GetCurrentAnimatorStateInfo (1).IsName ("Attack " + IndexCombo [0])) {
-				if (IndexCombo.Count > 1) {
-					AnimRef.SetAttackAnim (IndexCombo [1]);
-					IndexCombo.Remove (IndexCombo [0]);
-				} else {
+			if (IndexCombo.Count > 0) {
+				if (AnimRef.Anim.GetCurrentAnimatorStateInfo (1).IsName ("Attack " + IndexCombo [0])) {
+					if (IndexCombo.Count > 1) {
+						AnimRef.SetAttackAnim (IndexCombo [1]);
+						IndexCombo.Remove (IndexCombo [0]);
+					} else {
+						AnimRef.SetAttackAnim (0);
+						IndexCombo.Clear ();
+					}
+				}
+
+				if (!Attacking) {
 					AnimRef.SetAttackAnim (0);
 					IndexCombo.Clear ();
 				}
 			}
+			if (Time.time > combo1.TimeLastButtonPressed + combo1.TimeBetweenButtons) {
+				Attacking = false;
+			}
+//		} if(ChargingAttack) {
+//			SetChargedAttack ();
+//		}
+//
+//		if(!ChargedAttack)
+//			AnimRef.CanMove = true;
+//		
+	}
 
-			if (!Attacking) {
-				AnimRef.SetAttackAnim (0);
-				IndexCombo.Clear ();
+	void SetChargedAttack(){
+		if (ChargingAttack) {
+			AnimRef.CanMove = false;
+			if (DamageRef.StrongDamage < DamageRef.MaxStrongDamage) {
+				DamageRef.StrongDamage += 10 * Time.deltaTime;
+			} else {
+				ExecuteChargedAttack ();
+				ChargingAttack = false;
 			}
 		}
-		if (Time.time > combo1.TimeLastButtonPressed + combo1.TimeBetweenButtons) {
-			Attacking = false;
-		}
+	}
+
+	void ExecuteChargedAttack(){
+		ChargedAttack = true;
+		AnimRef.SetStrongAttackAnim ("Release");
 	}
 }
 

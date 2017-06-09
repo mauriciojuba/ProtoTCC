@@ -532,7 +532,18 @@ float preventMovLock = 0;
 		Anim.SetTrigger ("Attack");
 		Anim.SetInteger ("AttackNumber", AttackNumber);
 	}
-
+	public void SetStrongAttackAnim(string Part){
+		if (Anim == null) {
+			return;
+		}
+		if (Part == "Charging") {
+			Anim.SetBool ("ReleaseStrongAttack", false);
+			Anim.SetBool ("ChargeStrongAttack", true);
+		} else if (Part == "Release") {
+			Anim.SetBool ("ChargeStrongAttack", false);
+			Anim.SetBool ("ReleaseStrongAttack", true);
+		}
+	}
 	void SetAnimOnScreen(){
 		if (Anim == null) {
 			return;

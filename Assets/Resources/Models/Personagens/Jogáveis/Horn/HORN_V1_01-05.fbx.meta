@@ -9036,7 +9036,7 @@ ModelImporter:
       events:
       - time: 0.068110764
         functionName: DesactiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0
@@ -9346,7 +9346,7 @@ ModelImporter:
       events:
       - time: 0.66872966
         functionName: ActiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0

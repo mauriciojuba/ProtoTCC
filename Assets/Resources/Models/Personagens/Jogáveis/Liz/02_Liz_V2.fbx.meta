@@ -12350,7 +12350,7 @@ ModelImporter:
         messageOptions: 0
       - time: 0.79144436
         functionName: ActiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0
@@ -12775,7 +12775,7 @@ ModelImporter:
       events:
       - time: 0.17112222
         functionName: DesactiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0
@@ -13197,10 +13197,10 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
