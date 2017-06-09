@@ -282,6 +282,9 @@ public class FSMAranha : MonoBehaviour
     private void Idle()
     {
 
+        if (TakeDamage)
+            state = FSMStates.Damage;
+
         if (Vector3.Distance(Target.transform.position, gameObject.transform.position) < Vision)
         {
             state = FSMStates.Walk;
@@ -308,6 +311,10 @@ public class FSMAranha : MonoBehaviour
     private void Patrol()
     {
 
+        if (TakeDamage)
+            state = FSMStates.Damage;
+
+
         Vector3 dir = waypoints[currentWayPoint].position - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * RotationSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
@@ -333,6 +340,9 @@ public class FSMAranha : MonoBehaviour
     #region Walk
     private void Walk()
     {
+
+        if (TakeDamage)
+            state = FSMStates.Damage;
 
         Vector3 dir = Target.transform.position;
 
@@ -368,6 +378,9 @@ public class FSMAranha : MonoBehaviour
     private void ATK1()
     {
 
+        if (TakeDamage)
+            state = FSMStates.Damage;
+
         //rotaciona o Npc apontando para o alvo
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Target.transform.position - myTransform.position), Time.deltaTime * RotationSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
@@ -389,7 +402,11 @@ public class FSMAranha : MonoBehaviour
     #region ATK2
     private void ATK2()
     {
-        GameObject part = Instantiate(Shot, transform.position, Quaternion.identity) as GameObject;
+
+        if (TakeDamage)
+            state = FSMStates.Damage;
+
+        GameObject part = Instantiate(Shot, Muzle.transform.position, Quaternion.identity) as GameObject;
         part.GetComponent<Rigidbody>().AddForce(transform.forward * force);
         Destroy(part, 5);
 

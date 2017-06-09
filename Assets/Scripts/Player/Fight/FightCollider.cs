@@ -43,7 +43,10 @@ public class FightCollider : MonoBehaviour {
 							col.gameObject.GetComponent<FSMMosquito> ().state = FSMMosquito.FSMStates.Damage;
 							col.gameObject.GetComponent<FSMMosquito> ().SetTakeDamageAnim ();
 						}
-
+                        if (col.gameObject.GetComponent<FSMAranha> () != null) {
+							col.gameObject.GetComponent<FSMAranha> ().state = FSMAranha.FSMStates.Damage;
+							col.gameObject.GetComponent<FSMAranha> ().SetTakeDamageAnim ();
+						}
 
 					}
 				}
