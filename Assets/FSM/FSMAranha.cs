@@ -271,7 +271,9 @@ public class FSMAranha : MonoBehaviour
 
     public void SpiderShot()
     {
-        state = FSMStates.Patrol;
+        GameObject part = Instantiate(Shot, Muzle.transform.position, Quaternion.identity) as GameObject;
+        part.GetComponent<Rigidbody>().AddForce(transform.forward * force);
+        Destroy(part, 5);
     }
 
     #endregion
@@ -288,6 +290,7 @@ public class FSMAranha : MonoBehaviour
 
         if (Vector3.Distance(Target.transform.position, gameObject.transform.position) < Vision)
         {
+            AranhaAnimator.SetBool("IsIdle", false);
             state = FSMStates.Walk;
         }
         TimeToNextPoint -= Time.deltaTime;
@@ -327,6 +330,7 @@ public class FSMAranha : MonoBehaviour
 
         if (dir.sqrMagnitude <= 1)
         {
+            AranhaAnimator.SetBool("IsWalk", false);
             state = FSMStates.Idle;
         }
         else
@@ -337,8 +341,10 @@ public class FSMAranha : MonoBehaviour
             state = FSMStates.Walk;
         }
         if (TakeDamage)
+        {
+            AranhaAnimator.SetBool("IsWalk", false);
             state = FSMStates.Damage;
-
+        }
     }
     #endregion
 
@@ -367,8 +373,10 @@ public class FSMAranha : MonoBehaviour
         }
 
         if (Distace <= EnemyDist)
+        {
+            AranhaAnimator.SetBool("IsWalk", false);
             state = FSMStates.ATK1;
-
+        }
         if (Distace > SafeDist)
         {
            
@@ -376,7 +384,10 @@ public class FSMAranha : MonoBehaviour
         }
 
         if (TakeDamage)
+        {
+            AranhaAnimator.SetBool("IsWalk", false);
             state = FSMStates.Damage;
+        }
 
     }
     #endregion
@@ -385,6 +396,7 @@ public class FSMAranha : MonoBehaviour
     #region ATK1
     private void ATK1()
     {
+        AranhaAnimator.SetBool("IsIdle", true);
 
         if (TakeDamage)
             state = FSMStates.Damage;
@@ -396,13 +408,21 @@ public class FSMAranha : MonoBehaviour
         TimerAtk += Time.deltaTime;
         if (Distace <= EnemyDist && TimerAtk >= CooldownAtk)
         {
+            AranhaAnimator.SetBool("IsIdle", false);
+            AranhaAnimator.SetTrigger("ATK");
             state = FSMStates.ATK2;
             TimerAtk = 0;
         }
         if (Distace > EnemyDist)
+        {
+            AranhaAnimator.SetBool("IsIdle", false);
             state = FSMStates.Patrol;
+        }
         if (TakeDamage)
+        {
+            AranhaAnimator.SetBool("IsIdle", false);
             state = FSMStates.Damage;
+        }
     }
     #endregion
 
@@ -413,14 +433,7 @@ public class FSMAranha : MonoBehaviour
 
         if (TakeDamage)
             state = FSMStates.Damage;
-
-        GameObject part = Instantiate(Shot, Muzle.transform.position, Quaternion.identity) as GameObject;
-        part.GetComponent<Rigidbody>().AddForce(transform.forward * force);
-        Destroy(part, 5);
-
             state = FSMStates.ATK1;
-
-
     }
     #endregion
 
@@ -428,11 +441,18 @@ public class FSMAranha : MonoBehaviour
     #region Damage
     private void Damage()
     {
+        AranhaAnimator.SetBool("TakeDamage", true);
+
         if (Life <= 0)
+        {
+            AranhaAnimator.SetBool("TakeDamage", false);
             state = FSMStates.Die;
+        }
         else
+        {
+            AranhaAnimator.SetBool("TakeDamage", false);
             state = FSMStates.Walk;
-               
+        }
            
         
 
@@ -499,6 +519,7 @@ public class FSMAranha : MonoBehaviour
     #region Die
     private void Die()
     {
+        AranhaAnimator.SetTrigger("Die");
         gameObject.GetComponent<Rigidbody>().useGravity = true;
 
     }
