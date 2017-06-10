@@ -55,7 +55,6 @@ public class FSMAranha : MonoBehaviour
     [SerializeField] private float TimerAtk;                   //Tempo de recarga do ataque
     [SerializeField] private float Distace;                    //Distancia entre o NPC e o player
     [SerializeField] private float TimeToChangeTarget = 5f;    //
-    [SerializeField] private Collider DeathCollider;
     [SerializeField] private bool reachScreen;
     public float velTransicao;                                 //Velocidade da tranzição pra tela
     public Transform model;
@@ -420,26 +419,13 @@ public class FSMAranha : MonoBehaviour
     #region Damage
     private void Damage()
     {
-        if (!onScreen)
-        {
-            if (!cor)
-            {
-                if (Life > 0 && Life <= MaxLife * 0.2f && !grappled)
-                {
-                }
-                else if (Life <= 0)
-                    state = FSMStates.Die;
-            }
-            TakeDamage = false;
-            if (AranhaAnimator.GetCurrentAnimatorStateInfo(0).IsName("Take Damage") && AranhaAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.7f && !grappled && Life > 0)
-            {
-                state = FSMStates.Walk;
-            }
-            else if (AranhaAnimator.GetCurrentAnimatorStateInfo(0).IsName("Take Damage") && AranhaAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.7f && grappled && Life > 0)
-            {
-                state = FSMStates.Grappled;
-            }
-        }
+        if (Life <= 0)
+            state = FSMStates.Die;
+        else
+            state = FSMStates.Walk;
+               
+           
+        
 
     }
     #endregion
