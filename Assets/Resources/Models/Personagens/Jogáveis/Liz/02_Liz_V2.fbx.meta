@@ -6810,7 +6810,7 @@ ModelImporter:
       events:
       - time: 0.24599
         functionName: ActiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0
@@ -6818,7 +6818,7 @@ ModelImporter:
         messageOptions: 0
       - time: 0.5561493
         functionName: DesactiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0
@@ -10242,7 +10242,7 @@ ModelImporter:
       events:
       - time: 0.42016935
         functionName: ActiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0
@@ -10250,7 +10250,7 @@ ModelImporter:
         messageOptions: 0
       - time: 0.57983065
         functionName: DesactiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0

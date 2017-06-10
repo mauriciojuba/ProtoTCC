@@ -49,17 +49,20 @@ public class SpecialPos : MonoBehaviour {
 				SetReachAnimation ();
 				transform.localEulerAngles = new Vector3 (0, transform.localEulerAngles.y, transform.localEulerAngles.z);
 
-				if(transform.localEulerAngles.y != 180)
-					transform.localEulerAngles = Vector3.MoveTowards(transform.localEulerAngles ,new Vector3 (transform.localEulerAngles.x, 180, transform.localEulerAngles.z), Speed * Time.deltaTime * MultiplierRotationSpeed);
+				if (transform.localEulerAngles.y != 180)
+					transform.localEulerAngles = Vector3.MoveTowards (transform.localEulerAngles, new Vector3 (transform.localEulerAngles.x, 180, transform.localEulerAngles.z), Speed * Time.deltaTime * MultiplierRotationSpeed);
 
-				if(transform.localEulerAngles.z != 0)
-					transform.localEulerAngles = Vector3.MoveTowards(transform.localEulerAngles ,new Vector3 (transform.localEulerAngles.x, transform.localEulerAngles.y, 0), Speed * Time.deltaTime * MultiplierRotationSpeed);
+				if (transform.localEulerAngles.z != 0)
+					transform.localEulerAngles = Vector3.MoveTowards (transform.localEulerAngles, new Vector3 (transform.localEulerAngles.x, transform.localEulerAngles.y, 0), Speed * Time.deltaTime * MultiplierRotationSpeed);
 			}
 			if (transform.localScale != new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet)) {
 				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet), Speed * Time.deltaTime * MultiplierScaleSpeed);
-			} else {
+			} 
+			if(transform.position == Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)) && transform.localScale == new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet)
+				&& transform.localEulerAngles == new Vector3(0,180,0)) {
+				SetPos = false;
 			}
-		}
+		} 
 	}
 
 	void SetReachAnimation(){
@@ -78,7 +81,7 @@ public class SpecialPos : MonoBehaviour {
 		if (Anim != null) {
 			Anim.SetBool ("GoToScreen", true);
 		}
-		transform.SetParent (transform.parent.GetComponent<UseSpecial> ().ScreenGlass);
+		transform.SetParent (transform.parent.GetComponent<Movimentacao3D> ().camScreen);
 		SetPos = true;
 	}
 

@@ -40,6 +40,7 @@ public class Life : MonoBehaviour {
 	public GameObject LifeSpritePrefab;
 	[SerializeField] private GameObject ScreenGlass;
 	[SerializeField] private CameraControl DollyCam;
+	public float MaxLife;
 	public float X, InitialX;
     #endregion
 	[SerializeField] private bool UpdateL;
@@ -66,6 +67,7 @@ public class Life : MonoBehaviour {
         }
 		if (LifeOF == LifeType.Player)
 		{
+			MaxLife = LifeQuant;
 			PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
 			//mudar a quantidade de vida para imagem aqui
 			Division = 100;
@@ -179,7 +181,6 @@ public class Life : MonoBehaviour {
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().freezeRotation = false;
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().isKinematic = false;
 			ListOfImg [QuantImgInScene - 1].GetComponent<Rigidbody> ().useGravity = true;
-			
 			ListOfImg.RemoveAt (QuantImgInScene - 1);
 			QuantImgInScene--;
 			X -= InitialX;

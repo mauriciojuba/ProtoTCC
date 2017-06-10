@@ -3931,7 +3931,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.3641462
+        functionName: ActiveCollider
+        data: Basic
+        objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.61344564
+        functionName: DesactiveCollider
+        data: Basic
+        objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -8400,7 +8416,7 @@ ModelImporter:
       events:
       - time: 0.22058749
         functionName: ActiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0
@@ -8408,7 +8424,7 @@ ModelImporter:
         messageOptions: 0
       - time: 0.57843107
         functionName: DesactiveCollider
-        data: 
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 8c8e71d585dcc1b4ba2acf7c460dee97,
           type: 3}
         floatParameter: 0
@@ -9355,6 +9371,14 @@ ModelImporter:
       - time: 0.005062874
         functionName: CanMoveFalse
         data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.92436814
+        functionName: DesactiveCollider
+        data: Basic
         objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
           type: 3}
         floatParameter: 0
