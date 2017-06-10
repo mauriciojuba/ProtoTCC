@@ -18,11 +18,11 @@ public class Resurrect : MonoBehaviour {
 		if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player1_3D") ||
 		   	col.CompareTag ("Player1_3D") || col.CompareTag ("Player1_3D")) 
 		{
-			if (Input.GetButtonDown ("Left Analog Button " + col.GetComponent<Movimentacao3D> ().PlayerNumber)) {
+			if (Input.GetButtonDown ("Left Analog Button P" + col.GetComponent<Movimentacao3D> ().PlayerNumber)) {
 				Timer += Time.deltaTime;
 			}
 
-			if (Input.GetButtonUp ("Left Analog Button " + col.GetComponent<Movimentacao3D> ().PlayerNumber)) {
+			if (Input.GetButtonUp ("Left Analog Button P" + col.GetComponent<Movimentacao3D> ().PlayerNumber)) {
 				Timer = 0;
 			}
 		}

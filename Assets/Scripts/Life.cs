@@ -64,17 +64,11 @@ public class Life : MonoBehaviour {
         {
            sfx = GetComponent<SFX>();
         }
-    }
-
-    void Awake () {
-
-        
-
-        if (LifeOF == LifeType.Player)
-        {
-            PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
+		if (LifeOF == LifeType.Player)
+		{
+			PlayerNumber = GetComponent<Movimentacao3D>().PlayerNumber;
 			//mudar a quantidade de vida para imagem aqui
-            Division = 100;
+			Division = 100;
 			if (PlayerNumber == 1) {
 				InitialX = 0.06f;
 				X = InitialX;
@@ -82,10 +76,17 @@ public class Life : MonoBehaviour {
 				InitialX = 0.06f;
 				X = 0.70f;
 			}
-        }
+		}
 		ScreenGlass = GameObject.FindWithTag ("ScreenGlass");
 		DollyCam = GameObject.FindWithTag ("DollyCam").GetComponent<CameraControl>();
-        UpdateLife();
+		UpdateLife();
+    }
+
+    void Awake () {
+
+        
+
+     
     }
 
 	void Update(){

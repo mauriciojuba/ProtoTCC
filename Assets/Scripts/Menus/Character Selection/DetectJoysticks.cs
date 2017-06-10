@@ -32,7 +32,7 @@ public class DetectJoysticks : MonoBehaviour {
 	[Range(1,5)]
 	[SerializeField] private float MaxTimer = 3;
 
-	[SerializeField] private GameObject Player;
+	[SerializeField] private GameObject Player2;
 	[SerializeField] private Transform Point;
 	[Range(650,1500)]
 	[SerializeField] private float Force = 650;
@@ -178,7 +178,7 @@ public class DetectJoysticks : MonoBehaviour {
 
 	void SummonPlayer(int Number){
 		if (Number == 2) {
-			P2 = GameObject.Instantiate (Player, Point.position, Point.rotation);
+			P2 = GameObject.Instantiate (Player2, Point.position, Point.rotation);
 			P2.transform.FindChild("PlayerModel").GetComponent<OptionsPlayer> ().CanMove = false;
 			P2.transform.FindChild("PlayerModel").GetComponent<OptionsPlayer> ().PlayerNumber = Number;
 			StartCoroutine (P2.transform.FindChild ("PlayerModel").GetComponent<OptionsPlayer> ().StarMove ());

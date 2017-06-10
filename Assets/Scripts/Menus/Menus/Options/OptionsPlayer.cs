@@ -68,9 +68,9 @@ public class OptionsPlayer : MonoBehaviour {
 				DirectionDefinition ();
 				Jump ();
 			}
-			if (CameraMain.gameObject.GetComponent<CameraMenu> ().InOptions) {
-				//TestPosition ();
-			}
+//			if (CameraMain.gameObject.GetComponent<CameraMenu> ().InOptions) {
+//				//TestPosition ();
+//			}
 			if (InStairs) {
 				if (Input.GetButtonDown ("X P1")) {
 					UsingStairs = true;
