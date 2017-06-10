@@ -297,13 +297,16 @@ public class FSMAranha : MonoBehaviour
             if (currentWayPoint >= waypoints.Length)
                 currentWayPoint = 0;
             TimeToNextPoint = TimeTo;
-            state = FSMStates.Patrol;
 
+            AranhaAnimator.SetBool("IsIdle", false);
+            state = FSMStates.Patrol;
         }
 
         if (TakeDamage)
+        {
+            AranhaAnimator.SetBool("IsIdle", false);
             state = FSMStates.Damage;
-
+        }
     }
     #endregion
 
@@ -311,6 +314,8 @@ public class FSMAranha : MonoBehaviour
     #region Patrol
     private void Patrol()
     {
+
+        AranhaAnimator.SetBool("IsWalk", true);
 
         if (TakeDamage)
             state = FSMStates.Damage;
@@ -341,6 +346,8 @@ public class FSMAranha : MonoBehaviour
     #region Walk
     private void Walk()
     {
+
+        AranhaAnimator.SetBool("IsWalk", true);
 
         if (TakeDamage)
             state = FSMStates.Damage;
