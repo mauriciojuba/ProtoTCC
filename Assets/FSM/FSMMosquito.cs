@@ -77,6 +77,7 @@ public class FSMMosquito : MonoBehaviour
 
 	private float LifeDrainInit;
 
+	private bool DrainingLife;
 
     #endregion
 
@@ -275,7 +276,7 @@ public class FSMMosquito : MonoBehaviour
 
     public void DrainLifeEnd()
     {
-
+		DrainingLife = false;
         ParticleSystem particleemitter = part.GetComponent<ParticleSystem>();
         if (particleemitter != null)
         {
@@ -301,6 +302,8 @@ public class FSMMosquito : MonoBehaviour
 
     public void DrainLifeStart()
     {
+
+		DrainingLife = true;
         part = Instantiate(ParticulaLifeDrain, VidaTatu.transform.position, Quaternion.identity) as GameObject;
 		part.transform.parent = VidaTatu.transform;
 
@@ -378,7 +381,7 @@ public class FSMMosquito : MonoBehaviour
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
                 camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
             //rotação pra deixar o modelo pronto pra movimentação na tela e colocar os pés do modelo no "vidro"
-            ModelMosquito.transform.localRotation = Quaternion.RotateTowards(ModelMosquito.transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
+			ModelMosquito.transform.localEulerAngles = Vector3.MoveTowards(ModelMosquito.transform.localEulerAngles, new Vector3(90,0,0), velTransicao * 10);
             transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao * 10);
             transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), velTransicao / 10);
             if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY, camScreen.localPosition.z) && transform.localRotation == Quaternion.AngleAxis(90, Vector3.right) && transform.localScale == new Vector3(0.5f, 0.5f, 0.5f))
@@ -407,19 +410,25 @@ public class FSMMosquito : MonoBehaviour
 
     void exitScreen()
     {
+
+		MoveSpeed = 4f;
+
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
                 1f, DollyCam.target.position.z), velTransicao);
 
-        ModelMosquito.transform.localRotation = Quaternion.RotateTowards(ModelMosquito.transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 10);
+		ModelMosquito.transform.localEulerAngles = Vector3.MoveTowards (ModelMosquito.transform.localEulerAngles, new Vector3(0,0,0), velTransicao * 20);
+		ModelMosquito.transform.localPosition = new Vector3(ModelMosquito.transform.localPosition.x, ModelMosquito.transform.localPosition.y, 0);
+
+
         transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(1, 1, 1), velTransicao / 10);
-        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 5);
-        model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0, 0, 0), velTransicao * 5);
+        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.AngleAxis(0, Vector3.right), velTransicao * 15);
+       // model.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0, 0, 0), velTransicao * 5);
 
 
         if (transform.localScale == new Vector3(1, 1, 1) && transform.localRotation.x == 0f)
         {
             rb.useGravity = true;
-            model.localRotation = Quaternion.Euler(0, 0, 0);
+          //  model.localRotation = Quaternion.Euler(0, 0, 0);
             toWorld = false;
         }
 
@@ -578,21 +587,26 @@ public class FSMMosquito : MonoBehaviour
         }
         if (onScreen)
         {
-            MosquitoAni.SetTrigger("TakeDamageScreen");
-            TakeDamage = false;
-			ParticleSystem particleemitter = part.GetComponent<ParticleSystem>();
-			if (particleemitter != null)
-			{
-				ParticleSystem.EmissionModule emit = particleemitter.emission;
-				emit.enabled = false;
-			}
-			Destroy(part, 5f);
 			StopAllCoroutines ();
+            MosquitoAni.SetTrigger("TakeDamageScreen");
+			MosquitoAni.SetBool ("LifeDrain", false);
+			if (part != null) {
+				ParticleSystem particleemitter = part.GetComponent<ParticleSystem> ();
+				if (particleemitter != null) {
+					ParticleSystem.EmissionModule emit = particleemitter.emission;
+					emit.enabled = false;
+				}
+				Destroy(part, 5f);
+			}
+
            // state = FSMStates.OnScreen;
 			Descer();
-			state = FSMStates.Fall;
-
-
+			if (Life > 0) {
+				state = FSMStates.Fall;
+			} else {
+				state = FSMStates.Die;
+			}
+			TakeDamage = false;
         }
 
     }
@@ -661,14 +675,31 @@ public class FSMMosquito : MonoBehaviour
         if(TakeDamage)
         state = FSMStates.Damage;
 
-        
+		if (VidaTatu.GetComponent<ScaleLife> ().TatuLife <= 0) {
+			DrainingLife = false;
+			Descer ();
+			StopAllCoroutines ();
+			if (part != null) {
+				ParticleSystem particleemitter = part.GetComponent<ParticleSystem> ();
+				if (particleemitter != null) {
+					ParticleSystem.EmissionModule emit = particleemitter.emission;
+					emit.enabled = false;
+				}
+				Destroy(part, 5f);
+			}
+			MosquitoAni.SetBool ("LifeDrain", false);
+		}
 
-        MosquitoAni.SetBool("LifeDrain", true);
-		//para não olhar direto pro tatu
-		Vector3 correctLook = Vector3.Lerp(direction.position, VidaTatu.transform.position, RotationSpeed * Time.deltaTime);
 
-		//olha para o tatu e coloca arruma a posição, ponta-cabeça
-		transform.LookAt(correctLook, new Vector3(-1, -1, 1));
+			MosquitoAni.SetBool ("LifeDrain", true);
+			//para não olhar direto pro tatu
+		if (DrainingLife) {
+			Vector3 correctLook = Vector3.Lerp (direction.position, VidaTatu.transform.position, RotationSpeed * Time.deltaTime);
+
+			//olha para o tatu e coloca arruma a posição, ponta-cabeça
+			transform.LookAt (correctLook, new Vector3 (-1, -1, 1));
+		}
+
 
 
     }
