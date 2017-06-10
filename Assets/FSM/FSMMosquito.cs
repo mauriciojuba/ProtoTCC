@@ -580,8 +580,18 @@ public class FSMMosquito : MonoBehaviour
         {
             MosquitoAni.SetTrigger("TakeDamageScreen");
             TakeDamage = false;
+			ParticleSystem particleemitter = part.GetComponent<ParticleSystem>();
+			if (particleemitter != null)
+			{
+				ParticleSystem.EmissionModule emit = particleemitter.emission;
+				emit.enabled = false;
+			}
+			Destroy(part, 5f);
+			StopAllCoroutines ();
            // state = FSMStates.OnScreen;
 			Descer();
+			state = FSMStates.Fall;
+
 
         }
 

@@ -2,29 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
 
 	public static bool gamePaused;
 
 	public GameObject pauseMenu;
+
+	[SerializeField] private EventSystem Event;
+	[SerializeField] private GameObject ButtonSelect;
+
 	public void SairDoJogo(){
 		Application.Quit();
 	}
 	public void SelecaoPersonagem(){
-		SceneManager.LoadScene(1);
+		gamePaused = false;
+		Time.timeScale = 1;
+		SceneManager.LoadScene("Selecao Personagens 3D");
 	}
 	public void MainMenu(){
-		SceneManager.LoadScene(0);
+		gamePaused = false;
+		Time.timeScale = 1;
+		SceneManager.LoadScene("Main Menu");
 	}
+
+	public void TemCerteza(string Menu){
+		Time.timeScale = 1;
+	}
+
 	void Update(){
 		if(Input.GetButtonDown("Start P1") || Input.GetButtonDown("Start P2")){
 			gamePaused = !gamePaused;
 			pauseMenu.SetActive(gamePaused);
+			Event.SetSelectedGameObject (ButtonSelect);
 		}
 		if(Input.GetButtonDown("PS4 Options") || Input.GetButtonDown("PS4 Share")){
 			gamePaused = !gamePaused;
 			pauseMenu.SetActive(gamePaused);
+		}
+
+		if (gamePaused) {
+			Time.timeScale = 0;
+		} else {
+			Time.timeScale = 1;
 		}
 	}
 }

@@ -11,10 +11,10 @@ public class Cheat : MonoBehaviour {
 		col = this.GetComponentInChildren<FightCollider>();
 	}
 	void Update () {
-		if((Input.GetButton("LT P1") || Input.GetButton("LT P2")) || Input.GetButton("PS4 L2")){
+		if(Input.GetAxisRaw("LT P" + GetComponent<Movimentacao3D>().PlayerNumber) >= 1){
 			col.Damage = 500;
 		}
-		else{
+		else {
 			col.Damage = 5;
 		}
 	}

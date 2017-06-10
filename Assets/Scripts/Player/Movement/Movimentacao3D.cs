@@ -316,8 +316,9 @@ public class Movimentacao3D : MonoBehaviour {
 			Jumping = false;
 		}
 		if (KeyboardCanControl) {
-			if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen || Input.GetKeyDown(KeyCode.Q) && !onScreen) {
+			if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen && !PauseMenu.gamePaused || Input.GetKeyDown(KeyCode.Q) && !onScreen && !PauseMenu.gamePaused) {
 				//desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
+				ActualDirection = 1;
 				SetAnimOnScreen ();
 				Jumping = true;
 				Vector3 V3 = rb.velocity;
@@ -330,7 +331,7 @@ public class Movimentacao3D : MonoBehaviour {
 				onScreen = true;
 			}
 		} else {
-			if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen) {
+			if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen && !PauseMenu.gamePaused) {
 				//desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
 				SetAnimOnScreen ();
 				Jumping = true;
@@ -358,7 +359,7 @@ float preventMovLock = 0;
         if (onScreen)
 		{
             //variavel para parar de controlar o jogador após ele chegar na tela
-            if (!reachScreen)
+			if (!reachScreen && !PauseMenu.gamePaused)
             {
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(camScreen.localPosition.x + _2dX,
                     camScreen.localPosition.y + _2dY, camScreen.localPosition.z), velTransicao);
@@ -391,9 +392,10 @@ float preventMovLock = 0;
 
             //se o jogador pedir pra descer
 			if (KeyboardCanControl) {
-				if (Input.GetButtonDown ("RB P" + PlayerNumber) || Input.GetKeyDown(KeyCode.T)) {
+				if (Input.GetButtonDown ("RB P" + PlayerNumber) && !PauseMenu.gamePaused || Input.GetKeyDown(KeyCode.T) && !PauseMenu.gamePaused) {
 					//tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
 					//SetAnimOffScreen();
+					ActualDirection = 0;
 					SetAnimOffScreen ();
 					transform.SetParent (playerRoot);
 					direcoes.transform.SetParent (playerRoot);
@@ -403,7 +405,7 @@ float preventMovLock = 0;
 					onScreen = false;
 				}
 			} else {
-				if (Input.GetButtonDown ("RB P" + PlayerNumber)) {
+				if (Input.GetButtonDown ("RB P" + PlayerNumber) && !PauseMenu.gamePaused) {
 					//tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
 					//SetAnimOffScreen();
 					SetAnimOffScreen ();
@@ -423,7 +425,7 @@ float preventMovLock = 0;
     void exitScreen()
     {
         //se a variavel q fala pra ele sair da tela tiver ligada ele deve consertar o tamanho e a rotação do personagem
-        if (toWorld)
+		if (toWorld && !PauseMenu.gamePaused)
         {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(DollyCam.target.position.x,
 				transform.position.y, DollyCam.target.position.z), velTransicao);
