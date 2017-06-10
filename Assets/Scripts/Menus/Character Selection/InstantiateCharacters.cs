@@ -31,6 +31,7 @@ public class InstantiateCharacters : MonoBehaviour {
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeQuant = DataS.P1SelectedCharacter.Life;
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeOF = Life.LifeType.Player;
 			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<UseSpecial> ().SpecialRef = DataS.P1SelectedCharacter.Special;
+			P1.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeSpritePrefab = DataS.P1Life;
 			P1.transform.FindChild ("3D_Player").tag = "Player1_3D";
 
 			if (P2Model != null) {
@@ -43,6 +44,7 @@ public class InstantiateCharacters : MonoBehaviour {
 				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeQuant = DataS.P2SelectedCharacter.Life;
 				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeOF = Life.LifeType.Player;
 				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<UseSpecial> ().SpecialRef = DataS.P2SelectedCharacter.Special;
+				P2.transform.FindChild ("3D_Player").gameObject.GetComponent<Life> ().LifeSpritePrefab = DataS.P2Life;
 				P2.transform.FindChild ("3D_Player").tag = "Player2_3D";			
 			}
 		}

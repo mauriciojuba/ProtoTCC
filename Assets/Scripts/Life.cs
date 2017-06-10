@@ -32,12 +32,12 @@ public class Life : MonoBehaviour {
     #region Variables For Players Life
     public List<GameObject> ListOfImg;
 	[SerializeField] private int PlayerNumber;
-	private GameObject LifeOBJ;
+	public GameObject LifeOBJ;
 	private GameObject Container;
 	private int Division;
 	public int QuantImgInScene;
 	[SerializeField] private int QuantImg;
-	[SerializeField] private GameObject LifeSpritePrefab;
+	public GameObject LifeSpritePrefab;
 	[SerializeField] private GameObject ScreenGlass;
 	[SerializeField] private CameraControl DollyCam;
 	public float X, InitialX;
