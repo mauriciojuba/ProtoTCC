@@ -258,7 +258,1351 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Spider:left
+        weight: 1
+      - path: Spider:Spider
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL/Spider:Saddle_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:Helmete_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL/Spider:R_Claw_01_CTRL1
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL/Spider:R_Claw_01_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Abdomen_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1/Spider:L_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1/Spider:R_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:Saddle_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01/Spider:Helmet_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01/Spider:L_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01/Spider:R_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01/Spider:L_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01/Spider:L_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01/Spider:L_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01/Spider:L_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01/Spider:R_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01/Spider:R_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01/Spider:R_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01/Spider:R_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:MESH
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Body_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:buttons_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Eyes_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Helmet_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Saddle_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:straps_low
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: 41
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Spider:left
+        weight: 1
+      - path: Spider:Spider
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL/Spider:Saddle_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:Helmete_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL/Spider:R_Claw_01_CTRL1
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL/Spider:R_Claw_01_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Abdomen_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1/Spider:L_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1/Spider:R_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:Saddle_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01/Spider:Helmet_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01/Spider:L_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01/Spider:R_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01/Spider:L_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01/Spider:L_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01/Spider:L_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01/Spider:L_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01/Spider:R_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01/Spider:R_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01/Spider:R_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01/Spider:R_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:MESH
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Body_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:buttons_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Eyes_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Helmet_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Saddle_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:straps_low
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack_Ranged
+      takeName: Attack_Ranged
+      firstFrame: 71
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Spider:left
+        weight: 1
+      - path: Spider:Spider
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL/Spider:Saddle_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:Helmete_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL/Spider:R_Claw_01_CTRL1
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL/Spider:R_Claw_01_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Abdomen_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1/Spider:L_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1/Spider:R_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:Saddle_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01/Spider:Helmet_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01/Spider:L_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01/Spider:R_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01/Spider:L_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01/Spider:L_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01/Spider:L_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01/Spider:L_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01/Spider:R_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01/Spider:R_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01/Spider:R_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01/Spider:R_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:MESH
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Body_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:buttons_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Eyes_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Helmet_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Saddle_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:straps_low
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take_Damage
+      takeName: Take_Damage
+      firstFrame: 101
+      lastFrame: 125
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Spider:left
+        weight: 1
+      - path: Spider:Spider
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL/Spider:Saddle_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:Helmete_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL/Spider:R_Claw_01_CTRL1
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL/Spider:R_Claw_01_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Abdomen_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1/Spider:L_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1/Spider:R_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:Saddle_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01/Spider:Helmet_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01/Spider:L_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01/Spider:R_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01/Spider:L_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01/Spider:L_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01/Spider:L_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01/Spider:L_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01/Spider:R_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01/Spider:R_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01/Spider:R_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01/Spider:R_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:MESH
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Body_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:buttons_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Eyes_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Helmet_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Saddle_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:straps_low
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Death
+      firstFrame: 126
+      lastFrame: 165
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Spider:left
+        weight: 1
+      - path: Spider:Spider
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL/Spider:Saddle_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:Helmete_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL/Spider:R_Claw_01_CTRL1
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL/Spider:R_Claw_01_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Abdomen_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1/Spider:L_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1/Spider:R_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:Saddle_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01/Spider:Helmet_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01/Spider:L_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01/Spider:R_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01/Spider:L_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01/Spider:L_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01/Spider:L_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01/Spider:L_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01/Spider:R_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01/Spider:R_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01/Spider:R_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01/Spider:R_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:MESH
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Body_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:buttons_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Eyes_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Helmet_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Saddle_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:straps_low
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack_Melee
+      takeName: Attack_Melee
+      firstFrame: 166
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Spider:left
+        weight: 1
+      - path: Spider:Spider
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_A_CTRL/Spider:L_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_B_CTRL/Spider:L_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_C_CTRL/Spider:L_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:L_Paw_D_CTRL/Spider:L_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Knee_A_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_A_CTRL/Spider:R_Paw_A_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Knee_B_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_B_CTRL/Spider:R_Paw_B_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Knee_C_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_C_CTRL/Spider:R_Paw_C_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Knee_D_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:R_Paw_D_CTRL/Spider:R_Paw_D_ik
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Abdomen_CTRL/Spider:Saddle_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:Helmete_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:L_Claw_RT_CTRL/Spider:R_Claw_01_CTRL1
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:BASE_CTRL/Spider:ROOT_CTRL/Spider:Head_CTRL/Spider:R_Claw_RT_CTRL/Spider:R_Claw_01_CTRL
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Abdomen_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:L_Strap_Button/Spider:L_Strap_Button1/Spider:L_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:R_Strap_Button/Spider:R_Strap_Button1/Spider:R_Strap_Button2
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Abdomen_01/Spider:Saddle_01/Spider:Saddle_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:Helmet_01/Spider:Helmet_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:L_Claw_RT/Spider:L_Claw_01/Spider:L_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:Head/Spider:R_Claw_RT/Spider:R_Claw_01/Spider:R_Claw_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_A_RT/Spider:L_Paw_A_01/Spider:L_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_B_RT/Spider:L_Paw_B_01/Spider:L_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_C_RT/Spider:L_Paw_C_01/Spider:L_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:L_Paw_D_RT/Spider:L_Paw_D_01/Spider:L_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_A_RT/Spider:R_Paw_A_01/Spider:R_Paw_A_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_B_RT/Spider:R_Paw_B_01/Spider:R_Paw_B_03
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_C_RT/Spider:R_Paw_C_01/Spider:R_Paw_C_02
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01
+        weight: 1
+      - path: Spider:Spider/Spider:JOINTS/Spider:ROOT/Spider:R_Paw_D_RT/Spider:R_Paw_D_01/Spider:R_Paw_D_02
+        weight: 1
+      - path: Spider:Spider/Spider:MESH
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Body_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:buttons_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Eyes_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Helmet_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:L_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_A_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_B_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_C_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:R_Paw_D_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:Saddle_low
+        weight: 1
+      - path: Spider:Spider/Spider:MESH/Spider:straps_low
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

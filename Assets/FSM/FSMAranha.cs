@@ -281,6 +281,8 @@ public class FSMAranha : MonoBehaviour
     private void Idle()
     {
 
+        AranhaAnimator.SetBool("IsIdle", true);
+
         if (TakeDamage)
             state = FSMStates.Damage;
 
