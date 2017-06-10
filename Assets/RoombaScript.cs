@@ -17,8 +17,4 @@ public class RoombaScript : MonoBehaviour {
 
 
 	}
-
-	void EndGame(){
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("Thanks");
-	}
 }
