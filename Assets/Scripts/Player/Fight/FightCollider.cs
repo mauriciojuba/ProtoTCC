@@ -51,10 +51,7 @@ public class FightCollider : MonoBehaviour {
 				}
 			}
 		} else {
-			if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player2_3D") ||
-				col.CompareTag ("Player3_3D") || col.CompareTag ("Player4_3D")) {
-				col.GetComponent<Movimentacao3D> ().SetTakeDamageAnim ();
-			}
+			
 			if (col.gameObject.GetComponent<Life> () != null) {
 				if (particula != null) {
 					GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
@@ -63,10 +60,18 @@ public class FightCollider : MonoBehaviour {
 
 				}
 				if (col.gameObject.GetComponent<Life> ().LifeOF == Life.LifeType.Player) {
-					col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().TatuLife -= (int)Damage;
-					col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().UpdateScaleLife ();
+					if (col.gameObject.GetComponent<Life> ().LifeQuant >= col.gameObject.GetComponent<Life> ().Division) {
+						if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player2_3D") ||
+							col.CompareTag ("Player3_3D") || col.CompareTag ("Player4_3D")) {
+							col.GetComponent<Movimentacao3D> ().SetTakeDamageAnim ();
+						}
+						col.gameObject.GetComponent<Life> ().LifeQuant -= (int)Damage;
+						col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().TatuLife -= (int)Damage;
+						col.gameObject.GetComponent<Life> ().ListOfImg [col.gameObject.GetComponent<Life> ().QuantImgInScene - 1].GetComponent<ScaleLife> ().UpdateScaleLife ();
+						col.gameObject.GetComponent<Life> ().UpdateLife ();
+					}
 				}
-				col.gameObject.GetComponent<Life> ().UpdateLife ();
+			
 			}
             if(GetComponent<BoxCollider>() != null)
 			GetComponent<BoxCollider> ().enabled = false;

@@ -17,9 +17,17 @@ public class SpecialPos : MonoBehaviour {
 
 	public bool GoOffScreen;
 	void OnEnable () {
-		X = 0.05f;
+
 		Anim = GetComponent<Animator> ();
 		if (PlayerNumber == 1) {
+			X = 0.05f;
+			Y = 0.75f;
+			Z = 1;
+			X = X * (XRef.SpecialInScreen.Count);
+		}
+
+		if (PlayerNumber == 2) {
+			X = 0.70f;
 			Y = 0.75f;
 			Z = 1;
 			X = X * (XRef.SpecialInScreen.Count);

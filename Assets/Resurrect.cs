@@ -12,13 +12,15 @@ public class Resurrect : MonoBehaviour {
 			Timer = 0;
 			transform.parent.GetComponent<Movimentacao3D> ().CanMove = true;
 			transform.parent.GetComponent<Movimentacao3D> ().Stunned = false;
+			transform.parent.GetComponent<Life> ().LifeQuant += 299;
+			transform.parent.GetComponent<Life> ().UpdateLife ();
 		}
 	}
 	void OnTriggerStay(Collider col){
-		if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player1_3D") ||
-		   	col.CompareTag ("Player1_3D") || col.CompareTag ("Player1_3D")) 
+		if (col.CompareTag ("Player1_3D") || col.CompareTag ("Player2_3D") ||
+		   	col.CompareTag ("Player3_3D") || col.CompareTag ("Player4_3D")) 
 		{
-			if (Input.GetButtonDown ("Left Analog Button P" + col.GetComponent<Movimentacao3D> ().PlayerNumber)) {
+			if (Input.GetButton ("Left Analog Button P" + col.GetComponent<Movimentacao3D> ().PlayerNumber)) {
 				Timer += Time.deltaTime;
 			}
 

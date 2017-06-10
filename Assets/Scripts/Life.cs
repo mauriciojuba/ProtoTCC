@@ -34,7 +34,7 @@ public class Life : MonoBehaviour {
 	[SerializeField] private int PlayerNumber;
 	public GameObject LifeOBJ;
 	private GameObject Container;
-	private int Division;
+	public int Division;
 	public int QuantImgInScene;
 	[SerializeField] private int QuantImg;
 	public GameObject LifeSpritePrefab;
