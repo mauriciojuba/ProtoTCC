@@ -520,7 +520,7 @@ public class FSMAranha : MonoBehaviour
     private void Die()
     {
         AranhaAnimator.SetTrigger("Die");
-        Destroy(this);
+        
     }
     #endregion
 
