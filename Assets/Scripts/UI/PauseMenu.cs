@@ -32,10 +32,14 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	void Update(){
-		if(Input.GetButtonDown("Start P1") || Input.GetButtonDown("Start P2")){
+		if(Input.GetButtonDown("Start P1") || Input.GetButtonDown("Start P2") || Input.GetKeyDown(KeyCode.P)){
 			gamePaused = !gamePaused;
 			pauseMenu.SetActive(gamePaused);
-			Event.SetSelectedGameObject (ButtonSelect);
+			if (gamePaused) {
+				Event.SetSelectedGameObject (ButtonSelect);
+			} else {
+				Event.SetSelectedGameObject (null);
+			}
 		}
 		if(Input.GetButtonDown("PS4 Options") || Input.GetButtonDown("PS4 Share")){
 			gamePaused = !gamePaused;

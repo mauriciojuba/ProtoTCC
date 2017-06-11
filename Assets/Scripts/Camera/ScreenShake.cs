@@ -67,15 +67,15 @@ public class ScreenShake : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Shake(0.2f,0.5f);
-        }
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            Blur();
-            
-        }
+//        if (Input.GetKeyDown(KeyCode.T))
+//        {
+//            Shake(0.2f,0.5f);
+//        }
+//        if (Input.GetKeyDown(KeyCode.Y))
+//        {
+//            Blur();
+//            
+//        }
 		
 	
 	}
