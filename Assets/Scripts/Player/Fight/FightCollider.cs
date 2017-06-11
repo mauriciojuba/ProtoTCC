@@ -8,6 +8,7 @@ public class FightCollider : MonoBehaviour {
     public GameObject particula;
 	public string CharacterName;
 	public GameObject Player;
+    
 
 
 	void OnTriggerEnter (Collider col){
@@ -28,16 +29,23 @@ public class FightCollider : MonoBehaviour {
 							SoundManager.PlaySFX (gameObject, "Liz_Atk-02");
 
 						//coloca particula de Ataque
-						if (particula != null) {
-							GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
+						if (particula != null)
+                        {
+                            ScreenShake.Instance.Shake(0.1f, 0.1f);
+                            GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
 							float timePart = part.GetComponent<ParticleSystem> ().duration;
 							if (Player.GetComponent<Movimentacao3D> ().onScreen) {
 								part.transform.localScale = new Vector3 (0.3f, 0.3f, 0.3f);
 							}
 							GameObject.Destroy (part, timePart);
 
-						}
-						col.gameObject.GetComponent<Life> ().UpdateLife ();
+                            
+
+                        }
+
+                       
+
+                        col.gameObject.GetComponent<Life> ().UpdateLife ();
 						if (col.gameObject.GetComponent<FSMMosquito> () != null) {
 							col.gameObject.GetComponent<FSMMosquito> ().state = FSMMosquito.FSMStates.Damage;
 							col.gameObject.GetComponent<FSMMosquito> ().SetTakeDamageAnim ();
@@ -54,7 +62,8 @@ public class FightCollider : MonoBehaviour {
 			
 			if (col.gameObject.GetComponent<Life> () != null) {
 				if (particula != null) {
-					GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
+                    ScreenShake.Instance.Shake(0.1f, 0.1f);
+                    GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
 					float timePart = part.GetComponent<ParticleSystem> ().duration;
 					GameObject.Destroy (part, timePart);
 

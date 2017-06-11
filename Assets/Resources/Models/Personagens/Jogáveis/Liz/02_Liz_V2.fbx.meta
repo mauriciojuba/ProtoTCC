@@ -9365,15 +9365,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.060344826
-        functionName: EmitAllParticle
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: a8739704e72ad2d478a84f121715fb90,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1
@@ -9790,39 +9782,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.49772722
-        functionName: EmitParticleRightArm
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: a8739704e72ad2d478a84f121715fb90,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.49772722
-        functionName: EmitParticleLeftFoot
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: a8739704e72ad2d478a84f121715fb90,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.0007575983
-        functionName: EmitParticleRightFoot
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: a8739704e72ad2d478a84f121715fb90,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.0007575983
-        functionName: EmitParticleLeftArm
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: a8739704e72ad2d478a84f121715fb90,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1

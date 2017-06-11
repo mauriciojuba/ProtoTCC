@@ -520,8 +520,7 @@ public class FSMAranha : MonoBehaviour
     private void Die()
     {
         AranhaAnimator.SetTrigger("Die");
-        gameObject.GetComponent<Rigidbody>().useGravity = true;
-
+        Destroy(this);
     }
     #endregion
 
