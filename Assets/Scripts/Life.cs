@@ -100,6 +100,7 @@ public class Life : MonoBehaviour {
 		if (QuantImgInScene < QuantImg && LifeOF == LifeType.Player) {
 			UpdateLife ();
 		}
+
 		if (LifeOF == LifeType.Object) {
 			UpdateLife ();
 		}
@@ -142,6 +143,7 @@ public class Life : MonoBehaviour {
 				Instantiate (ObjDestruido, transform.position, Quaternion.identity);
 				break;
 			}
+
             DropLoot();
             Destroy(gameObject);
         }
