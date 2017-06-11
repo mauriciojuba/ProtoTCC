@@ -57,6 +57,7 @@ public class SFX : MonoBehaviour {
 					LuzQuebrando lq = luz.GetComponent<LuzQuebrando> ();
 					if (lq != null) {
 						lq.Quebrou = true;
+                        SoundManager.PlaySFX(gameObject, "holofote_falhando_01");
 					}
 				}
 			}
