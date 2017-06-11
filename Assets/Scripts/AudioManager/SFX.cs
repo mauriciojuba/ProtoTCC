@@ -9,6 +9,7 @@ public class SFX : MonoBehaviour {
     public string Objeto;
     public AudioMixerGroup Mixer;
 	[SerializeField] private AudioSource Audio;
+	public GameObject luz;
 
     public void PlaySoundSFX(string Name)
     {
@@ -50,13 +51,23 @@ public class SFX : MonoBehaviour {
                 Audio = GetComponent<AudioSource>();
                 Audio.outputAudioMixerGroup = Mixer;
             }
+
+			if (Objeto == "Destruct") {
+				if (luz != null) {
+					LuzQuebrando lq = luz.GetComponent<LuzQuebrando> ();
+					if (lq != null) {
+						lq.Quebrou = true;
+					}
+				}
+			}
         }
 
         if (hit.gameObject.name == "Roomba")
         {
             if (Objeto == "Destruct")
             {
-                SoundManager.PlayCappedSFX(SoundManager.LoadFromGroup("Objetos Quebrando"), "1");
+
+				SoundManager.PlayCappedSFX(SoundManager.LoadFromGroup("Objetos Quebrando"), "1");
             }
         }
 
