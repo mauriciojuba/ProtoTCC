@@ -39,10 +39,10 @@ public class Fight : MonoBehaviour
 	public void ActiveCollider(string StyleDamage){
 		if (StyleDamage == "Basic") {
 			DamageCollider.enabled = true;
-			DamageCollider.gameObject.GetComponent<FightCollider> ().Damage = Random.Range (MinDamage, MaxDamage);
+			//DamageCollider.gameObject.GetComponent<FightCollider> ().Damage = Random.Range (MinDamage, MaxDamage);
 		} else if (StyleDamage == "Strong") {
 			StrongDamageCollider.enabled = true;
-			StrongDamageCollider.gameObject.GetComponent<FightCollider> ().Damage = StrongDamage;
+			//StrongDamageCollider.gameObject.GetComponent<FightCollider> ().Damage = StrongDamage;
 		}
 	}
 
