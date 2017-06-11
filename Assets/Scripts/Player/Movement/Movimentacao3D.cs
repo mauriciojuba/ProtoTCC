@@ -54,7 +54,7 @@ public class Movimentacao3D : MonoBehaviour {
 	public LayerMask SombraIgnorePlayer;
 
 	[SerializeField] private GameObject ResurrectCol;
-	[SerializeField] private bool KeyboardCanControl;
+	[SerializeField] public bool KeyboardCanControl;
 
 	[SerializeField] private float ScreenX,ScreenY,ScreenZ;
 	[SerializeField] private float RotScreenX, RotScreenY, RotScreenZ;

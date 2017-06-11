@@ -15,6 +15,7 @@ public class ApplyCombo: MonoBehaviour{
 	void Start(){
 		combo1.PlayerNumber = GetComponent<Movimentacao3D> ().PlayerNumber;
 		AnimRef = GetComponent<Movimentacao3D> ();
+		combo1.Mov = AnimRef;
 	}
 
 	void Update(){
@@ -89,6 +90,7 @@ public class Combo{
 	public int PlayerNumber;
 	public int CurrentIndex = 0;
 	public bool Attacking;
+	public Movimentacao3D Mov;
 
 	public float TimeBetweenButtons = 0.4f;
 	public float TimeLastButtonPressed;
@@ -102,12 +104,22 @@ public class Combo{
 			Attacking = false;
 		}
 		if (CurrentIndex < Buttons.Length) {
-			if(Buttons[CurrentIndex] == "X" && Input.GetButtonDown("X P" + PlayerNumber) || Buttons[CurrentIndex] == "X" && Input.GetKeyDown(KeyCode.J) ||
-			   Buttons[CurrentIndex] == "Y" && Input.GetButtonDown("Y P" + PlayerNumber) || Buttons[CurrentIndex] == "Y" && Input.GetKeyDown(KeyCode.I)){
-				TimeLastButtonPressed = Time.time;
-				CurrentIndex++;
-				Attacking = true;
-				return true;
+			if (Mov.KeyboardCanControl) {
+				if (Buttons [CurrentIndex] == "X" && Input.GetButtonDown ("X P" + PlayerNumber) || Buttons [CurrentIndex] == "X" && Input.GetKeyDown (KeyCode.J) ||
+				    Buttons [CurrentIndex] == "Y" && Input.GetButtonDown ("Y P" + PlayerNumber) || Buttons [CurrentIndex] == "Y" && Input.GetKeyDown (KeyCode.I)) {
+					TimeLastButtonPressed = Time.time;
+					CurrentIndex++;
+					Attacking = true;
+					return true;
+				}
+			} else {
+				if (Buttons [CurrentIndex] == "X" && Input.GetButtonDown ("X P" + PlayerNumber) ||
+					Buttons [CurrentIndex] == "Y" && Input.GetButtonDown ("Y P" + PlayerNumber)) {
+					TimeLastButtonPressed = Time.time;
+					CurrentIndex++;
+					Attacking = true;
+					return true;
+				}
 			}
 		}
 		if (CurrentIndex >= Buttons.Length) {

@@ -20,8 +20,10 @@ public class LuzQuebrando : MonoBehaviour {
 	void Update(){
 		if (Quebrou && !blinking && !end) {
 			StartCoroutine (Pisca ());
-			rb = gameObject.GetComponent<Rigidbody> ();
-			rb.useGravity = true;
+			if (gameObject.GetComponent<Rigidbody> () != null) {
+				rb = gameObject.GetComponent<Rigidbody> ();
+				rb.useGravity = true;
+			}
 			GameObject part = Instantiate (particle, lamp.transform.position, lamp.transform.rotation) as GameObject;
 			part.transform.parent = this.gameObject.transform;
 			ParticleSystem emit = part.GetComponent<ParticleSystem> ();
