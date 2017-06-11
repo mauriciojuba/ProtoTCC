@@ -45,7 +45,7 @@ public class PickThrow : MonoBehaviour {
 		}
 		if (PlayerNum != 0) {
 			if (KeyboardCanControl) {
-				if (Input.GetButtonDown ("B P" + PlayerNum) && !Grabbing || Input.GetKeyDown(KeyCode.L)) {
+				if (Input.GetButtonDown ("B P" + PlayerNum) && !Grabbing || Input.GetKeyDown(KeyCode.L) && !Grabbing) {
 					if (CanPick) {
 						transform.parent.GetComponent<Movimentacao3D> ().SetGrabAnim ();
 					} else {

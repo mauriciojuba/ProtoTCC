@@ -417,6 +417,7 @@ float preventMovLock = 0;
 				if (Input.GetButtonDown ("RB P" + PlayerNumber) && !PauseMenu.gamePaused) {
 					//tira ele do parent, ativa a variavel que fala que é pra ir pro 3D, liga a gravidade, e desativa a variavel que fala q ele ta na tela
 					//SetAnimOffScreen();
+					ActualDirection = 0;
 					SetAnimOffScreen ();
 					transform.SetParent (playerRoot);
 					direcoes.transform.SetParent (playerRoot);

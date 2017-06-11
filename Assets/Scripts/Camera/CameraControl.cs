@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraControl : MonoBehaviour {
 
@@ -21,6 +22,8 @@ public class CameraControl : MonoBehaviour {
     public bool playerOnScreen;
 
     public Transform target;
+
+	[SerializeField] private Image Fader;
 
 	public List<GameObject> StunnedPlayers;
 
@@ -159,8 +162,14 @@ public class CameraControl : MonoBehaviour {
     
 	void ResetGame(){
 		if (StunnedPlayers.Count == players.Length) {
-			//colocar o nome da cena aqui----------------------\|/
-			UnityEngine.SceneManagement.SceneManager.LoadScene (0);
+
+			Color c = Fader.color;
+			c.a += Time.deltaTime / 5;
+			Fader.color = c;
+			//colocar o nome da cena aqui--------------------------\|/
+			if (c.a >= 1) {
+				UnityEngine.SceneManagement.SceneManager.LoadScene ("Level 1A");
+			}
 		}
 	}
 

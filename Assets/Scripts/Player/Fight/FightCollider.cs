@@ -86,8 +86,7 @@ public class FightCollider : MonoBehaviour {
 			GetComponent<BoxCollider> ().enabled = false;
 		}
 		if (col.CompareTag ("Luz")) {
-			if (col.GetComponent<LuzQuebrando> () != null && !col.GetComponent<LuzQuebrando> ().Quebrou)
-				col.GetComponent<LuzQuebrando> ().StartCoroutine (col.GetComponent<LuzQuebrando> ().Pisca ());
+			col.GetComponent<LuzQuebrando> ().Quebrou = true;
 		}
     }
 }
