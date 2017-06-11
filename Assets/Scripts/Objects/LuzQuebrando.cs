@@ -33,7 +33,7 @@ public class LuzQuebrando : MonoBehaviour {
 	}
 
 	public IEnumerator LampFade(){
-		float counter = 0;
+        float counter = 0;
 		float duration = (longBlink * ((longBlinkDuration * 2) + longBlinkDuration) + shortBlink * ((shortBlinkDuration * 2) + shortBlinkDuration) + shortBlinkDuration)*15;
 		Renderer rend = lamp.GetComponent<Renderer> ();
 		Material mat = rend.material;

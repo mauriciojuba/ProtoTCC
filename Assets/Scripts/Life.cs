@@ -9,7 +9,7 @@ public class Life : MonoBehaviour {
 
 	public enum LifeType {Player, Enemy, Boss, Object};
     public enum EnemyType {Mosquito, Aranha};
-	public enum ObjectType {Box, Barricade};
+	public enum ObjectType {Box, Barricade, Luz};
     public LifeType LifeOF;
     public EnemyType TypeEnemy;
 	public ObjectType TypeOfObject;
@@ -138,14 +138,25 @@ public class Life : MonoBehaviour {
 				if (sfx != null) {
 					sfx.PlaySoundSfxGrupo ("Caixa Quebrando");
 				}
-				break;
+                    Destroy(gameObject);
+                    break;
 			case ObjectType.Barricade:
 				Instantiate (ObjDestruido, transform.position, Quaternion.identity);
-				break;
+                    Destroy(gameObject);
+                    break;
+
+                case ObjectType.Luz:
+                    if(gameObject.GetComponent<LuzQuebrando>() != null)
+                    {
+                        gameObject.GetComponent<LuzQuebrando>().Quebrou = true;
+                        SoundManager.PlaySFX(gameObject, "holofote_falhando_01");
+                        Destroy(this);
+                    }
+                    break;
 			}
 
             DropLoot();
-            Destroy(gameObject);
+            
         }
     }
     void DestroyObject()
