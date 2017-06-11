@@ -5,10 +5,6 @@ using UnityEngine;
 public class LuzQuebrando : MonoBehaviour {
 
     public Light Luz;
-    public bool Bateu;
-    public bool quebro;
-
-
 
     IEnumerator Pisca()
     {
@@ -38,16 +34,4 @@ public class LuzQuebrando : MonoBehaviour {
             Luz.enabled = false;
         }
     }
-
-
-
-	// Use this for initialization
-	void Start () {
-        StartCoroutine(Pisca());
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
 }
