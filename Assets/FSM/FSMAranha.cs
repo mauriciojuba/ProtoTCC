@@ -313,7 +313,7 @@ public class FSMAranha : MonoBehaviour
     }
     #endregion
 
-    //estado de patrulha do mosquito
+    //estado de patrulha da Aranha
     #region Patrol
     private void Patrol()
     {
@@ -392,7 +392,7 @@ public class FSMAranha : MonoBehaviour
     }
     #endregion
 
-    //estado de ataque fraco do mosquito
+    //estado de ataque fraco da Aranha
     #region ATK1
     private void ATK1()
     {
@@ -426,7 +426,7 @@ public class FSMAranha : MonoBehaviour
     }
     #endregion
 
-    //estado de ataque forte do mosquito
+    //estado de ataque forte da Aranha
     #region ATK2
     private void ATK2()
     {
@@ -485,7 +485,6 @@ public class FSMAranha : MonoBehaviour
     }
     #endregion
 
-    //estado do mosquito agarrado
     #region Grappled
     private void Grappled()
     {
@@ -497,7 +496,6 @@ public class FSMAranha : MonoBehaviour
     }
     #endregion
 
-    //estado do mosquito sendo arremessado
     #region Thrown
     private void Thrown()
     {
@@ -520,7 +518,6 @@ public class FSMAranha : MonoBehaviour
     private void Die()
     {
         AranhaAnimator.SetTrigger("Die");
-        
     }
     #endregion
 
