@@ -30,9 +30,9 @@ public class ScreenShake : MonoBehaviour {
         CancelInvoke("StopShaking");
         Invoke("StopShaking", duration);
     }
-    public void Blur(float transitionSpeed)
+    public void Blur()
     {
-        _blurTransition = transitionSpeed;
+        _blurTransition = 20;
         isBlur = true;
         //CancelInvoke("ClearBlur");
         //Invoke("ClearBlur", 1f);
@@ -54,7 +54,7 @@ public class ScreenShake : MonoBehaviour {
         if(isBlur){
             var focalLenght = ppProfile.depthOfField.settings;
             if(focalLenght.focalLength <= 80){
-                focalLenght.focalLength += Time.deltaTime * _blurTransition * 2;
+                focalLenght.focalLength += Time.deltaTime * _blurTransition * 8;
                 ppProfile.depthOfField.settings = focalLenght;
             }
             else isBlur = false;
@@ -62,7 +62,7 @@ public class ScreenShake : MonoBehaviour {
         else{
             var focalLenght = ppProfile.depthOfField.settings;
             if(focalLenght.focalLength >= 40){
-                focalLenght.focalLength -= Time.deltaTime * _blurTransition;
+                focalLenght.focalLength -= Time.deltaTime * _blurTransition / 2;
                 ppProfile.depthOfField.settings = focalLenght;
             }
         }
@@ -73,7 +73,7 @@ public class ScreenShake : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            Blur(20f);
+            Blur();
             
         }
 		

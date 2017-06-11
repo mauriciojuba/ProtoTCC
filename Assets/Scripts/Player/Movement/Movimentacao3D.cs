@@ -368,6 +368,8 @@ float preventMovLock = 0;
 				if (transform.localPosition == new Vector3(camScreen.localPosition.x + _2dX, camScreen.localPosition.y + _2dY,camScreen.localPosition.z))
 				{
 					landOnScreen = true;
+					ScreenShake.Instance.Shake(0.2f,0.1f);
+					ScreenShake.Instance.Blur();
 				}
 				if(landOnScreen){
 					transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(90, Vector3.right), velTransicao/2);
