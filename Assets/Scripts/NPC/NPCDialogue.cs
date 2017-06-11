@@ -32,7 +32,9 @@ public class NPCDialogue : MonoBehaviour {
 	//definir se esta rolando letras.
 	private bool IsScrolling;
 	//player mais proximo.
-	private Transform Target;
+	[SerializeField] private Transform Target;
+
+	[SerializeField] bool InRange;
 
 	void Start () {
 
@@ -49,44 +51,41 @@ public class NPCDialogue : MonoBehaviour {
 	
 	void Update () {
 		//calcula qual player esta mais proximo
-		Target = SelectTarget (P1T, P2T, P3T, P4T);
+		if (!InDialogue) {
+			Target = SelectTarget (P1T, P2T, P3T, P4T);
+		}
 
-		//se for o player 1, os controles de dialogo passam para o player 1.
-		if (Target == P1T) {
 			//para iniciar o dialogo, apertar X
-			if (Input.GetButtonDown ("X P1") && Vector3.Distance (transform.position, Target.position)
-			    < 5 && !InDialogue) {
-				//começa a rolar as letras e inicia o dialogo
-				StartCoroutine (Scroll ());
-				InDialogue = true;
-				DialogueActive.DialogueActive = true;
-				P1T.gameObject.GetComponent<Movimentacao3D> ().CanMove = false;
-			}
-			if (Input.GetButtonDown ("A P1") && Vector3.Distance (transform.position, Target.position)
-			     < 5 && InDialogue) {
-				//se as letras estiverem rolando e apertar A, mostra a frase inteira.
-				if (IsScrolling) {
-					NPCText.text = QuantDialogues [ActualDialogue].Words [ActualWords];
-					IsScrolling = false;
+		if (Input.GetButtonDown ("X P" + Target.gameObject.GetComponent<Movimentacao3D> ().PlayerNumber) && InRange && !InDialogue) {
+			//começa a rolar as letras e inicia o dialogo
+			StartCoroutine (Scroll ());
+			InDialogue = true;
+			DialogueActive.DialogueActive = true;
+			Target.gameObject.GetComponent<Movimentacao3D> ().InDialogue = true;
+		}
+		if (Input.GetButtonDown ("A P" + Target.gameObject.GetComponent<Movimentacao3D>().PlayerNumber) && InDialogue) {
+			//se as letras estiverem rolando e apertar A, mostra a frase inteira.
+			if (IsScrolling) {
+				NPCText.text = QuantDialogues [ActualDialogue].Words [ActualWords];
+				IsScrolling = false;
+			} else {
+				//se a linha que esta sendo mostrada nao for a ultima, volta a rolar as letras da proxima linha.
+				if (ActualWords < QuantDialogues [ActualDialogue].Words.Length - 1) {
+					ActualWords++;
+					NPCText.text = "";
+					StartCoroutine (Scroll ());
 				} else {
-					//se a linha que esta sendo mostrada nao for a ultima, volta a rolar as letras da proxima linha.
-					if (ActualWords < QuantDialogues [ActualDialogue].Words.Length - 1) {
-						ActualWords++;
-						NPCText.text = "";
-						StartCoroutine (Scroll ());
+					//se a linha que esta sendo mostrada for a ultima, desativa o dialogo.
+					Target.gameObject.GetComponent<Movimentacao3D> ().StartCoroutine(Target.gameObject.GetComponent<Movimentacao3D>().SetDialogueFalse());
+					ActualWords = 0;
+					NPCText.text = "";
+					InDialogue = false;
+					DialogueActive.DialogueActive = false;
+					//se caso tiver mais de um tipo de dialogo, ele passa para o proximo dialogo.
+					if (ActualDialogue < QuantDialogues.Length - 1) {
+						ActualDialogue++;
 					} else {
-						//se a linha que esta sendo mostrada for a ultima, desativa o dialogo.
-						P1T.gameObject.GetComponent<Movimentacao3D> ().CanMove = true;
-						ActualWords = 0;
-						NPCText.text = "";
-						InDialogue = false;
-						DialogueActive.DialogueActive = false;
-						//se caso tiver mais de um tipo de dialogo, ele passa para o proximo dialogo.
-						if (ActualDialogue < QuantDialogues.Length - 1) {
-							ActualDialogue++;
-						} else {
-							ActualDialogue = 0;
-						}
+						ActualDialogue = 0;
 					}
 				}
 			}
@@ -139,5 +138,17 @@ public class NPCDialogue : MonoBehaviour {
 			}
 		}
 		IsScrolling = false;
+	}
+
+	void OnTriggerEnter(Collider Col){
+		if (Col.CompareTag (Target.tag)) {
+			InRange = true;
+		}
+	}
+
+	void OnTriggerExit(Collider Col){
+		if (Col.CompareTag (Target.tag)) {
+			InRange = false;
+		}
 	}
 }

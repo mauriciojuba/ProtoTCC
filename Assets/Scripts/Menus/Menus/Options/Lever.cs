@@ -20,7 +20,7 @@ public class Lever : MonoBehaviour {
 
 		//se esta no alcance e apertar X, trava a posião do player e começa a movimentar a alavanca.
 		if (Player.GetComponent<OptionsPlayer> ().InLever) {
-			if (Input.GetButtonDown ("X P1")) {
+			if (Input.GetButtonDown ("X P1") || Input.GetKeyDown (KeyCode.J)) {
 				Player.GetComponent<OptionsPlayer> ().UsingLever = true;
 				Player.transform.position = PosToUse.position;
 				Player.transform.rotation = PosToUse.rotation;
@@ -31,7 +31,7 @@ public class Lever : MonoBehaviour {
 
 		//pra sair da alavanca aperta B.
 		if (Player.GetComponent<OptionsPlayer> ().UsingLever) {
-			if (Input.GetButtonDown ("B P1")) {
+			if (Input.GetButtonDown ("B P1") || Input.GetKeyDown(KeyCode.L)) {
 				Player.GetComponent<OptionsPlayer> ().UsingLever = false;
 				//fazer o apply do options direto aqui
 			}

@@ -27,6 +27,7 @@ public class ApplyCombo: MonoBehaviour{
 //			ExecuteChargedAttack ();
 //		}
 //		if (!ChargingAttack) {
+		if(!AnimRef.InDialogue){
 			if (combo1.CheckCombo ()) {
 				if (!IndexCombo.Contains (combo1.CurrentIndex)) {
 					IndexCombo.Add (combo1.CurrentIndex);
@@ -60,6 +61,7 @@ public class ApplyCombo: MonoBehaviour{
 //		if(!ChargedAttack)
 //			AnimRef.CanMove = true;
 //		
+		}
 	}
 
 	void SetChargedAttack(){

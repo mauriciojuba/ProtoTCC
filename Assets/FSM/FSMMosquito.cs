@@ -79,6 +79,7 @@ public class FSMMosquito : MonoBehaviour
 
 	private bool DrainingLife;
 
+	private bool Falling;
     #endregion
 
     #region Unity Functions
@@ -601,6 +602,7 @@ public class FSMMosquito : MonoBehaviour
 
            // state = FSMStates.OnScreen;
 			Descer();
+			Falling = true;
 			if (Life > 0) {
 				state = FSMStates.Fall;
 			} else {
@@ -710,7 +712,17 @@ public class FSMMosquito : MonoBehaviour
     #region Die
     private void Die()
     {
-
+		if (Falling) {
+			if (transform.localRotation != Quaternion.AngleAxis (0, Vector3.right)) {
+				transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.AngleAxis (0, Vector3.right), velTransicao * 15);
+			}
+			if (ModelMosquito.transform.localEulerAngles != new Vector3 (0, 0, 0)) {
+				ModelMosquito.transform.localEulerAngles = new Vector3 (0, 0, 0);
+			}
+			if (transform.localScale != new Vector3 (1, 1, 1)) {
+				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (1, 1, 1), velTransicao / 10);
+			}
+		}
         Descer();
         gameObject.GetComponent<Rigidbody>().useGravity = true;
 
@@ -738,6 +750,8 @@ public class FSMMosquito : MonoBehaviour
     #region Fall
     private void Fall()
     {
+		Falling = false;
+
         if (toWorld) exitScreen();
         else state = FSMStates.Idle;
     }

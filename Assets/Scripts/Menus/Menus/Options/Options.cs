@@ -31,6 +31,11 @@ public class Options : MonoBehaviour {
 		//controla a alavanca, mexendo ela de acordo com o joystick
 		if (Lever != null) {
 			if (Player.GetComponent<OptionsPlayer> ().UsingLever) {
+				if (Input.GetKey (KeyCode.D)) {
+					Direction = 1;
+				} else if (Input.GetKey (KeyCode.A)) {
+					Direction = -1;
+				}else
 				Direction = Input.GetAxis ("Horizontal P1");
 			} else {
 				Direction = 0;

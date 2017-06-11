@@ -60,6 +60,8 @@ public class Movimentacao3D : MonoBehaviour {
 	[SerializeField] private float RotScreenX, RotScreenY, RotScreenZ;
 	[SerializeField] private float WorldX, WorldY, WorldZ;
 
+
+	public bool InDialogue;
 	public bool Liz;
 	void Start () {
 		camScreen = GameObject.FindWithTag ("ScreenGlass").transform;
@@ -79,16 +81,20 @@ public class Movimentacao3D : MonoBehaviour {
 		TestPosition ();
 		SetAnimations();
 		if (CanMove) {
-			CastShadowOnJump();
 			Jump ();
-			goToScreen ();
-			exitScreen ();
+			if (!InDialogue) {
+				CastShadowOnJump ();
+				goToScreen ();
+				exitScreen ();
+			}
 		}
     }
 
 	void FixedUpdate () {
 		if (CanMove) {
-			DirectionDefinition ();
+			if (!InDialogue) {
+				DirectionDefinition ();
+			}
 		}
 		
 
@@ -277,72 +283,73 @@ public class Movimentacao3D : MonoBehaviour {
 		//verifica se o player esta encostando no chão
 		InGround = Physics.Linecast (Player.transform.position, Player.transform.position - Vector3.up * 1.1f, NoIgnoredLayers);
 		//Debug.DrawLine (Player.transform.position,Player.transform.position - Vector3.up * 1.1f);
-		if (KeyboardCanControl) {
-			if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround && !onScreen || Input.GetKeyDown(KeyCode.K) && InGround && !onScreen) {
+		if (!InDialogue) {
+			if (KeyboardCanControl) {
+				if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround && !onScreen || Input.GetKeyDown (KeyCode.K) && InGround && !onScreen) {
 
-				Jumping = true;
-				SetJumpAnim ();
-				Vector3 V3 = rb.velocity;
-				V3.y = JumpForce;
-				rb.velocity = V3;
-			}
-			if (Input.GetButtonUp ("A P" + PlayerNumber) || Input.GetKeyUp(KeyCode.K)) {
-				Jumping = false;
-			}
-		} else {
-			//se estiver no chao, pula, apertando A no controle.
-			if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround && !onScreen) {
+					Jumping = true;
+					SetJumpAnim ();
+					Vector3 V3 = rb.velocity;
+					V3.y = JumpForce;
+					rb.velocity = V3;
+				}
+				if (Input.GetButtonUp ("A P" + PlayerNumber) || Input.GetKeyUp (KeyCode.K)) {
+					Jumping = false;
+				}
+			} else {
+				//se estiver no chao, pula, apertando A no controle.
+				if (Input.GetButtonDown ("A P" + PlayerNumber) && InGround && !onScreen) {
 			
-				Jumping = true;
-				SetJumpAnim ();
-				Vector3 V3 = rb.velocity;
-				V3.y = JumpForce;
-				rb.velocity = V3;
+					Jumping = true;
+					SetJumpAnim ();
+					Vector3 V3 = rb.velocity;
+					V3.y = JumpForce;
+					rb.velocity = V3;
+				}
+				if (Input.GetButtonUp ("A P" + PlayerNumber)) {
+					Jumping = false;
+				}
 			}
-			if (Input.GetButtonUp ("A P" + PlayerNumber)) {
-				Jumping = false;
-			}
-		}
 
-		if(Jumping && !onScreen){
-			Vector3 V3 = rb.velocity;
-			V3.y += JumpForce;
-            rb.velocity = V3;
+			if (Jumping && !onScreen) {
+				Vector3 V3 = rb.velocity;
+				V3.y += JumpForce;
+				rb.velocity = V3;
             
 
-        }
-		if(rb.velocity.y > MaxJump && !onScreen)
-        {
-			Jumping = false;
-		}
-		if (KeyboardCanControl) {
-			if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen && !PauseMenu.gamePaused || Input.GetKeyDown(KeyCode.Q) && !onScreen && !PauseMenu.gamePaused) {
-				//desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
-				ActualDirection = 1;
-				SetAnimOnScreen ();
-				Jumping = true;
-				Vector3 V3 = rb.velocity;
-				V3.y = JumpForce;
-				rb.velocity = V3;
-				rb.useGravity = false;
-				transform.SetParent (camScreen);
-				_2dX = Random.Range (-1.5f, +1.5f);
-				_2dY = Random.Range (-0.8f, +0.8f);
-				onScreen = true;
 			}
-		} else {
-			if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen && !PauseMenu.gamePaused) {
-				//desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
-				SetAnimOnScreen ();
-				Jumping = true;
-				Vector3 V3 = rb.velocity;
-				V3.y = JumpForce;
-				rb.velocity = V3;
-				rb.useGravity = false;
-				transform.SetParent (camScreen);
-				_2dX = Random.Range (-1.5f, +1.5f);
-				_2dY = Random.Range (-0.8f, +0.8f);
-				onScreen = true;
+			if (rb.velocity.y > MaxJump && !onScreen) {
+				Jumping = false;
+			}
+			if (KeyboardCanControl) {
+				if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen && !PauseMenu.gamePaused || Input.GetKeyDown (KeyCode.Q) && !onScreen && !PauseMenu.gamePaused) {
+					//desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
+					ActualDirection = 1;
+					SetAnimOnScreen ();
+					Jumping = true;
+					Vector3 V3 = rb.velocity;
+					V3.y = JumpForce;
+					rb.velocity = V3;
+					rb.useGravity = false;
+					transform.SetParent (camScreen);
+					_2dX = Random.Range (-1.5f, +1.5f);
+					_2dY = Random.Range (-0.8f, +0.8f);
+					onScreen = true;
+				}
+			} else {
+				if (Input.GetButtonDown ("LB P" + PlayerNumber) && !onScreen && !PauseMenu.gamePaused) {
+					//desabilita gravidade coloca o player como child da tela e faz o caminho do player pra tela(MoveTowards) e diminui o tamanho do player, pra não ficar gigante ao se aproximar
+					SetAnimOnScreen ();
+					Jumping = true;
+					Vector3 V3 = rb.velocity;
+					V3.y = JumpForce;
+					rb.velocity = V3;
+					rb.useGravity = false;
+					transform.SetParent (camScreen);
+					_2dX = Random.Range (-1.5f, +1.5f);
+					_2dY = Random.Range (-0.8f, +0.8f);
+					onScreen = true;
+				}
 			}
 		}
     }
@@ -610,6 +617,11 @@ float preventMovLock = 0;
 
 	public void CanMoveTrue(){
 		CanMove = true;
+	}
+
+	public IEnumerator SetDialogueFalse(){
+		yield return new WaitForSeconds (0.1f);
+		InDialogue = false;
 	}
 }
 

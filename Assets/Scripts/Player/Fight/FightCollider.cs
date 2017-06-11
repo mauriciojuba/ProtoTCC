@@ -31,7 +31,7 @@ public class FightCollider : MonoBehaviour {
 						//coloca particula de Ataque
 						if (particula != null)
                         {
-                            ScreenShake.Instance.Shake(0.1f, 0.1f);
+                            ScreenShake.Instance.Shake(0.05f, 0.05f);
                             GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
 							float timePart = part.GetComponent<ParticleSystem> ().duration;
 							if (Player.GetComponent<Movimentacao3D> ().onScreen) {
@@ -62,7 +62,7 @@ public class FightCollider : MonoBehaviour {
 			
 			if (col.gameObject.GetComponent<Life> () != null) {
 				if (particula != null) {
-                    ScreenShake.Instance.Shake(0.1f, 0.1f);
+                    ScreenShake.Instance.Shake(0.05f, 0.05f);
                     GameObject part = Instantiate (particula, transform.position, Quaternion.identity) as GameObject;
 					float timePart = part.GetComponent<ParticleSystem> ().duration;
 					GameObject.Destroy (part, timePart);
@@ -84,6 +84,10 @@ public class FightCollider : MonoBehaviour {
 			}
             if(GetComponent<BoxCollider>() != null)
 			GetComponent<BoxCollider> ().enabled = false;
+		}
+		if (col.CompareTag ("Luz")) {
+			if (col.GetComponent<LuzQuebrando> () != null && !col.GetComponent<LuzQuebrando> ().Quebrou)
+				col.GetComponent<LuzQuebrando> ().StartCoroutine (col.GetComponent<LuzQuebrando> ().Pisca ());
 		}
     }
 }

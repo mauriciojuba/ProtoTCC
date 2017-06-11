@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class LuzQuebrando : MonoBehaviour {
 
+	public bool Quebrou;
     public Light Luz;
 
-    IEnumerator Pisca()
+    public IEnumerator Pisca()
     {
         for (int i = 0; i < 3; i++)
         {
