@@ -13,7 +13,7 @@ public class Cheat : MonoBehaviour {
 		InitDamage = col.Damage;
 	}
 	void Update () {
-		if((Input.GetAxisRaw("LT P" + GetComponent<Movimentacao3D>().PlayerNumber) >= 1)  || (Input.GetAxisRaw("PS4 L2") >=1)){
+		if((Input.GetAxisRaw("LT P" + GetComponent<Movimentacao3D>().PlayerNumber) >= 1)  || (Input.GetAxisRaw("PS4 L2") >=1) || Input.GetKey(KeyCode.E)){
 			Debug.Log(Input.GetAxisRaw("PS4 L2").ToString());
 			col.Damage = 5000;
 		}
@@ -21,7 +21,7 @@ public class Cheat : MonoBehaviour {
 			col.Damage = InitDamage;
 		}
 
-		if((Input.GetKeyDown(KeyCode.G))){
+		if(Input.GetKeyDown(KeyCode.G)){
 			this.GetComponent<Life>().LifeQuant = 250;
 		}
 	}
