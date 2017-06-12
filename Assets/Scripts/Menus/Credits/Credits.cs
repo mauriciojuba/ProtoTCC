@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour {
 
@@ -71,7 +72,7 @@ public class Credits : MonoBehaviour {
 			py -= 2;
 		}
 
-		//if (Input.anyKey) SceneManager.LoadScene(0);
+		if (Input.anyKey) SceneManager.LoadScene (1);
 	}
 
 	public void OnGUI() {
@@ -89,6 +90,6 @@ public class Credits : MonoBehaviour {
 			}
 		}
 
-		//if (py + deltaY < 0) SceneManager.LoadScene(0);
+		if (py + deltaY < 0) SceneManager.LoadScene(1);
 	}
 }

@@ -246,8 +246,13 @@ public class FSMMosquito : MonoBehaviour
 
     public void PegaVidaPlayer()
     {
-        VidaPlayer = Players[(int)Random.Range(0, Players.Count - 1)];
-
+		if (Players [0].GetComponent<Movimentacao3D> ().Stunned) {
+			VidaPlayer = Players [1];
+		} else if (Players [1].GetComponent<Movimentacao3D> ().Stunned) {
+			VidaPlayer = Players [0];
+		} else {
+			VidaPlayer = Players [(int)Random.Range (0, Players.Count)];
+		}
         VidaTatu = (GameObject)VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
     }
     public Transform direction;
