@@ -55,6 +55,7 @@ public class OptionsPlayer : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+		SetAnimations ();
 		if (Menus) {
 			if (UsingStairs) {
 				Model.transform.localEulerAngles = new Vector3 (-90, 0, 0);
@@ -63,7 +64,7 @@ public class OptionsPlayer : MonoBehaviour {
 				Model.transform.localEulerAngles = new Vector3 (0, 0, 0);
 				Model.transform.localPosition = new Vector3 (0, -1.01f, 0);
 			}
-			SetAnimations ();
+
 			if (!UsingLever) {
 				DirectionDefinition ();
 				Jump ();
