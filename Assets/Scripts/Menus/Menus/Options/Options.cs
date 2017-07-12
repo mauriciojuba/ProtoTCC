@@ -31,24 +31,31 @@ public class Options : MonoBehaviour {
 		//controla a alavanca, mexendo ela de acordo com o joystick
 		if (Lever != null) {
 			if (Player.GetComponent<OptionsPlayer> ().UsingLever) {
-				if (Input.GetKey (KeyCode.D)) {
-					Direction = 1;
-				} else if (Input.GetKey (KeyCode.A)) {
-					Direction = -1;
-				}else
-				Direction = Input.GetAxis ("Horizontal P1");
-			} else {
-				Direction = 0;
+					MoveLever ();
 			}
-			AngleToGo = Mathf.MoveTowards (AngleToGo, Direction, Time.deltaTime * Speed);
-			PosToGo = Mathf.MoveTowards (PosToGo, Direction, Time.deltaTime * Speed);
+		}
+	}
 
-			Lever.transform.localEulerAngles = new Vector3 (rotX, rotY, InitRot + (AngleToGo * 45f * -1));
-			if (Direction > 0.2f) {
-				Plus ();
-			} else if (Direction < 0.2f) {
-				Minus ();
-			}
+
+	void MoveLever(){
+		if (Player.GetComponent<OptionsPlayer> ().UsingLever) {
+			if (Input.GetKey (KeyCode.D)) {
+				Direction = 1;
+			} else if (Input.GetKey (KeyCode.A)) {
+				Direction = -1;
+			}else
+				Direction = Input.GetAxis ("Horizontal P1");
+		} else {
+			Direction = 0;
+		}
+		AngleToGo = Mathf.MoveTowards (AngleToGo, Direction, Time.deltaTime * Speed);
+		PosToGo = Mathf.MoveTowards (PosToGo, Direction, Time.deltaTime * Speed);
+
+		Lever.transform.localEulerAngles = new Vector3 (rotX, rotY, InitRot + (AngleToGo * 45f * -1));
+		if (Direction > 0.2f) {
+			Plus ();
+		} else if (Direction < 0.2f) {
+			Minus ();
 		}
 	}
 

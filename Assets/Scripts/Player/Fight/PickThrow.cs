@@ -29,18 +29,7 @@ public class PickThrow : MonoBehaviour {
 		LocateObject ();
 		if (PickedCollider != null) {
 			if (PickedCollider.GetComponent<FSMMosquito> () != null) {
-				if (PickedCollider.GetComponent<FSMMosquito> ().state == FSMMosquito.FSMStates.Die) {
-					PickedCollider.transform.SetParent (null);
-					PickedCollider.GetComponent<Rigidbody> ().isKinematic = false;
-					PickedCollider.transform.eulerAngles = new Vector3(0,0,0);
-					PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.forward * Force);
-					PickedCollider.GetComponent<Collider>().isTrigger = false;
-					PickedObj = null;
-					PickedCollider = null;
-					CanPick = true;
-					transform.parent.GetComponent<Movimentacao3D> ().CanMove = true;
-					transform.parent.GetComponent<Movimentacao3D> ().SetGrabbedAnim (false);
-				}
+				CheckIsEnemyDie ();
 			}
 		}
 		if (PlayerNum != 0) {
@@ -64,6 +53,23 @@ public class PickThrow : MonoBehaviour {
 		}
 	}
 
+	//checa se o inimigo agarrado esta morto, pra largar.
+	void CheckIsEnemyDie(){
+		if (PickedCollider.GetComponent<FSMMosquito> () != null) {
+			if (PickedCollider.GetComponent<FSMMosquito> ().state == FSMMosquito.FSMStates.Die) {
+				PickedCollider.transform.SetParent (null);
+				PickedCollider.GetComponent<Rigidbody> ().isKinematic = false;
+				PickedCollider.transform.eulerAngles = new Vector3(0,0,0);
+				PickedCollider.GetComponent<Rigidbody> ().AddForce (transform.forward * Force);
+				PickedCollider.GetComponent<Collider>().isTrigger = false;
+				PickedObj = null;
+				PickedCollider = null;
+				CanPick = true;
+				transform.parent.GetComponent<Movimentacao3D> ().CanMove = true;
+				transform.parent.GetComponent<Movimentacao3D> ().SetGrabbedAnim (false);
+			}
+		}
+	}
 
 	void LocateObject(){
 		//Debug.DrawRay (transform.position + (transform.up / 2), transform.forward * 2, Color.red);
