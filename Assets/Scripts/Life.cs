@@ -148,7 +148,7 @@ public class Life : MonoBehaviour {
                 case ObjectType.Luz:
                     if(gameObject.GetComponent<LuzQuebrando>() != null)
                     {
-                        gameObject.GetComponent<LuzQuebrando>().Quebrou = true;
+						gameObject.GetComponent<LuzQuebrando> ().BreakLight ();
                         SoundManager.PlaySFX(gameObject, "holofote_falhando_01");
                         Destroy(this);
                     }

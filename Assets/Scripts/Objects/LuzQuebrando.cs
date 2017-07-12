@@ -17,8 +17,8 @@ public class LuzQuebrando : MonoBehaviour {
 
 	Rigidbody rb;
 
-	void Update(){
-		if (Quebrou && !blinking && !end) {
+	public void BreakLight(){
+		//if (Quebrou && !blinking && !end) {
 			StartCoroutine (Pisca ());
 			if (gameObject.GetComponent<Rigidbody> () != null) {
 				rb = gameObject.GetComponent<Rigidbody> ();
@@ -29,7 +29,7 @@ public class LuzQuebrando : MonoBehaviour {
 			ParticleSystem emit = part.GetComponent<ParticleSystem> ();
 			GameObject.Destroy (part, emit.duration);
 			blinking = true;
-		}
+		//}
 	}
 
 	public IEnumerator LampFade(){

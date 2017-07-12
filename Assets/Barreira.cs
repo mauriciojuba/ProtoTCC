@@ -18,10 +18,15 @@ public class Barreira : MonoBehaviour {
 			dominoCenterLeft.AddForce(forceDir*2000f);
 			dominoCenterRight.AddForce(-forceDir*2000f);
 			this.GetComponent<BoxCollider>().enabled = false;
+			Destroy (this,10);
 		}
 
 		for (int i = 0; i < AreaEnemys.Length; i++) {
-			if (AreaEnemys [i].GetComponent<FSMMosquito> ().state == FSMMosquito.FSMStates.Die) {
+			if (AreaEnemys [i].GetComponent<FSMMosquito> () != null && AreaEnemys [i].GetComponent<FSMMosquito> ().state == FSMMosquito.FSMStates.Die) {
+				if (!DeadEnemys.Contains (AreaEnemys [i])) {
+					DeadEnemys.Add (AreaEnemys [i]);
+				}
+			} else if (AreaEnemys [i].GetComponent<FSMAranha> () != null && AreaEnemys [i].GetComponent<FSMAranha> ().state == FSMAranha.FSMStates.Die) {
 				if (!DeadEnemys.Contains (AreaEnemys [i])) {
 					DeadEnemys.Add (AreaEnemys [i]);
 				}

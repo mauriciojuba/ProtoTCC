@@ -11,28 +11,26 @@ public class Lever : MonoBehaviour {
 	private GameObject Player;
 	[SerializeField] private Transform PosToUse;
 	[SerializeField] private Options OptionsReference;
+	private OptionsPlayer PlayerScriptReference;
 
 	void Start(){
 		Player = GameObject.FindWithTag ("Player1_3D");
+		PlayerScriptReference = Player.GetComponent<OptionsPlayer> ();
 	}
 
-	void Update(){
+	void FixedUpdate(){
 
 		//se esta no alcance e apertar X, trava a posião do player e começa a movimentar a alavanca.
-		if (Player.GetComponent<OptionsPlayer> ().InLever) {
+		if (PlayerScriptReference.InLever) {
 			if (Input.GetButtonDown ("X P1") || Input.GetKeyDown (KeyCode.J)) {
-				Player.GetComponent<OptionsPlayer> ().UsingLever = true;
-				Player.transform.position = PosToUse.position;
-				Player.transform.rotation = PosToUse.rotation;
-				OptionsReference.SelectLever (LeverObj, OptionObj, OptionSlider);
-				OptionsReference.SetInitialRot ();
+				SetPlayerPos ();
 			}
 		}
 
 		//pra sair da alavanca aperta B.
-		if (Player.GetComponent<OptionsPlayer> ().UsingLever) {
+		if (PlayerScriptReference.UsingLever) {
 			if (Input.GetButtonDown ("B P1") || Input.GetKeyDown(KeyCode.L)) {
-				Player.GetComponent<OptionsPlayer> ().UsingLever = false;
+				PlayerScriptReference.UsingLever = false;
 				//fazer o apply do options direto aqui
 			}
 		}
@@ -50,5 +48,13 @@ public class Lever : MonoBehaviour {
 		if (col.CompareTag ("Player1_3D")) {
 			col.GetComponent<OptionsPlayer> ().InLever = false;
 		}
+	}
+
+	void SetPlayerPos(){
+		PlayerScriptReference.UsingLever = true;
+		Player.transform.position = PosToUse.position;
+		Player.transform.rotation = PosToUse.rotation;
+		OptionsReference.SelectLever (LeverObj, OptionObj, OptionSlider);
+		OptionsReference.SetInitialRot ();
 	}
 }
