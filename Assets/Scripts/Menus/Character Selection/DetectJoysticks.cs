@@ -179,12 +179,12 @@ public class DetectJoysticks : MonoBehaviour {
 	void SummonPlayer(int Number){
 		if (Number == 2) {
 			P2 = GameObject.Instantiate (Player2, Point.position, Point.rotation);
-			P2.transform.FindChild("PlayerModel").GetComponent<OptionsPlayer> ().CanMove = false;
-			P2.transform.FindChild("PlayerModel").GetComponent<OptionsPlayer> ().PlayerNumber = Number;
-			StartCoroutine (P2.transform.FindChild ("PlayerModel").GetComponent<OptionsPlayer> ().StarMove ());
-			P2.transform.FindChild ("PlayerModel").GetComponent<Rigidbody> ().useGravity = false;
-			P2.transform.FindChild("PlayerModel").GetComponent<Rigidbody> ().AddForce (Point.forward * Force);
-			P2.transform.FindChild ("PlayerModel").GetComponent<Rigidbody> ().useGravity = true;
+			P2.transform.Find("PlayerModel").GetComponent<OptionsPlayer> ().CanMove = false;
+			P2.transform.Find("PlayerModel").GetComponent<OptionsPlayer> ().PlayerNumber = Number;
+			StartCoroutine (P2.transform.Find ("PlayerModel").GetComponent<OptionsPlayer> ().StarMove ());
+			P2.transform.Find ("PlayerModel").GetComponent<Rigidbody> ().useGravity = false;
+			P2.transform.Find("PlayerModel").GetComponent<Rigidbody> ().AddForce (Point.forward * Force);
+			P2.transform.Find ("PlayerModel").GetComponent<Rigidbody> ().useGravity = true;
 		}
 	}
 }

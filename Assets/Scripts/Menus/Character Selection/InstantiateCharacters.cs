@@ -28,7 +28,7 @@ public class InstantiateCharacters : MonoBehaviour {
 			//define o nome do personagem
 			P1.name = DataS.P1SelectedCharacter.CharacterName;
 			//Variavel criada para guardar o child 3d_Player.
-			P1_3d_Player = P1.transform.FindChild ("3D_Player").gameObject;
+			P1_3d_Player = P1.transform.Find ("3D_Player").gameObject;
 			//ativa o script de movimentacao 3D para o jogador 1
 			ApplyP1Components();
 
@@ -38,7 +38,7 @@ public class InstantiateCharacters : MonoBehaviour {
 				//define o nome do personagem
 				P2.name = DataS.P2SelectedCharacter.CharacterName;
 				//Variavel criada para guardar o child 3d_Player.
-				P2_3d_Player = P2.transform.FindChild ("3D_Player").gameObject;
+				P2_3d_Player = P2.transform.Find ("3D_Player").gameObject;
 				//ativa o script de movimentacao 3D para o jogador 1
 				ApplyP2Components();
 			}
