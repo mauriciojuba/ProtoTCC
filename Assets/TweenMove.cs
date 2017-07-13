@@ -11,11 +11,8 @@ public class TweenMove : MonoBehaviour
 
     public GameObject target;
     public GameObject MenuTarget;
-    
-    // public GameObject Target;
 
     public bool volta;
-
 
     public void GoToMenu(string Tela)
     {
@@ -25,11 +22,9 @@ public class TweenMove : MonoBehaviour
 
     public void olhala()
     {
-
         iTween.MoveTo(gameObject, iTween.Hash("y" , 13 , "time" , 5));
         iTween.LookTo(gameObject, iTween.Hash("looktarget", target.transform, "time", 3 , "easetype", "easeInOutQuad"));
     }
-
 
     public void olhaMenu()
     {
@@ -37,11 +32,10 @@ public class TweenMove : MonoBehaviour
         iTween.LookTo(gameObject, iTween.Hash("looktarget", MenuTarget.transform, "time", 2 , "easetype", "easeInOutQuad"));
     }
 
+    public void Mover() {
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        // Se a variavel Move se  torna verdadeira ele excuda o iTween expecificado pela string Path.
+        
         if (move)
         {
             if (Path == "Options")
@@ -57,7 +51,7 @@ public class TweenMove : MonoBehaviour
                 move = false;
             }
 
-            else if(Path == "Game")
+            else if (Path == "Game")
             {
                 time = 5;
 
@@ -66,7 +60,7 @@ public class TweenMove : MonoBehaviour
                 move = false;
             }
 
-            else if(Path == "Creditos")
+            else if (Path == "Creditos")
             {
 
                 time = 5;
@@ -89,13 +83,26 @@ public class TweenMove : MonoBehaviour
             }
 
         }
+    }
+
+    public void Voltar() {
+
+        // Esta funcao esta em teste 
+        //Faz a Camera voltar para o local inicial  do menu principal
 
         if (volta)
         {
-            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(Path), "time", time/2, "oncomplete", "olhaMenu", "orienttopath", true, "easetype", "easeInOutQuad"));
+            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath(Path), "time", time / 2, "oncomplete", "olhaMenu", "orienttopath", true, "easetype", "easeInOutQuad"));
 
             volta = false;
         }
+    }
+
+    void FixedUpdate()
+    {
+        Mover();
+
+        Voltar();
     }
 
 }

@@ -16,67 +16,72 @@ public class FSMMosquito : MonoBehaviour
 
     #region Variaveis
 
-    public GameObject Target;
-    public List<GameObject> Players;
+    
+    [HideInInspector] public GameObject Target;
+    [HideInInspector] public List<GameObject> Players;
 
-    public GameObject VidaPlayer;
-    public GameObject VidaTatu;
+    [HideInInspector] public GameObject VidaPlayer;
+    [HideInInspector] public GameObject VidaTatu;
 
-
+    [Header("Movimentação")]
+    public Transform[] waypoints;                              //Lista de Waypoints
+    public float TimeToNextPoint = 5f;                         //Tempo para o proximo way point
     public float MoveSpeed;                                    //Velocidade De Movimentção
     public float RotationSpeed;                                //Velocidade De Rotação
+    public float velTransicao;                                 //Velocidade da tranzição 
 
-
-    public Transform[] waypoints;                              //Lista de Waypoints
-
+    [Header("Area De Interação")]
     public float Vision = 5f;                                  //Area Para o Npc Identificar o Player
     public float SafeDist = 10f;                               //Area Para o Npc desistir de perceguir o Player
     public float EnemyDist = 2f;                               //Area para Iniciar o Ataque
     public float LifeDrainDist = 1f;
 
-    public GameObject ModelMosquito;
+    [HideInInspector]  public GameObject ModelMosquito;
+
     private float LifeDist;
 
-
+    [Header("Vida")]
     public float Life = 100;                                   //Vida Do NPC
-    [SerializeField] private float MaxLife;                    //Vida Maxima
+    private float MaxLife;                                     //Vida Maxima
 
-    public bool TakeDamage = false;                            //Verifica se o player levou dano
+    [HideInInspector] public bool TakeDamage = false;          //Verifica se o player levou dano
     private float[] PlayersDist = new float[2];
-    public Animator MosquitoAni;                               //Aramazena as animações do mosquito
+    [HideInInspector] public Animator MosquitoAni;             //Aramazena as animações do mosquito
     private Transform myTransform;                             //
     private int currentWayPoint;                               //
-    public float TimeToNextPoint = 5f;                         //Tempo para o proximo way point
     private float TimeTo;                                      //
     private bool cor = false;
-    public GameObject[] hitbox;                                  //Hitbox do ataque do mosquito
-    public bool grappled = false;                              //Verifica se o mosquito esta sendo agarrado
-    [SerializeField] private Rigidbody rb;                     //
+    [HideInInspector] public GameObject[] hitbox;              //Hitbox do ataque do mosquito
+    [HideInInspector] public bool grappled = false;            //Verifica se o mosquito esta sendo agarrado
+    private Rigidbody rb;                     //
+    [Header("Tempo")]
     [SerializeField] private float CooldownAtk = 3f;           //Tempo de recarga do ataque
-    [SerializeField] private float TimerAtk;                   //Tempo de recarga do ataque
-    [SerializeField] private float Distace;                    //Distancia entre o NPC e o player
+    private float TimerAtk;                                    //Tempo de recarga do ataque
+    private float Distace;                                     //Distancia entre o NPC e o player
     [SerializeField] private float TimeToChangeTarget = 5f;    //
-    [SerializeField] private Collider DeathCollider;
-    [SerializeField] private bool reachScreen;
-    public float velTransicao;                                 //Velocidade da tranzição 
-    public Transform model;
-    public Transform direcoes;
-    public bool toWorld;
-    public CameraControl DollyCam;
-    private bool descer = false;
+    private Collider DeathCollider;
+    private bool reachScreen;
+
+    [HideInInspector] public Transform model;
+    [HideInInspector] public Transform direcoes;
+    [HideInInspector] public bool toWorld;
+    [HideInInspector] public CameraControl DollyCam;
+    [HideInInspector] private bool descer = false;
     private bool returned;
-    public Transform camScreen;
+    [HideInInspector] public Transform camScreen;
     float _2dY, _2dX;
-    public bool onScreen;
+    [HideInInspector] public bool onScreen;
 
     private GameObject part;
 
+    [Header("Particula")]
     public GameObject ParticulaLifeDrain;
 
-	public Transform rootJoint;
+    [HideInInspector] public Transform rootJoint;
 
 	private float LifeDrainInit;
 
+    
 	private bool DrainingLife;
 
 	private bool Falling;
@@ -259,7 +264,7 @@ public class FSMMosquito : MonoBehaviour
         VidaTatu = (GameObject)VidaPlayer.GetComponent<Life>().ListOfImg[VidaPlayer.GetComponent<Life>().ListOfImg.Count - 1];
 
     }
-    public Transform direction;
+    [HideInInspector] public Transform direction;
 
     //move o mosquito para a vida  do player
 
