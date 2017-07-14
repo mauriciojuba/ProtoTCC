@@ -88,7 +88,6 @@ public class RecoveryItem : MonoBehaviour {
 		if (Player.GetComponent<UseSpecial>() != null)
 		{
 			Player.GetComponent<UseSpecial> ().SpecialItens++;
-			Player.GetComponent<UseSpecial> ().UpdateBar ();
 		}
 	}
 

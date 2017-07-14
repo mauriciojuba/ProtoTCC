@@ -30,9 +30,15 @@ public class UseSpecial : MonoBehaviour {
 			return;
 		}
 
-		forwardX = transform.forward.x;
-		forwardY = transform.forward.y;
-		forwardZ = transform.forward.z;
+
+		CanUse();
+
+		if (Use)
+			UseTheSpecial ();
+	}
+
+	//verifica se pode ser usado e se o player pressionou o botao.
+	public void CanUse(){
 		if (!GetComponent<Movimentacao3D> ().onScreen && GetComponent<Movimentacao3D> ().InGround && !CheckGrab.Grabbing) {
 			if (Input.GetButtonDown (SpecialRef.ButtonToUse + PlayerNumber) && !Use && SpecialItens > 0) {
 				if (SpecialRef.Rush) {
@@ -52,12 +58,6 @@ public class UseSpecial : MonoBehaviour {
 				RB.velocity = v3;
 			}
 		}
-		if (Use)
-			UseTheSpecial ();
-	}
-
-	public void UpdateBar(){
-		
 	}
 
 	public void UseTheSpecial(){
