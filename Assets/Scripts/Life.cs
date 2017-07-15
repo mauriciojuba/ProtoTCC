@@ -4,6 +4,7 @@ using UnityEngine;
 using RAIN.Core;
 using UnityEngine.UI;
 
+[System.Obsolete("ESTE SCRIPT DEIXARA DE SER USADO. Elew vai ser substituido em breve pelo ObjLife e o PlayerLife")]
 public class Life : MonoBehaviour {
 
 

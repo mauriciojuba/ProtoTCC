@@ -88,7 +88,7 @@ public class FightCollider : MonoBehaviour {
 			SoundManager.PlaySFX (gameObject, "Liz_Atk-02");
 	}
 
-	void InstantiateParticle(){
+	public void InstantiateParticle(){
 		if (particula != null)
 		{
 			ScreenShake.Instance.Shake(0.05f, 0.05f);
@@ -102,4 +102,5 @@ public class FightCollider : MonoBehaviour {
 			GameObject.Destroy (part, timePart);
 		}
 	}
+
 }
