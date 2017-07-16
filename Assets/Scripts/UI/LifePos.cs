@@ -29,9 +29,9 @@ public class LifePos : MonoBehaviour {
 
 		if (!Tatuzinho) {
 			if (PlayerNumber == 1)
-				X = Player.GetComponent<Life> ().X + 0.007f;
+				X = Player.GetComponent<PlayerLife> ().X + 0.007f;
 			else if (PlayerNumber == 2)
-				X = Player.GetComponent<Life> ().X;
+				X = Player.GetComponent<PlayerLife> ().X;
 		}
         if (!SetS)
         {

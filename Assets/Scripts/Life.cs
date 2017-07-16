@@ -31,7 +31,7 @@ public class Life : MonoBehaviour {
     #endregion
 
     #region Variables For Players Life
-    public List<GameObject> ListOfImg;
+    public List<GameObject> ListOfImg; 
 	[SerializeField] private int PlayerNumber;
 	public GameObject LifeOBJ;
 	private GameObject Container;
