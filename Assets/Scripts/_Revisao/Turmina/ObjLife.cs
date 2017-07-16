@@ -9,6 +9,7 @@ public class ObjLife : MonoBehaviour
 
     public float Life;
     public bool Damage;
+    public bool PowerDrop;
 
     [Header("Destruir")]
     public bool PowerDestroy = true;
@@ -27,13 +28,20 @@ public class ObjLife : MonoBehaviour
             Life = 50;
     }
 
-    public void TakeMamage(float Hit)
+    public void TakeDamage(float Hit)
     {
         Life -= Hit;
         Fight.InstantiateParticle();
 
         if (Life <= 0f)
+        {
+            gameObject.GetComponent<Collider>().enabled = false;
+
+            if (PowerDrop)
+                gameObject.GetComponent<DropLoot>().Drop();
+
             Dest.ApagarDaExistencia();
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -41,7 +49,7 @@ public class ObjLife : MonoBehaviour
         if (other.gameObject.GetComponent<FightCollider>() != null)
         {
             Fight = other.gameObject.GetComponent<FightCollider>();
-            TakeMamage(other.GetComponent<FightCollider>().Damage);
+            TakeDamage(other.GetComponent<FightCollider>().Damage);
         }
     }
 }
