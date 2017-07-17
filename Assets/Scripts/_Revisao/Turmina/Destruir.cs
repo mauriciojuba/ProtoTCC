@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Destruir : MonoBehaviour {
 
-    //Algumas Maneiras de Destruir Um Objeto.
 
-    //Apaga Da Existencia o Objeto Intantaneamente.
+    public bool SelfDestruct;
+    [SerializeField] private float Tempo;
+
+    private void Start()
+    {
+        if (SelfDestruct)
+            ApagarDaExistenciaTimer(Tempo);
+    }
+
     public void ApagarDaExistencia()
     {
         Destroy(gameObject);
@@ -14,17 +21,11 @@ public class Destruir : MonoBehaviour {
 
     public void ApagarAlvoDaExistencia(GameObject Target) { }
 
-    public void ApagarDaExistenciaTimer() { }
+    public void ApagarDaExistenciaTimer(float Timer)
+    {
+        Destroy(gameObject, Timer);
+    }
 
     public void ApagarDaExistenciaLentamente() { }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

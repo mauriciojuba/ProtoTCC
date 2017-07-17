@@ -9,7 +9,6 @@ public class PlayerLife : MonoBehaviour {
     public float life;
 
     [HideInInspector] public float MaxLife;
-    
     [HideInInspector] public int Division;
     private CameraControl DollyCam;
     private int QuantImg;

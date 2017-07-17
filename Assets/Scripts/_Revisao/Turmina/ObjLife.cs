@@ -9,12 +9,11 @@ public class ObjLife : MonoBehaviour
 
     public float Life;
     public bool Damage;
+    [Header("Habilita Drops")]
     public bool PowerDrop;
 
     [Header("Destruir")]
     public bool PowerDestroy = true;
-    [Tooltip("defalt: Apaga imediatamente apos acabar a vida")]
-    public string TypeOfDestruction = "default";
 
     [HideInInspector] public FightCollider Fight;
     private Destruir Dest;
