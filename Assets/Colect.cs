@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Candy : MonoBehaviour {
+public class Colect : MonoBehaviour {
 
 	bool Reduct;
 	[SerializeField] private float speedReduct;
