@@ -79,6 +79,7 @@ public class UseSpecial : MonoBehaviour {
 				SP.PushForce = SpecialRef.AOEPushForce;
 				SP.Pull = SpecialRef.Pull;
 				SP.Push = SpecialRef.Push;
+				SP.AoE = true;
 				SP.InitPos = obj.transform.position;
 				if(!AnimatorControl)
 					gameObject.GetComponent<Movimentacao3D> ().CanMove = true;
