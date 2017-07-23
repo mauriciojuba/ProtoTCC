@@ -10,13 +10,9 @@ public class Resurrect : MonoBehaviour {
 	[SerializeField] private Image RessurectTime;
 
 	void Update(){
-		RessurectTime.fillAmount = Timer / TimerMax;
+		UpdateBar ();
 		if (Timer >= TimerMax) {
-			transform.parent.GetComponent<Movimentacao3D> ().CanMove = true;
-			transform.parent.GetComponent<Movimentacao3D> ().Stunned = false;
-			transform.parent.GetComponent<Life> ().LifeQuant += 299;
-			transform.parent.GetComponent<Life> ().UpdateLife ();
-			Timer = 0;
+			RessurrectPlayer ();
 		}
 	}
 	void OnTriggerStay(Collider col){
@@ -31,5 +27,17 @@ public class Resurrect : MonoBehaviour {
 				Timer = 0;
 			}
 		}
+	}
+
+	void UpdateBar(){
+		RessurectTime.fillAmount = Timer / TimerMax;
+	}
+
+	void RessurrectPlayer(){
+		transform.parent.GetComponent<Movimentacao3D> ().CanMove = true;
+		transform.parent.GetComponent<Movimentacao3D> ().Stunned = false;
+		transform.parent.GetComponent<Life> ().LifeQuant += 299;
+		transform.parent.GetComponent<Life> ().UpdateLife ();
+		Timer = 0;
 	}
 }

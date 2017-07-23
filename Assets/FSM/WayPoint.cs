@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class WayPoint : MonoBehaviour {
 
-    static Color linkColor = Color.green;
+	[Header("Define a cor da linha")]
+	public Color linkColor = Color.green;
+	[Space(10)]
+	[Header("Define a cor dos pontos")]
     public Color waypointColor = Color.blue;
+	[Header("Tamanho dos pontos")]
     public float radius = 0.1F;
+	[Header("Proximo Waypoint")]
     public Transform[] Links;
-
+	[Space(10)]
+	[Tooltip ("Mesh para indicar a direção que o npc vai ir")]
     public Mesh Seta;
 
     public void OnDrawGizmos()

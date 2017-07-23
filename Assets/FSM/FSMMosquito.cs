@@ -59,7 +59,7 @@ public class FSMMosquito : MonoBehaviour
     private float TimerAtk;                                    //Tempo de recarga do ataque
     private float Distace;                                     //Distancia entre o NPC e o player
     [SerializeField] private float TimeToChangeTarget = 5f;    //
-    private Collider DeathCollider;
+    [SerializeField] private Collider DeathCollider;
     private bool reachScreen;
 
     [HideInInspector] public Transform model;

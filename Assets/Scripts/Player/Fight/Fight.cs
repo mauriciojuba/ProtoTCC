@@ -29,12 +29,20 @@ public class Fight : MonoBehaviour
     {
 		if (CharacterName == "Liz") {
 			if (PlayerNumberRef.onScreen) {
-				DamageCollider.GetComponent<BoxCollider> ().size = new Vector3 (1, 2, 1);
+				IncreaseColliderSize ();
 			} else {
-				DamageCollider.GetComponent<BoxCollider> ().size = new Vector3 (1, 0.5f, 0.5f);
+				ReductColliderSize ();
 			}
 		}
     }
+
+	void ReductColliderSize(){
+		DamageCollider.GetComponent<BoxCollider> ().size = new Vector3 (1, 0.5f, 0.5f);
+	}
+
+	void IncreaseColliderSize(){
+		DamageCollider.GetComponent<BoxCollider> ().size = new Vector3 (1, 2, 1);
+	}
 
 	public void ActiveCollider(string StyleDamage){
 		if (StyleDamage == "Basic") {

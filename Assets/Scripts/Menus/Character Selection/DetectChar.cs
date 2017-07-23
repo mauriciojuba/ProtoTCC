@@ -25,41 +25,44 @@ public class DetectChar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (CanSelect) {
-			if (KeyboardCancontrol) {
-				if (Input.GetButtonDown ("X P" + PlayerNumber) && !Selected || Input.GetKeyDown (KeyCode.J) && !Selected) {
-					CharacterPreSelected.GetComponent<SelectChar3D> ().OnSelectCharacter (PlayerNumber);
-					GetComponent<Rigidbody> ().velocity = Vector3.zero;
-					GetComponent<OptionsPlayer> ().enabled = false;
+			PressButton ();
+		}
+	}
 
-					DetectS.QuantSelected++;
-					Selected = true;
 
+	void SelectPerson(){
+		CharacterPreSelected.GetComponent<SelectChar3D> ().OnSelectCharacter (PlayerNumber);
+		GetComponent<Rigidbody> ().velocity = Vector3.zero;
+		GetComponent<OptionsPlayer> ().enabled = false;
+
+		DetectS.QuantSelected++;
+		Selected = true;
+	}
+
+	void DeselectPerson(){
+		CharacterPreSelected.GetComponent<SelectChar3D> ().OnDeselectCharacter (PlayerNumber);
+		GetComponent<OptionsPlayer> ().enabled = true;
+		Selected = false;
+		DetectS.QuantSelected--;
+	}
+
+	void PressButton(){
+		if (KeyboardCancontrol) {
+			if (Input.GetButtonDown ("X P" + PlayerNumber) && !Selected || Input.GetKeyDown (KeyCode.J) && !Selected) {
+				SelectPerson ();
+			}
+			if (Selected) {
+				if (Input.GetButtonDown ("B P" + PlayerNumber) || Input.GetKeyDown (KeyCode.L)) {
+					DeselectPerson ();
 				}
-				if (Selected) {
-					if (Input.GetButtonDown ("B P" + PlayerNumber) || Input.GetKeyDown (KeyCode.L)) {
-						CharacterPreSelected.GetComponent<SelectChar3D> ().OnDeselectCharacter (PlayerNumber);
-						GetComponent<OptionsPlayer> ().enabled = true;
-						Selected = false;
-						DetectS.QuantSelected--;
-					}
-				}
-			} else {
-				if (Input.GetButtonDown ("X P" + PlayerNumber) && !Selected) {
-					CharacterPreSelected.GetComponent<SelectChar3D> ().OnSelectCharacter (PlayerNumber);
-					GetComponent<Rigidbody> ().velocity = Vector3.zero;
-					GetComponent<OptionsPlayer> ().enabled = false;
-
-					DetectS.QuantSelected++;
-					Selected = true;
-
-				}
-				if (Selected) {
-					if (Input.GetButtonDown ("B P" + PlayerNumber)) {
-						CharacterPreSelected.GetComponent<SelectChar3D> ().OnDeselectCharacter (PlayerNumber);
-						GetComponent<OptionsPlayer> ().enabled = true;
-						Selected = false;
-						DetectS.QuantSelected--;
-					}
+			}
+		} else {
+			if (Input.GetButtonDown ("X P" + PlayerNumber) && !Selected) {
+				SelectPerson ();
+			}
+			if (Selected) {
+				if (Input.GetButtonDown ("B P" + PlayerNumber)) {
+					DeselectPerson ();
 				}
 			}
 		}
