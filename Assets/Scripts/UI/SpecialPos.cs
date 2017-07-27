@@ -43,26 +43,38 @@ public class SpecialPos : MonoBehaviour {
 
 		if (SetPos) {
 			if (transform.position != Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z))) {
-				transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)), Speed * Time.deltaTime);
-				transform.LookAt (Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)));
+				SetPosition ();
 			} else {
 				SetReachAnimation ();
 				transform.localEulerAngles = new Vector3 (0, transform.localEulerAngles.y, transform.localEulerAngles.z);
 
-				if (transform.localEulerAngles.y != 180)
-					transform.localEulerAngles = Vector3.MoveTowards (transform.localEulerAngles, new Vector3 (transform.localEulerAngles.x, 180, transform.localEulerAngles.z), Speed * Time.deltaTime * MultiplierRotationSpeed);
-
-				if (transform.localEulerAngles.z != 0)
-					transform.localEulerAngles = Vector3.MoveTowards (transform.localEulerAngles, new Vector3 (transform.localEulerAngles.x, transform.localEulerAngles.y, 0), Speed * Time.deltaTime * MultiplierRotationSpeed);
+				SetRotation ();
 			}
 			if (transform.localScale != new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet)) {
-				transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet), Speed * Time.deltaTime * MultiplierScaleSpeed);
+				SetScale ();
 			} 
 			if(transform.position == Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)) && transform.localScale == new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet)
 				&& transform.localEulerAngles == new Vector3(0,180,0)) {
 				SetPos = false;
 			}
 		} 
+	}
+
+	void SetPosition(){
+		transform.position = Vector3.MoveTowards (transform.position, Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)), Speed * Time.deltaTime);
+		transform.LookAt (Camera.main.ViewportToWorldPoint (new Vector3 (X, Y, Z)));
+	}
+
+	void SetRotation(){
+		if (transform.localEulerAngles.y != 180)
+			transform.localEulerAngles = Vector3.MoveTowards (transform.localEulerAngles, new Vector3 (transform.localEulerAngles.x, 180, transform.localEulerAngles.z), Speed * Time.deltaTime * MultiplierRotationSpeed);
+
+		if (transform.localEulerAngles.z != 0)
+			transform.localEulerAngles = Vector3.MoveTowards (transform.localEulerAngles, new Vector3 (transform.localEulerAngles.x, transform.localEulerAngles.y, 0), Speed * Time.deltaTime * MultiplierRotationSpeed);
+	}
+
+	void SetScale(){
+		transform.localScale = Vector3.MoveTowards (transform.localScale, new Vector3 (ScaleToSet, ScaleToSet, ScaleToSet), Speed * Time.deltaTime * MultiplierScaleSpeed);
 	}
 
 	void SetReachAnimation(){

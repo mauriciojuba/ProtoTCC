@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Legends : MonoBehaviour {
+public class Subtitles : MonoBehaviour {
 
 	[Header("Linhas de legenda")]
 	[SerializeField] private string[] Lines;

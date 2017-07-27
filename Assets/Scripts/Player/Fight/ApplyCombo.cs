@@ -29,32 +29,9 @@ public class ApplyCombo: MonoBehaviour{
 //		}
 //		if (!ChargingAttack) {
 		if(!AnimRef.InDialogue){
-			if (combo1.CheckCombo ()) {
-				if (!IndexCombo.Contains (combo1.CurrentIndex)) {
-					IndexCombo.Add (combo1.CurrentIndex);
-				}
-				AnimRef.SetAttackAnim (IndexCombo [0]);
-				Attacking = combo1.Attacking;
-			}
-			if (IndexCombo.Count > 0) {
-				if (AnimRef.Anim.GetCurrentAnimatorStateInfo (1).IsName ("Attack " + IndexCombo [0])) {
-					if (IndexCombo.Count > 1) {
-						AnimRef.SetAttackAnim (IndexCombo [1]);
-						IndexCombo.Remove (IndexCombo [0]);
-					} else {
-						AnimRef.SetAttackAnim (0);
-						IndexCombo.Clear ();
-					}
-				}
+			GetCombo ();
+			SetComboAnim ();
 
-				if (!Attacking) {
-					AnimRef.SetAttackAnim (0);
-					IndexCombo.Clear ();
-				}
-			}
-			if (Time.time > combo1.TimeLastButtonPressed + combo1.TimeBetweenButtons) {
-				Attacking = false;
-			}
 //		} if(ChargingAttack) {
 //			SetChargedAttack ();
 //		}
@@ -62,6 +39,38 @@ public class ApplyCombo: MonoBehaviour{
 //		if(!ChargedAttack)
 //			AnimRef.CanMove = true;
 //		
+		}
+	}
+
+	void GetCombo(){
+		if (combo1.CheckCombo ()) {
+			if (!IndexCombo.Contains (combo1.CurrentIndex)) {
+				IndexCombo.Add (combo1.CurrentIndex);
+			}
+			AnimRef.SetAttackAnim (IndexCombo [0]);
+			Attacking = combo1.Attacking;
+		}
+		if (Time.time > combo1.TimeLastButtonPressed + combo1.TimeBetweenButtons) {
+			Attacking = false;
+		}
+	}
+
+	void SetComboAnim(){
+		if (IndexCombo.Count > 0) {
+			if (AnimRef.Anim.GetCurrentAnimatorStateInfo (1).IsName ("Attack " + IndexCombo [0])) {
+				if (IndexCombo.Count > 1) {
+					AnimRef.SetAttackAnim (IndexCombo [1]);
+					IndexCombo.Remove (IndexCombo [0]);
+				} else {
+					AnimRef.SetAttackAnim (0);
+					IndexCombo.Clear ();
+				}
+			}
+
+			if (!Attacking) {
+				AnimRef.SetAttackAnim (0);
+				IndexCombo.Clear ();
+			}
 		}
 	}
 
