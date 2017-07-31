@@ -5,10 +5,9 @@ using UnityEngine;
 public class InDialogue : MonoBehaviour {
 
 	//script apenas para definir se o dialogo esta ativo ou não.
-	public bool DialogueActive;
 	[SerializeField] private GameObject NPCDialogueBox;
 
-	void Update () {
+	public void ActiveDialogue (bool DialogueActive) {
 		NPCDialogueBox.SetActive (DialogueActive);
 	}
 }

@@ -82,7 +82,7 @@ public class NPCDialogue : MonoBehaviour {
 			Target.gameObject.GetComponent<Movimentacao3D> ().InMovement = false;
 			StartCoroutine (Scroll ());
 			InDialogue = true;
-			DialogueActive.DialogueActive = true;
+			DialogueActive.ActiveDialogue (true);
 		}
 	}
 
@@ -91,7 +91,7 @@ public class NPCDialogue : MonoBehaviour {
 			//começa a rolar as letras e inicia o dialogo
 			StartCoroutine (Scroll ());
 			InDialogue = true;
-			DialogueActive.DialogueActive = true;
+			DialogueActive.ActiveDialogue (true);
 			Target.gameObject.GetComponent<Movimentacao3D> ().InDialogue = true;
 		}
 	}
@@ -114,7 +114,7 @@ public class NPCDialogue : MonoBehaviour {
 				ActualWords = 0;
 				NPCText.text = "";
 				InDialogue = false;
-				DialogueActive.DialogueActive = false;
+				DialogueActive.ActiveDialogue (false);
 				//se caso tiver mais de um tipo de dialogo, ele passa para o proximo dialogo.
 				if (ActualDialogue < QuantDialogues.Length - 1) {
 					ActualDialogue++;
