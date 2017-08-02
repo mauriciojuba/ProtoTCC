@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{fe48a556-cb5f-4530-acd3-ccfb91e12573}">
+        <property name="assetPath">
+            <value>Vidro_Batendo.mp3</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.57469387755102042</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{7e2cd9c5-7e7b-41ab-aa3d-896b2f3b6340}</destination>
+        </relationship>
+    </object>
+</objects>
