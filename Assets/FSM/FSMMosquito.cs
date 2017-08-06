@@ -92,8 +92,8 @@ public class FSMMosquito : MonoBehaviour
     void Start()
     {
         //teste
-        //if(GameObject.Find("SoundManager") != null)
-        //SoundManager.PlayCappedSFX("Mosquito_Flying_Loop_01", "Mosquito_Flying_Loop_01_cap");
+
+
 
         //Encontra os player
 

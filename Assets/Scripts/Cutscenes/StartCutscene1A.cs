@@ -11,7 +11,6 @@ public class StartCutscene1A : MonoBehaviour {
 		if(hit.CompareTag("Player1_3D")){
 			zoomOut = true;
 			Roomba.enabled = true;
-            SoundManager.PlaySFX("Roomba");
 		}
 	}
 	void Update(){

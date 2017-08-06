@@ -22,7 +22,7 @@ public class RecoveryItem : MonoBehaviour {
                 {
                     if (other.gameObject.GetComponent<PlayerLife>().life + 100 <= other.gameObject.GetComponent<PlayerLife>().MaxLife)
                     {
-                        SoundManager.PlaySFX("ColetarVida");
+
 
                         if (emitter != null)
                         { //desabilita efeitos graficos

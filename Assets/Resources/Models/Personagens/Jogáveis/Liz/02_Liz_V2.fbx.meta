@@ -3,7 +3,7 @@ guid: 34afd64e021a92b4d8f712b7d1754500
 timeCreated: 1495960945
 licenseType: Free
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
     100002: left
@@ -448,6 +448,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Walk_LIZ
@@ -889,23 +890,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.19789842
-        functionName: PlaySoundSFX
-        data: Liz_Footstep_01
-        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.7285465
-        functionName: PlaySoundSFX
-        data: Liz_Footstep_01
-        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1
@@ -1322,15 +1307,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.13485107
-        functionName: PlaySoundSFX
-        data: Liz_JumpSFX_01
-        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1
@@ -4250,7 +4227,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: 0.010733453
         functionName: CanMoveFalse
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
@@ -4270,14 +4247,6 @@ ModelImporter:
         functionName: SetGrabbingFalse
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 7cfac12eda954cd4ea15033e1eccb60e,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.008680344
-        functionName: PlaySoundSFX
-        data: Liz_GetHit
-        objectReferenceParameter: {fileID: 11500000, guid: 9ea9ffee8b7ea9a40a4e1f7348c6effe,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -14007,7 +13976,10 @@ ModelImporter:
     globalScale: 20
     meshCompression: 3
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -14023,6 +13995,7 @@ ModelImporter:
     normalSmoothAngle: 180
     normalImportMode: 1
     tangentImportMode: 3
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

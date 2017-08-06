@@ -1,0 +1,4 @@
+{ba48c721-844f-4dce-ad11-2609c68c76a3} event:/MenuTeme
+{0e5c2a78-0d4b-4b66-b84f-42e927bc19f8} bus:/
+{a1a20196-0dde-4535-84d7-23961ad8e53e} bus:/Reverb
+{e03f51fc-b190-434d-816e-79f747c88508} bank:/Master Bank

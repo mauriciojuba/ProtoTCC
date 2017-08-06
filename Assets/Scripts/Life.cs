@@ -45,7 +45,6 @@ public class Life : MonoBehaviour {
 	public float X, InitialX;
     #endregion
 	[SerializeField] private bool UpdateL;
-    private SFX sfx;
 
     public bool UpdateL1
     {
@@ -62,10 +61,7 @@ public class Life : MonoBehaviour {
 
     void Start()
     {
-        if(GetComponent<SFX>() != null)
-        {
-           sfx = GetComponent<SFX>();
-        }
+       
 		if (LifeOF == LifeType.Player)
 		{
 			MaxLife = LifeQuant;
@@ -136,9 +132,7 @@ public class Life : MonoBehaviour {
 				foreach (Rigidbody rb in RBGB) {
 					rb.velocity = gameObject.GetComponent<Rigidbody> ().velocity;
 				}
-				if (sfx != null) {
-					sfx.PlaySoundSfxGrupo ("Caixa Quebrando");
-				}
+			
                     Destroy(gameObject);
                     break;
 			case ObjectType.Barricade:
@@ -150,7 +144,7 @@ public class Life : MonoBehaviour {
                     if(gameObject.GetComponent<LuzQuebrando>() != null)
                     {
 						gameObject.GetComponent<LuzQuebrando> ().BreakLight ();
-                        SoundManager.PlaySFX(gameObject, "holofote_falhando_01");
+ 
                         Destroy(this);
                     }
                     break;

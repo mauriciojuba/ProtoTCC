@@ -24,7 +24,6 @@ public class FightCollider : MonoBehaviour {
 						ApplyDamage ();
 
 						//Som de Ataque
-						PlaySFXHit ();
                        
 						//coloca particula de Ataque
 						InstantiateParticle();
@@ -79,14 +78,7 @@ public class FightCollider : MonoBehaviour {
 		}
 	}
 
-	void PlaySFXHit(){
-		//Som de Ataque do Horn
-		if (CharacterName == "Horn")
-			SoundManager.PlaySFX (gameObject, "Horn_Atk_02");
-
-		if (CharacterName == "Liz")
-			SoundManager.PlaySFX (gameObject, "Liz_Atk-02");
-	}
+	
 
 	public void InstantiateParticle(){
 		if (particula != null)
